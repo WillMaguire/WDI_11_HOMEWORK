@@ -10,7 +10,7 @@ You can use Redux together with [React](https://facebook.github.io/react/), or w
 It is tiny (2kb, including dependencies).  
 
 >New! Learn Redux from its creator:  
-[Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)  
+[Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux) (30 free videos)  
 
 ### Testimonials  
 >["Love what you're doing with Redux"](https://twitter.com/jingc/status/616608251463909376)  
