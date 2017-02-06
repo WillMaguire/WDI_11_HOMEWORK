@@ -1,7 +1,7 @@
-![logo](https://raw.githubusercontent.com/reactjs/redux/master/logo/logo-title-dark.png = 250x)
+![Imgur](http://i.imgur.com/pkRruy6.png?1)
 
 ###### Redux is a predictable state container for JavaScript apps.
-###### (if you're looking for a WordPress framework, check out [Redux Frame](https://reduxframework.com)
+###### (if you're looking for a WordPress framework, check out [Redux Frame](https://reduxframework.com))
 
 ###### It helps you write application that behave consistently, run in different environments (client, server, and native), and
 ###### are easy to test. On top of that, it provides a developer experience, such as [live code editing comibined with a](google.com.au)
@@ -31,6 +31,6 @@
 
 ### Developer Experience
 
-###### I wrote Redux while working on my React Europe talk called ["Hot Reloading with Time Travel".](google.com.au)My gal was to create
+###### I wrote Redux while working on my React Europe talk called ["Hot Reloading with Time Travel".](google.com.au)My goal was to create
 ###### a state management library with minimal API but completely predictable behavior, so it is possible to implement
 ###### logging, hot reloading, time travel, universal apps, record and replay, without any buy-in from the developer.
