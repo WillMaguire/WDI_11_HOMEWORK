@@ -1,4 +1,4 @@
-![Redux logo](https://raw.githubusercontent.com/reactjs/redux/master/logo/logo-title-dark.png)
+<img src ="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo-title-dark.png" alt="Redux logo" style="height: 4em; margin: 0 0 -0.5em -1em;">
 ==========
 Redux is a predictable state container for Javascript apps.  
 (If you're looking for a WordPress framework, check out [Redux framework](#).)
