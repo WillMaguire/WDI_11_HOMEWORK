@@ -8,26 +8,15 @@
 </body>
 <script>
 	var currentTemp = parseInt(prompt("What is the current temperature?","Current Temperature"),10);
-
 	var acFunctional = (prompt("Is the AC Functional?","Yes/No")).toLowerCase();
-
 	var desiredTemp = parseInt(prompt("What temperature do you wish it was?","Temperature"),10);
-
-
 	if (acFunctional==="yes"){
-		
 		if(currentTemp>desiredTemp){
 			console.log("Turn on the A/C Please");
 		}
-
-		
-	}
-
-	else if(currentTemp>desiredTemp){
+	}else if(currentTemp>desiredTemp){
 		console.log("Fix the A/C now! it's hot!");
-	}
-
-	else{
+	}else{
 		console.log("Fix the A/C whenever you have the chance...it's cool...");
 	}
 </script>
