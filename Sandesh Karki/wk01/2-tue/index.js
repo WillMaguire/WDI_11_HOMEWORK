@@ -4,18 +4,17 @@
 var name= prompt("Please enter your name ");
 console.log("Welcome, " + name + "!!");
 
-var menu= ["Fruit Salad", "Tofurkey", "Pork Chops"];
-var dinner= prompt ("What would you like for dinner tonite??\n " + menu);
-
-
 // Part 2 - The Vegan Test
 
-if(dinner === menu[1]){
+var menu= ["Steak", "Fruit Salad", "Tofurkey", "Pork Chops"];
+var dinner= prompt ("What would you like for dinner tonite??\n " + menu);
+
+if((dinner === menu[1]) || (dinner === menu[2])){
   console.log("This cuisine is vegan friendly.")
-}else if(dinner !== menu[1] && dinner === menu[0,2]){
+}else if((dinner === menu[0]) || (dinner === menu[3])) {
   console.log ("Vegan beware!!")
 }else{
-  console.log ("Sorry, it's not in menu")
+  console.log ("Sorry, " + dinner + " is not in menu")
 }
 
 // conditionals
@@ -23,12 +22,11 @@ if(dinner === menu[1]){
 // 1. Drinking age
 
 var age= prompt("Please enter your age");
-var ageInNum= Number(age);
 
-if(ageInNum < 18){
+if(+age < 18){
   console.log("You are underage");
 }else{
-  console.log("You are allowed to drink");
+  console.log("You are eligable to drink");
 }
 
 // 2. Air Conditioning
@@ -39,24 +37,28 @@ var currentTemp= prompt("Please enter current Temperature");
 var desiredTemp= 18;
 
 if(acFunctional === 'y'){
-  if(currentTemp > desiredTemp){
+  if(+currentTemp > desiredTemp){
     console.log("Turn on the Air Conditioning Please");
+  }else{
+    console.log("No instructions,y");
   }
 }
-else if(currentTemp > desiredTemp){
+else if(+currentTemp > desiredTemp){
     console.log("Fix the Air Conditioning now! It's hot!");
 }
-else if(currentTemp < desiredTemp){
+else if(+currentTemp < desiredTemp){
   console.log("Fix the Air Conditioning whenever you have the chance... It's cool...")
+}else {
+  console.log("No instructions,n");
 }
 
 // Melbourne Suburbs
 
-var suburbs= prompt("What Suburb you live in ");
+var suburbs= prompt("What Suburb do you live in ");
 var iLiveIn= "Glen Huntly";
 
 if(suburbs === iLiveIn){
   console.log("Great, we live in same suburb");
 }else{
-  console.log("Sad we dont live in same area");
+  console.log("Sad, we don't live in same area");
 }
