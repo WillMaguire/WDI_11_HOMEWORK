@@ -24,12 +24,14 @@ var topcolors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 for (var i = 1; i <= topcolors.length; i++) {
   var suffix = 'th';
 
-  if (i === 1) {
-    suffix = 'st';
-  } else if (i === 2) {
-    suffix = 'nd';
-  } else if (i === 3) {
-    suffix = 'rd';
+  if (i % 100 !== 11 && i % 100 !== 12 && i % 100 !== 13) {
+    if (i % 10 === 1) {
+      suffix = 'st';
+    } else if (i % 10 === 2) {
+      suffix = 'nd';
+    } else if (i % 10 === 3) {
+      suffix = 'rd';
+    }
   }
 
   console.log('My ' + i + suffix + ' choice is ' + topcolors[i - 1] + '.');
