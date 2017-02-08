@@ -17,10 +17,26 @@ for (var i = 0; i < favouriteRecipe.ingredients.length; i++) {
 console.log('Starting the reading list...');
 
 var books = [
-  { title: 'The Hobbit', author: 'J.R.R. Tolkien', alreadyRead: true },
-  { title: 'Harry Potter and the Philosopher\'s Stone', author: 'J.K. Rowling', alreadyRead: false },
-  { title: 'Thief of Time', author: 'Terry Pratchett', alreadyRead: true },
-  { title: 'American Gods', author: 'Neil Gaiman', alreadyRead: false }
+  {
+    title: 'The Hobbit',
+    author: 'J.R.R. Tolkien',
+    alreadyRead: true
+  },
+  {
+    title: 'Harry Potter and the Philosopher\'s Stone',
+    author: 'J.K. Rowling',
+    alreadyRead: false
+  },
+  {
+    title: 'Thief of Time',
+    author: 'Terry Pratchett',
+    alreadyRead: true
+  },
+  {
+    title: 'American Gods',
+    author: 'Neil Gaiman',
+    alreadyRead: false
+  }
 ];
 
 for (var i = 0; i < books.length; i++) {
