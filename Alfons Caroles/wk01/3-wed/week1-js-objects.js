@@ -49,5 +49,3 @@ function movieInfo() {
   console.log(movieList.title + " lasts for " + movieList.duration + " minutes. Stars: " + movieList.stars);
 }
 movieInfo();
-
-alert("Hello\nHow are you?");
