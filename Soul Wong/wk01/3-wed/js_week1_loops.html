@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+  //The Even/Odd Reporter
+  for(var x=0; x<21; x++){
+    if(x%2===0){
+      console.log(x+" is Even.");
+    }else{
+      console.log(x+" is Odd.");
+    }
+  }
+
+  //Multiplication Table
+  for(var z=1; z<11; z++){
+    for(var y=1; y<11; y++){
+      var num = y * z;
+      console.log(y+ " * " +z+ " = "+num);
+    }
+  }
+
+  //Top Choices
+  var myTopColors = ["Blue","Red","Green"];
+  for(var choiceIndex=0; choiceIndex<myTopColors.length; choiceIndex++){
+    console.log("My #"+(choiceIndex+1)+" Choice Is "+myTopColors[choiceIndex]);
+  }
+
+  </script>
+</html>
