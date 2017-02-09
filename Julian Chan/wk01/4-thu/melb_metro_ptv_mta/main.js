@@ -23,7 +23,7 @@ var pakenhamLine = {
   stations: ['Broadmeadows', 'Glenbervie', 'Kensington', 'Richmond', 'Murrumbeena', 'Cardinia Road']
 }
 
-var trainLines = [alameinLine, glenWaverleyLine, sandringhamLine, belgraveLine, pakenhamLine  ];
+var trainLines = [alameinLine, glenWaverleyLine, sandringhamLine, belgraveLine, pakenhamLine];
 var lineNames = trainLines.map(function(line) { return line.name });
 var intersectingStation = 'Richmond';
 
