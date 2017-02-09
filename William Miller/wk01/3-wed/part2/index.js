@@ -1,20 +1,20 @@
-//RECIPE CARD
+RECIPE CARD
 
-// var recipe = {
-//   title: 'Mole',
-//   serves: 2,
-//   ingredients: ['Cinnamon', 'Cumin', 'Cocoa']
-// }
-//
-// console.log(recipe.title);
-// console.log(recipe.serves);
-// console.log(recipe.ingredients[0]);
-// console.log(recipe.ingredients[1]);
-// console.log(recipe.ingredients[2]);
+var recipe = {
+  title: 'Mole',
+  serves: 2,
+  ingredients: ['Cinnamon', 'Cumin', 'Cocoa']
+}
 
-//The Reading List
+console.log(recipe.title);
+console.log(recipe.serves);
+console.log(recipe.ingredients[0]);
+console.log(recipe.ingredients[1]);
+console.log(recipe.ingredients[2]);
 
-var book1 = {
+The Reading List
+
+var books = {
   title: 'One Hundred Years of Solitude',
   author: 'Gabriel Garcia Marquez',
   alreadyRead: true,

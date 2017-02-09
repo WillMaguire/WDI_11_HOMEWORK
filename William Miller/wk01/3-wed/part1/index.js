@@ -27,5 +27,5 @@ for (var num = 0; num <= 20; num++) {
 
  var favFruits = ['fig', 'mango', 'banana', 'dragonfruit', 'durian']
  for (var num = 0; num <=5-1; num++){
-   console.log('My' + ' ' + 'number' + ' ' +(num + 1) + ' ' + 'fruit' + ' ' + 'is' + ' ' + favFruits[num]);
+   console.log('My number' + ' ' + (num + 1) + ' ' + 'fruit is' + ' ' + favFruits[num]);
 }
