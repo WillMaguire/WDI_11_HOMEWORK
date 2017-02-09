@@ -9,6 +9,7 @@ var recipeCard = {title: 'Mole',
 console.log(recipeCard.title);
 console.log("Serves: " + recipeCard.serves);
 console.log("Ingredients:");
+console.log(recipeCard.ingredients.join('\n'));
 
 for (i = 0; i < recipeCard.ingredients.length; i++) {
   console.log(recipeCard.ingredients[i]);
@@ -31,10 +32,12 @@ var listOfBooks = [{
     }];
 
 for (i = 0; i < listOfBooks.length; i++) {
-  if (listOfBooks[i].alreadyRead === true){
-    console.log("You already read " +listOfBooks[i].title + " by " + listOfBooks[i].author);
+  bookDescription = listOfBooks[i].title + " by " + listOfBooks[i].author;
+  
+  if (listOfBooks[i].alreadyRead){
+    console.log("You already read " + bookDescription);
   } else {
-    console.log("You still need to read " +listOfBooks[i].title + " by " + listOfBooks[i].author);
+    console.log("You still need to read " + bookDescription);
   }
 }
 
