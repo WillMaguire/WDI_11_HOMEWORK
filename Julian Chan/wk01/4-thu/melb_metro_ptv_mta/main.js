@@ -24,7 +24,7 @@ var pakenhamLine = {
 }
 
 var trainLines = [alameinLine, glenWaverleyLine, sandringhamLine, belgraveLine, pakenhamLine];
-var lineNames = trainLines.map(function(line) { return line.name });
+var lineNames = trainLines.map(function(line) { return line.name; });
 var intersectingStation = 'Richmond';
 
 var trainMapString = trainLines.map(function(line) {
