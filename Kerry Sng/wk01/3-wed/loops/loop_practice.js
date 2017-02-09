@@ -5,6 +5,8 @@ guessNumber = Math.floor(Math.random()*20);
 for (var number = 0; number <= 20; number++) {
     if (number % 2 === 0) {
     console.log(number);
+  } else {
+    console.log(number + "" + 'odd number');
   }
 }
 
@@ -33,7 +35,35 @@ for (var number = 0; number <= 10; number++) {
 // Top choices
 
 var choices = ['green','blue','black','yellow','grey','red','white'];
+var suffix = ['st', 'nd', 'rd', 'th']
 
-for (var i = 0; i <= choices.length; i++) {
-    console.log('My #1' + 'choice is' +  choices[i]);
+for (var i = 0; i < choices.length; i++) {
+    console.log('My #' + ((i + 1) + suffix[i]) + ' choice is ' +  choices[i]);
+}
+
+// reading list
+
+var books = [ {
+  title: 'the hobbit',
+  author: 'jrr tolkien',
+  alreadyRead: true,
+} {
+  title: 'fight club',
+  author: 'chuck p',
+  alreadyRead: true,
+} {
+  title: 'Game of thrones',
+  author: 'George rr Martin',
+  alreadyRead: false,
+}
+];
+
+for (var index = 0; index < books.length; index++) {
+  var bookDescription = books[index].title + '' + books[index].author;
+
+  if (books[index].alreadyRead) {
+    console.log('You already read' + booksDescription);
+  } else {
+    console.log('You need to read' + bookDescription);
+  }
 }
