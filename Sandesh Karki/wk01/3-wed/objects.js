@@ -1,6 +1,6 @@
 console.log("Objects");
 
-// // The Recipe Card
+// The Recipe Card
 
 var recipe = {title : "Mole",
 serves: 2,
@@ -9,25 +9,34 @@ ingredients: ["cinnamon", "cumin", "coca"]
 console.log(recipe.title);
 console.log("Serve: " + recipe.serves);
 console.log("Ingredients: ");
-for(var i = 0; i <=2 ; i++){
-  console.log(recipe.ingredients[i]);
-}
+console.log(recipe.ingredients.join(","));
+
 
 // The Reading List
-var books = [{title : "html" , author : "jack" , alreadyRead : false},
-             {title : "js" ,   author : "matt" , alreadyRead : true },
-             {title : "rubby", author : "ram"  , alreadyRead : true }];
+var books = [{
+  title : "html", 
+  author : "jack",
+  alreadyRead : false
+ },{
+  title : "js",
+  author : "matt",
+  alreadyRead : true 
+ },{
+  title : "rubby",
+  author : "ram",
+  alreadyRead : true
+}];
 
 for(var i = 0; i <= books.length - 1; i++){
   console.log("Book title is: " + books[i].title + "\nBook Author is: "
   + books[i].author);
+  var bookDescription= "\"" + books[i].title + "\"" + " by ";
+    + books[i].author
 
-  if(books[i].alreadyRead === true){
-    console.log ("You already read " + "\"" + books[i].title + "\"" + " by "
-    + books[i].author)
+  if(books[i].alreadyRead){
+    console.log ("You already read " + bookDescription);
   } else {
-    console.log ("You still need to read " + "\"" + books[i].title + "\"" + " by "
-    + books[i].author)
+    console.log ("You still need to read " + bookDescription);
   }
 }
 
