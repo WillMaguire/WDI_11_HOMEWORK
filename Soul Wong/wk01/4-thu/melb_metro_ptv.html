@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	var originStation = prompt("Please state your origin station");
+	var destinationStation = prompt("Please state your desination station");
+	var trainLines = [["Flagstaff","Melbourne Central", "Parliament","Richmond","Kooyong","Tooronga"],["Flinders St","Richmond","East Richmond","Burnley","Hawthorn","Glenferrie"],["Southern Cross","Richmond","South Yarra","Prahran","Windsor"]];
+	var itinerary =""; //string placeholder
+	var numStops =0; //number of stops for journey
+
+for(var i=0;i<trainLines.length;i++){
+	//Checks if origin station exists in any of the stations in trainLines array
+	if(trainLines[i].indexOf(originStation)!==-1){
+		//if origin station checks out, check if destination station is in the same line(array)
+		if(trainLines[i].indexOf(destinationStation)!==-1){
+			//if journey is determined to be valid, obtain the indexes of the stations in the array
+			var y = trainLines[i].indexOf(destinationStation);
+			var x = trainLines[i].indexOf(originStation)
+			//Checks if journey is a reversed journey (against array order)
+			if (x>y){
+				for(;y<x;x--){
+				itinerary = itinerary.concat(trainLines[i][x], " -----> ");
+				numStops++;
+				}
+			//Standard straight forward journey (following array order)
+			}else{
+				for(;x<y;x++){
+				itinerary = itinerary.concat(trainLines[i][x], " -----> ");
+				numStops++;
+				}
+			}	
+		}
+	}
+}
+	
+console.log("origin: "+originStation + "\n" + "destination: " + destinationStation + "\n\n" + itinerary+ destinationStation + "\n\n" + numStops + " stops total");
+	</script>
+</html>
