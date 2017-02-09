@@ -41,7 +41,11 @@ var parse = function(input) {
     return stringArray.join(' ');
   }
 
-  return input.split(',').map(function(str) { return toTitleCase(str.trim()); });
+  return input.split(',').map(function(str) {
+    return toTitleCase(str.trim().split(' ').filter(function(word) {
+      return word !== '';
+    }).join(' ')); 
+  });
 }
 
 var promptLineAndStationIndices = function(promptMessage) {
