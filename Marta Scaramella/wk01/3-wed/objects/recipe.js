@@ -9,6 +9,7 @@ var recipeCard = {
   console.log(recipeCard.ingredients[0]);
   console.log(recipeCard.ingredients[1]);
   console.log(recipeCard.ingredients[2]);
+  console.log(recipeCard.ingredients.join('\n'));
 
 
 // for (var index = 0; index < 3; index++) {
