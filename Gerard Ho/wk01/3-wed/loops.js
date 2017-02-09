@@ -24,21 +24,22 @@ for(var i=0; i<=20; i++){
   }else{
     console.log(i + " is an odd number.")
   }
-}
+}//CHECKED AND CORRECT
 
 console.log("Multiplication Tables");
 for(var num=1; num<=10; num++){
   for(var i=0; i<=10; i++){
-    multiplier = num;
-    console.log(i*num);
+    //multiplier = num;
+    console.log(i + "*"+ num + "="+ i * num);
   }
-}
+}//CHECKED AND CORRECT but you need to concatenate text in the log.
 
 console.log("Your top choices");
 var topChoices = ["Navy Blue", "Lamborghini", "Paradise", "Lifestyle", "Health", "Financial Security", "Happiness", "Motivation", "Self Confidence"];
+var suffix = ['st', 'nd', 'rd', 'th'];
 
 for(var i=0; i<topChoices.length; i++){
-  var comment = "My #"+ i + " choice is "+topChoices[i];
+  var comment = "My #"+ (i+1+suffix[i]) + " choice is "+topChoices[i];
 
   console.log(comment);
-}
+}//checked and correct but need to add in the 1st 2nd 3rd suffix notations.

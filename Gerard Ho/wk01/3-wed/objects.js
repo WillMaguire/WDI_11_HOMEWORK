@@ -38,9 +38,9 @@ var recipe1 = {
 }
 console.log(recipe1.title);
 console.log(recipe1.servings);
-console.log(recipe1.ingredients[0]);
-console.log(recipe1.ingredients[1]);
-console.log(recipe1.ingredients[2]);
+console.log(recipe1.ingredients.join('\n'));
+//CHECKED AND CORRECT
+
 
 console.log("The Reading List");
 var books = [
@@ -58,7 +58,7 @@ var books = [
     alreadyRead: false },
   { title: "The Sellout",
     author: "Paul Beatty",
-    alreadyRead: false },
+    alreadyRead: false }
 ];
 for(var i=0; i<books.length; i++){
   var bookTitle = books[i].title;
@@ -71,7 +71,7 @@ for(var i=0; i<books.length; i++){
     var comment1 = bookTitle + " is a book you need to read";
     console.log(comment1);
   }
-}
+}//CHECKED AND CORRECT
 
 console.log("The Movie Database");
 var movies = [
