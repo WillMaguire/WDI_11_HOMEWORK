@@ -7,11 +7,11 @@ var recipe = {
  ingredients: ['sauce', 'mince meat', 'pasta']
 };
 
+
 console.log(recipe.title);
 console.log(recipe.servings);
-console.log(recipe.ingredients[0]);
-console.log(recipe.ingredients[1]);
-console.log(recipe.ingredients[2]);
+console.log(recipe.ingredients.join(' \n'));
+
 
 
 //the reading list
