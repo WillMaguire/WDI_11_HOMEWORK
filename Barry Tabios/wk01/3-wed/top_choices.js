@@ -10,7 +10,7 @@ for (var i = 0; i < 3; i++){
 
 i = 0;
 
-while (i < 3){
+while (i < top_choices.length){
   if (i === 0){
     console.log('My 1st choice is ' + top_choices[i]);
   };
