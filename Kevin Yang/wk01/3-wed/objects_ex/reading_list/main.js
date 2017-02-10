@@ -30,3 +30,27 @@ for (var i=0; i<=2;i++){
       console.log('You still need to read '+ '"'+ books[i].title+" by "+ books[i].author+'"');
     }
 }
+
+//suggested answers
+// var books ={{
+//   title:'the hobbit',
+//   author: 'JRR tolkien',
+//   alreadyRead: true
+// },{
+//   title:'fight club',
+//   author:'Chuck Palahniuk',
+//   alreadyRead: true,
+// },{
+//   title: 'The Lord of the Flies',
+//   author: 'William Golding',
+//   alreadyRead: true
+// }};
+//
+// for (var index=0; index < books.length; index++){
+//   var bookDescription = books[index].title+ ' '+ books[index].author;
+//   if(books[index].alreadyRead ===true){
+//     console.log('you already read '+bookDescription);
+//   } else {
+//     console.log('you need to read '+bookDescription)
+//   }
+// }
