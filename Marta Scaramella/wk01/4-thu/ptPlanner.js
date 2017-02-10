@@ -1,7 +1,8 @@
+
 var ptNetwork = {
-  'Alamein Line': ['a', 'c','Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
+  'Alamein Line': ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
   'GlenWaverly Line': ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'],
-  'Sandringham Line': ['Southern Cross', 'Richmond', 'South Yarra' ,'b','Prahran', 'Windsor']
+  'Sandringham Line': ['Southern Cross', 'Richmond', 'South Yarra','Prahran', 'Windsor']
 }
 
 //def origin
@@ -44,6 +45,7 @@ if (originLineObjectIndex <= originIntersectionNodeIndex){
     trip1.push(" --> ");
     var trip1Distance = originIntersectionNodeIndex - originLineObjectIndex;
   }
+    trip1 = trip1.join('');
 }
 else {
   for (var x = originLineObjectIndex; x >= originIntersectionNodeIndex; x--) {
@@ -51,6 +53,7 @@ else {
     trip1.push(" --> ");
     var trip1Distance = originLineObjectIndex - originIntersectionNodeIndex;
   }
+    trip1 = trip1.join('');
 }
 // from Richmond to destination
 if (destinationLineObjectIndex >= destinationIntersectionNodeIndex){
@@ -59,6 +62,7 @@ if (destinationLineObjectIndex >= destinationIntersectionNodeIndex){
     trip2.push(" --> ");
   }
     trip2.pop();
+    trip2 = trip2.join('');
     var trip2Distance = destinationLineObjectIndex - destinationIntersectionNodeIndex;
 }
 else {
@@ -67,11 +71,11 @@ else {
       trip2.push(" --> ");
   }
   trip2.pop();
+  q.join(' ')
+  trip2 = trip2.join('');
   var trip2Distance = destinationIntersectionNodeIndex - destinationLineObjectIndex;
 }
-// console.log(trip1);
-// console.log(trip2);
 
 var totDistance = trip2Distance + trip1Distance + 1;
 
-console.log( 'Origin: '+ origin + '\n' + 'Destination: '+ destination + '\n' + '\n' + trip1+ ','+ trip2 + ' '+'\n'+'\n' + totDistance + ' stops total.');
+console.log( 'Origin: '+ origin + '\n' + 'Destination: '+ destination + '\n' + '\n' + trip1+ trip2 + ' '+'\n'+'\n' + totDistance + ' stops total.');
