@@ -26,6 +26,7 @@ function startTrip(station){
        stationInArray = trainlines[index].stations.indexOf(station);
        richmond = trainlines[index].stations.indexOf('Richmond');
        var tripLeg = trainlines[index].stations.slice(stationInArray, richmond);
+       tripLeg = tripLeg.join(' --> ');
        return tripLeg;
      }
   }
@@ -38,6 +39,7 @@ function endTrip(station){
        stationInArray = trainlines[index].stations.indexOf(station);
        richmond = trainlines[index].stations.indexOf('Richmond');
        var tripLeg = trainlines[index].stations.slice(richmond, stationInArray + 1);
+       tripLeg = tripLeg.join(' --> ');
        return tripLeg;
      }
   }
@@ -45,8 +47,16 @@ function endTrip(station){
 
 
 var createTrip = function(start, destination){
-    var beforeSwitch = startTrip(start);
-    var afterSwitch = endTrip(destination);
+    var firstLeg = startTrip(start);
+    var secondLeg = endTrip(destination);
+//    console.log(beforeSwitch + " --> Richmond --> " + afterSwitch);
 
-    console.log(beforeSwitch + " --> Richmond --> " + afterSwitch);
+    // turn arrays into strings for display
+    var trip = [firstLeg, secondLeg].join(' --> ');
+    console.log(trip);
+
+    // Lets show the trip!
+    document.querySelector('.start-station').innerHTML = start;
+    document.querySelector('.dest-station').innerHTML = destination;
+    document.querySelector('.trip').innerHTML = trip;
 };
