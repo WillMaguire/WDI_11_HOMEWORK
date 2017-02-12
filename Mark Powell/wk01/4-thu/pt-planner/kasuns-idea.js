@@ -1,29 +1,38 @@
-var sandringham = ['Flagstaff','Melbourne Central', 'Parliament','Richmond','Kooyong','Tooronga'];
-var glenWaverly = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'];
-var alamein = ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'];
-
-//
-// // array of objects
-// var trainLines = [
-//     {
-//       name: 'sandringhamLine',
-//       stations: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie']
-//     },
-//     {
-//       name: 'glenWaverlyLine',
-//       stations: ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
-//     },
-//     {
-//       name: 'alameinLine',
-//       stations: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie']
-//     }
-//   ];
+// var sandringham = ['Flagstaff','Melbourne Central', 'Parliament','Richmond','Kooyong','Tooronga'];
+// var glenWaverly = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'];
+// var alamein = ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'];
 
 
+// array of objects
+var trainlines = [
+    {
+    name: 'Alamein',
+    stations:['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
+  },
+    {
+    name: 'Glen Waverley',
+    stations: ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'],
+  },
+  {
+    name: 'Sandringham',
+    stations: ['Tooronga', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
+  },
+];
 
-  var trainLines = {
-      sandringhamLine: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
-      glenWaverlyLine: ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'],
-      alameinLine: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie']
-    };
-    // To access sandringhamLine we would have to use trainLines["sandringhamLine"] or trainLines.sandringhamLine;
+function createLeg (station){
+  for(var i = 0; i < trainlines.length; i++) {
+     if(trainlines[i].stations.indexOf(station) > -1 ) {
+       index = i;
+       stationInArray = trainlines[index].stations.indexOf(station);
+       richmond = trainlines[index].stations.indexOf('Richmond');
+       var tripLeg = trainlines[index].stations.slice(stationInArray, richmond);
+       return tripLeg;
+     }
+  }
+}
+
+var createTrip = function(start, destination){
+    
+
+
+};
