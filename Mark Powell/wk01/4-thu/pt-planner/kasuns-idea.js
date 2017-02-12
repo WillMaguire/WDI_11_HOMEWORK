@@ -19,7 +19,7 @@ var trainlines = [
   },
 ];
 
-function createLeg (station){
+function startTrip(station){
   for(var i = 0; i < trainlines.length; i++) {
      if(trainlines[i].stations.indexOf(station) > -1 ) {
        index = i;
@@ -31,8 +31,22 @@ function createLeg (station){
   }
 }
 
+function endTrip(station){
+  for(var i = 0; i < trainlines.length; i++) {
+     if(trainlines[i].stations.indexOf(station) > -1 ) {
+       index = i;
+       stationInArray = trainlines[index].stations.indexOf(station);
+       richmond = trainlines[index].stations.indexOf('Richmond');
+       var tripLeg = trainlines[index].stations.slice(richmond, stationInArray + 1);
+       return tripLeg;
+     }
+  }
+}
+
+
 var createTrip = function(start, destination){
-    
+    var beforeSwitch = startTrip(start);
+    var afterSwitch = endTrip(destination);
 
-
+    console.log(beforeSwitch + " --> Richmond --> " + afterSwitch);
 };
