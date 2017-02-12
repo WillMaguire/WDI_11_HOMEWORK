@@ -1,9 +1,10 @@
 console.log("train station.js connected!");
 //variables
   var intersectStation = "Richmond";
-  var originStation = "Hawthorn";
-  var destinationStation = "Windsor";
-
+  var originStation = "Flinders Street";
+  var destinationStation = "Tooronga";
+  var originToRichmondArray = [];
+  var destToRichmondArray = [];
 //station, key/value pairs
 
   var trainLine = [
@@ -114,5 +115,32 @@ console.log("train station.js connected!");
 	function  printInformationToConsole (originStation, destinationStation, stops) {
     console.log("origin: " + originStation + "\n" + "\n" + "destination: " + destinationStation + "\n" +"\n" + stops + " stops total");
   }
-
   printInformationToConsole(originStation, destinationStation, stops);
+
+  if (originStationIndex > originInstesectIndex) {
+    for (var i = originStationIndex; i > originInstesectIndex; i--) {
+
+       originToRichmondArray.push(trainLine[originLineIndex].station[i], "---->" );
+     }//for close
+   } else {
+      for (var i = originStationIndex; i < originInstesectIndex; i++) {
+
+         originToRichmondArray.push(trainLine[originLineIndex].station[i], "---->");
+    } //for close
+  }//else close
+originToRichmondArray.push(trainLine[destLineIndex].station[destIntersectIndex])
+  if (destStationIndex > destIntersectIndex) {
+    for (var i = destStationIndex; i > destIntersectIndex; i--) {
+
+       destToRichmondArray.push(trainLine[destLineIndex].station[i], "---->");
+     }//for close
+   } else {
+      for (var i = destStationIndex; i < destIntersectIndex; i++) {
+
+         destToRichmondArray.push(trainLine[destLineIndex].station[i], "---->");
+    } //for close
+
+  }//else close
+
+
+console.log(originToRichmondArray +" ----> "+destToRichmondArray);
