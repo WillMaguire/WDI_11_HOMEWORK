@@ -1,91 +1,146 @@
 console.log("train station.js connected!");
 //variables
-var intersectStation = "Richmond";
-var originStation = "Flinders Street";
-var originLine = "";
-var destLine = "";
-var destinationStation = "Toronga";
-var destinationLineName ="";
-var stationStops = 0;
+  var intersectStation = "Richmond";
+  var originStation = "Flinders Street";
+  var destinationStation = "Tooronga";
+  var originToRichmondArray = [];
+  var destToRichmondArray = [];
+//station, key/value pairs
+
+  var trainLine = [
+    {
+    name: 'Alamein',
+    station: ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'],
+  },
+    {
+    name: 'Glen Waverley',
+    station: ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'],
+  },
+  {
+    name: 'Sandringham',
+    station: ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
+  },
+  ];
+
+//find the  array index number of the origin STATION
+	function indexNoOriginStation (trainLine, originStation) {
+
+    for (var x = 0; x < trainLine.length; x++) {
+        for (var y = 0; y < trainLine[x].station.length; y++) {
+            if (trainLine[x].station[y] === originStation) {
+              var originStationInd = y;
+            }//if statement close
+        }//inner for loop close
+      }//outer for loop close
+
+      return originStationInd
+  };
+
+  var originStationIndex = indexNoOriginStation(trainLine, originStation);
+
+  //find the index number of the origin LINE
+   function indexNoOriginLine (trainLine, originStation) {
+
+     for (var x = 0; x < trainLine.length; x++) {
+         for (var y = 0; y < trainLine[x].station.length; y++) {
+             if (trainLine[x].station[y] === originStation) {
+               var originStationLineInd = x;
+             }//if statement close
+         }//inner for loop close
+       }//outer for loop close
+       return originStationLineInd
+  };
+  var originLineIndex = indexNoOriginLine(trainLine, originStation);
 
 
-//station
-  var alamein = ['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'] ;
-  var glenWaverley = ['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'];
-  var sandringham = ['Tooronga', 'Richmond', 'South Yarra', 'Prahran', 'Windsor'];
+  //find the Origin station richmond stop
+    for (var i = 0; i < trainLine[originLineIndex].station.length; i++) {
+      if (trainLine[originLineIndex].station[i] === intersectStation) {
+          var originInstesectIndex = trainLine[originLineIndex].station.indexOf(intersectStation);
+      }
+    }
+
+  //find the index number of the DESTINATION STATION
+	function indexNoDestStation (trainLine, destinationStation) {
+
+    for (var x = 0; x < trainLine.length; x++) {
+        for (var y = 0; y < trainLine[x].station.length; y++) {
+            if (trainLine[x].station[y] === destinationStation) {
+              var destStationInd = y;
+            }//if statement close
+        }//inner for loop close
+      }//outer for loop close
+      return destStationInd
+  }
+  var destStationIndex = indexNoDestStation(trainLine, destinationStation);
+
+//find the index number of the DESTINATION LINE
+	function indexNoDestLine (trainLine, destinationStation) {
+    for (var x = 0; x < trainLine.length; x++) {
+        for (var y = 0; y < trainLine[x].station.length; y++) {
+            if (trainLine[x].station[y] === destinationStation) {
+              var destStationLineInd = x;
+            }//if statement close
+        }//inner for loop close
+      }//outer for loop close
+      return destStationLineInd
+ };
+  var destLineIndex = indexNoDestLine(trainLine, destinationStation);
+
+  //find the destination station richmond stop
+  for (var i = 0; i < trainLine[destLineIndex].station.length; i++) {
+    if (trainLine[destLineIndex].station[i] === intersectStation) {
+        var destIntersectIndex = trainLine[destLineIndex].station.indexOf(intersectStation);
+    }
+  }
 
 
+  function calculateStops (destStationIndex, originStationIndex, originInstesectIndex, destIntersectIndex) {
+    if (originStationIndex - originInstesectIndex < 0 ) {
+      var originStops = originInstesectIndex - originStationIndex;
+    } else {
+      var originStops = originStationIndex - originInstesectIndex;
+    }
 
-//identify the origin location
+    if (destStationIndex -destIntersectIndex < 0 ) {
+      var destStops  = destIntersectIndex - destStationIndex;
+    } else {
+      var destStops  = destStationIndex -destIntersectIndex;
+    }
 
-if (alamein.indexOf(originStation) != -1 ) {
+      return stops = originStops+destStops
+  }
+  var stops = calculateStops(destStationIndex, originStationIndex, originInstesectIndex, destIntersectIndex, trainLine);
 
-  var originNum = alamein.indexOf(originStation);
-  originLine = "alamein";
-} else if (glenWaverley.indexOf(originStation) != -1) {
-  var originNum = glenWaverley.indexOf(originStation);
-  originLine = "glenWaverley";
-} else if (sandringham.indexOf(originStation) != -1)  {
-  var originNum = sandringham.indexOf(originStation) ;
-  originLine = "sandringham";
-}
+	function  printInformationToConsole (originStation, destinationStation, stops) {
+    console.log("origin: " + originStation + "\n" + "\n" + "destination: " + destinationStation + "\n" +"\n" + stops + " stops total");
+  }
+  printInformationToConsole(originStation, destinationStation, stops);
 
-//identify the destination location
-if (alamein.indexOf(destinationStation) != -1 ) {
-  var destinationNum = alamein.indexOf(destinationStation);
-  destLine = "alamein";
-} else if (glenWaverley.indexOf(destinationStation) != -1) {
-  var destinationNum = glenWaverley.indexOf(destinationStation);
-  destLine = "glenWaverley";
-} else if (sandringham.indexOf(destinationStation) != -1)  {
-  var destinationNum = sandringham.indexOf(destinationStation) ;
-  destLine = "sandringham";
-}
+  if (originStationIndex > originInstesectIndex) {
+    for (var i = originStationIndex; i > originInstesectIndex; i--) {
 
-//console log the origin and destination including index numbers.
-console.log("Origin: " + originStation +" " + originNum );
-console.log("Destination: " + destinationStation +" " + destinationNum );
+       originToRichmondArray.push(trainLine[originLineIndex].station[i], "---->" );
+     }//for close
+   } else {
+      for (var i = originStationIndex; i < originInstesectIndex; i++) {
 
-//identify the intersection origin
-if (originLine === "alamein") {
-  var richLocOrigin = alamein.indexOf(intersectStation);
+         originToRichmondArray.push(trainLine[originLineIndex].station[i], "---->");
+    } //for close
+  }//else close
+originToRichmondArray.push(trainLine[destLineIndex].station[destIntersectIndex])
+  if (destStationIndex > destIntersectIndex) {
+    for (var i = destStationIndex; i > destIntersectIndex; i--) {
 
-} else if (originLine === "glenWaverley") {
-  var richLocOrigin = glenWaverley.indexOf(intersectStation);
+       destToRichmondArray.push(trainLine[destLineIndex].station[i], "---->");
+     }//for close
+   } else {
+      for (var i = destStationIndex; i < destIntersectIndex; i++) {
 
-} else if (originLine === "sandringham")  {
-  var richLocOrigin = sandringham.indexOf(intersectStation); ;
+         destToRichmondArray.push(trainLine[destLineIndex].station[i], "---->");
+    } //for close
 
-}
-console.log(richLocOrigin);
+  }//else close
 
-//identify the intersection of destination
-//identify the intersection origin
-if (destLine === "alamein") {
-  var richLocDest = alamein.indexOf(intersectStation);
 
-} else if (destLine === "glenWaverley") {
-  var richLocdest = glenWaverley.indexOf(intersectStation);
-
-} else if (destLine === "sandringham")  {
-  var richLocDest = sandringham.indexOf(intersectStation); ;
-
-}
-console.log("origin richmond stops: " + richLocOrigin);
-console.log("destination richmond stops: " +richLocDest);
-stationStops = ((originNum +1) + (destinationNum+1));
-console.log("orgin to richmond =" + stationStops);
-
-//confirm the number of stations between Origin and Richmond
-//
-// if (stationStops < 0) {
-//
-//   stationStops = richLocation - (originNum + destinationNum);
-// } else {
-//   stationStops;
-// }
-
-//print origin to destination station
-//
-//
-console.log("Origin: " + originStation + "\n\n" + "Destination: " + destinationStation + "\n\n" + stationStops + " stops total");
+console.log(originToRichmondArray +" ----> "+destToRichmondArray);
