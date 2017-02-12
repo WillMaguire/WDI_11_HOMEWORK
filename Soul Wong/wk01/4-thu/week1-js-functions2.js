@@ -6,7 +6,7 @@
 
 var calculateAge = function(birthYear,currentYear){
 	var baseAge = currentYear - birthYear;
-	return "You are either "+baseAge+" or "+(baseAge+1);
+	return "You are either "+baseAge+" or "+(baseAge-1);
 }
 
 
@@ -33,7 +33,7 @@ var lengths = function(arrayOfStrings){
 // raised to the power of the third number.
 
  var transmogrifier = function(a,b,c){
- 	return (a * b) ^ c;
+ 	return Math.power((a * b),c);
  }
 
 // 4. Write a function `wordReverse` that accepts a single argument, a string. The
@@ -41,7 +41,7 @@ var lengths = function(arrayOfStrings){
 // about punctuation.
 
 var wordReverse = function(word){
-	var array = word.split('');
+	var array = word.split(' ');
 	array.reverse();
-	return array.join("");
+	return array.join(' ');
 }

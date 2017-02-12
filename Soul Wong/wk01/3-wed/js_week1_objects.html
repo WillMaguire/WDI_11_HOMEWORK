@@ -18,8 +18,11 @@
   }
 
   //The Reading List
-  var booksCollection = [{"title":"The Hobbit","author":"J.R.R Tolkien","alreadyRead":false},
-  {"title":"The Lord of the Rings","author":"J.R.R Tolkien","alreadyRead":true}];
+  var booksCollection = [{
+    "title":"The Hobbit","author":"J.R.R Tolkien","alreadyRead":false
+  },{"title":"The Lord of the Rings","author":"J.R.R Tolkien","alreadyRead":true
+  }];
+
   for(var x = 0; x < booksCollection.length;x++){
     console.log(booksCollection[x]['title']+ " by " + booksCollection[x]["author"]);
     if(booksCollection[x].alreadyRead){
