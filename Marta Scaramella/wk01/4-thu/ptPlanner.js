@@ -71,7 +71,7 @@ else {
       trip2.push(" --> ");
   }
   trip2.pop();
-  q.join(' ')
+  trip2.join(' ')
   trip2 = trip2.join('');
   var trip2Distance = destinationIntersectionNodeIndex - destinationLineObjectIndex;
 }
