@@ -1,0 +1,71 @@
+/*header {*/
+/*background-image: url('ecardly_CSS/images/background.jpg') ;*/
+/*width: 806px;*/
+/*}*/
+/*body {*/
+  /*background-color: #dbdbdb;*/
+  /*background-size: 100px;*/
+
+body {
+  height: 100px;
+  background-color: #D3D3D3;
+  background-repeat: repeat-x;
+  background-image: url(ecardly_CSS/images/background.jpg);
+}
+
+/*.logo {*/
+  /*height: : 170px;*/
+  /*background-image: url(ecardly_CSS/images/logo.png);*/
+
+/*}*/
+
+.sidebar {
+  display: inline-block;
+  width: 38%;
+  vertical-align: top;
+  margin: auto;
+  background-color: white;
+
+
+}
+
+.articles {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  background-color: white;
+
+}
+/*.square {*/
+  /*background-color: white;*/
+  /*width: 400px;*/
+  /*height: 400px;*/
+  /*padding-left: 20px;*/
+  /*padding-right: 20px;*/
+/*}*/
+
+.articles img {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;;
+
+  margin: 0;
+}
+
+mark.red {
+  color: red;
+  background: none;
+}
+
+
+footer {
+  display: inline-block;
+  margin: 0;
+  clear: both;
+  text-align: center;
+}
