@@ -7,18 +7,16 @@ var students = [
   'Sandesh','Will','William','Zach','Gerald','Mark','Soul'
 ];
 
-var makeGroups = function(arrayName, groupSize){
-  for (var i = 0; i <= arrayName.length; i++) {
-    //console.log(arrayName[i]);
-    var newArray = [];
-    if (newArray.length <= groupSize) {
-      var student = arrayName.shift();
-      newArray.push(student);
-      students = arrayName.push(newArray);
+var makeGroups = function(groupSize){
+  // console.log(students);
+  var students = [
+    'Alfons','Aniko','Barry','Gatluak','Helmi',
+    'Julian','Kerry','Kevin','Marta','Samantha',
+    'Sandesh','Will','William','Zach','Gerald','Mark','Soul'
+  ];
 
-    }
-    return students;
-
+  while (students.length > 0) {
+    groups = students.splice(0,groupSize);
   }
 };
   // return a nested array of groups, i.e [[student, student],[student,student], [student, student]]
