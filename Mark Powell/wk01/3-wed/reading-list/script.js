@@ -38,6 +38,4 @@ for (var i = 0; i < readingList.length; i++) {
   } else {
     console.log('You still need to read "' + readingList[i].title + '" by ' + readingList[i].author);
   }
-
-
 }

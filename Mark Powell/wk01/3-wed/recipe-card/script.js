@@ -2,7 +2,7 @@ var tacos = {
   name: 'Mexican Tacos',
   serves: 4,
   contents: [
-    "Meat (Chicken, Fish, Beef, Lamb)",
+    "Fish",
     "Guacamole",
     "Taco Shells (Hard or Soft)",
     "Cilantro",
@@ -11,9 +11,14 @@ var tacos = {
   ]
 };
 
-console.log("Name: " +tacos.name);
+console.log("Name: " + tacos.name);
 console.log("Serves: " + tacos.serves);
 console.log("Ingredients: ");
-for (var i = 0; i < tacos.contents.length; i++) {
-  console.log("- " + tacos.contents[i] );
-}
+console.log(
+  tacos.contents.join(" \n")
+);
+
+// Alternatively, use a for loop to go through 'contents' array of ingredients
+// for (var i = 0; i < tacos.contents.length; i++) {
+//   console.log("- " + tacos.contents[i] );
+// }
