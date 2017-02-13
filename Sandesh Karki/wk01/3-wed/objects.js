@@ -49,3 +49,19 @@ function myFav(movie){
   + "Stars " + movie.stars.join(","));
 }
 myFav(movie);
+
+
+
+
+
+
+
+
+var trainline= [
+				{alamein : ["Flinders Street", "Richmond", "East Richmond", "Burnley", 
+              				"Hawthorn", "Glenferrie"]},
+				{glenWaverly : ["Flagstaff", "Melbourne Central", "Parliament", 
+                 			    "Richmond", "Kooyong", "Tooronga"]},
+				{sandringham : ["Southern Cross", "Richmond", "South Yarra", "Prahran", 
+                                "Windsor"]}
+               ];
