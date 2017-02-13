@@ -1,0 +1,79 @@
+body {
+  background-color: lightgrey;
+  color: black;
+  background-image: url('/home/will/WDI/fullslack/homework/WDI_11_HOMEWORK/Will Maguire/wk02/1-mon/ecardly_CSS/images/background.jpg');
+  background-repeat: repeat-x;
+
+}
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+#logo {
+  text-align: center;
+}
+
+.leftPanel {
+  background: white;
+  float:left;
+  width: 65%;
+  display: inline;
+  padding: 15px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.leftImage {
+  margin: inherit;
+  padding: inherit;
+
+
+}
+
+.rightPanel {
+  background: white;
+  float:left;
+  width: 25%;
+  display: inline;
+  margin-top: 10px;
+  padding: 15px
+}
+
+.sidebar-lists {
+  padding: inherit;
+}
+
+.rightImages {
+  padding: 10px 0 5px 0 ;
+  size: 50%;
+}
+ li {
+   list-style-type: none;
+   font-size: 15px;
+   font-weight: bold;
+ }
+.pfooter {
+  margin: inherit;
+  border-top: 1px black dotted;
+  border-bottom: 1px black solid;
+}
+.red {
+  color: red;
+}
+.soc_media {
+  list-style-type: none;
+  display: inline;
+}
+
+footer {
+  margin: 1px;
+  clear: both;
+  padding-top: 5px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+.class {
+  color: red;
+}
