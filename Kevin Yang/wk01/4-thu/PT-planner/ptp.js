@@ -19,7 +19,6 @@ var trainlines = [
 var commonStop = [trainlines[0].stops[1],trainlines[1].stops[3],trainlines[2].stops[1]];
 var origin = prompt('Where do you want to start? i.e. Train stations');
 var destination = prompt('Where would you like to go?');
-
 var sliced = [];
 
 // var originStop = trainlines[0].stops.indexOf(origin);
@@ -48,7 +47,7 @@ for (var i = 0; i< trainlines.length; i++){
   var originStop = trainStops.indexOf(origin);
   var destinationStop = trainStops.indexOf(destination);
 
-  var intersection = trainlines[i].stops.indexOf(commonStop);
+  var intersection = trainlines[i].stops.indexOf(commonStop[i]);
 
 if (originStop >= 0 && destinationStop >= 0){
   if(trainStops.indexOf(origin) > trainStops.indexOf(destination)){
@@ -72,7 +71,7 @@ break;
     if (destinationStop >= 0) {
 
         if (intersection >= destinationStop) {
-          sliced = sliced.concat(trainStops.slice(destinationStop, intersection).reverse());
+          sliced = sliced.concat(trainStops.slice(destinationStop, intersection +1).reverse());
         } else {
           sliced = sliced.concat(trainStops.slice(intersection + 1, destinationStop + 1));
         }
