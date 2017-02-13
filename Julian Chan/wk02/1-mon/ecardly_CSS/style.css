@@ -7,11 +7,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-body > div {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
 header {
   background: url("images/background.jpg");
   background-repeat: repeat-x;
@@ -19,8 +14,19 @@ header {
   margin-bottom: 2em;
 }
 
-aside, .wrapper {
+body > div {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper, aside {
   background-color: white;
+}
+
+.wrapper {
+  width: 70%;
+  padding: 1em;
+  float: left;
 }
 
 article {
@@ -33,12 +39,12 @@ aside {
   width: 27%;
 }
 
-h4, li {
-  margin-bottom: .5em;
-}
-
 aside > div {
   margin-bottom: 2em;
+}
+
+h4, li {
+  margin-bottom: .5em;
 }
 
 p {
@@ -52,14 +58,18 @@ a {
   text-decoration: none;
 }
 
-aside a {
-  color: black;
-}
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.wrapper img, aside img {
+  width: 100%;
+}
+
+aside a {
+  color: black;
 }
 
 aside img {
@@ -71,16 +81,6 @@ footer {
   clear: both;
   text-align: center;
   padding: 2em;
-}
-
-.wrapper {
-  width: 70%;
-  padding: 1em;
-  float: left;
-}
-
-.wrapper img, aside img {
-  width: 100%;
 }
 
 .uppercase {
