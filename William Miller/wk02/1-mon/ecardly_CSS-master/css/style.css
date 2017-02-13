@@ -1,0 +1,53 @@
+header {
+  background-image: url(../images/background.jpg);
+  text-align: center;
+  height: 165px;
+}
+
+#logo {
+  margin: 10px 0 40px 0;
+}
+
+body {
+  background-color: #D3D3D3;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+.articles {
+  width: 600px;
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  margin: 120px 10px 110px 320px;
+  padding: 40px 40px 40px 40px;
+}
+
+.archive {
+  text-align: left;
+  width: 200px;
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  margin: 120px 120px 0 20px;
+  padding: 1% 1% 1% 1%;
+}
+
+.articles > img {
+  width: 100%;
+}
+
+.archive > img {
+  width: 100%;
+  padding: 10px 5px 10px 5px;
+}
+
+
+
+.pfooter {
+  border-top-style: dotted;
+  border-bottom-style: solid;
+}
+
+footer {
+  text-align: center;
+}
