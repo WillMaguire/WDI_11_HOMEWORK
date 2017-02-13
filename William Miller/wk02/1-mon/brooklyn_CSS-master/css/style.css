@@ -1,0 +1,8 @@
+h1 {
+  color: #d3d3d3;
+}
+
+.logos {
+  display: inline-block;
+  border: 5px solid black;
+}
