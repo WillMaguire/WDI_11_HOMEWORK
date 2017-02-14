@@ -1,0 +1,74 @@
+.container {
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.topheader {
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.topheader h1 {
+  color: red;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 200;
+  font-size: 3em;
+  display: inline-block;
+}
+
+.topheader h1, .topheader h2{
+  padding: 10px 0;
+}
+
+.topheader h2 {
+  font-size: 1.8em;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Helvetica", sans-serif;
+  font-weight: 200;
+  display: inline-block;
+}
+
+nav {
+  width: 100%;
+}
+
+.nav-item {
+
+  display: inline-block;
+  width: 16.3%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.nav-item a {
+  padding: 10px 0px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.main {
+  width: 620px;
+  display: inline-block;
+}
+
+.main img {
+  width: 100%;
+  height: auto;
+}
+
+.sidebar {
+  width: 300px;
+  display: inline-block;
+  float: right;
+  clear: left;
+}
+
+
+.main, .sidebar, .container, .div {
+  background-color: rgba(255, 0, 0, 0.3);
+}

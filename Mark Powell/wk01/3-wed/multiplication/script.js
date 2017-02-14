@@ -5,11 +5,9 @@ for (var i = 0; i <= 10; i++) {
   console.log(i + " * 9 = " + timesNine);
 }
 
-var outerArray = [];
-
-for(var i = 1; i < 10; i++){
-  for(var y = 1; y < 10; y++){
-      var multiplied = y * i;
-      console.log(i + " x " + y + " + " + "= " + multiplied );
+for(var num = 1; num < 10; num++){
+  for(var num2 = 1; num2 < 10; num2++){
+      var multiplied = num2 * num;
+      console.log(num + " x " + num2 + " " + "= " + multiplied );
   }
 }
