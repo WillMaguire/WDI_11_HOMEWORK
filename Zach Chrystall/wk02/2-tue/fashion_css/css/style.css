@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -19,12 +20,21 @@ aside {
   width: 30%;
   display: inline-block;
   vertical-align: top;
+  color: #949494;
 }
 
 nav {
   margin-top: 0;
   margin-bottom: 50px;
 }
+
+/* ---------- ALL PAGE ELEMENTS --------- */
+a {
+  color: red;
+  text-decoration: none;
+}
+
+
 
 /* ---------- ARTICLE ELEMENTS ---------- */
 article {
@@ -41,8 +51,6 @@ article > img {
   text-align: right;
   font-weight: 700;
   display: block;
-  text-decoration: none;
-  color: red;
 }
 
 /* ----------- ELEMENTS IN MAIN ---------*/
@@ -76,6 +84,16 @@ header h1,
 header h3 {
   display: inline-block;
   margin-bottom: 5px;
+  font-weight: 100;
+}
+
+header h1 {
+  color: red;
+}
+
+header h3 {
+  margin-left: 5px;
+  color: #bababa;
 }
 
 
@@ -91,9 +109,19 @@ header h3 {
   text-align: center;
 }
 
+.popular {
+  padding-top: 2em;
+  border-top: 2px solid #bababa;
+  margin-top: 3em;
+}
+
 /* ---------- FOOTER ---------------- */
 footer {
-  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+h5 {
+  color: #bababa;
 }
 
 /* ----------- GERENRAL HORIZONTAL LISTS ------- */
