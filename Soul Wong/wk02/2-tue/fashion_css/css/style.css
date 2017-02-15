@@ -1,15 +1,54 @@
+h1{
+	padding-right: 15px;
+	color:red;
+	display:inline-block;
+
+}
+h2{
+	display:inline-block;
+	color:gray;
+}
+
+.article::first-letter{
+	 font-size: 4em;
+  padding: 5px 10px;
+  float: left;
+  clear: right;
+}
+.dateHeading{
+	color:gray;
+}
+
+#copyrightLabel{
+	color:gray;
+}
+
 body{
 	font-family: 'Lato', sans-serif;
-border:1px solid purple;
+
+}
+
+#footer-nav{
+	list-style:none;
+	padding:0;
+}
+#footer-nav > li {
+		border:1px solid grey;
+		border-top:none;
+		border-bottom:none;
+		border-left:none;
+		display:inline-block;
+		padding-right:2px;
+		color:red;
 }
 
 #container{
-	border:1px solid purple;
-	width:950px;
+
+	width:970px;
 	margin: 0 auto;
 }
 .side_heading{
-	font-weight:bold;
+	font-weight:bolder;
 	color:gray;
 }
 #top_side{
@@ -18,11 +57,11 @@ border:1px solid purple;
 }
 #header{
 	width: 950px;
-	border:1px solid purple;
+	
 }
 #main-content{
 	width:650px;
-	border:1px solid red;
+	
 	display:inline-block;
 }
 
@@ -31,10 +70,11 @@ border:1px solid purple;
 }
 
 #side-bar{
+	margin-left:10px;
 	display:inline-block;
 	width: 290px;
 	 vertical-align:top;
-	 border:1px solid blue;
+	 
 }
 
 #nav-menu{
@@ -50,7 +90,7 @@ border:1px solid purple;
 	margin-right:1px;	
 	margin-left:0px;
 	padding:15px 45px 15px 45px;
-	border:1px solid black;
+	
 	width:500px;
 }
 
@@ -82,3 +122,6 @@ a {
 	font-weight:lighter;
 }
 
+#top-ten-list{
+	color:gray;
+}
