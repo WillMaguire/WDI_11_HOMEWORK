@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* --------- OVERALL STRUCTURE ------------ */
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main {
+  width: 65%;
+  margin-right: 5%;
+  display: inline-block;
+}
+
+aside {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+nav {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+/* ---------- ARTICLE ELEMENTS ---------- */
+article {
+  padding-bottom: 2em;
+  border-bottom: 2px solid #BABABA;
+  margin-bottom: 3em;
+}
+
+article > img {
+  max-width: 100%;
+}
+
+.continue {
+  text-align: right;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+  color: red;
+}
+
+/* ----------- ELEMENTS IN MAIN ---------*/
+
+main h3 {
+  font-size: 2em;
+  color: #BABABA;
+  margin: 0;
+}
+
+main h2 {
+  font-size: 2em;
+  color: #bababa;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.first-letter {
+  color: #bababa;
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+/* -------------- HEADER -------------- */
+header h1,
+header h3 {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+
+/* ---------- ASIDE -------------------- */
+.advert {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 250px;
+  background: #428bca;
+  color: #fff;
+  line-height: 250px;
+  font-size: 4em;
+  text-align: center;
+}
+
+/* ---------- FOOTER ---------------- */
+footer {
+  margin-top: 25px;
+}
+
+/* ----------- GERENRAL HORIZONTAL LISTS ------- */
+.horizontal {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.horizontal > li {
+  list-style: none;
+  display: inline-block;
+}
+
+/* -------- LIST ELEMENTS IN NAVIGATION ---------- */
+nav li {
+  width: 16.66667%;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+/* -------------- LIST ELEMENTS IN FOOTER ------------ */
+footer li {
+  color: red;
+}
+
+.list-middle {
+  border-left: 1px solid #BABABA;
+  border-right: 1px solid #BABABA;
+  padding: 5px;
+}
+
+.first {
+  border-right: 1px solid #BABABA;
+  padding: 5px 5px 5px 0;
+}
+
+.last {
+  border-left: 1px solid #BABABA;
+  padding: 5px;
+}

@@ -6,16 +6,20 @@ var sandringham = ['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Wind
 var lines = [alamein, glenWaverley, sandringham];
 var arrow = ' -----> '
 
-var start;
-var end;
+var start = null;
+var end = null;
+
 
 var main = function() {
-  // creatButtons();
+
   // input();
-  var start = prompt('where would you like to start?');
-  var end = prompt('where would you like to go?');
-  richmondCheck(start, end);
-  printResult(startIndex, endIndex);
+  // var start = prompt('where would you like to start?');
+  // var end = prompt('where would you like to go?');
+  if (start !== null && end !== null) {
+    var trainStopIndexes = richmondCheck(start, end);
+    printResult(trainStopIndexes[0], trainStopIndexes[1]);
+
+  }
 }
 
 //find all the stops between here and there.
@@ -59,6 +63,7 @@ var richmondCheck = function(start, end) {
     startIndex = findIndexes(start);
     endIndex = findIndexes(end);
   }
+  return [startIndex, endIndex]
 }
 
 var printResult = function(startIndex, endIndex) {
@@ -71,30 +76,34 @@ var printResult = function(startIndex, endIndex) {
     secondLine = findStops(richOnEndLine, endIndex);
     console.log(firstLine.join(arrow) + '| Change at ' + secondLine.join(arrow) + ' \n \nTotal stops: ' + (firstLine.length + secondLine.length - 1));
   }
+  start = null;
+  end = null;
 }
 
-// var creatButtons = function() {
-//   for (var i = 0; i < lines.length; i++) {
-//     for (var j = 0; j < lines[i].length; j++) {
-//       var myLocations = document.getElementById('locations');
-//       var stopButton = document.createElement('li');
-//       stopButton.className = 'button';
-//       stopButton.innerHTML = lines[i][j];
-//       stopButton.setAttribute('data-card', lines[i][j]);
-//       stopButton.addEventListener('click', input);
-//       myLocations.appendChild(stopButton);
-//     }
-//   }
-// }
-//
-// locationsClicked = [];
-// var input = function() {
-//   locationsClicked.push(this.getAttribute('data-card'));
-//   if (locationsClicked.length === 2) {
-//     start = locationsClicked[0];
-//     end = locationsClicked[1];
-//     locationsClicked = [];
-//   }
-// }
+var creatButtons = function() {
+  for (var i = 0; i < lines.length; i++) {
+    for (var j = 0; j < lines[i].length; j++) {
+      var myLocations = document.getElementById('locations');
+      var stopButton = document.createElement('div');
+      stopButton.className = 'button';
+      stopButton.innerHTML = lines[i][j];
+      stopButton.setAttribute('data-card', lines[i][j]);
+      stopButton.addEventListener('click', input);
+      myLocations.appendChild(stopButton);
+    }
+  }
+}
 
-main();
+locationsClicked = [];
+var input = function() {
+  locationsClicked.push(this.getAttribute('data-card'));
+  if (locationsClicked.length === 2) {
+    start = locationsClicked[0];
+    end = locationsClicked[1];
+    main()
+    locationsClicked = [];
+  }
+  return [start, end];
+}
+
+creatButtons();
