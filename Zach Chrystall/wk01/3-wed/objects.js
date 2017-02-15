@@ -34,10 +34,10 @@ var books = [book1, book2, book3];
 
 
 for (var i = 0; i < books.length; i++) {
-  if (books[i].readAlready === false) {
-    console.log('You still need to read "' + books[i].title + '" by ' + books[i].author)
-  } else {
+  if (books[i].readAlready) {
     console.log('You have already read "' + books[i].title + '" by ' + books[i].author)
+  } else {
+    console.log('You still need to read "' + books[i].title + '" by ' + books[i].author)
   }
 }
 
