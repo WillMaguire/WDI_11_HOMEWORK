@@ -21,12 +21,16 @@ console.log("Super Mario!!");
     var currentLeft = parseInt(img.style.left);
 
     if (currentLeft < window.innerWidth - img.width && direction === 'right')  {
+      img.style.transform = "scaleX(1)";
+      img.style.transition = "all 0.100s linear"
       img.style.left = currentLeft + movePixel + 'px';
       } else {
         direction = 'left';
 
     if (currentLeft >= 0) {
       img.style.left = currentLeft - movePixel + 'px';
+      img.style.transform = "scaleX(-1)";
+      img.style.transition = "all 0.100s linear"
       } else {
         direction = 'right';
       }
