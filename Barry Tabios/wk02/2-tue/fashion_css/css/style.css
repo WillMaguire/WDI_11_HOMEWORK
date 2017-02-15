@@ -1,18 +1,25 @@
-h1.header1 {
-  display: inline-block;
-}
-
+h1.header1,
 h2.header2 {
-    display: inline-block;
+  display: inline-block;
+  font-style: normal;
 }
 
-.link{
+.header1 {
+  color: Red;
+}
+
+.header2 {
+  color: grey;
+}
+
+.link {
   display: inline-block;
   color: white;
   text-align: center;
   background-color: black;
   height:50px;
   width: 15%;
+  padding-top: 20px;
 }
 
 .main_page {
@@ -22,10 +29,31 @@ h2.header2 {
 }
 
 img{
-  width:90%;
+  width:100%;
+}
+
+.firstcharacter {
+  color: #cccccc;
+  float: left;
+  font-family: Georgia;
+  font-size: 30px;
+  line-height: 30px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+.continue {
+  color: Red;
+  text-align:right;
+  margin-rght: 10px;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .side_bar {
+  vertical-align: top;
   display: inline-block;
   width: 36%;
   margin-left: 10px;
@@ -38,6 +66,23 @@ img{
 
 }
 
+h1 {
+  margin-top: 10px;
+  font-style: Serif;
+}
+
+h2 {
+  color: gray;
+}
+
+.date {
+  margin-top: 40px;
+  font-size: 30px;
+  color: #cccccc;
+}
+
+.main_page,
+.
 .advert {
   height: 250px;
   width: 90%;
@@ -45,17 +90,26 @@ img{
 
 .bottom-link {
   display: inline-block;
-  border-right: solid grey;
-  font-size: 80%;
-  height: 20px;
-  width: 10%;
-}
-/*.main_page * {
-  margin-left: 20px;
-  margin-right: 20px;
+  border-right: thin solid grey;
+  font-size: 70%;
+  height: 10%;
+  width: 13%;
+  text-align: center;
 }
 
-//.side_bar * {
-  margin-left: 20px;
-  margin-right: 20px;
+.about {
+  color: #bfbfbf;
+}
+
+
+
+ul > li
+{
+    color: red;
+}
+
+.footer {
+  margin-top: 20px;
+  color: #cccccc;
+  font-style: 'Times News Roman';
 }
