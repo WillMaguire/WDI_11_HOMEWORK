@@ -1,81 +1,154 @@
+/*WRAPPER*/
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+/*WRAPPER END*/
 
-  nav li {
-
-    list-style: none;
-    display: inline-block;
-    width: 15%;
-    height: 60px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    border: 0px solid white;
-
+/*NAV BAR*/
+nav li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  list-style: none;
+  width: 15%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  border: 0px solid white;
+  display: inline-block;
   }
 
-.date {
+nav {
+  height: 100px;
+  width: 100%;
+  }
+/*NAVBAR END*/
+
+/*ABOUT US AND POPULAR*/
+aside li {
 font-family: 'Raleway', sans-serif;
-font-size: 25px;
-opacity: 0.2;
-margin: 0;
+color: red;
+}
+
+.article-wrapper {
+  margin-left: 45px;
+  width: 700px;
+}
+
+aside {
+  width: 300px;
+  length: 800px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+/*ABOUT US AND POPULAR END*/
+
+
+/*HEADINGS*/
+
+.date {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  opacity: 0.2;
+  margin: 0;
 }
 
 #heading-major {
   margin-left: 50px;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 40px;
+  font-size: 3em;
   color: red;
+  margin-right: 15px;
 }
 
 .heading-minor {
   font-family: 'Raleway', sans-serif;
-  font-size: 25px;
+  font-size: 2em;
   opacity: 0.5;
-
-
-}
-.wrapper {
-  display: inline-block;
-  width: 80%;
-  height: 1500px;
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: mistyrose;
-
 }
 
+h3 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.5em;
+  opacity: 0.5;
+  text-align: center;
+}
+
+/*HEADINGS END*/
+
+
+/*IMAGES*/
 .imgarticle {
   margin-top: 10px;
-  width: 700px
-
+  width: 700px;
 }
 
 .ad {
-
   height: 200px;
-  width: 200px;
+  width: 300px;
+  margin-right: 10%;
 }
+/*IMAGES END*/
 
+/*PARAGRAPH AND LINKS*/
 p {
-
   font-family: 'Raleway', sans-serif;
+}
+
+a, u {
+    text-decoration: none;
+    color: red;
+}
+
+.continue-text {
+  color: red;
+  font-weight: bolder;
+
+}
+/*PARAGRAPH AND LINKS END*/
+
+/*FOOTER*/
+
+footer li{
+  text-align: left;
+  list-style: none;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  color: red;
 
 }
 
-article {
-
+footer {
+  margin-top: 30px;
+  width: 100%;
   margin-left: 45px;
-  width: 700px
+}
+
+footer p {
+  margin-left: 45px;
 
 }
 
-aside {
+/*FOOTER END*/
 
-  width: 200px;
-  length: 800px;
-  background-color: plum;
-  position:relative;
-  left: 70%;
-  bottom: 69.5%;
+@media (max-width: 40em) {
+  body {
+    width: 60%;
+    }
 
+  nav li {
+    display: block;
+    text-align: left;
+    }
+
+    #heading-major {
+      font-size: 1em;
+
+    }
+
+    .heading-minor {
+      font-size: 1em;
+    }
 }
