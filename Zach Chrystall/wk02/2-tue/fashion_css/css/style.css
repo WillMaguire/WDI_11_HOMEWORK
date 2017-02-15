@@ -3,10 +3,9 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-
 /* --------- OVERALL STRUCTURE ------------ */
 .wrapper {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -34,8 +33,6 @@ a {
   text-decoration: none;
 }
 
-
-
 /* ---------- ARTICLE ELEMENTS ---------- */
 article {
   padding-bottom: 2em;
@@ -54,18 +51,19 @@ article > img {
 }
 
 /* ----------- ELEMENTS IN MAIN ---------*/
-
 main h3 {
   font-size: 2em;
   color: #BABABA;
   margin: 0;
+  font-weight: 100;
 }
 
 main h2 {
   font-size: 2em;
   color: #bababa;
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin-top: .25em;
+  margin-bottom: .25em;
+  font-weight: 100;
 }
 
 .first-letter {
@@ -96,13 +94,12 @@ header h3 {
   color: #bababa;
 }
 
-
 /* ---------- ASIDE -------------------- */
 .advert {
   max-width: 100%;
   margin: 0 auto;
   height: 250px;
-  background: #428bca;
+  background: #bababa;
   color: #fff;
   line-height: 250px;
   font-size: 4em;
