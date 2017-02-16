@@ -10,22 +10,42 @@
 <body>
   <h1>ONLINE BANK</h1>
 
-  <ul id="logo">
+      <div class = "container">
+
+    <ul id="logo">
     <li class="logo">LOGO</li>
   </ul>
 
-  <ul id="accounts">
-    <li class="savings">SAVINGS</li>
-    <li class ="checking">CHECKING</li>
-  </ul>
+      <div class="savings">
+        <h1>Savings A/C</h1>
+        <h2>Balance in your account:</h2>
+        <input class="sav_screen"type="sav_screen"readonly/>
+        <input class="sav_enter_amount_screen"type="text">
+        <button class="sav_deposit_button">Deposit</button>
+        <button class="sav_withdraw_button">Withdraw</button>
 
-  <input class="balance"type="sav_balance" readonly/><input class="balance" type="chq_balance"readonly/>
-  <input class="savings" type="text"/><input class="checking" type="text"/>
+      </div>
 
-  <button class="withdraw">WITHDRAW</button>
-  <button class="deposit">DEPOSIT</button>
-  <button class="withdraw">WITHDRAW</button>
-  <button class="deposit">DEPOSIT</button>
+        <div class="checking">
+          <h1>Checking A/C</h1>
+          <h2>Balance in your account:</h2>
+          <input class="chq_screen"type="sav_screen" readonly/>
+          <input class="chq_enter_amount_screen"type="text">
+          <button class="chq_deposit_button">Deposit</button>
+          <button class="chq_withdraw_button">Withdraw</button>
 
-</body>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
 </html>

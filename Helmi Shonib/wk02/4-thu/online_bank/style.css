@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 #logo {
   display: block;
   height: 40px;
@@ -9,10 +13,70 @@
   }
 
 .savings {
-  list-style: none;
-  display: block;
-  width: 100px;
-  height: 100px;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
   background: tomato;
-  
+  text-align: center;
+}
+
+.savings h1{
+  text-align: center;
+}
+.checking {
+  width: 400px;
+  height: 400px;
+  background: yellow;
+  text-align: center;
+  display: inline-block;
+}
+
+.sav_deposit_button {
+  position: relative;
+  top: 150px;
+  left: -90px;
+}
+
+.sav_withdraw_button {
+  position: relative;
+  top: 150px;
+  left: -50px;
+}
+
+.chq_deposit_button {
+  position: relative;
+  top: 150px;
+  left: -90px;
+}
+
+.chq_withdraw_button {
+  position: relative;
+  top: 150px;
+  left: -50px;
+}
+
+.sav_screen {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  background-color: cyan;
+}
+
+.sav_enter_amount_screen {
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+.chq_screen {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  background-color: cyan;
+}
+
+.chq_enter_amount_screen {
+  position: relative;
+  top: 100px;
+  left: 50px;
 }
