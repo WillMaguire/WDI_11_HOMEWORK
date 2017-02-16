@@ -10,23 +10,22 @@ h1 {
   text-align: center;
 }
 
-.savings {
+.row {
+  display: flex;
+  width:100%;
+  display: -webkit-flex;
+  justify-content: space-around;
+
+}
+.savings, .checking {
   border: 1px solid black;
-  height:250px;
+  height:220px;
   width: 250px;
   text-align: center;
   display: inline-block;
-  margin: 9%;
+
 }
 
-.checking {
-  border: 1px solid black;
-  height:250px;
-  width: 250px;
-  text-align: center;
-  display: inline-block;
-  margin: 9%;
-}
 
 input {
   display: block;
