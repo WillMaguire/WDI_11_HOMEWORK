@@ -1,10 +1,3 @@
-/*header {*/
-/*background-image: url('ecardly_CSS/images/background.jpg') ;*/
-/*width: 806px;*/
-/*}*/
-/*body {*/
-  /*background-color: #dbdbdb;*/
-  /*background-size: 100px;*/
 
 body {
   height: 100px;
@@ -13,11 +6,6 @@ body {
   background-image: url(ecardly_CSS/images/background.jpg);
 }
 
-/*.logo {*/
-  /*height: : 170px;*/
-  /*background-image: url(ecardly_CSS/images/logo.png);*/
-
-/*}*/
 
 .sidebar {
   display: inline-block;
@@ -25,8 +13,6 @@ body {
   vertical-align: top;
   margin: auto;
   background-color: white;
-
-
 }
 
 .articles {
@@ -34,15 +20,11 @@ body {
   width: 60%;
   vertical-align: top;
   background-color: white;
-
 }
-/*.square {*/
-  /*background-color: white;*/
-  /*width: 400px;*/
-  /*height: 400px;*/
-  /*padding-left: 20px;*/
-  /*padding-right: 20px;*/
-/*}*/
+.articles *{
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .articles img {
   width: 100%;
@@ -62,10 +44,9 @@ mark.red {
   background: none;
 }
 
-
 footer {
-  display: inline-block;
-  margin: 0;
-  clear: both;
+  /*display: inline-block;*/
+  /*margin: 0;*/
+  /*clear: both;*/
   text-align: center;
 }
