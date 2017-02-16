@@ -13,6 +13,11 @@ h1{
   font-size: 50px;
   margin-top: 0;
 }
+
+h3{
+  margin: 5px;
+  font-family: 'Barrio', cursive;
+}
 .central-blocks{
   margin-left: 300px;
 }
@@ -38,7 +43,22 @@ button{
 .savings{
  background-color: #00cca3;
 }
+.saving-balance{
+  background-color: #00cca3;
+  font-size: 20px;
+  width: 40%;
+  border-color: #00cca3;
+  font-family: 'Barrio', cursive;
+}
 
 .checking{
   background-color: #b3ff99;
+}
+
+.checking-balance{
+  background-color: #b3ff99;
+  font-size: 20px;
+  width: 40%;
+  border-color: #b3ff99;
+  font-family: 'Barrio', cursive;
 }
