@@ -134,10 +134,6 @@ li{
   line-height: 97%;
 }
 
-li: last-child {
-  border-right: 1px solid black;
-}
-
 ul.footer > li{
   text-align: left;
   border-right: 1px solid #e6e6e6;
