@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset='utf-8'>
+    </head>
+
+    <body>
+      <h4>this calculates the amount of starbursts that a person will need if they were to live
+      upto a certain age multiplied by starbusts they have per day</h4>
+    </body>
+
+  <script>
+
+    starBurst = function (age, amountPerDay) {
+      // this calculate the number of starBurst that will be need to last until life ends
+    numOfStarBurst = age * amountPerDay;
+    //this will log for example 109 * 6, and return the value that will be need to last until
+    // the person 109 years of age
+    console.log('You will need ' + numOfStarBurst + ' to last you until the ripe old age of ' + age)
+  }
+  //pass in any value to this function
+  starBurst(109, 6)
+  </script>
+</html>
+
+console.log('Welcome to Melbourne Public Transport Metro');
+
+var userOrigin = prompt('Current station')
+// where user gets on the train
+var userDestination = prompt('Final destination')
+
+// user change if line is !== going to Glen Waverley line, Sandringham or Alamein,
+// and are going to alamein, if (userAnswer === Burnley) if on sandringham and alamein line {
+// console.log('Please get off at Richmond ' train station)
+//} else if (userAnswer === Windsor) if user is on alamein or glen waverley line{
+//console.log ('please get off at Richmond train station')
+//} else if (userAnswer === glenferrie) that is user is on sandringham or glen waverley
+//}
+var intersectLine = 'richmond';
+
+// the station user is going to
+
+// objects of arrays showing the train line and the stops user can go if the take this line
+var alamein = ['flinders street', 'richmond', 'east richmond', 'burnley', 'hawthorn', 'glenferie'];
+
+var glenWaverley = ['flagstaff', 'melbourne central', 'richmond', 'kooyong', 'tooronga'];
+
+var sandringham = ['southern Cross', 'richmond', 'south Yara', 'prahan', 'windsor'];
+
+var wantThisLine = function (origin, destination) {
+  for (var a = 0; a <alamein.length; a++) {
+    if(userOrigin === alamein[a].length && userDestination === glenWaverley[f].length) {
+      console.log('You get on ');
+    }
+}
+ThisThatLine(userOrigin, userDestination);
+
+
+
+
+
+// All 3 train lines intersect at Richmond, but there are NO other intersection points as trains run express.
+//
+// Write a javascript program that works out display the journey when you give it an origin and destination.
+//
+// example:
+//
+//
+// origin: Melbourne Central
+// destination: Richmond
+//
+// Melbourne Central -----> Parliament -----> Richmond
+//
+// 2 stops total
+// You may want to hard code the origin and destination for easier testing in the beginning.
+//
+// Hints:
+//
+// Consider diagramming the lines by sketching out the train lines and their stops and intersection. Think about what data structure to use to store each line and all the stops on each line.
+//
+// The key to the lab is the intersection of the lines at Richmond.
+//
+// Non-Required Bonus:
+//
+// input validation
+// User must enter a line and station in the subway network
+// If the user enters something else, your program should handle it
+// Add additional lines
+// Resources
