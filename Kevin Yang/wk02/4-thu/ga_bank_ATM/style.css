@@ -1,0 +1,36 @@
+*{
+  font-family: 'Cinzel', serif;
+}
+
+img {
+  width: 25%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.savings {
+  border: 1px solid black;
+  height:250px;
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+  margin: 9%;
+}
+
+.checking {
+  border: 1px solid black;
+  height:250px;
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+  margin: 9%;
+}
+
+input {
+  display: block;
+  margin: 20%;
+  margin-top:10%;
+  margin-bottom: 0;
+}
