@@ -6,11 +6,11 @@ function printRan(min, max) {
             Ints += i + ',';
 
         if (i % 3 === 0){
-            Ints = "Cake";
-          } else if(+Ints % 5 === 0){
-            Ints = "Pudding";
-          } else if (+Ints % 3 === 0 && Ints % 5 === 0){
-            Ints = "CakePudding";
+            Ints += "Cake,";
+          } else if(i % 5 === 0){
+            Ints += "Pudding,";
+          } else if (i % 3 === 0 && i % 5 === 0){
+            Ints += "CakePudding,";
           }
         }
 
