@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Bank GA</header>
+  <main>
+    <div class="savings">
+      <h1>SAVINGS</h1>
+      <input class="savingsAccountInput" type="text" readOnly>
+      <input class="savingsInputAmount" type="text"> INPUT HERE
+      <button>Withdraw</button>
+      <button data-accountActivity="savings" class="savingsDeposit-btn">Deposit</button>
+    </div>
+    <div class="checking">
+      <h1>CHECKING</h1>
+      <input class="checkingAccountInput" type="text" readOnly>
+      <input class="checkingInputAmount" type="text"> INPUT HERE
+      <button>Withdraw</button>
+      <button>Deposit</button>
+    </div>
+  </main>
+
+  <script src="gaBankApp.js"></script>
+</body>
+</html>

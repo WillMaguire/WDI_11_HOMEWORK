@@ -1,0 +1,30 @@
+body{
+  width:968px;
+}
+
+header{
+  border: 1px solid red;
+  width: 968px;
+}
+
+main{
+  border: 1px solid red;
+  width: 700px;
+  height: 900px;
+  margin: 0 auto;
+}
+
+.savings{
+  border: 1px solid blue;
+  height:500px;
+  width:300px;
+  display:inline-block;
+}
+
+.checking{
+  border: 1px solid purple;
+  height:500px;
+  width:300px;
+  display:inline-block;
+
+}
