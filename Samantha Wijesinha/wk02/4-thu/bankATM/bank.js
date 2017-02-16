@@ -77,7 +77,7 @@ var withdrawFromChecking = function(checkingAmountInput) {
 withdrawCheckingBtn.addEventListener('click', function() {
 
   if ((checkingBalance - +checkingAmountInput.value) <0 &&  (savingsBalance - +checkingAmountInput.value) <0){
-    displayResultCheckingOutput.value = "$--";
+    displayResultCheckingOutput.textContent = "$--";
     document.querySelector('.message').innerHTML = "Not enough funds!"
 
   } else if (checkingBalance >= +checkingAmountInput.value){
