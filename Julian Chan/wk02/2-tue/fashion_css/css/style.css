@@ -1,0 +1,177 @@
+body {
+  width: 75%;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  display: inline-block;
+  margin: .5em 0;
+}
+
+h1 {
+  color: crimson;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-left: .7em;
+  vertical-align: .1em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: .4em 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+h2, aside {
+  color: gray;
+}
+
+header, h1, h2, h3, article > p::first-letter, li, footer {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
+header ul {
+  display: table;
+  table-layout: fixed;
+  border-spacing: .1em 0;
+  margin: 0 -.1em;
+  width: 100%;
+  text-align: center;
+}
+
+header li {
+  height: 3em;
+  background-color: black;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header a {
+  color: white;
+}
+
+nav > ul {
+  list-style: none;
+  padding: 0;
+}
+
+div, aside {
+  display: inline-block;
+  vertical-align: top;
+}
+
+body > div {
+  width: 65%;
+}
+
+.date {
+  margin-bottom: -.35em;
+}
+
+article {
+  padding: 1.5em 0;
+  border-bottom: 1px solid lightgray;
+}
+
+article > p::first-letter {
+  font-size: 4em;
+  float: left;
+  line-height: 0em;
+  margin: .45em .1em .5em 0;
+}
+
+.article-link {
+  text-align: right;
+}
+
+img, .article-link {
+  font-weight: bold;
+  width: 100%;
+}
+
+aside {
+  width: 30%;
+  margin: 3.5em 0 0 4%;
+}
+
+aside > div {
+  padding: 1.5em 0;
+}
+
+.date, article > p::first-letter, footer {
+  color: lightgray;
+}
+
+article > p, .article-link, h4, aside p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+}
+
+.ad-section {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+
+.ad-box {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-color: lightgray;
+}
+
+.ad-box > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.ad-box > div > div {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.ad {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Droid Serif", serif;
+  font-weight: bold;
+  font-size: 5em;
+}
+
+footer {
+  clear: both;
+  margin-bottom: 4em;
+}
+
+footer li {
+  float: left;
+  border-left: 1px solid lightgray;
+  padding: 0 .3em;
+  margin: 1em 0;
+}
+
+footer li:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+footer > p {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
