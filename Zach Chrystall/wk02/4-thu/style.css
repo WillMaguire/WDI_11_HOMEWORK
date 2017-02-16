@@ -1,6 +1,7 @@
 body {
   background-color: black;
   color: gold;
+  font-family: 'Cinzel', serif;
 }
 
 h1 {
@@ -8,7 +9,7 @@ h1 {
   font-size: 3em;
   vertical-align: top;
   margin-top: 0;
-  font-family: 'Cinzel', serif;
+
 }
 
 img {
@@ -53,4 +54,6 @@ button {
   height: 4em;
   background-color: gold;
   color: black;
+  margin: 4px;
+  border: 2px solid brown;
 }
