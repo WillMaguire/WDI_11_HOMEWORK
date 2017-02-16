@@ -1,0 +1,14 @@
+.box  {
+  width: 250px;
+  height: 200px;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.savings {
+  position-absolute
+  left: 50px;
+  text-align: justify;
+  color: yellow;
+
+}
