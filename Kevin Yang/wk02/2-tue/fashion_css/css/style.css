@@ -54,8 +54,7 @@ article > p::first-letter {
   color: #c9cacc;
   font-size: 55px;
   line-height: 50px;
-  display: inline;
-
+  float: left;
 }
 img {
   width: 100%;
