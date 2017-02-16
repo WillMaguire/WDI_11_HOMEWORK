@@ -40,6 +40,8 @@ var savingToCheck = function(){
   if(amountWithdraw <= currentCheckingAccount){
     currentCheckingAccount = currentCheckingAccount - amountWithdraw;
     checkingTextUpdate(currentCheckingAccount);
+  }else{
+    currentSavingsAccount = 0;
   }
 }
 
@@ -49,6 +51,8 @@ var checkToSaving = function(){
   if(amountWithdraw <= currentSavingsAccount){
     currentSavingsAccount = currentSavingsAccount - amountWithdraw;
     savingTextUpdate(currentSavingsAccount);
+  }else{
+    currentCheckingAccount = 0;
   }
 }
 
@@ -80,8 +84,8 @@ var checkingBalanceUpdate = function(amount){
 }
 
 var notEnoughFundsReset = function(){
-  savingBalance.textContent = 'inadequate funds';
-  checkingBalance.textContent = 'inadequate funds'
+  savingBalance.textContent = 'Inadequate Funds';
+  checkingBalance.textContent = 'Inadequate Funds'
   currentSavingsAccount = 0;
   currentCheckingAccount = 0;
 }
