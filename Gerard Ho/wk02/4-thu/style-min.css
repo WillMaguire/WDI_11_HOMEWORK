@@ -1,0 +1,81 @@
+body {
+  background: -webkit-linear-gradient(#212530, white);
+  background: linear-gradient(#212530, white);
+  background-repeat: no-repeat;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+
+header {
+  width: 100%;
+  height: 30px;
+  margin: 50px auto; }
+
+header h1 {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  height: 50px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase; }
+
+header img {
+  float: left;
+  width: 30%;
+  height: auto; }
+
+div.wrapper {
+  width: 50%;
+  margin: 0 auto; }
+
+div.savings {
+  margin-top: 70px;
+  clear: left;
+  float: left;
+  width: 50%;
+  text-align: center;
+  background-color: #2ECC40;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10%; }
+
+div.checking {
+  margin-top: 70px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  background-color: orange;
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10%; }
+
+div h2 {
+  text-transform: uppercase;
+  font-size: 30px; }
+
+input {
+  width: 80%;
+  height: 50px;
+  text-align: right;
+  font-size: 30px;
+  margin: 20px 0; }
+
+button {
+  width: 100px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: white; }
+
+button.withdrawBtn {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  float: left; }
+
+button.depositBtn {
+  margin-right: 40px;
+  float: right; }
+
+.balanceCSS {
+  font-size: 2em;
+  margin: 20px 0; }
