@@ -11,8 +11,8 @@ var savingsInput = document.querySelector('.savings-input');
 var checkingInput = document.querySelector('.checking-input');
 
 var updateAccountValues = function() {
-  document.querySelector('.savings-balance').innerHTML = '$' + savingsBalance.toFixed(2);
-  document.querySelector('.checking-balance').innerHTML = '$' + checkingBalance.toFixed(2);
+  document.querySelector('.savings-balance').innerHTML = '$' + numberWithCommas(savingsBalance.toFixed(2));
+  document.querySelector('.checking-balance').innerHTML = '$' + numberWithCommas(checkingBalance.toFixed(2));
   updateBackground()
   savingsInput.value = '';
   checkingInput.value = '';
@@ -96,6 +96,10 @@ var overdraft = function(fundsChange, accIndicator) {
       savingsBalance -= fundsChange;
     }
   }
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 
