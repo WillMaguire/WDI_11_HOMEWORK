@@ -21,7 +21,7 @@ var updateViews = function(accounts) {
       account.view.style.backgroundColor = 'gray';
     }
 
-    account.view.querySelector('.dollars-cents').textContent = Number(account.balance).toFixed(2);
+    account.view.querySelector('.dollars-cents').textContent = (account.balance).toFixed(2);
   });
 };
 
