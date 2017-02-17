@@ -10,6 +10,27 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+header{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 3em;
+}
+.logo{
+  display: inline-block;
+  height: 35px;
+  width: 300px;
+  background-image: url(logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.name {
+  display: inline-block;
+  font-size: 3em;
+  margin-right: 1em;
+}
+
 h2, p {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -84,4 +105,8 @@ input[type=button]:hover{
   /*display: inline-block;*/
   width: 80%;
   color: white;
+}
+
+.negative {
+  background-color: red;
 }
