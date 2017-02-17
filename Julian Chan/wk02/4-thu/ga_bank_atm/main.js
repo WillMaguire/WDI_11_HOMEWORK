@@ -11,8 +11,6 @@ var transact = function(account, byAmount) {
     account.balance = 0;
     account.overdraftBackup.balance += result;
   }
-
-  updateViews(accounts);
 };
 
 var updateViews = function(accounts) {
@@ -47,10 +45,12 @@ accounts.map(function(account) {
 
   account.view.querySelector('.withdraw-btn').addEventListener('click', function() {
     transact(account, -(+input.value));
+    updateViews(accounts);
   });
 
   account.view.querySelector('.deposit-btn').addEventListener('click', function() {
     transact(account, +input.value);
+    updateViews(accounts);
   });
 });
 
