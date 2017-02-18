@@ -17,23 +17,28 @@ function depositToAccount(amount, account){
   account.balance += amount;
 }
 
-function withdrawFromAccount(amount, account){
+  function withdrawFromAccount(amount, account, fromAccount){
   if (amount < account.balance) {
     account.balance -= amount;
-  } else {
+  } else if (amount > account.balance ) {
+    coverOverdraft (amount, account, fromAccount);
+    displayBalance();
   }
 }
-//
-// function coverOverdraft(amount, toAccount, fromAccount){
-//   //amount
-// }
+
+function coverOverdraft(amount, toAccount, fromAccount){
+  //amount to be covered
+  var amountToCover = amount - toAccount.balance;
+  toAccount.balance = 0;
+  fromAccount.balance -= amountToCover;
+}
 
 // Events
 document.querySelector('.savings-widthdraw-btn').addEventListener('click', function(){
   var amount = +document.querySelector('.input-amount-savings').value;
-  // debugger
-  withdrawFromAccount(amount, savingsAccount);
+  withdrawFromAccount(amount, savingsAccount, checkingAccount);
   document.querySelector('.saving-balance').textContent = +savingsAccount.balance.toFixed(2);
+  document.querySelector('.checking-balance').textContent = +checkingAccount.balance.toFixed(2);
   document.querySelector('.input-amount-savings').value = '';
 });
 
@@ -47,8 +52,9 @@ document.querySelector('.savings-deposit-btn').addEventListener('click', functio
 // CHecking account
 document.querySelector('.checking-widthdraw-btn').addEventListener('click', function(){
   var amount = +document.querySelector('.input-amount-checking').value;
-  withdrawFromAccount(amount, checkingAccount);
+  withdrawFromAccount(amount, checkingAccount, savingsAccount);
   document.querySelector('.checking-balance').textContent = checkingAccount.balance.toFixed(2);
+  document.querySelector('.saving-balance').textContent = savingsAccount.balance.toFixed(2);
   document.querySelector('.input-amount-checking').value = '';
 });
 
@@ -63,7 +69,6 @@ document.querySelector('.checking-deposit-btn').addEventListener('click', functi
 var displayBalance = function(){
   document.querySelector('.saving-balance').textContent = savingsAccount.balance;
   document.querySelector('.checking-balance').textContent = checkingAccount.balance;
-
   if (savingsAccount.balance < 1 ){
     savingAccountBox.classList.toggle("negative");
   } else if (checkingAccount.balance < 1) {
