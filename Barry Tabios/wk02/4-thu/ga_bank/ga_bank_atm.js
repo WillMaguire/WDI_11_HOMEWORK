@@ -1,48 +1,128 @@
 console.log('JAVASCRIPT ONLINE BANK');
 
-var savings = 30000;
-var cheque = 15000;
+var savings = 30000.00;
+var checking = 15000.00;
 
-var clearInputChequeAccount = document.querySelector('.chequeInput')
-var clearInputSavingsAccount = document.querySelector('.savingsInput')
-
-var chequeBalance = document.querySelector('.chequeBalanceOutput');
-var savingsBalance = document.querySelector('.savingsBalanceOutput');
+document.querySelector('.checking-balance-output').innerHTML = '$' + checking;
+document.querySelector('.savings-balance-output').innerHTML = '$' + savings;
 
 
-//Diferrent way of selecting DOM
-clearInputChequeAccount.addEventListener('click', function(){
-  clearInputChequeAccount.value = '';
+document.querySelector('.checking-input').addEventListener('click', function(){
+    document.querySelector('.checking-input').value = '';
+});
+
+document.querySelector('.savings-input').addEventListener('click', function(){
+  document.querySelector('.savings-input').value = '';
 });
 
 
-clearInputSavingsAccount.addEventListener('click', function(){
-  clearInputSavingsAccount.value = '';
+
+var accountZeroBalance = function(accountHasZeroBalance){
+  switch(accountHasZeroBalance) {
+
+    case 0:
+      document.querySelector('.checking-account').style.backgroundColor = '#A30000';
+      checking = 0;
+      document.querySelector('.checking-balance-output').innerHTML = '$' + checking;
+      break;
+
+    case 1:
+      document.querySelector('.savings-account').style.backgroundColor = '#A30000';
+      savings = 0;
+      document.querySelector('.savings-balance-output').innerHTML = '$' + savings;
+      break;
+
+    };
+
+};
+
+
+var accountDecider = function (decider){
+
+
+  switch(decider){
+
+      case 0:
+
+          var checkingAccountValidator = checking - (+document.querySelector('.checking-input').value);
+
+          if(checkingAccountValidator > 0){
+            checking = checking - (+document.querySelector('.checking-input').value);
+            document.querySelector('.checking-balance-output').textContent = '$' + checking;
+          };
+
+          if(checkingAccountValidator <= 0){
+            savingsAccountValidator = savings + checkingAccountValidator // this will subtract savings from -negative number
+
+            if (savingsAccountValidator<0){
+              break;
+            } else {
+              savings = savings + checkingAccountValidator; // this will subtract savings from -negative number
+              document.querySelector('.savings-balance-output').textContent = '$' + savings;
+              accountZeroBalance(0);
+            };
+          };
+
+          break;
+
+      case 1:
+
+          checking = checking + (+document.querySelector('.checking-input').value);
+          document.querySelector('.checking-balance-output').textContent = '$' + checking;
+
+          break;
+
+      case 2:
+          var savingsAccountValidator = savings - (+document.querySelector('.savings-input').value);
+
+
+          if(savingsAccountValidator > 0){
+            savings = savings - (+document.querySelector('.savings-input').value);
+            document.querySelector('.savings-balance-output').textContent = '$' + savings;
+          };
+
+          if(savingsAccountValidator <= 0){
+            checkingAccountValidator = checking + savingsAccountValidator // this will subtract savings from -negative number
+
+            if (checkingAccountValidator<0){
+              break;
+            } else {
+              checking = checking + savingsAccountValidator; // this will subtract savings from -negative number
+              document.querySelector('.checking-balance-output').textContent = '$' + checking;
+              accountZeroBalance(1);
+            };
+          };
+
+
+
+          break;
+
+      case 3:
+
+          savings = savings + (+document.querySelector('.savings-input').value);
+          document.querySelector('.savings-balance-output').textContent = '$' + savings;
+
+          break;
+
+      };
+};
+
+
+
+// checking account
+document.querySelector('.checking-withdraw-btn').addEventListener('click', function(){
+  accountDecider(0);
 });
 
-
-// USES IDs to listen for events.
-chequeWithdrawBtn.addEventListener('click',function(){
-  var chequeWithdraw = document.querySelector('.chequeInput');
-  cheque = cheque - (+chequeWithdraw.value);
-  chequeBalance.textContent = '$' + cheque;
-
+document.querySelector('.checking-deposit-btn').addEventListener('click', function(){
+  accountDecider(1);
 });
 
-chequeDepositBtn.addEventListener('click', function(){
-  var chequeDeposit = document.querySelector('.chequeInput');
-  cheque = cheque + (+chequeDeposit.value);
-  chequeBalance.textContent = '$' + cheque;
+// savings account
+document.querySelector('.savings-withdraw-btn').addEventListener('click', function(){
+ accountDecider(2);
 });
 
-savingsWithdrawBtn.addEventListener('click', function(){
-  var savingsWithdraw = document.querySelector('.savingsInput');
-  savings = savings - (+savingsWithdraw.value);
-  savingsBalance.textContent = '$' + savings;
-})
-
-savingsDepositBtn.addEventListener('click', function(){
-  var savingsDeposit = document.querySelector('.savingsInput');
-  savings = savings + (+savingsDeposit.value);
-  savingsBalance.textContent = '$' + savings;
-})
+document.querySelector('.savings-deposit-btn').addEventListener('click', function(){
+  accountDecider(3);
+});

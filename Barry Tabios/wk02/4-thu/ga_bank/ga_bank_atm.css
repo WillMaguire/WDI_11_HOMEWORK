@@ -1,6 +1,8 @@
-body{
-  /*background-color: orange;*/
-  background-image: url('backgroundImage.jpg');
+body {
+  background: #314755; \
+  background: -webkit-linear-gradient(right, #314755, #26a0da);
+  background: -o-linear-gradient(right, #314755, #26a0da);
+  background: linear-gradient(to left, #314755, #26a0da);
 }
 
 h1 {
@@ -20,22 +22,25 @@ h1 {
   border: 1px solid black;
 }
 
-.chequeAccount{
+.checking-account{
   float: left;
   border: 1px solid black;
   height: 300px;
   width: 300px;
   text-align: center;
-  background-color: blue;
+  background-color: gray;
+  border-radius: 5%;
 }
 
-.savingsAccount{
+.savings-account{
   float: right;
   border: 1px solid black;
   height: 300px;
   width: 300px;
   text-align: center;
-  background-color: red;
+  background-color: gray;
+  border-radius: 5%;
+
 }
 
 h2 {
@@ -43,14 +48,14 @@ h2 {
   width: 100%;
 }
 
-.chequeBalance,
-.savingsBalance {
+.checking-balance,
+.savings-balance {
   height: 50px;
   width: 100%;
 }
 
-.savingsBalanceOutput,
-.chequeBalanceOutput {
+.savings-balance-output,
+.checking-balance-output {
   height:50px;
   width: 100%;
   text-align: center;
@@ -58,15 +63,15 @@ h2 {
   font-size: 2em;
 }
 
-.chequeInput,
-.savingsInput {
+.checking-input,
+.savings-input {
   border: 1px solid black;
   height: 50px;
   width: 80%;
 }
 
-#chequeWithdrawBtn,
-#savingsWithdrawBtn {
+.checking-withdraw-btn,
+.savings-withdraw-btn {
   display: inline-block;
   height:30px;
   width: 30%;
@@ -76,8 +81,8 @@ h2 {
   background-color: grey;
 }
 
-#savingsDepositBtn,
-#chequeDepositBtn {
+.savings-deposit-btn,
+.checking-deposit-btn {
   display: inline-block;
   height:30px;
   width: 30%;
