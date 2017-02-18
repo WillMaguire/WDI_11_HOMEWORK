@@ -56,7 +56,13 @@ var accountDecider = function (decider){
 
             if (savingsAccountValidator<0){
               break;
-            } else {
+            }
+
+            if(savingsAccountValidator === 0){
+              accountZeroBalance(1);
+            };
+
+            if(savingsAccountValidator>0){
               savings = savings + checkingAccountValidator; // this will subtract savings from -negative number
               document.querySelector('.savings-balance-output').textContent = '$' + savings;
               accountZeroBalance(0);
@@ -69,7 +75,7 @@ var accountDecider = function (decider){
 
           checking = checking + (+document.querySelector('.checking-input').value);
           document.querySelector('.checking-balance-output').textContent = '$' + checking;
-
+          document.querySelector('.checking-account').style.backgroundColor = 'gray';
           break;
 
       case 2:
@@ -86,7 +92,13 @@ var accountDecider = function (decider){
 
             if (checkingAccountValidator<0){
               break;
-            } else {
+            }
+
+            if (checkingAccountValidator == 0){
+              accountZeroBalance(0);
+            };
+
+            if(checkingAccountValidator > 0){
               checking = checking + savingsAccountValidator; // this will subtract savings from -negative number
               document.querySelector('.checking-balance-output').textContent = '$' + checking;
               accountZeroBalance(1);
@@ -101,6 +113,7 @@ var accountDecider = function (decider){
 
           savings = savings + (+document.querySelector('.savings-input').value);
           document.querySelector('.savings-balance-output').textContent = '$' + savings;
+          document.querySelector('.savings-account').style.backgroundColor = 'gray';
 
           break;
 
