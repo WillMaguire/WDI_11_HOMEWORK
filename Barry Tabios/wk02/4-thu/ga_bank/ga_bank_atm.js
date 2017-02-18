@@ -45,6 +45,7 @@ var accountDecider = function (decider){
       case 0:
 
           var checkingAccountValidator = checking - (+document.querySelector('.checking-input').value);
+          console.log(checkingAccountValidator);
 
           if(checkingAccountValidator > 0){
             checking = checking - (+document.querySelector('.checking-input').value);
@@ -124,18 +125,30 @@ var accountDecider = function (decider){
 
 // checking account
 document.querySelector('.checking-withdraw-btn').addEventListener('click', function(){
-  accountDecider(0);
+  if(isNaN(document.querySelector('.checking-input').value)){
+    document.querySelector('.checking-input').value = 'INPUT MUST BE A NUMBER';
+  } else {
+    accountDecider(0)};
 });
 
 document.querySelector('.checking-deposit-btn').addEventListener('click', function(){
-  accountDecider(1);
+  if(isNaN(document.querySelector('.checking-input').value)){
+    document.querySelector('.checking-input').value = 'INPUT MUST BE A NUMBER';
+  } else {
+    accountDecider(1)};
 });
 
 // savings account
 document.querySelector('.savings-withdraw-btn').addEventListener('click', function(){
- accountDecider(2);
+  if(isNaN(document.querySelector('.savings-input').value)){
+    document.querySelector('.savings-input').value = 'INPUT MUST BE A NUMBER';
+  } else {
+    accountDecider(2)};
 });
 
 document.querySelector('.savings-deposit-btn').addEventListener('click', function(){
-  accountDecider(3);
+  if(isNaN(document.querySelector('.savings-input').value)){
+    document.querySelector('.savings-input').value = 'INPUT MUST BE A NUMBER';
+  } else {
+    accountDecider(3)};
 });
