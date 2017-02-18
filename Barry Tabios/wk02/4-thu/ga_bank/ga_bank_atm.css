@@ -1,8 +1,9 @@
 body {
-  background: #314755; \
+  background: #314755;
   background: -webkit-linear-gradient(right, #314755, #26a0da);
   background: -o-linear-gradient(right, #314755, #26a0da);
   background: linear-gradient(to left, #314755, #26a0da);
+  min-width: 890px;
 }
 
 h1 {
@@ -17,9 +18,8 @@ h1 {
 .logo{
   display: inline-block;
   height: 100px;
-  width: 28%;
-  background-color: red;
-  border: 1px solid black;
+  max-width: 180px;
+  margin-left: 20px;
 }
 
 .checking-account{

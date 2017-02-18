@@ -126,14 +126,14 @@ var accountDecider = function (decider){
 // checking account
 document.querySelector('.checking-withdraw-btn').addEventListener('click', function(){
   if(isNaN(document.querySelector('.checking-input').value)){
-    document.querySelector('.checking-input').value = 'INPUT MUST BE A NUMBER';
+    document.querySelector('.checking-input').value = 'PLEASE ENTER A NUMBER';
   } else {
     accountDecider(0)};
 });
 
 document.querySelector('.checking-deposit-btn').addEventListener('click', function(){
   if(isNaN(document.querySelector('.checking-input').value)){
-    document.querySelector('.checking-input').value = 'INPUT MUST BE A NUMBER';
+    document.querySelector('.checking-input').value = 'PLEASE ENTER A NUMBER';
   } else {
     accountDecider(1)};
 });
@@ -141,14 +141,14 @@ document.querySelector('.checking-deposit-btn').addEventListener('click', functi
 // savings account
 document.querySelector('.savings-withdraw-btn').addEventListener('click', function(){
   if(isNaN(document.querySelector('.savings-input').value)){
-    document.querySelector('.savings-input').value = 'INPUT MUST BE A NUMBER';
+    document.querySelector('.savings-input').value = 'PLEASE ENTER A NUMBER';
   } else {
     accountDecider(2)};
 });
 
 document.querySelector('.savings-deposit-btn').addEventListener('click', function(){
   if(isNaN(document.querySelector('.savings-input').value)){
-    document.querySelector('.savings-input').value = 'INPUT MUST BE A NUMBER';
+    document.querySelector('.savings-input').value = 'PLEASE ENTER A NUMBER';
   } else {
     accountDecider(3)};
 });
