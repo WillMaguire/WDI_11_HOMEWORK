@@ -1,5 +1,10 @@
 var checkingAccountBox = document.querySelector('.checking');
 var savingAccountBox = document.querySelector('.savings');
+var savingsBalance = document.querySelector('.saving-balance');
+var checkingBalance = document.querySelector('.checking-balance');
+
+var inputFieldChecking = document.querySelector('.input-amount-checking');
+var inputFieldSavings = document.querySelector('.input-amount-savings');
 
 //Accounts
 var checkingAccount = {
@@ -13,13 +18,14 @@ var savingsAccount = {
 };
 
 // Functions
-function depositToAccount(amount, account){
+function depositToAccount(amount, account) {
   account.balance += amount;
 }
 
   function withdrawFromAccount(amount, account, fromAccount){
   if (amount < account.balance) {
     account.balance -= amount;
+    displayBalance(amount, account);
   } else if (amount > account.balance ) {
     coverOverdraft (amount, account, fromAccount);
     displayBalance();
@@ -35,44 +41,47 @@ function coverOverdraft(amount, toAccount, fromAccount){
 
 // Events
 document.querySelector('.savings-widthdraw-btn').addEventListener('click', function(){
-  var amount = +document.querySelector('.input-amount-savings').value;
+  var amount = +inputFieldSavings.value;
   withdrawFromAccount(amount, savingsAccount, checkingAccount);
-  document.querySelector('.saving-balance').textContent = +savingsAccount.balance.toFixed(2);
-  document.querySelector('.checking-balance').textContent = +checkingAccount.balance.toFixed(2);
-  document.querySelector('.input-amount-savings').value = '';
+  savingsBalance.textContent = +savingsAccount.balance.toFixed(2);
+  checkingBalance.textContent = +checkingAccount.balance.toFixed(2);
+  inputFieldSavings.value = '';
 });
 
 document.querySelector('.savings-deposit-btn').addEventListener('click', function(){
-  var amount = +document.querySelector('.input-amount-savings').value;
+  var amount = +inputFieldSavings.value;
   depositToAccount(amount, savingsAccount);
-  document.querySelector('.saving-balance').textContent = savingsAccount.balance;
-  document.querySelector('.input-amount-savings').value = '';
+  savingsBalance.textContent = savingsAccount.balance;
+  inputFieldSavings.value = '';
 });
 
 // CHecking account
 document.querySelector('.checking-widthdraw-btn').addEventListener('click', function(){
-  var amount = +document.querySelector('.input-amount-checking').value;
+  var amount = +inputFieldChecking.value;
   withdrawFromAccount(amount, checkingAccount, savingsAccount);
-  document.querySelector('.checking-balance').textContent = checkingAccount.balance.toFixed(2);
-  document.querySelector('.saving-balance').textContent = savingsAccount.balance.toFixed(2);
-  document.querySelector('.input-amount-checking').value = '';
+  checkingBalance.textContent = checkingAccount.balance.toFixed(2);
+  savingsBalance.textContent = savingsAccount.balance.toFixed(2);
+  inputFieldChecking.value = '';
 });
 
 document.querySelector('.checking-deposit-btn').addEventListener('click', function(){
-  var amount = +document.querySelector('.input-amount-checking').value;
+  var amount = +inputFieldChecking.value;
   depositToAccount(amount, checkingAccount);
-  document.querySelector('.checking-balance').textContent = checkingAccount.balance;
-  document.querySelector('.input-amount-checking').value = '';
+  checkingBalance.textContent = checkingAccount.balance.toFixed(2);
+  inputFieldChecking.value = '';
 });
 
 // Display balance when the document loads
 var displayBalance = function(){
-  document.querySelector('.saving-balance').textContent = savingsAccount.balance;
-  document.querySelector('.checking-balance').textContent = checkingAccount.balance;
+  savingsBalance.textContent = savingsAccount.balance.toFixed(2);
+  checkingBalance.textContent = checkingAccount.balance.toFixed(2);
+
   if (savingsAccount.balance < 1 ){
     savingAccountBox.classList.toggle("negative");
   } else if (checkingAccount.balance < 1) {
     checkingAccountBox.classList.toggle("negative");
   }
 };
+
+//display balances when document loads
 displayBalance();
