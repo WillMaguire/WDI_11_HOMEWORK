@@ -79,6 +79,19 @@ input[type=button], .input-amount-savings, .input-amount-checking{
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+.input-amount-checking::-webkit-input-placeholder,
+.input-amount-savings::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.8);
+}
+.input-amount-checking::-webkit-input-placeholder,
+.input-amount-savings::-webkit-input-placeholder { /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.8);
+}
+.input-amount-checking::-webkit-input-placeholder,
+.input-amount-savings::-webkit-input-placeholder{ /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.8);
+}
+
 input[type=button]{
   width: 80%;
 }
@@ -108,5 +121,5 @@ input[type=button]:hover{
 }
 
 .negative {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.35);
 }
