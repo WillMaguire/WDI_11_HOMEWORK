@@ -11,18 +11,19 @@ var savingDepositBtn = document.querySelector('.deposit-btn_saving');
 var currentSavingBalance = 0.00;
 var currentCheckingBalance = 0.00;
 
+
 var emptySavingBalance = function() {
   while (currentSavingBalance === 0) {
-      return document.querySelector('.saving').style.backgroundColor = 'red';
+      return document.querySelector('.saving').style.backgroundColor = 'rgba(255, 0, 0, 0.21)';
     }
-    document.querySelector('.saving').style.backgroundColor = 'grey';
+    document.querySelector('.saving').style.backgroundColor = 'rgba(128,128,128, 0.21)';
 }
 
 var emptyCheckingBalance = function() {
   while (currentCheckingBalance === 0) {
-      return document.querySelector('.checking').style.backgroundColor = 'red';
+      return document.querySelector('.checking').style.backgroundColor = 'rgba(255, 0, 0, 0.21)';
     }
-    document.querySelector('.checking').style.backgroundColor = 'grey';
+    document.querySelector('.checking').style.backgroundColor = 'rgba(128,128,128, 0.21)';
 }
 
 checkingDepositBtn.addEventListener('click', function() {
@@ -30,8 +31,8 @@ checkingDepositBtn.addEventListener('click', function() {
 
     currentCheckingBalance = currentCheckingBalance + amountOfMoneyToDeposit;
     checkingBalance.textContent = parseFloat(currentCheckingBalance).toFixed(2);
-    checkingInput.value = '';
     emptyCheckingBalance(currentCheckingBalance);
+    checkingInput.value = "";
 })
 
 checkingWithdrawBtn.addEventListener('click', function() {
@@ -50,7 +51,7 @@ checkingWithdrawBtn.addEventListener('click', function() {
       }
     }
     emptyCheckingBalance(currentCheckingBalance);
-    checkingInput.value = '';
+    checkingInput.value = "";
 })
 
 savingDepositBtn.addEventListener('click', function() {
@@ -59,7 +60,7 @@ savingDepositBtn.addEventListener('click', function() {
     currentSavingBalance = currentSavingBalance + amountOfMoneyToDeposit;
     savingBalance.textContent = parseFloat(currentSavingBalance).toFixed(2);
     emptySavingBalance(currentSavingBalance);
-    savingInput.value = '';
+    savingInput.value = "";
 })
 
 savingWithdrawBtn.addEventListener('click', function() {
@@ -70,5 +71,5 @@ savingWithdrawBtn.addEventListener('click', function() {
       savingBalance.textContent = parseFloat(currentSavingBalance).toFixed(2);
     }
     emptySavingBalance(currentSavingBalance);
-    savingInput.value = '';
+    savingInput.value = "";
 })
