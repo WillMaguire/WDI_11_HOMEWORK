@@ -1,21 +1,65 @@
-var totalBalance = balance
-var sav_screen = document.querySelector(.'sav_screen');
-var addTwoAmounts = function(num1, sav_screen){
-  return num1 + num2;
+console.log("Bank Online");
+
+var accountBalance = document.querySelector('.sav_screen');
+accountBalance.value = 0;
+
+var savScreen = document.querySelector('.sav_screen');
+var sav_deposit_button = document.querySelector('.sav_deposit_button');
+var sav_withdraw_button = document.querySelector('.sav_withdraw_button');
+
+ var savTotalBalance = function (savDepositAmount) {
+
+ 	var savDepositAmount = document.querySelector('.sav_enter_amount_screen');
+
+  	savScreen.value = +savDepositAmount.value + +accountBalance.value;
 }
 
-var minusTwoAmounts = function(num1, num2){
-  return num1 - num2;
-} if (totalBalance < minusTwoAmounts) {
-  return totalBalance;
-} else {
-  return minusTwoAmounts;
+sav_deposit_button.addEventListener('click', savTotalBalance);
+
+
+
+  var savTotalBalance2 = function (savWithdrawAmount) {
+
+    var savWithdrawAmount = document.querySelector('.sav_enter_amount_screen');
+    savScreen.value = +accountBalance.value - +savWithdrawAmount.value ;
+      if (+accountBalance.value < 0)  {
+        document.querySelector('.sav_screen').value = 'Please check balance amount';
+        document.querySelector('.sav_screen').style.background = 'red';
+        } else {
+          savTotalBalance2;
+          document.querySelector('.sav_screen').style.background = 'grey';
+        }
+
+  }
+
+sav_withdraw_button.addEventListener('click', savTotalBalance2);
+
+var accountBalance2 = document.querySelector('.chq_screen');
+accountBalance2.value = 0;
+
+var chqScreen = document.querySelector('.chq_screen');
+var chq_deposit_button = document.querySelector('.chq_deposit_button');
+var chq_withdraw_button = document.querySelector('.chq_withdraw_button');
+
+ var chqTotalBalance = function (chqDepositAmount) {
+
+ 	var chqDepositAmount = document.querySelector('.chq_enter_amount_screen');
+
+  	chqScreen.value = +chqDepositAmount.value + +accountBalance2.value;
 }
 
-var sav_enter_amount_screen = document.querySelector(.'sav_enter_amount_screen');
-var sav_deposit_button = document.querySelector(.'sav_deposit_button')
+chq_deposit_button.addEventListener('click', chqTotalBalance);
 
-sav_deposit_button.addEventListener('click', addTwoAmounts()) {
-  var sav_enter_amount_screen = addTwoAmounts (+sav_enter_amount_screen.value +totalBalance.value);
-  sav_screen.value = result;
-});
+  var chqTotalBalance2 = function (chqWithdrawAmount) {
+
+    var chqWithdrawAmount = document.querySelector('.chq_enter_amount_screen');
+    chqScreen.value = +accountBalance2.value - +chqWithdrawAmount.value;
+      if (+accountBalance2.value < 0) {
+          document.querySelector('.chq_screen').value = 'Please check balance amount';
+          document.querySelector('.chq_screen').style.background = 'red';
+        } else {
+          chqTotalBalance2;
+          document.querySelector('.chq_screen').style.background = 'grey';
+        }
+  }
+chq_withdraw_button.addEventListener('click', chqTotalBalance2);
