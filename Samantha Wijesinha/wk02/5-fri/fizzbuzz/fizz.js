@@ -22,14 +22,18 @@ console.log("fizzbuzz!!");
 
 for (var i = 1; i <= 100; i++) {
 
-  if (i%3 === 0 ) {
+  if (i%3 === 0 && i%5 === 0) {
+    console.log("cakepudding");
+  }
+
+  if (i%3 === 0) {
       console.log("cake");
 
-  } else if (i%5 === 0) {
-    console.log("pudding");
+    } else if (i%5 === 0) {
+      console.log("pudding");
 
-  } else if (i%3 === 0 && i%5 === 0) {
-      console.log("cakepudding");
-  }
-  console.log(i);
+    } else {
+      console.log(i);
+    }
+
 }
