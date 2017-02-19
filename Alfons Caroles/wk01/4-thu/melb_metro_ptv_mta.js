@@ -35,6 +35,24 @@ function titleCase(str) {
   return str.join(' ');
 }
 
+var indexLine = function(origin) {
+  var x =0;
+  debugger;
+  while (allLines[x].station.includes(origin) == false){
+    x++;
+  }
+  return x;
+}
+
+var indexLine = function(destination) {
+  var x =0;
+  debugger;
+  while (allLines[x].station.includes(destination) == false){
+    x++;
+  }
+  return x;
+}
+
 //This to add new lines
 // var addNewLines = function() {
 //   var newLineNames = prompt("Please enter line name");
@@ -81,19 +99,12 @@ function titleCase(str) {
 // }
 // -----------------------------------
 
-//This function to return index of train line.
-var indexLine = function(name) {
-  var x =0;
-  while (allLines[x].name !== name){
-    x++;
-  }
-  return x;
-}
+
 
 //This is the main function to setup journey plan.
-var journeyPlanner = function() {
-    var indexOriginLine = indexLine(trainLineOrigin);
-    var indexDestinationLine = indexLine(trainLineDestination);
+var journeyPlanner = function(trainLineOrigin,trainLineDestination,origin,destination) {
+    var indexOriginLine = indexLine(origin);
+    var indexDestinationLine = indexLine(destination);
     var indexOrigin = allLines[indexOriginLine].stations.indexOf(origin);
     var indexDestination = allLines[indexDestinationLine].stations.indexOf(destination);
     var intersectionOrigin = allLines[indexOriginLine].stations.indexOf('Richmond');
@@ -147,3 +158,5 @@ var journeyPlanner = function() {
     console.log(journey.join('-->'));
     console.log(journey.length + ' stops total');
 }
+
+//This function to return index of train line.
