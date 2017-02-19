@@ -1,104 +1,143 @@
-console.log("welome to the bak of GA");
+console.log("ripping people off since 1958");
 
-var checkingBalance=0;
-var savingsBalance=0;
+var checkingAccount = [
+{
+accountName: "Checking",
+accountBalance: 0.00
+}]
 
+var savingAccount = [
+{
+accountName: "Saving",
+accountBalance: 0.00
+}]
 
-//savings deposit button
 var depositSavingsBtn = document.querySelector('.saving-deposit-btn');
-
-//savings withdrawal button
 var withdrawSavingsBtn = document.querySelector('.saving-withdraw-btn');
-
-//checking desposit button
 var depositCheckingBtn = document.querySelector('.checking-deposit-btn');
-
-//checking withdrawal button
 var withdrawCheckingBtn = document.querySelector('.checking-withdraw-btn');
-
-//enter amount to withdraw or deposit in checking account
 var checkingAmountInput = document.querySelector('.enterAmount-checking');
-
-//enter amount to withdraw or deposit in savings account
 var savingsAmountInput = document.querySelector('.enterAmount-saving');
-
 var displayResultSavingsOutput = document.querySelector('.balance-savings');
-
 var displayResultCheckingOutput = document.querySelector('.balance-checking');
+var displayMessage = document.querySelector('.message');
 
-//deposits to Savings
-var addToSavings = function(savingsAmountInput) {
-  savingsBalance = savingsBalance+savingsAmountInput
-  return savingsBalance;
-}
+  var validateTheInput = function(amount) {
+  if (isNaN(amount) || amount === undefined) {
+    displayMessage.textContent = "Please enter a valid Number";
+    var validatedNumber = 0;
 
-depositSavingsBtn.addEventListener('click', function() {
-var result = addToSavings(+savingsAmountInput.value);
-  //update ui
-  displayResultSavingsOutput.value = "$"+result;
-});
+    } else if (amount < 0){
+      var validatedNumber = 0;
+      displayMessage.textContent = "Please enter a valid Number";
 
-//withdraw from savings
-
-//check if there is money in the savings account, if no money, check if there is money in the checking account
-var withdrawFromSavings = function(savingsAmountInput) {
-  savingsBalance = savingsBalance-savingsAmountInput
-  return savingsBalance;
-}
-
-withdrawSavingsBtn.addEventListener('click', function() {
-var result = withdrawFromSavings(+savingsAmountInput.value);
-  //update ui
-  displayResultSavingsOutput.value = "$"+result;
-});
-
-
-
-//deposits to checking
-var addToChecking = function(checkingAmountInput) {
-  checkingBalance = checkingBalance+checkingAmountInput
-  return checkingBalance;
-}
-
-depositCheckingBtn.addEventListener('click', function() {
-var result = addToChecking(+checkingAmountInput.value);
-  //update ui
-  displayResultCheckingOutput.value = "$"+result;
-});
-
-
-//withdraw from checking
-var withdrawFromChecking = function(checkingAmountInput) {
-
-  checkingBalance = checkingBalance-checkingAmountInput
-  return checkingBalance;
-}
-
-withdrawCheckingBtn.addEventListener('click', function() {
-
-  if ((checkingBalance - +checkingAmountInput.value) <0 &&  (savingsBalance - +checkingAmountInput.value) <0){
-    displayResultCheckingOutput.textContent = "$--";
-    document.querySelector('.message').innerHTML = "Not enough funds!"
-
-  } else if (checkingBalance >= +checkingAmountInput.value){
-    var result = withdrawFromChecking(+checkingAmountInput.value);
-  } else if (savingsBalance >= +checkingAmountInput.value) {
-    withdrawFromSavings(+checkingAmountInput.value)
+      } else {
+        var validatedNumber = amount;
+      }
+   return validatedNumber;
   }
 
-  //update ui
-  displayResultCheckingOutput.value = "$"+result;
-});
+  var validateAndUpdateOutput = function(amount, account) {
+    if (amount > 0 && account === checkingAccount[0].accountName) {
+        var updateBalance = amount;
+
+      } else if (amount > 0 && account === savingAccount[0].accountName) {
+          var updateBalance = amount;
+
+        } else if (amount <0 && account === checkingAccount[0].accountName) {
+          document.querySelector('.checking-wrapper').style.backgroundColor = 'red';
+
+          var updateBalance = 0;
+
+          displayResultCheckingOutput.value = "$"+0;
+          displayMessage.textContent = "Insufficient Funds";
+
+            } else if (amount <0 && account === savingAccount[0].accountName) {
+                document.querySelector('.savings-wrapper').style.backgroundColor = 'red';
+
+                var updateBalance = 0;
+
+                displayResultSavingsOutput.value = "$"+0;
+                displayMessage.textContent = "Insufficient Funds";
+              }
+          return updateBalance;
+  }
+
+  var depositAccount = function(amount, account)  {
+    if (account === checkingAccount[0].accountName) {
+      var result = checkingAccount[0].accountBalance + amount;
+
+        } else if (account === savingAccount[0].accountName) {
+        var result = savingAccount[0].accountBalance + amount;
+    }
+
+    return result;
+
+  }
+
+  var withdrawAccount = function(amount, account) {
+    if (account === checkingAccount[0].accountName) {
+      var result = checkingAccount[0].accountBalance - amount;
+
+      } else if (account === savingAccount[0].accountName) {
+        var result = savingAccount[0].accountBalance - amount;
+      }
+
+    return result;
+
+  }
 
 
+  withdrawSavingsBtn.addEventListener('click', function() {
+
+    var validatedInput = validateTheInput(+savingsAmountInput.value);
+
+    var withdrawFromSaving = withdrawAccount(validatedInput, "Saving");
+
+    var validateOutput = validateAndUpdateOutput(withdrawFromSaving, "Saving");
+
+    savingAccount[0].accountBalance = +validateOutput;
+
+    displayResultSavingsOutput.value = validateOutput;
+    savingsAmountInput.value = "";
+
+  });
+
+  withdrawCheckingBtn.addEventListener('click', function() {
+
+    var validatedInput = validateTheInput(+checkingAmountInput.value);
+
+    var withdrawFromChecking = withdrawAccount(validatedInput, "Checking");
+
+    var validateOutput = validateAndUpdateOutput(withdrawFromChecking, "Checking");
+
+    checkingAccount[0].accountBalance = +validateOutput;
+
+    displayResultCheckingOutput.value = validateOutput;
+    checkingAmountInput.value = "";
+
+  });
 
 
+  depositSavingsBtn.addEventListener('click', function() {
 
-//check account
-var enoughFundsChecking = function(checkingAmountInput, savingsAmountInput, savingsBalance, checkingBalance){
+    var validatedInput = validateTheInput(+savingsAmountInput.value);
 
-}
+    var depositIntoSaving = depositAccount(validatedInput, "Saving");
 
-var enoughFundsSaving = function(checkingAmountInput, savingsAmountInput) {
+    savingAccount[0].accountBalance = depositIntoSaving;
+    displayResultSavingsOutput.value = depositIntoSaving;
+    savingsAmountInput.value = "";
+  });
 
-}
+
+  depositCheckingBtn.addEventListener('click', function() {
+    var validatedInput = validateTheInput(+checkingAmountInput.value);
+
+    var depositIntoChecking = depositAccount(validatedInput, "Checking");
+
+    checkingAccount[0].accountBalance = depositIntoChecking;
+
+    displayResultCheckingOutput.value = depositIntoChecking;
+    checkingAmountInput.value = "";
+  });
