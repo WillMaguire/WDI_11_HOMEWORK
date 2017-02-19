@@ -11,8 +11,6 @@ var transact = function(account, byAmount) {
     account.balance = 0;
     account.overdraftBackup.balance += result;
   }
-
-  updateViews(accounts);
 };
 
 var updateViews = function(accounts) {
@@ -23,7 +21,7 @@ var updateViews = function(accounts) {
       account.view.style.backgroundColor = 'gray';
     }
 
-    account.view.querySelector('.dollars-cents').textContent = Number(account.balance).toFixed(2);
+    account.view.querySelector('.dollars-cents').textContent = (account.balance).toFixed(2);
   });
 };
 
@@ -47,10 +45,12 @@ accounts.map(function(account) {
 
   account.view.querySelector('.withdraw-btn').addEventListener('click', function() {
     transact(account, -(+input.value));
+    updateViews(accounts);
   });
 
   account.view.querySelector('.deposit-btn').addEventListener('click', function() {
     transact(account, +input.value);
+    updateViews(accounts);
   });
 });
 
