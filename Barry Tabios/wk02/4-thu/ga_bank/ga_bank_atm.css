@@ -79,6 +79,7 @@ h2 {
   margin-right: 10px;
   text-align: center;
   background-color: grey;
+  font-weight: bold;
 }
 
 .savings-deposit-btn,
@@ -90,4 +91,5 @@ h2 {
   margin-left: 10px;
   text-align: center;
   background-color: grey;
+  font-weight: bold;
 }
