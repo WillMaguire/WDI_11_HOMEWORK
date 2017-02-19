@@ -1,21 +1,29 @@
 console.log('ebanking');
 
-
-
+var openingBalance = 1000;
 
 //saving account variables
 var displaySavBal = document.querySelector('.displaySav');
-var savBalanceAmt = 1000;
-displaySavBal.innerHTML = savBalanceAmt;
+var savBalanceAmt = openingBalance;
+displaySavBal.innerHTML = savBalanceAmt.toFixed(2);
 
 // Checking Account variables
 var displayChkBal = document.querySelector('.displayChk');
-var chkBalanceAmt = 1000;
-displayChkBal.innerHTML = chkBalanceAmt;
+var chkBalanceAmt = openingBalance;
+displayChkBal.innerHTML = chkBalanceAmt.toFixed(2);
 
 var totalBalance = savBalanceAmt + chkBalanceAmt;
-var getAmt = document.querySelector('.getAmt');
 
+var positiveGetAmtValue = function(){
+    var getAmt = document.querySelector('.getAmt');
+
+		if(+getAmt.value >= 0){
+			return (+getAmt.value);
+
+		}else{
+			return 0;
+		}
+}
 
 // changes to different background color when balance
 //  in saving account is zero or more than zero
@@ -26,17 +34,18 @@ var changeBackgroundColor = function(color0 , color1){
 		document.querySelector('.saving').style.
 		backgroundColor = color0;
 
-	}else if(chkBalanceAmt === 0){
+	}else {
+
+        document.querySelector('.saving').style.
+        backgroundColor = color1;
+    }
+
+    if(chkBalanceAmt === 0){
 
 		document.querySelector('.checking').style.
 		backgroundColor = color0;
 
-    }else if(savBalanceAmt !== 0){
-
-    	document.querySelector('.saving').style.
-		backgroundColor = color1;
-
-	}else if(chkBalanceAmt !== 0){
+    }else {
 
 		document.querySelector('.checking').style.
 		backgroundColor = color1;
@@ -46,65 +55,55 @@ var changeBackgroundColor = function(color0 , color1){
 // deposit in saving account
 var depositeSaving = function(){
 
-    savBalanceAmt += +getAmt.value;
-    displaySavBal.innerHTML = savBalanceAmt;
+    savBalanceAmt += positiveGetAmtValue();
+    displaySavBal.innerHTML = savBalanceAmt.toFixed(2);
 
-    changeBackgroundColor("red" , "grey");
+    changeBackgroundColor("red" , "gray");
 }
 
 var depositeBtn = document.querySelector('.sDepo-btn');
 depositeBtn.addEventListener('click',depositeSaving);
 
-
 // Saving Withdraw
 var withdrawSaving = function(){
 
-	if(+getAmt.value <= savBalanceAmt){
+    	if(positiveGetAmtValue() <= savBalanceAmt){
 
-		savBalanceAmt -= +getAmt.value; 
-		displaySavBal.innerHTML = savBalanceAmt;
+    		savBalanceAmt -= positiveGetAmtValue();
+    		displaySavBal.innerHTML = savBalanceAmt.toFixed(2);
 
-        changeBackgroundColor("red" , "grey");    
-
-   }else if((+getAmt.value > savBalanceAmt) && 
-   	        (+getAmt.value <= totalBalance)){
-
-     	var shortAmt = +getAmt.value - savBalanceAmt;
-
-     	savBalanceAmt -= (+getAmt.value - shortAmt);
-     	displaySavBal.innerHTML = savBalanceAmt;
-
-     	chkBalanceAmt -= shortAmt;
-     	displayChkBal.innerHTML = chkBalanceAmt;
-
-     	changeBackgroundColor("red" , "grey");  
+        changeBackgroundColor("red" , "grey");
 
 
-     	
+       }else if((positiveGetAmtValue() > savBalanceAmt) &&
+       	        (positiveGetAmtValue() <= totalBalance)){
 
-   }
+           	var shortAmt = positiveGetAmtValue() - savBalanceAmt;
 
+           	savBalanceAmt -= (positiveGetAmtValue() - shortAmt);
+           	displaySavBal.innerHTML = savBalanceAmt.toFixed(2);
+
+                if(shortAmt <= chkBalanceAmt) {
+
+             	  chkBalanceAmt -= shortAmt;
+             	  displayChkBal.innerHTML = chkBalanceAmt.toFixed(2);
+
+             	  changeBackgroundColor("red" , "grey");
+                }
+       }
 }
 
 var withdrawBtn = document.querySelector('.sWith-btn');
 withdrawBtn.addEventListener('click',withdrawSaving);
 
 
-
-
-
-
-// Checking Account 
-
-// //get amount frm chaking account
-// var getAmt = document.querySelector('.getAmt');
-
+// Checking Account
 
 // deposit in saving account
 var depositeChecking = function(){
 
-    chkBalanceAmt += +getAmt.value;
-    displayChkBal.innerHTML = chkBalanceAmt;
+    chkBalanceAmt += positiveGetAmtValue();
+    displayChkBal.innerHTML = chkBalanceAmt.toFixed(2);
 
     changeBackgroundColor("red" , "grey");
 }
@@ -113,16 +112,32 @@ var depositeBtnChk = document.querySelector('.cDepo-btn');
 depositeBtnChk.addEventListener('click',depositeChecking);
 
 
-// Checking Withdraw
+// // Saving Withdraw
 var withdrawChecking = function(){
 
-	if(+getAmt.value <= chkBalanceAmt){
+        if(+positiveGetAmtValue() <= chkBalanceAmt){
 
-		chkBalanceAmt -= +getAmt.value; 
-		displayChkBal.innerHTML = chkBalanceAmt;
+            chkBalanceAmt -= positiveGetAmtValue();
+            displayChkBal.innerHTML = chkBalanceAmt.toFixed(2);
 
-        changeBackgroundColor("red" , "grey");
-    }
+            changeBackgroundColor("red" , "grey");
+
+       }else if((+positiveGetAmtValue() > chkBalanceAmt) &&
+                (+positiveGetAmtValue() <= totalBalance)){
+
+            var shortAmt = positiveGetAmtValue() - chkBalanceAmt;
+
+            chkBalanceAmt -= (positiveGetAmtValue() - shortAmt);
+            displayChkBal.innerHTML = chkBalanceAmt.toFixed(2);
+
+            if(shortAmt <= savBalanceAmt) {
+
+                savBalanceAmt -= shortAmt;
+                displaySavBal.innerHTML = savBalanceAmt.toFixed(2);
+
+                changeBackgroundColor("red" , "grey");
+            }
+       }
 }
 
 var withdrawBtnChk = document.querySelector('.cWith-btn');
