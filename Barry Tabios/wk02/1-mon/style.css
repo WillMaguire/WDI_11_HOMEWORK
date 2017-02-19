@@ -1,0 +1,103 @@
+.main_page {
+  background-color: #d6d6d6;
+  /*display: inline-block;*/
+}
+
+
+/*#image2{
+}*/
+
+.page_1{
+  background-color: white;
+  margin-left: 100px;
+  width: 700px;
+  background-color: white;
+  display: inline-block;
+  text-align: left;
+}
+
+.page_1 * {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.page1_image{
+  width: 90%;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+.post{
+  padding-left: 10px
+}
+
+
+.link {
+  margin-right: 0;
+  margin-left: 0;
+  color: #cc6633;
+}
+
+
+.page_2{
+  background-color: white;
+/*  width: 40% auto;;*/
+  width: 300px;
+  height: 750px;
+  margin-right: 80px;
+
+/*  border: solid black;*/
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.page_2 * {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.list {
+  font-weight: bold;
+}
+
+.page2_images{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image5 {
+    background-color: white;
+}
+
+.image6 {
+    background-color: white;
+}
+
+.list{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+body {
+  background-color: #d6d6d6;
+  background-image: url(ecardly_CSS/images/background.jpg);
+  background-repeat: repeat-x;
+  height: 170px;
+  text-align: center;
+  /*margin-bottom: 50px*/
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.post {
+  border-top: 1px dotted black;
+  border-bottom: 1px solid black;
+  margin-bottom: 60px;
+}

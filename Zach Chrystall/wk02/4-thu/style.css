@@ -1,0 +1,59 @@
+body {
+  background-color: black;
+  color: gold;
+  font-family: 'Cinzel', serif;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 3em;
+  vertical-align: top;
+  margin-top: 0;
+
+}
+
+img {
+  margin: .6em;
+  border-radius: .6em;
+  width: 150px;
+  height: 150px;
+}
+
+.main {
+  padding: 3em 0;
+  border-top: 1em solid gold;
+  border-bottom: 1em solid gold;
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.interface {
+  display: inline-block;
+  width: 24em;
+  height: 15em;
+  text-align: center;
+
+}
+
+.checking {
+  /*background-color: steelblue;*/
+}
+
+.savings {
+  /*background-color: chartreuse;*/
+}
+
+.btn-holder {
+  display: block;
+  margin-top: 1em;
+}
+
+button {
+  width: 10em;
+  height: 4em;
+  background-color: gold;
+  color: black;
+  margin: 4px;
+  border: 2px solid brown;
+}

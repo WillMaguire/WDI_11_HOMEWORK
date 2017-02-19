@@ -1,0 +1,86 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #d6d6d6 ;
+}
+
+header{
+  height: 150px;
+  background-image: url(https://raw.githubusercontent.com/kasun-maldeni/ecardly_CSS/master/images/background.jpg);
+}
+
+div.container {
+  margin-top: 160px;
+  margin: 0 auto;
+  width: 960px;
+  display: block;
+  background-color: inherit;
+  border-color: #d6d6d6;
+}
+
+img.eCard ,img.courage{
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div {
+  width: 64%;
+  display:inline-block;
+  margin-top: 80px;
+  border: 1px solid BLACK;
+  background-color: white;
+  padding: 20px;
+}
+
+nav{
+  width: 35%;
+  display:inline-block;
+  margin-top: 80px;
+  border: 1px solid BLACK;
+  background-color: white;
+  vertical-align:top;
+}
+
+p{
+  margin: 0;
+  text-align: center;
+}
+
+p.text {
+  text-align: left;
+  padding-top: 15px;
+}
+
+.posted{
+  padding: 0 40px;
+}
+
+h1{
+  padding-left: 20px;
+  font-family: 'Francois One', sans-serif;
+}
+
+.bottom{
+  margin-bottom: 60px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.sideImg {
+  margin: 25px;
+}
+
+.socialImg{
+  width: 3%;
+  display: inline;
+}

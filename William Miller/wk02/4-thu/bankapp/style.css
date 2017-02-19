@@ -1,0 +1,50 @@
+* {
+  background: #c5e2c3;
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+}
+
+.wrapper {
+  width: 80%;
+  display: block;
+  top: 50%;
+  left: 50%;
+}
+
+.accounts {
+  top: 50%;
+  left: 50%
+
+}
+
+.savings-box,
+.checking-box {
+  border: .2em solid #ffffff;
+  width: 10%;
+  text-align: center;
+  margin: 5%;
+  padding: 5%;
+  display: inline-block;
+
+}
+
+.savings-box {
+
+}
+
+.checking-box {
+
+}
+
+
+.withdraw-btn {
+
+}
+
+.deposit-btn {
+
+}

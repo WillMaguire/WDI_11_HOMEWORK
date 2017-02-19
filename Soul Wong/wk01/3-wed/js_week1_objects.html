@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script>
+  //The Recipe Card
+  var favouriteRecipes = {"title":"Mole","Serves":2,"Ingredients":["Cinnamon","Cumin","Cocoa"]};
+  console.log(favouriteRecipes.title);
+  console.log("Serves " + favouriteRecipes.Serves);
+  console.log("Ingredients:");
+  for(var i =0; i < favouriteRecipes.Ingredients.length; i++){
+    console.log(favouriteRecipes['Ingredients'][i]);
+  }
+
+  //The Reading List
+  var booksCollection = [{
+    "title":"The Hobbit","author":"J.R.R Tolkien","alreadyRead":false
+  },{"title":"The Lord of the Rings","author":"J.R.R Tolkien","alreadyRead":true
+  }];
+
+  for(var x = 0; x < booksCollection.length;x++){
+    console.log(booksCollection[x]['title']+ " by " + booksCollection[x]["author"]);
+    if(booksCollection[x].alreadyRead){
+      console.log("You already read \" " + booksCollection[x]['title']+ "\" by " + booksCollection[x]["author"]);
+    }else{
+      console.log("You still need to read \" " + booksCollection[x]['title']+ "\" by " + booksCollection[x]["author"]);
+    }
+  }
+
+  //The Movie Database
+  var movieDB = {"title":"Puff the Magic Dragon","Duration":30,"stars":["Puff","Jackie","Living Sneezes"]};
+
+  function printMovieInfo(){
+    //combine array of movie stars into a single variable to be printed
+    var stars = movieDB.stars.join();
+    console.log(movieDB.title+" lasts for "+movieDB.Duration+". Stars:"+ stars);
+  }
+
+  printMovieInfo();
+
+  </script>
+</html>
