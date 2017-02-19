@@ -4,10 +4,8 @@ var cakepudding = function(num){
   var pastry = document.createElement('div');
   if(num%3===0){
     pastry.innerHTML = num + " - Cake";
-
   }else if(num%5===0){
-
-    pastry.innerHTML = num +  "- Pudding";
+    pastry.innerHTML = num +  " - Pudding";
   }
   pastryPlate.appendChild(pastry);
 }
