@@ -4,22 +4,28 @@
 	{
 		"name": "Process All Remaining Files and Folders",
 		"stepType": 1,
-		"uuidString": "5CD477E2-7FFD-4FA9-8716-E6AC095A4CB7"
+		"uuidString": "F0C5FD9C-3C45-4A75-ADA3-8B094C2DA4D8"
 		}
 	],
 "creatorBuild": "25504",
 "files": {
-	"\/.keep": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.keep",
-		"oF": 0
+	"\/hangman-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/hangman-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
-	"\/hangman": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/build\/hangman",
-		"oF": 0
+	"\/hangman.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/hangman-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -27,23 +33,25 @@
 		"oAP": "\/index.html",
 		"oF": 0
 		},
-	"\/test-min.js": {
-		"ft": 64,
-		"mi": 1,
+	"\/style-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/test-min-min.js",
+		"oAP": "\/style-min-min.css",
 		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oS": 0
 		},
-	"\/test.js": {
-		"ft": 64,
-		"mi": 1,
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/test-min.js",
+		"oAP": "\/style-min.css",
 		"oF": 0,
-		"sC": 1,
-		"tS": 0
+		"oS": 0
 		}
 	},
 "hooks": [
@@ -51,10 +59,10 @@
 "manualImportLinks": {
 	},
 "projectAttributes": {
-	"creationDate": 508979337,
-	"displayValue": "5-fri",
+	"creationDate": 509066374,
+	"displayValue": "hangman",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-facepalm"
+	"iconImageName": "meme-daenerys"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1972,7 +1980,7 @@
 	"languageDefaultsUserDefined": [
 		],
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/hangman",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {

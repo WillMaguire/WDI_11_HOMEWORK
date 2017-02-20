@@ -15,6 +15,22 @@
 		"oAP": "\/.keep",
 		"oF": 0
 		},
+	"\/background.jpg": {
+		"ft": 16384,
+		"iS": 1501217,
+		"oA": 0,
+		"oAP": "\/background.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/background2.jpg": {
+		"ft": 16384,
+		"iS": 3067013,
+		"oA": 0,
+		"oAP": "\/background2.jpg",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/bankaccount-min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -29,6 +45,24 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/bankaccount-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bankaccount2-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/bankaccount2-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/bankaccount2.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/bankaccount2-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
