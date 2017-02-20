@@ -1,7 +1,9 @@
 console.log('Give a man a gun and he can rob a bank\nGive a man a bank and he can rob the world');
 
-var savingsBalance = 0;
-var checkingBalance = 0;
+var savingsBalance = 100;
+var checkingBalance = 100;
+
+
 
 var savingsDeposit = document.querySelector('.savings-deposit-btn');
 var savingsWithdraw = document.querySelector('.savings-withdraw-btn');
@@ -10,43 +12,59 @@ var checkingWithdraw = document.querySelector('.checking-withdraw-btn');
 var savingsInput = document.querySelector('.savings-input');
 var checkingInput = document.querySelector('.checking-input');
 
+var savingsAccount = {
+  balance: savingsBalance,
+  input: parseInt(savingsInput.value),
+  inputBox: savingsInput,
+  deposit: function() {
+    updateInputValues();
+    savingsAccount.balance += savingsAccount.input;
+    updateAccountValues()
+    updateBackground(savingsAccount.balance, savingsAccount.inputBox);
+  },
+  withdraw: function() {
+    updateInputValues()
+    if (checkEnoughFunds(savingsAccount.balance, savingsAccount.input)) {
+      savingsAccount.balance -= (+savingsAccount.input);
+    } else {
+      overdraft(savingsAccount.balance, savingsAccount.input, true)
+    }
+    updateAccountValues();
+    updateBackground(savingsAccount.balance, savingsAccount.inputBox);
+  }
+}
+
+var checkingAccount = {
+  balance: checkingBalance,
+  input: parseInt(checkingInput.value),
+  inputBox: checkingInput,
+  deposit: function() {
+    updateInputValues();
+    checkingAccount.balance += (+checkingAccount.input);
+    updateAccountValues()
+    updateBackground(checkingAccount.balance, checkingAccount.inputBox);
+  },
+  withdraw: function() {
+    updateInputValues();
+    if (checkEnoughFunds(checkingAccount.balance, checkingAccount.input)) {
+      checkingAccount.balance -= (+checkingAccount.input);
+    } else {
+      overdraft(checkingAccount.balance, checkingAccount.input, false)
+    }
+    updateAccountValues();
+    updateBackground(checkingAccount.balance, checkingAccount.inputBox);
+  }
+}
+
+
 var updateAccountValues = function() {
-  document.querySelector('.savings-balance').innerHTML = '$' + numberWithCommas(savingsBalance.toFixed(2));
-  document.querySelector('.checking-balance').innerHTML = '$' + numberWithCommas(checkingBalance.toFixed(2));
-  updateBackground()
-  savingsInput.value = '';
-  checkingInput.value = '';
+  document.querySelector('.savings-balance').innerHTML = '$' + numberWithCommas(savingsAccount.balance.toFixed(2));
+  document.querySelector('.checking-balance').innerHTML = '$' + numberWithCommas(checkingAccount.balance.toFixed(2));
+  // updateBackground()
 }
 
-var deposit = function(accIndicator) {
-  if (accIndicator) {
-    savingsBalance += (+savingsInput.value);
-  } else {
-    checkingBalance += (+checkingInput.value);
-  }
-  updateAccountValues()
-}
 
-var withdraw = function(accIndicator) {
-  var savingsFundsChange = (+savingsInput.value)
-  var checkingFundsChange = (+checkingInput.value)
-  if (accIndicator) {
-    if (checkEnoughFunds(savingsFundsChange, savingsBalance)) {
-      savingsBalance -= savingsFundsChange;
-    } else {
-      overdraft(savingsFundsChange, accIndicator);
-    }
-  } else {
-    if (checkEnoughFunds(checkingFundsChange, checkingBalance)) {
-      checkingBalance -= checkingFundsChange;
-    } else {
-      overdraft(checkingFundsChange, accIndicator);
-    }
-  }
-  updateAccountValues();
-}
-
-var checkEnoughFunds = function(fundsChange, balance) {
+var checkEnoughFunds = function(balance, fundsChange) {
   if ((balance - fundsChange) >= 0) {
     return true;
   } else {
@@ -54,49 +72,43 @@ var checkEnoughFunds = function(fundsChange, balance) {
   }
 }
 
-savingsDeposit.addEventListener('click', function() {
-  var savingsTransaction = true;
-  deposit(savingsTransaction);
-});
-savingsWithdraw.addEventListener('click', function() {
-  var savingsTransaction = true;
-  withdraw(savingsTransaction);
-});
-checkingDeposit.addEventListener('click', function() {
-  var savingsTransaction = false;
-  deposit(savingsTransaction);
-});
-checkingWithdraw.addEventListener('click', function() {
-  var savingsTransaction = false;
-  withdraw(savingsTransaction);
-});
+savingsDeposit.addEventListener('click', savingsAccount.deposit);
+savingsWithdraw.addEventListener('click', savingsAccount.withdraw);
+checkingDeposit.addEventListener('click', checkingAccount.deposit);
+checkingWithdraw.addEventListener('click', checkingAccount.withdraw);
 
-var updateBackground = function() {
-  if (savingsBalance === 0) {
-    savingsInput.style.backgroundColor = 'tomato';
+var updateBackground = function(balance, input) {
+  if (balance === 0) {
+    input.style.backgroundColor = 'tomato';
   } else {
-    savingsInput.style.backgroundColor = 'lightgrey';
+    input.style.backgroundColor = 'lightgrey';
   }
-  if (checkingBalance === 0) {
-    checkingInput.style.backgroundColor = 'tomato';
-  } else {
-    checkingInput.style.backgroundColor = 'lightgrey';
-  }
+  // if (checkingAccount.balance === 0) {
+  //   checkingInput.style.backgroundColor = 'tomato';
+  // } else {
+  //   checkingInput.style.backgroundColor = 'lightgrey';
+  // }
 }
 
-var overdraft = function(fundsChange, accIndicator) {
-  if ((savingsBalance + checkingBalance) >= fundsChange) {
+var overdraft = function(balance, fundsChange, accIndicator) {
+  if ((savingsAccount.balance + checkingAccount.balance) >= fundsChange) {
     if (accIndicator) {
-      fundsChange -= savingsBalance;
-      savingsBalance = 0;
-      checkingBalance -= fundsChange;
+      fundsChange -= savingsAccount.balance;
+      savingsAccount.balance = 0;
+      checkingAccount.balance -= fundsChange;
     } else {
-      fundsChange -= checkingBalance;
-      checkingBalance = 0;
-      savingsBalance -= fundsChange;
+      fundsChange -= checkingAccount.balance;
+      checkingAccount.balance = 0;
+      savingsAccount.balance -= fundsChange;
     }
   }
 }
+
+function updateInputValues() {
+  savingsAccount.input = parseInt(savingsInput.value);
+  checkingAccount.input = parseInt(checkingInput.value);
+}
+
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -104,3 +116,5 @@ function numberWithCommas(x) {
 
 
 updateAccountValues()
+updateBackground(savingsAccount.balance, savingsAccount.inputBox);
+updateBackground(checkingAccount.balance, checkingAccount.inputBox);
