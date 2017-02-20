@@ -21,8 +21,10 @@ document.querySelector("#settings").remove();
 //(5.) How would you add an event listener to the button element inside the div, so that when it is clicked the background color of the div changes to red?
 
 document.querySelector("div button").addEventListener('click', function(){
- document.querySelector("div button").style.background = 'red';
+ document.querySelectorAll("div")[2].style.background = 'red';
 });
+
+
 
 //(6.) Store the contents of the input box with id 'favCol' into a variable called 'favouriteColor'.
 var favouriteColor = document.querySelector("#favCol").value;
@@ -35,4 +37,4 @@ var favouriteColor = document.querySelector("#favCol").value;
 //(8.) Write the necessary code to figure out how many list items are in the ul tag below:
 
 var numberOfListItems = document.querySelectorAll('ul li').length; // or document.querySelectorAll('.list li').length
-//console.log(numberOfListItems); 
+//console.log(numberOfListItems);
