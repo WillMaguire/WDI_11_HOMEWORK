@@ -1,0 +1,52 @@
+
+body {
+  height: 100px;
+  background-color: #D3D3D3;
+  background-repeat: repeat-x;
+  background-image: url(ecardly_CSS/images/background.jpg);
+}
+
+
+.sidebar {
+  display: inline-block;
+  width: 38%;
+  vertical-align: top;
+  margin: auto;
+  background-color: white;
+}
+
+.articles {
+  display: inline-block;
+  width: 60%;
+  vertical-align: top;
+  background-color: white;
+}
+.articles *{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.articles img {
+  width: 100%;
+}
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;;
+
+  margin: 0;
+}
+
+mark.red {
+  color: red;
+  background: none;
+}
+
+footer {
+  /*display: inline-block;*/
+  /*margin: 0;*/
+  /*clear: both;*/
+  text-align: center;
+}

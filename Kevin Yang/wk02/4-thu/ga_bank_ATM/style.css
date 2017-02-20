@@ -1,0 +1,35 @@
+*{
+  font-family: 'Cinzel', serif;
+}
+
+img {
+  width: 25%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  width:100%;
+  display: -webkit-flex;
+  justify-content: space-around;
+
+}
+.savings, .checking {
+  border: 1px solid black;
+  height:220px;
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+
+}
+
+
+input {
+  display: block;
+  margin: 20%;
+  margin-top:10%;
+  margin-bottom: 0;
+}

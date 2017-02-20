@@ -1,0 +1,44 @@
+
+
+body {
+  background-image: url(../images/background.jpg);
+}
+.container {
+  text-align: center;
+  width: 60%;
+  display: inline-block;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+
+
+}
+.lists {
+  text-align: center;
+  width: 36%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  margin: auto;
+
+}
+#logo {
+  text-align: center;
+}
+.ecard {
+  text-align: left;
+  margin-left: 40px;
+}
+ul {
+  list-style: none;
+  display: block;
+
+}
+
+li > img {
+  padding: 20px;
+
+}
+footer {
+  padding-top: 30px;
+}

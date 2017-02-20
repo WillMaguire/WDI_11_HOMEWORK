@@ -1,0 +1,1 @@
+var looper=function(){for(var o=1;o<101;o++)o%3===0&&o%5===0?console.log("CakePudding"):o%3===0?console.log("Cake"):o%5===0?console.log("Pudding"):console.log(o)};

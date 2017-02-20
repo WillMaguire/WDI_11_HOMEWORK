@@ -1,0 +1,78 @@
+ul.tab {
+  width: 50%;
+  margin-left: 2em;
+  padding: 0;
+  list-style: none;
+  background-color: black;
+  overflow: hidden;
+
+}
+
+ul.tab li  {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  width: 150px;
+  color: #f2f2f2;
+  border-right: 1px solid white;
+  float: left;
+
+}
+
+ .tab li a {
+  font-style: italic;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.heading {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.tab {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+article {
+  width: 50%;
+}
+
+.wrapper p {
+  text-align: left;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+p::first-letter {
+    font-size: 400%;
+    color: grey;
+    float: left;
+    line-height: 20px;
+}
+
+ h2 {
+  margin-left: 2em;
+}
+ h2a {
+  margin-left: 1em;
+  font-size: 2em;
+}
+
+.wrapper img {
+  margin-left: 2em;
+}
+
+ h3 {
+  text-align: right;
+  color: red;
+  border-bottom: 1px solid grey;
+}
+
+h4, date {
+  margin-left: 2em;
+}

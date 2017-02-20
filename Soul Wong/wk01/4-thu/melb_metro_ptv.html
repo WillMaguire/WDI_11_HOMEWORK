@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+//Can only handle 1 transit or same line journey
+	var trainLines = {
+		'Alamein':['Flinders Street', 'Richmond', 'East Richmond', 'Burnley', 'Hawthorn', 'Glenferrie'], 
+
+		'Glen Waverly':['Flagstaff', 'Melbourne Central', 'Parliament', 'Richmond', 'Kooyong', 'Tooronga'],
+	
+		'Sandringham':['Southern Cross', 'Richmond', 'South Yarra', 'Prahran', 'Windsor']
+
+	};
+
+
+	//validate station name
+	var retrieveStationLine = function(stationName){
+		for(var lines in trainLines){
+			if(trainLines[lines].includes(stationName)){
+			return lines;
+			}
+		}
+		alert("Error, Station Doesn't exist");
+		return;
+
+	}
+
+	var planJourney = function(startStationName,endStationName){
+		//straight forward journey
+		for(var lines in trainLines){
+			if(trainLines[lines].includes(startStationName)&&trainLines[lines].includes(endStationName)){
+				return {
+				start: startStationName,
+				end: endStationName,
+				line: lines
+				};
+			}
+		}
+		var startStationLine = retrieveStationLine(startStationName);
+		var endStationLine = retrieveStationLine(endStationName);
+		var changeStation = "";
+
+		//Transit journey
+		//Finding the common station between the start station lines and end station line 
+		for(var i =0;i<trainLines[startStationLine].length;i++){
+			for(var x=0;x<trainLines[endStationLine].length;x++){
+				if(trainLines[startStationLine][i]===trainLines[endStationLine][x]){
+					changeStation = trainLines[startStationLine][i];
+				}
+			}
+		}
+		//try to return object so we can pass in the object in other function
+		return {
+			start: startStationName,
+			end: endStationName,
+			line: startStationLine,
+			secondLine: endStationLine,
+			transit: changeStation
+		};
+	}
+
+	var printItinerary = function(journeyDetails){
+
+		var startStationName = journeyDetails.start;
+		var endStationName = journeyDetails.end;
+		var lineToTake = journeyDetails.line;
+		var secondLineToTake = journeyDetails.endStationLine;
+		var transitStation = journeyDetails.transit;
+
+
+		
+		var i = trainLines[lineToTake].indexOf(startStationName);
+		var y = trainLines[lineToTake].indexOf(endStationName);
+
+		var generateJourneyMap = function(i,y){
+			var itinerary = "";
+			var numStops = 0;
+			if(y>i){
+				for(;i<y;i++){
+				itinerary = itinerary.concat(trainLines[lineToTake][i]," -----> ");
+				numStops++;
+				}
+			}else{
+				for(;i>y;i--){
+				itinerary = itinerary.concat(trainLines[lineToTake][i]," -----> ");
+				numStops++;
+				}
+			}
+			//debugger;
+			return { 
+				map: itinerary , stops: numStops
+			}
+
+		}
+		//check if forward journey or reverse journey according to train line
+		if(secondLineToTake===undefined && transitStation===undefined){
+			
+			var journeyTicket = generateJourneyMap(i,y);
+			console.log("origin:" + startStationName + "\n" + "destination: " + endStationName + "\n\n" + journeyTicket.map + endStationName + "\n\n" + journeyTicket.stops + " stops total" );
+			// console.log("origin: "+startStationName + "\n" + "destination: " + endStationName + "\n\n" + itinerary+ endStationName + "\n\n" + numStops + " stops total");
+		}else{
+			//hard coded logic and printing so script can only handle 1 transit
+			//get position of transit station on starting line
+			var z= trainLines[lineToTake].indexOf(transitStation);
+			//get position of transit station on second line
+			debugger;
+			var b= trainLines[secondLineToTake].indexOf(transitStation);
+			
+			var journeyTicketPartOne = generateJourneyMap(i,z);
+			var journeyTicketPartTwo = generateJourneyMap(b,y);
+			console.log(journeyTicketPartOne.map);
+			console.log(journeyTicketPartTwo.map);
+			
+		}
+
+
+
+	}
+
+	// printItinerary(planJourney('Windsor','Southern Cross'));
+	// printItinerary(planJourney('Southern Cross','Windsor'));
+
+	printItinerary(planJourney('Flinders Street','Windsor'));
+
+	
+	</script>
+</html>
