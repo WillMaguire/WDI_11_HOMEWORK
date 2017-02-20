@@ -1,21 +1,16 @@
 console.log('connected to web')
+var result
 
-function printRan(min, max) {
-     Ints = "";
-    for (var i = min; i <= max; i++) {
-            Ints += i + ',';
+    for (var i = 1; i <= 100; i++) {
 
-        if (i % 3 === 0){
-            Ints = "Cake";
-          } else if(+Ints % 5 === 0){
-            Ints = "Pudding";
-          } else if (+Ints % 3 === 0 && Ints % 5 === 0){
-            Ints = "CakePudding";
+      if (i % 3 === 0 && i % 5 === 0){
+        result = "CakePudding, ";
+          } else if(i % 5 === 0){
+            result = "Pudding, ";
+          } else if (i % 3 === 0 ){
+            result = "Cake, ";
+          } else {
+            result = i;
           }
-        }
-
-    return Ints;
-    var result = Ints;
-}
-
- console.log(printRan(1,100));
+          console.log(result);
+      }
