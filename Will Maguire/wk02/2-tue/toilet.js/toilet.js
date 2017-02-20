@@ -1,19 +1,15 @@
-console.log("don't steal my code");
+console.log("THIS IS FURTHER THEN I MADE IT THE FIRST TIME I TRIED THIS!");
 
-// function bang() {
-//   console.log('big bang');
-// }
-//bang();
-//setTimeout(bang, 3000);
 
 var poop = function() {
   document.body.style.backgroundColor = 'darkolivegreen';
+  document.body.style.backgroundImage = "url(http://www.strangemilitary.com/images/content/184013.png)"
   console.log("playing with your phone");
 }
 
 var flush = function() {
   document.body.style.backgroundColor = 'white';
-  document.body.style.backgroundImage = "url()";
+  document.body.style.backgroundImage = "url(http://cdn.quotesgram.com/img/71/81/1942946764-alice-resident-evil-movie.gif)";
 }
 
 function delay() {
@@ -67,13 +63,14 @@ function explode() {
   setTimeout(coolZombie, 1500);
 }
 function coolZombie () {
-    document.getElementById('zombie').setAttribute('src', 'http://orig14.deviantart.net/60cc/f/2016/224/8/c/deviantart_sans_pagedoll_by_kyubeygirl-dadmi17.gif');
+    document.getElementById('zombie').setAttribute('src', 'http://rs125.pbsrc.com/albums/p68/alongway99/Halloween%20Animations/Ghost%20Animations/GhostBlueAngry.gif~c200');
+
   }
 
-//will be the growing zombie... may need new original zombie
+//will be the growing zombie... may need new original zombie gif
 // function zombieCometh() {
-// for (var i = 0; i <= 100; i++) {
-//   100}
+// for (var i = 0; i <= TBD; i++) {
+//   TBD} TBD - depends on zombie gif
 // document.getElementById('zombie').setAttribute('height', (' + ' i ' + %');
 // document.getElementById('zombie').setAttribute('width', (' + ' i ' + %');
 // }

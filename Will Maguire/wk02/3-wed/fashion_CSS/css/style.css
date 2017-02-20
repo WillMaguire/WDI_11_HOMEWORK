@@ -1,19 +1,28 @@
 /* MUST SLEEP... more to come */
+
+body {
+  width: 96.66666667%;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
 #wrapper {
   display: block;
   margin: 0 auto;
-  width: 960px;
-  border-left: solid 2px #a9a3a3;
-  padding-left: 30px
+  width: 63.333333%;
+  padding-right: 33%;
 }
 
 #nav-bar {
 	background-color: #FFFFFF;
 	font-family: 'Raleway', sans-serif;
+  /*display: inline;*/
 }
-#header li {
+#header {
   list-style-type: none;
   display: inline;
+  width: 85.561497%;
+  height: 18pt;
+  padding-bottom: 1px;
 }
 #header_1 {
   font-family:'Raleway', sans-serif;
@@ -25,21 +34,26 @@
   font-size: 20pt;
   color: #a9a3a3;
 }
+#right {
+  width:30%;
+}
 .nav_box {
 	background-color: #000000;
 	color: white;
 	text-decoration: none;
-	display: block;
-	float: left;
+	display: inline;
 	padding: 20px;
   border: 1px solid #FFFFFF;
   font-family: 'Raleway', sans-serif;
   font-size: 18pt;
+  width: 10px;
+
+
 }
 .nav_box:hover {
   background-color: #f94444;
 }
-#nav-bar:after {
+/*#nav-bar:after {
 	visibility: hidden;
 	display: block;
   justify-content: center;
@@ -47,7 +61,7 @@
 	clear: both;
 	height: 0;
 	font-size: 0;
-}
+}*/
 #date {
   font-family: 'Raleway', sans-serif;
   font-size: 24pt;
@@ -57,15 +71,24 @@
   font-family: 'Raleway', sans-serif;
   font-size: 24pt;
 }
-#C {
+#cap-start {
   float: left;
   font-size: 52pt;
   color: #a9a3a3;
   padding: 2px 4px 4px 2px;
   }
-
+#img-1 {
+  width: 100%;
+}
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 10pt;
   float:left;
+}
+
+.class {
+  min-height: 100px;
+  float: left;
+  width: 96.6666666%;
+  margin-right: 3.3333333%;
 }

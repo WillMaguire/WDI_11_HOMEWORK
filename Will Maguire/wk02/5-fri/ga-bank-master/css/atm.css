@@ -1,0 +1,132 @@
+@import 'https://fonts.googleapis.com/css?family=Electrolize|Orbitron';
+body {
+  background-color: black;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 100%;
+  background: url("/home/will/WDI/fullslack/gabank/aaron-hamman-kraken-001.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+
+#logoImg {
+  height: 20%;
+  width: 20%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 100%;
+  padding-top: 6em;
+}
+#atm {
+  width: 62.5%;
+  border-left: : 4px solid #064273;
+  border-right: : 4px solid #064273;
+  background-color: #000000
+  display: block;
+  margin: 0 auto;
+}
+#terminals {
+  width: 83.333333%;
+  height: 83.333333%;
+  background-color: black;
+  display: block;
+  padding: 10px;
+  border: 3px solid #064273;
+  margin: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+#bankname {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 70px;
+  text-align: center;
+  color: #F5A30C;
+}
+
+#savBalance, #chqBalance {
+  height: 20px;
+  width: 150px;
+  display: block;
+  background-color: #FFFFFF;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin-left: 50%;
+  margin-bottom: 10px;
+  float: left;
+}
+.balance, .savBalance {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  width: 100px;
+  display: block;
+  color: #F5A30C;
+  align-self: center;
+}
+button {
+  font-family: 'Orbitron', sans-serif;
+  /*background-color: #FFFFFF;*/
+  font-size: 10pt;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 2em #FFFFFF;
+}
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22pt;
+  text-align: center;
+  color: #F5A30C;
+}
+#sav_deposit, #sav_withdraw, #chq_deposit, #chq_withdraw {
+  border-radius: 10px;
+  border: 1px solid #000000;
+  display: inline-block;
+  margin: 5px;
+}
+.buffer {
+  margin-left: 16%;
+  font-family:'Orbitron', sans-serif;
+}
+@media (50em) {
+  #wrapper {
+    width: 100%
+    margin 0 auto;
+  }
+  #logoImg {
+    height: 10%;
+    width: 10%;
+    margin-left: 30px;
+    position: absolute;
+  }
+  body {
+    width: 100%;
+    background-color: #000000;
+  }
+  #sav_deposit, #sav_withdraw {
+    width: 100%;
+    display: inline-block;
+    float: left;
+  }
+  #bankname {
+    font-size: 10px;
+  }
+  .terminals {
+    display: block;
+  }
+  #savBalance {
+    display: inline-block;
+    margin: 0 auto;
+  }
+  #savDepositButton, #savWithdrawButton {
+    width: 100px;
+
+  }
+
+
+
+}
