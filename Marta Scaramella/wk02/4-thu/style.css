@@ -49,6 +49,8 @@ button{
   width: 40%;
   border-color: #00cca3;
   font-family: 'Barrio', cursive;
+  text-align: right;
+  padding-right: 2px;
 }
 
 .checking{
@@ -61,4 +63,6 @@ button{
   width: 40%;
   border-color: #b3ff99;
   font-family: 'Barrio', cursive;
+  text-align: right;
+  padding-right: 2px;
 }
