@@ -23,7 +23,7 @@ sav_deposit_button.addEventListener('click', savTotalBalance);
     var savWithdrawAmount = document.querySelector('.sav_enter_amount_screen');
     savScreen.value = +accountBalance.value - +savWithdrawAmount.value ;
       if (+accountBalance.value < 0)  {
-        document.querySelector('.sav_screen').value = 'Please check balance amount';
+        document.querySelector('.sav_screen').value = 'Please check savings balance amount';
         document.querySelector('.sav_screen').style.background = 'red';
         } else {
           savTotalBalance2;
@@ -55,7 +55,7 @@ chq_deposit_button.addEventListener('click', chqTotalBalance);
     var chqWithdrawAmount = document.querySelector('.chq_enter_amount_screen');
     chqScreen.value = +accountBalance2.value - +chqWithdrawAmount.value;
       if (+accountBalance2.value < 0) {
-          document.querySelector('.chq_screen').value = 'Please check balance amount';
+          document.querySelector('.chq_screen').value = 'Please check checking balance amount';
           document.querySelector('.chq_screen').style.background = 'red';
         } else {
           chqTotalBalance2;
