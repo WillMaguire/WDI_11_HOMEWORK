@@ -9,36 +9,58 @@ var depositBtnCheck = document.querySelector('.checking-deposit-btn');
 var inputValueCheck = document.querySelector('.checking-amount');
 var balanceValueCheck = document.querySelector('.checking-balance');
 
-var withdrawnFnSav = function (num1, num2){
-  if (num1 >= num2) {
-    return num1 - num2;
+// var colorSwitcher = function(){
+//   if (balanceValueSav.value == '0' && balanceValueCheck.value == '0') {
+//     document.querySelector('.savings').style.backgroundColor='#ff1a1a';
+//     document.querySelector('.checking').style.backgroundColor='#ff1a1a';
+//   }
+//   else if (balanceValueCheck.value = '0' && balanceValueSav.value != '0') {
+//     document.querySelector('.checking').style.backgroundColor='#ff1a1a';
+//     document.querySelector('.savings').style.backgroundColor='#00cca3';
+//   }
+//   else if (balanceValueCheck.value !== '0' && balanceValueSav.value == '0') {
+//     document.querySelector('.checking').style.backgroundColor='#b3ff99';
+//     document.querySelector('.savings').style.backgroundColor='#ff1a1a';
+//   }
+//   else{
+//     document.querySelector('.savings').style.backgroundColor='#00cca3';
+//     document.querySelector('.checking').style.backgroundColor='#b3ff99';
+//   }
+// }
+
+var withdrawFnSav = function (amountFromSav, SavBalance){
+  if (SavBalance >= amountFromSav) {
+    // colorSwitcher();
+    return SavBalance - amountFromSav;
   }
   else{
-    document.querySelector('.savings').style.backgroundColor='#ff1a1a';
-    var resultX = withdrawnFnSavFromCheck(+balanceValueCheck.value , (num2-num1));
-      balanceValueCheck.value = resultX;
-        if (balanceValueCheck.value = '0') {
-          document.querySelector('.checking').style.backgroundColor='#ff1a1a';
-          document.querySelector('.savings').style.backgroundColor='#ff1a1a';
-          return 0;
-        }
-      else{
-        return result;
-      }
+    // document.querySelector('.savings').style.backgroundColor='#ff1a1a';
+    var resultX = withdrawFnSavFromCheck(+balanceValueCheck.value , (amountFromSav - SavBalance));
+    balanceValueCheck.value = resultX;
+    colorSwitcher();
+
+        // if (balanceValueCheck.value = '0') {
+          // document.querySelector('.checking').style.backgroundColor='#ff1a1a';
+          // document.querySelector('.savings').style.backgroundColor='#ff1a1a';
+      //     return 0;
+      //   }
+      // else{
+      //   return result;
+      // }
   }
 }
 
-var withdrawnFnCheck = function(num1, num2){
+var withdrawFnCheck = function(num1, num2){
   if (num1 >= num2) {
     return num1 - num2;
   }
   else {
-    document.querySelector('.checking').style.backgroundColor='#ff1a1a';
-    var resultXX = withdrawnFnCheckFromSav(+balanceValueSav.value , num2-num1);
+    // document.querySelector('.checking').style.backgroundColor='#ff1a1a';
+    var resultXX = withdrawFnCheckFromSav(+balanceValueSav.value , num2-num1);
     balanceValueSav.value = resultXX;
     if (balanceValueSav.value = '0') {
-      document.querySelector('.savings').style.backgroundColor='#ff1a1a';
-      document.querySelector('.checking').style.backgroundColor='#ff1a1a';
+      // document.querySelector('.savings').style.backgroundColor='#ff1a1a';
+      // document.querySelector('.checking').style.backgroundColor='#ff1a1a';
       return 0;
     }
     else{
@@ -47,16 +69,19 @@ var withdrawnFnCheck = function(num1, num2){
   }
 }
 
-var withdrawnFnSavFromCheck = function (val1, val2){
-  if (val1 >= val2) {
-    return val1 - val2;
+var withdrawFnSavFromCheck = function (CheckBalance, amountFromCheck){
+  if (CheckBalance >= amountFromCheck) {
+    return CheckBalance - amountFromCheck;
+      if (CheckBalance == amountFromCheck) {
+        return '0';
+      }
   }
   else{
-    balanceValueSav.value = 'Not Sufficient Found!';
+    return CheckBalance;
   }
 }
 
-var withdrawnFnCheckFromSav = function(val1, val2){
+var withdrawFnCheckFromSav = function(val1, val2){
   if (val1 >= val2) {
     return val1 - val2;
   }
@@ -72,35 +97,35 @@ var depositFn = function(num1, num2){
 depositBtnSav.addEventListener('click', function(){
   var result = depositFn(+balanceValueSav.value, +inputValueSav.value);
   balanceValueSav.value = result;
-  document.querySelector('.savings').style.backgroundColor='#00cca3';
+  // document.querySelector('.savings').style.backgroundColor='#00cca3';
 })
 
 depositBtnCheck.addEventListener('click', function(){
   var result = depositFn(+balanceValueCheck.value, +inputValueCheck.value);
   balanceValueCheck.value = result;
-  document.querySelector('.checking').style.backgroundColor='#b3ff99';
+  // document.querySelector('.checking').style.backgroundColor='#b3ff99';
 })
 
 withdrawBtnSav.addEventListener('click', function(){
-  var result = withdrawnFnSav(+balanceValueSav.value , +inputValueSav.value);
+  var result = withdrawFnSav(+inputValueSav.value, +balanceValueSav.value);
   balanceValueSav.value = result;
     return result;
-    if (balanceValueSav.value = '0') {
-      document.querySelector('.savings').style.backgroundColor='#ff1a1a';
-    }
-    else{
-      document.querySelector('.savings').style.backgroundColor='#b3ff99';
-    }
+    // if (balanceValueSav.value = '0') {
+    //   document.querySelector('.savings').style.backgroundColor='#ff1a1a';
+    // }
+    // else{
+    //   document.querySelector('.savings').style.backgroundColor='#b3ff99';
+    // }
 })
 
 withdrawBtnCheck.addEventListener('click', function(){
-  var result = withdrawnFnCheck(+balanceValueCheck.value , +inputValueCheck.value);
+  var result = withdrawFnCheck(+balanceValueCheck.value , +inputValueCheck.value);
   balanceValueCheck.value = result;
   return result;
-    if (balanceValueCheck.value = '0') {
-      document.querySelector('.checking').style.backgroundColor='#ff1a1a';
-    }
-    else{
-      document.querySelector('.checking').style.backgroundColor='#b3ff99';
-    }
+    // if (balanceValueCheck.value = '0') {
+    //   document.querySelector('.checking').style.backgroundColor='#ff1a1a';
+    // }
+    // else{
+    //   document.querySelector('.checking').style.backgroundColor='#b3ff99';
+    // }
 })
