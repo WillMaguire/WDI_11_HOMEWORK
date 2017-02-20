@@ -1,0 +1,58 @@
+div.wrapper {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto; }
+
+div h1 {
+  text-align: center; }
+
+div.gameWindow {
+  background-color: black;
+  color: white;
+  height: 400px; }
+
+p.guessArea {
+  float: left;
+  padding-left: 20px;
+  padding-top: 20px; }
+
+p.guessedLetters {
+  clear: left;
+  float: left;
+  font-size: 1.5em;
+  padding-left: 20px;
+  margin: 0;
+  text-transform: uppercase; }
+
+p.turnsLeft {
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px; }
+
+li {
+  float: left; }
+
+.guessedLetters {
+  list-style: none;
+  float: left; }
+
+.lives {
+  float: right;
+  list-style: none; }
+
+.wordGuess {
+  list-style: none;
+  font-size: 30px;
+  padding-top: 100px; }
+
+input {
+  width: 30px;
+  height: 40px;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: black;
+  color: white; }
+
+button {
+  display: block; }

@@ -1,6 +1,6 @@
 body {
-  background: -webkit-linear-gradient(#212530, white);
-  background: linear-gradient(#212530, white);
+  background-image: url(background2.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
 
@@ -11,17 +11,16 @@ header {
 
 header h1 {
   float: left;
-  margin: 0;
-  padding: 0;
-  width: 70%;
+  width: 50%;
   height: 50px;
   color: white;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 50px; }
 
 header img {
   float: left;
-  width: 30%;
+  width: 50%;
   height: auto; }
 
 div.wrapper {
@@ -29,25 +28,26 @@ div.wrapper {
   margin: 0 auto; }
 
 div.savings {
-  margin-top: 70px;
+  margin-top: 120px;
   clear: left;
   float: left;
-  width: 50%;
+  width: 45%;
   text-align: center;
-  background-color: #2ECC40;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid black;
   box-sizing: border-box;
-  border-radius: 10%; }
+  border-radius: 5%; }
 
 div.checking {
-  margin-top: 70px;
+  margin-top: 120px;
+  margin-left: 10%;
   float: left;
-  width: 50%;
+  width: 45%;
   text-align: center;
-  background-color: orange;
+  background-color: rgba(255, 255, 255, 0.8);
   border: 2px solid black;
   box-sizing: border-box;
-  border-radius: 10%; }
+  border-radius: 5%; }
 
 div h2 {
   text-transform: uppercase;
