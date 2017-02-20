@@ -10,6 +10,31 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+header{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: 3em;
+}
+.logo{
+  display: inline-block;
+  height: 35px;
+  width: 300px;
+  background-image: url(logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.name {
+  display: inline-block;
+  font-size: 3em;
+  margin-right: 1em;
+}
+
+h2, p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .container {
   width: 80%;
   position: relative;
@@ -28,29 +53,73 @@ h1 {
   font-size: 4em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .savings, .checking {
   text-align: center;
   padding: 2em;
-  width: 30%;
   min-height: 200px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: none;
+  border: 2px solid rgba(255, 255, 255, 0.73);
+  border-radius: 12px;
   display: inline-block;
   box-sizing: border-box;
+  width: 40%;
+}
+
+input[type=button], .input-amount-savings, .input-amount-checking{
+  display: inline-block;
+  text-align: center;
+  background: none;
+  border: none;
+  font-size: 1em;
+  padding: 8px 4px;
+  color: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.input-amount-checking::-webkit-input-placeholder,
+.input-amount-savings::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.8);
+}
+.input-amount-checking::-webkit-input-placeholder,
+.input-amount-savings::-webkit-input-placeholder { /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.8);
+}
+.input-amount-checking::-webkit-input-placeholder,
+.input-amount-savings::-webkit-input-placeholder{ /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 input[type=button]{
-  display: inline-block;
-  height: 32px;
-  width: 100px;
+  width: 80%;
+}
+
+/*input[type=button]::-webkit-input-placeholder{
+  color: yellow;
+}*/
+
+input[type=button]:not(:first-child){
+  margin-top: 1em;
+}
+
+input[type=button]:hover{
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .input-amount-savings, .input-amount-checking {
-  padding: 4px 8px;
+  box-sizing: border-box;
+  padding: 1em 0.5em;
   position: relative;
-  margin: 1em auto;
-  width: 75%;
-  display: block;
+  margin: 1em auto 0.7em auto;
+  /*display: inline-block;*/
+  width: 80%;
+  color: white;
+}
+
+.negative {
+  background-color: rgba(255, 0, 0, 0.35);
 }
