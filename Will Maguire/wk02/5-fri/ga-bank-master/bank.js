@@ -33,9 +33,21 @@ chqDepositButton.addEventListener('click', function(){
 });
 
 chqWithdrawButton.addEventListener('click', function(){
-   cacheChqBalance -= +chqWithdraw.value;
-   chqBalance.textContent = cacheChqBalance;
-   chqWithdraw.value = null;
+  var chqWithdrawValue = parseInt(chqWithdraw.value);
+   if (chqWithdrawValue > cacheChqBalance && chqWithdrawValue < (cacheChqBalance + cacheSavBalance)) {
+      cacheSavBalance = cacheSavBalance - (chqWithdrawValue - cacheChqBalance);
+      cacheChqBalance = 0;
+      chqBalance.textContent = cacheChqBalance;
+      savBalance.textContent = cacheSavBalance;
+      chqWithdraw.value = null;
+  } else if (chqWithdrawValue <= cacheChqBalance) {
+    cacheChqBalance -= chqWithdrawValue;
+    chqBalance.textContent = cacheChqBalance;
+    chqWithdraw.value = null;
+    console.log('test');
+  } else {
+    chqWithdraw.value = null;
+  }
 });
 
 //
