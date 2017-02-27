@@ -54,7 +54,8 @@ chq_deposit_button.addEventListener('click', chqTotalBalance);
 
     var chqWithdrawAmount = document.querySelector('.chq_enter_amount_screen');
     chqScreen.value = +accountBalance2.value - +chqWithdrawAmount.value;
-      if (+accountBalance2.value < 0) {
+      if (+accountBalance2.value < 0) && (+chqWithdrawAmount.value > 0){
+          +accountBalance.value - +chqWithdrawAmount.value
           document.querySelector('.chq_screen').value = 'Please check checking balance amount';
           document.querySelector('.chq_screen').style.background = 'red';
         } else {
