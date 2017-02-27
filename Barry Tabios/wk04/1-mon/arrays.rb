@@ -38,7 +38,7 @@ puts(days_of_the_week.rotate(-1))
 # The first inner array should be the weekdays
 # The second inner array should be the weekend days
 
-array
+array = Array.new
 
 array1 = days_of_the_week.rotate(5).drop(2)
 array2 = days_of_the_week.drop(5)
@@ -46,16 +46,15 @@ array2 = days_of_the_week.drop(5)
 array.push(array1)
 array.push(array2)
 
-puts(array)
+puts array
 
+# 4. Remove either the weekdays or the weekends
+#
+# Your choice..
 
-# while day < days_of_the_week.length do
-#   if days_of_the_week[day] == 'Saturday' || days_of_the_week == 'Sunday'
-#     days_of_the_week[day].drop
-#   else
-#     new_array = Array.new(days_of_the_week[day])
-#   end
-#
-#   day += 1
-#
-# end
+puts(days_of_the_week.drop(5)) # output  ["Saturday", "Sunday"]
+
+#5. Sort the remaining days alphabetically
+
+remove_weekends = days_of_the_week.rotate(5).drop(2)
+puts(remove_weekends.sort!) # sorts in alphabetical order
