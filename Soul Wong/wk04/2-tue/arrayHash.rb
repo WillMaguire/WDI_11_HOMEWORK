@@ -87,8 +87,10 @@ users["Jonathan"][:favorite_numbers] & users["Erik"][:favorite_numbers] & users[
 
 # 1. How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 array_num = []
-users.each do |key|
-  array_num.push( key[1][:favorite_numbers] )
+users.each do |key,val|
+  array_num.push( val[:favorite_numbers] )
 end
- all_user_fav_num = ( ( array_num.flatten ).uniq ).sort
+all_user_fav_num = ( ( array_num.flatten ).uniq ).sort
+
+
 
