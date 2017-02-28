@@ -17,7 +17,7 @@ days_and_weekends[1][1] = days_of_the_week[6]
 puts "Q2: #{days_and_weekends}"
 
 #3
-days_and_weekends[1].clear
+days_and_weekends[1].pop
 puts "Q3: #{days_and_weekends}"
 
 #4
