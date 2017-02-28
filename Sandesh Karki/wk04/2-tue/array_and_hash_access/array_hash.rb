@@ -96,13 +96,9 @@ is = {true => "It's true!", false => "It's false"}
   end
 
   # D6. How would you return an array of the favorite numbers common to all users?
-
-  j = users["Jonathan"][:favorite_numbers]
-  e = users["Erik"][:favorite_numbers]
-  an = users["Anil"][:favorite_numbers]
-  s = users["Sandesh"][:favorite_numbers]
-
-  common_number = j & e & an & s
+  users.values.map do|v|
+    v[:favorite_numbers]
+  end.reduce(&:&)
 
   # D7. How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 
@@ -113,4 +109,4 @@ is = {true => "It's true!", false => "It's false"}
 
 
 
-binding.pry
+# binding.pry
