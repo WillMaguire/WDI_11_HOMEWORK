@@ -38,20 +38,20 @@ require 'fry'
 #
 # D. Given the following data structure:
 # #
-# users = {
-#   "Jonathan" => {
-#     :twitter => "tronathan",
-#     :favorite_numbers => [12, 42, 75],
-#   },
-#   "Erik" => {
-#     :twitter => "sferik",
-#     :favorite_numbers => [8, 12, 24],
-#   },
-#   "Anil" => {
-#     :twitter => "bridgpal",
-#     :favorite_numbers => [12, 14, 85],
-#   },
-# }
+users = {
+  "Jonathan" => {
+    :twitter => "tronathan",
+    :favorite_numbers => [12, 42, 75],
+  },
+  "Erik" => {
+    :twitter => "sferik",
+    :favorite_numbers => [8, 12, 24],
+  },
+  "Anil" => {
+    :twitter => "bridgpal",
+    :favorite_numbers => [12, 14, 85],
+  },
+}
 # How would you access Jonathan's Twitter handle (i.e. the string "tronathan")?
   users['Jonathan'][:twitter]
 
@@ -85,6 +85,6 @@ require 'fry'
 
 # How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 all_favorite_num = [[users["Erik"][:favorite_numbers]],[users["Anil"][:favorite_numbers]], [users["Jonathan"][:favorite_numbers]]]
-all_favorite_num = all_favorite_num.flatten
+all_favorite_num = all_favorite_num.flatten.sort
 
 array = all_favorite_num.uniq
