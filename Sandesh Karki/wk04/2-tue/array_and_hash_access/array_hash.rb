@@ -5,7 +5,7 @@ require 'pry'
 a = %w(Anil Erik Jonathan)
 
 #A1. How would you return the string `"Erik"`?
-a[1].to_s
+a[1]
 
 #A2. How would you add your name to the array?
 a.push('Sandesh')
@@ -80,7 +80,9 @@ is = {true => "It's true!", false => "It's false"}
   users["Erik"][:favorite_numbers].push 7
 
   # D3. How would you add yourself to the users hash?
-  users["Sandesh"]={:favorite_numbers => [1,2,3,4,12], :twitter => "karki"}
+  users["Sandesh"] = {:favorite_numbers => [1,2,3,4,12],
+                      :twitter => "karki"
+                      }
 
   # D4. How would you return the array of Erik's favorite numbers?
   users["Erik"][:favorite_numbers]
@@ -95,25 +97,20 @@ is = {true => "It's true!", false => "It's false"}
 
   # D6. How would you return an array of the favorite numbers common to all users?
 
-  a = users["Jonathan"][:favorite_numbers]
-  b = users["Erik"][:favorite_numbers]
-  c = users["Anil"][:favorite_numbers]
-  d = users["Sandesh"][:favorite_numbers]
+  j = users["Jonathan"][:favorite_numbers]
+  e = users["Erik"][:favorite_numbers]
+  an = users["Anil"][:favorite_numbers]
+  s = users["Sandesh"][:favorite_numbers]
 
-  common_number = a & b & c & d
+  common_number = j & e & an & s
 
   # D7. How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 
-  new_array = users.keys.map do |key|
-    users[key][:favorite_numbers]
-  end
-
-  new_array.flatten!.sort
-
-  new_array.delete_if do |elem|
-    elem == common_number.join().to_i
-  end
+  users.values.map do |ele|
+    ele[:favorite_numbers]
+  end.flatten.uniq.sort
 
 
 
-# binding.pry
+
+binding.pry
