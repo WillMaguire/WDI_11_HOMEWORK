@@ -14,7 +14,7 @@ days_of_the_week[0].push("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 days_of_the_week[1].push("Saturday", "Sunday").compact!
 # 4. Remove either the weekdays or the weekends
 
-list.reject! {|item| item.name =~ /Saturday|Sunday/i }
+days_of_the_week.delete_if { |i| (5..6).include? i }
 days_of_the_week.delete('Saturday')
 days_of_the_week.delete('Sunday')
 # 5. Sort the remaining days alphabetically

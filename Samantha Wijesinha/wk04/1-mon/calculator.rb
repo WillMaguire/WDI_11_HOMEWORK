@@ -2,7 +2,6 @@ require 'pry'
 
 
 
-loop do
 
   puts 'enter the first Number: '
   first_number = gets.chomp.to_i
@@ -28,10 +27,3 @@ loop do
     puts "#{first_number} + #{second_number} = #{result}"
 
   end
-
-  puts 'enter another calculation? y or n'
-  continue = gets
-
-  if continue 
-
-end
