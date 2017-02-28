@@ -18,11 +18,11 @@ require 'fileutils' # standard libary
 require 'pry' # because I need the debugging methods
 
 
-random_number = rand(10 - 0) + 0
+random_number = rand(10 - 0) + 0 # Random.rand()
 
 puts('Part 1')
 puts('guess the number between 0 and 10. Enter your guess')
-user_guess = gets().to_i
+user_guess = gets().to_i # gets().chomp.to_1
 
 
 while user_guess != random_number do
@@ -47,7 +47,7 @@ puts(random_number)
 puts("guess the number between 0 and + #{random_number}")
 user_guess = gets().to_i
 
-while user_guess != random_number do
+while user_guess != random_number do # while (user_guess = gets().chomp.to_i) != random_number do
   if user_guess < random_number
     puts('guess higher')
   else
@@ -56,4 +56,4 @@ while user_guess != random_number do
   user_guess = gets().to_i
 end
 
-puts('congratulatios - you have entered the correct number')
+puts('congratulations - you have entered the correct number')
