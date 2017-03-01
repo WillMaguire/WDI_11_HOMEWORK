@@ -15,7 +15,7 @@
 
 puts 'Enter in a maximum value'
 max = gets.to_i
-puts "Enter in a number from 0- #{max} to guess"
+puts "Enter in a number from 0 - #{max} to guess"
 guess = gets.to_i
 random_number = rand(max)
 correct = false
