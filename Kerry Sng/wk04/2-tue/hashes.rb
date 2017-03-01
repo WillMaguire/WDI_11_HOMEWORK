@@ -64,3 +64,5 @@ users['Jonathan'][:twitter]
 users['Jonathan'][:favorite_numbers] = 12,42,75,7
 users['Erik'][:favorite_numbers]
 users['Erik'][:favorite_numbers].min
+users['Anil'][:favorite_numbers % 2 == 0]
+users[:favorite_numbers]
