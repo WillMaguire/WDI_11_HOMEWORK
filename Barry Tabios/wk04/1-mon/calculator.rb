@@ -53,30 +53,24 @@ while operation != 'QUIT' do
   numb2 = gets().to_i
 
 
-  puts('Enter your choice of - ADDITION / SUBTRACT / DIVIDE / MULTIPLY / EXPONENTS / SQUARE ROOTS or QUIT to exit program ')
+  puts("Enter your choice of - \n 1 - ADDITION \n 2 - SUBTRACT \n 3 - DIVIDE \n 4 - MULTIPLY \n 5 - EXPONENTS \n 6 - SQUARE ROOTS or QUIT to exit program ")
   operation = gets().strip()
 
   case operation
-  when 'ADDITION'
+  when '1'
     result = numb1 + numb2
-    puts("result is: #{result}")
-  when 'SUBTRACT'
+  when '2'
     result = numb1 - numb2
-    puts("result is: #{result}")
-  when 'DIVIDE'
+  when '3'
     result = numb1 / numb2
-    puts("result is: #{result}")
-  when 'MULTIPLY'
-    result = numb1 * numb2
-    puts("result is: #{result}")
-  when 'EXPONENTS'
+  when '4'
+    result  = numb1 * numb2
+  when '5'
     result = numb1**numb2
-    puts("result is: #{result}")
-  when 'SQUARE ROOTS'
+  when '6'
     root1 = Math.sqrt(numb1)
     root2 = Math.sqrt(numb2)
-    puts("Square root of #{numb1} is #{root1}")
-    puts("Square root of #{numb2} is #{root2}")
+    result = "Square root of #{numb1} is #{root1}\nSquare root of #{numb2} is #{root2}"
   end
-
+  puts("result is: #{result}")
 end
