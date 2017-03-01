@@ -4,10 +4,10 @@ days_of_the_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sat
 
 rotated = days_of_the_week.rotate(6) #roates the last item of array to the front.
 
-seperate_days = [rotated1..5] ,[rotated[0],rotated[6]]]
+seperate_days = [rotated[1..5] ,rotated[0],rotated[6]]
 
 seperate_days.pop
 
-seperate_weeks.sort
+seperate_weeks.flatten.sort
 
   end
