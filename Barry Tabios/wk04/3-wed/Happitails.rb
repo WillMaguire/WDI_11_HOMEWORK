@@ -95,9 +95,16 @@ while (input = gets().to_i) != 7 do
 
       animal_id[animal_counter] = Animal.new(name, age, gender, species)
 
+      puts "Enter favourite toy(s)"
+
+      while (toy = gets().chomp()) != '' do
+        animal_id[animal_counter].animal_toys(toy)
+        puts "Enter additional toy(s), otherwise leave blank to exit"
+      end
+
       animal_counter += 1
 
-    when 4#4. Create a Client
+    when 4 #4. Create a Client
 
       puts "Enter client name"
       name = gets().chomp
@@ -109,6 +116,13 @@ while (input = gets().to_i) != 7 do
       age = gets().to_i
 
       client_id[client_counter] = Client.new(name, number_of_children, age)
+
+      puts "Enter pet(s)"
+
+      while (pet = gets().chomp()) != '' do
+        client_id[client_counter].pets(pet)
+        puts "Enter additional pet(s), otherwise leave blank to exit"
+      end
 
       client_counter += 1
 
