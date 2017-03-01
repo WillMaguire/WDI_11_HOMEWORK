@@ -13,15 +13,31 @@
 # Let the user choose the maximum value (so they can play a long game with a random value between 0 and 10000, for example).
 # Give feedback to the user: "Wrong, guess higher!" or "Wrong, guess lower!"
 
+#
+# puts = "guess a number between 0 and 10"
+#
+# random_number = rand(1..10)
+# # puts random_number
+# choice = gets.chomp.to_i
+#
+# until choice == random_number
+#   puts 'sorry, enter another guess'
+#   choice = gets.chomp.to_i
+# end
+# puts 'congratulations'
 
-puts = "guess a number between 0 and 10"
+require 'pry'
+# Random.rand() is a longer way where as rand() is a shorter way
+secret_number = Random.and(1..10) 
+# guess = gets.chomp.to_i
 
-random_number = rand(1..10)
-# puts random_number
-choice = gets.chomp.to_i
-
-until choice == random_number
-  puts 'sorry, enter another guess'
-  choice = gets.chomp.to_i
+while (gets.chomp.to_i) != secret_number do
+  if guess < secret_number
+  puts 'you will die guess higher'
+  else
+  puts 'guess guess lower'
+  end
+  # guess = gets.chomp.to_i
 end
-puts 'congratulations'
+
+puts 'you are doing ok'

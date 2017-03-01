@@ -1,27 +1,3 @@
-1. Create an array of the days of the week
-
-Create a variable named days_of_the_week as an array of the following:
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-Sunday
-
-2. My calendar says the first day is Sunday...
-
-Remove Sunday from the last postion and move it to the first position. Use array methods.
-3. Create a new array of the days of the week:
-
-The first inner array should be the weekdays
-The second inner array should be the weekend days
-4. Remove either the weekdays or the weekends
-
-Your choice...
-
-5. Sort the remaining days alphabetically
-
 
 # adding items to array: use .push():
 # adding a value to the begining of an array: use .unshift():
@@ -30,9 +6,37 @@ Your choice...
 # .reverse(): reverses an array
 # .sort(): sorts an array alphabetically and .sort!() sorts an array permanently
 
+require 'pry'
 
-1. days_of_the_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+days_of_the_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
-2. days_of_the_week.unshift(days_of_the_week.pop)
+days_of_the_week.unshift(days_of_the_week.pop)
 
-3. new_array =
+new_array =
+
+# days_of_the_week = 'mon tue wed thur'.split(' ')
+# %w is used to create an array
+# sort_by sorts arrays alphabetically
+# .flatten cocats an array in one
+# rotate: rotates the array
+
+
+# creating a nested array:
+
+new_arr = days_of_the_week.rotate(-2).drop(2)
+new_arr2 = days_of_the_week.drop(5)
+finish_arr = [new_arr, new_arr2]
+
+
+# days_of_the_week = %w(mon tue wed thurs fri sat sun)
+#
+# last_day = days_of_the_week.pop
+# days_of_the_week.unshift(days_of_the_week.pop)
+#
+# days_of_the_week = [%w(mon tue wed thurs fri),%w(sat sun)]
+#
+# days_of_the_week.pop
+#
+# days_of_the_week.flatten
+# puts days_of_the_week.flatten.sort.join(', ')
+# binding.pry
