@@ -56,23 +56,31 @@
 require_relative 'animal.rb'
 require_relative 'client.rb'
 
-customer_counter = 0
+client_counter = 0
 animal_counter = 0
 animal_id = [] #stores the objects animals in an array
-customer_id =[] #stores the objects customers in an array
+client_id =[] #stores the objects customers in an array
 
 # CREATE MENU
 puts "1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM"
 
 while (input = gets().to_i) != 7 do
   case input
-    when 1 #1. Display all animals
-      puts "testing"
-      animal_id[0]
 
-    when 2
-      puts "2. Display all clients"
+    when 1 #1. Display all animals
+
+      for i in 0..animal_counter-1
+        animal_id[i].shelter
+      end
+
+    when 2 #2. Display all clients
+
+      for i in 0..client_counter-1
+        client_id[i].shelter
+      end
+
     when 3 #3. Create an animal"
+
       puts 'Enter animal name'
       name = gets().chomp()
 
@@ -88,12 +96,30 @@ while (input = gets().to_i) != 7 do
       animal_id[animal_counter] = Animal.new(name, age, gender, species)
 
       animal_counter += 1
-    when 4
-      puts "4. Create a Client"
+
+    when 4#4. Create a Client
+
+      puts "Enter client name"
+      name = gets().chomp
+
+      puts "Enter number of children of client"
+      number_of_children = gets().to_i
+
+      puts "Enter clients age"
+      age = gets().to_i
+
+      client_id[client_counter] = Client.new(name, number_of_children, age)
+
+      client_counter += 1
+
     when 5
+
       puts "5. Facilitate client adopts an animal"
+
     when 6
+
       puts "6. Facilitate client puts an animal up for adoption"
+
     end
 
     puts "1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM"
