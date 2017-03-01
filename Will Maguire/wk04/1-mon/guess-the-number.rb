@@ -2,10 +2,10 @@
 
 
 player = 'loser'
-answer = 1 + rand(10)
+answer = Random.rand(1..10)
   while player == 'loser'
       puts "Pick a number between 1 and 10"
-      guess = gets.to_i
+      guess = gets.chomp.to_i
          if guess == answer
            player = 'winner'
            puts 'YOU WIN'

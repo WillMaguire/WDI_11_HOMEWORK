@@ -2,11 +2,12 @@
 
 
 days_of_the_week = ["Monday","Tuesday","Wenesday","Thursday","Friday","Saturday","Sunday"] #part 1
-
+#days_of_the_week = ['Monday Tuesday Wenesday Thursday Friday Saturday Sunday'].split(' ')
+#days_of_the_week = %w['Monday Tuesday Wenesday Thursday Friday Saturday Sunday']
 puts days_of_the_week.rotate(-1) #part 2
 
-
-new_array1 = days_of_the_week.rotate(-2).drop(2)
+# .flatten()  - a method to squash multiple arrays into a single array
+new_array1 = days_of_the_week.drop(-2)
 puts new_array1
 puts "hi will"
 new_array2 = days_of_the_week.drop(5)
