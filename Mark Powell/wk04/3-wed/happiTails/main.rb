@@ -7,10 +7,19 @@ shelter = {
   current_clients: []
 }
 
-def displayAll(shelter)
+def display_all(shelter)
   puts shelter[:current_clients]
   puts shelter[:current_pets]
 end
+
+def display_clients(shelter)
+  puts shelter[:current_clients]
+end
+
+def display_animals(shelter)
+  puts shelter[:current_pets]
+end
+
 
 def add_pet(shelter)
   puts "Enter pet name"
@@ -46,4 +55,31 @@ def add_client(shelter)
   shelter[:current_clients].push(clientObject)
 end
 
+
+
+# Lets create a menu
+puts "Choice?"
+menu_choice = gets.chomp.to_i
+case menu_choice
+when 1
+  puts display_animals(shelter)
+when 2
+  puts display_clients(shelter)
+when 3
+  add_pet(shelter)
+when 4
+  add_client(shelter)
+else
+  puts "Nothing here?"
+end
+
+
+=begin
+display all animals
+display all clients
+create an animal
+create an client
+facilitate client adopts an animal
+facilitate client puts an animal up for adoption
+=end
 binding.pry
