@@ -5,8 +5,6 @@ require 'pry'
 
 class Client
 
-  @no_of_customers = 0
-
   attr_accessor :name, :number_of_children, :age, :pets_array
 
   def initialize(name, number_of_children, age)
@@ -54,6 +52,7 @@ class Client
     puts "Client Name: #{@name}"
     puts "No. of Children: #{@number_of_children}"
     puts "Age: #{@age}"
+    puts "Pets: #{@pets_array}"
   end
 
 end

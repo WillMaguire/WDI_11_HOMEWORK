@@ -73,6 +73,7 @@ while (input = gets().to_i) != 7 do
 
       for i in 0..animal_counter-1
         puts "\n"
+        puts "Animal ID #{i}"
         animal_id[i].shelter
       end
 
@@ -82,6 +83,7 @@ while (input = gets().to_i) != 7 do
 
       for i in 0..client_counter-1
         puts "\n"
+        puts "Client ID #{i}"
         client_id[i].shelter
       end
 
@@ -127,18 +129,34 @@ while (input = gets().to_i) != 7 do
 
       client_id[client_counter] = Client.new(name, number_of_children, age)
 
-
       client_id[client_counter].pets()
 
       client_counter += 1
 
     when 5 #5. Facilitate client adopts an animal
+      puts "\nAdopt an animal"
 
+      puts "Enter Client ID"
+      c_id = gets().to_i
 
-    when 6
+      puts "Enter Animal ID"
+      a_id = gets().to_i
 
-      puts "6. Facilitate client puts an animal up for adoption"
+      client_id[c_id].pets_array.push animal_id.delete_at(a_id)
+      animal_counter -= 1
+      # y.push x.delete_at(1) example
+    when 6 # "6. Facilitate client puts an animal up for adoption"
+      puts "\nPut an animal for adoption"
 
+      puts "Enter Client's ID"
+      c_id = gets().to_i
+
+      puts "Enter Client's Animal ID"
+      a_id = gets().to_i
+
+      animal_id.push client_id[c_id].pets_array.delete_at(a_id)
+
+      animal_counter += 1
     end
 
     puts "\n1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM\nPlease choose from the following menu"
