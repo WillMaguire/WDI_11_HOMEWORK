@@ -37,9 +37,9 @@ loop do request != 5
       puts "Enter Animal Toys"
       animal_toys = gets.chomp
 
-      animal_array.push(Animals.new(animal_name, animal_age, animal_gender, animal_species))
-      animal_array.last.a_toys.push(animal_toys)
+
       request = 0
+
   elsif request == 4
     puts "Enter Client Name:"
     client_name = gets.chomp
@@ -50,17 +50,19 @@ loop do request != 5
     puts "Enter Pets"
     client_pets = gets.chomp
 
-    client_array.push(Clients.new(client_name, client_children, client_age))
-    client_array.last.c_pets.push(client_pets)
+
 
     request = 0
 
 
-    elsif request == 4
+  elsif request == 5
   break
 
   end
-
+  animal_array.push(Animals.new(animal_name, animal_age, animal_gender, animal_species))
+  animal_array.last.a_toys.push(animal_toys)
+  client_array.push(Clients.new(client_name, client_children, client_age))
+  client_array.last.c_pets.push(client_pets)
 end
 
 
@@ -68,11 +70,10 @@ end
 
 
 
-
-
-
-  # The shelter should display all the clients.
-  # The shelter should display all the animals.
+# Relationships:
+#
+# A client should be able to adopt an animal.
+# A client should be able to put an animal up for adoption
 
 
 
