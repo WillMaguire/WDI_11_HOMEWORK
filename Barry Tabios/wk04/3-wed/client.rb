@@ -44,7 +44,7 @@ class Client
 
       @pet_counter += 1
 
-      puts 'Do you have pet(s) - Y/N'
+      puts 'Do you have more pets to list - Y/N'
     end
   end
 
