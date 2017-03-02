@@ -71,14 +71,15 @@ users = {
 # 4. puts users["Erik"][:favorite_numbers]
 # 5. puts users["Erik"][:favorite_numbers].sort.first
 # 6.
-=begin
+
   even_numbers = []
   users["Anil"][:favorite_numbers].map do |number|
     if number.even?
       even_numbers.push(number)
     end
   end
-
+  puts even_numbers
+=begin
 # 7.
   common_numbers = []
   users["Anil"][:favorite_numbers].map do |number|
@@ -90,6 +91,10 @@ users = {
 =end
 
 # 8.
- # favorite_numbers = [ [users["Anil"][:favorite_numbers]], [users["Erik"][:favorite_numbers]],[users["Jonathan"][:favorite_numbers]] ]
+ # favorite_numbers = [
+ #  [users["Anil"][:favorite_numbers]],
+ #  [users["Erik"][:favorite_numbers]],
+ #  [users["Jonathan"][:favorite_numbers]]
+ #  ]
  # favorite_numbers = favorite_numbers.flatten.uniq.sort
  # puts favorite_numbers
