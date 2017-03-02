@@ -22,6 +22,7 @@ class Animal
       puts "Animal Name: #{@name}"
       puts "Age: #{@age}"
       puts "Gender: #{@gender}"
+      puts "Species: #{@species}"
       puts "Toys: #{@toys}"
     end
 

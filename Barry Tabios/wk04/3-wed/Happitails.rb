@@ -62,24 +62,34 @@ animal_id = [] #stores the objects animals in an array
 client_id =[] #stores the objects customers in an array
 
 # CREATE MENU
-puts "1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM"
+puts "\n1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM\nPlease choose from the following menu"
 
 while (input = gets().to_i) != 7 do
   case input
 
     when 1 #1. Display all animals
 
+      puts "\n"
+
       for i in 0..animal_counter-1
+        puts "\n"
+        puts "Animal ID #{i}"
         animal_id[i].shelter
       end
 
     when 2 #2. Display all clients
 
+      puts "\n"
+
       for i in 0..client_counter-1
+        puts "\n"
+        puts "Client ID #{i}"
         client_id[i].shelter
       end
 
     when 3 #3. Create an animal"
+
+      puts ""
 
       puts 'Enter animal name'
       name = gets().chomp()
@@ -106,6 +116,8 @@ while (input = gets().to_i) != 7 do
 
     when 4 #4. Create a Client
 
+      puts "\n"
+
       puts "Enter client name"
       name = gets().chomp
 
@@ -117,26 +129,37 @@ while (input = gets().to_i) != 7 do
 
       client_id[client_counter] = Client.new(name, number_of_children, age)
 
-      puts "Enter pet(s)"
-
-      while (pet = gets().chomp()) != '' do
-        client_id[client_counter].pets(pet)
-        puts "Enter additional pet(s), otherwise leave blank to exit"
-      end
+      client_id[client_counter].pets()
 
       client_counter += 1
 
-    when 5
+    when 5 #5. Facilitate client adopts an animal
+      puts "\nAdopt an animal"
 
-      puts "5. Facilitate client adopts an animal"
+      puts "Enter Client ID"
+      c_id = gets().to_i
 
-    when 6
+      puts "Enter Animal ID"
+      a_id = gets().to_i
 
-      puts "6. Facilitate client puts an animal up for adoption"
+      client_id[c_id].pets_array.push animal_id.delete_at(a_id)
+      animal_counter -= 1
+      # y.push x.delete_at(1) example
+    when 6 # "6. Facilitate client puts an animal up for adoption"
+      puts "\nPut an animal for adoption"
 
+      puts "Enter Client's ID"
+      c_id = gets().to_i
+
+      puts "Enter Client's Animal ID"
+      a_id = gets().to_i
+
+      animal_id.push client_id[c_id].pets_array.delete_at(a_id)
+
+      animal_counter += 1
     end
 
-    puts "1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM"
+    puts "\n1. Display all animals \n2. Display all clients \n3. Create an animal \n4. Create a Client \n5. Facilitate client adopts an animal \n6. Facilitate client puts an animal up for adoption\n7. EXIT PROGRAM\nPlease choose from the following menu"
 end
 
 
