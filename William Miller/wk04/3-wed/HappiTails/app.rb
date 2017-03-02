@@ -68,7 +68,7 @@ def add_new_animal
 	puts "Complete to add a new animal."
 	print "What is the animal\'s name? "
 	name = gets.chomp
-	print "How old is #{name}? " # MONTHS AND YEARS?
+	print "How old is #{name}? "
 	age = gets.to_i
 	print "Is #{name}\'s male or female?"
 	gender = gets.chomp
@@ -76,7 +76,7 @@ def add_new_animal
 	species = gets.chomp
 
 	new_animal = Animal.new name, age, gender, species
-	new_animal
+	new_animal.push.shelter[:animals]
 end
 
 #METHOD FOR ADDING NEW CLIENT
