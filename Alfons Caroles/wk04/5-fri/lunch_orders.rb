@@ -9,7 +9,7 @@ end
 all_order = {}
 puts "Name for order:"
 @customer_name = gets.chomp.to_s
-all_order[:name] = @customer_name
+all_order[:Name] = @customer_name
 agregate_order = []
 customer_response = 'y'
 while customer_response == 'y' do
