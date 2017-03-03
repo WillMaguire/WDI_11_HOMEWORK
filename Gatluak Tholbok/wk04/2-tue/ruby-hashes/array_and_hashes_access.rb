@@ -1,40 +1,18 @@
-# require 'pry'
 
-# A. Return string "Erik" and add "Gatluak" from and to the array
-#
-# a = ["Anil", "Erik", "Jonathan"]
-# a.delete_at(1).push('Gatluak')
+h = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
 
-# delete_at() deletes and return Erick
-# can also delete
-# use shift to remove an item from the beginning of an array
-# use pop to remove the last element in the array
+h[1]
+h[:two]
+h["two"]
+h[:four] = 4
+h[3] = 'Three'
 
-# adding elements:
-# push use to push an element into an array
-# unshift used to add an element to the beginning of an array
-# insert use to add an element anywhere in the array
+is = {true => "It's true!", false => "It's false"}
+1. It's true
+2. It's false
+3. It false
 
-# B. Return "One", return "Two", return "2", add {3 => "Three"} to the hash {:four => 4} to the hash
 
-# h = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
-#
-# h[1] # returns "One"
-# h[:two] # returns "Two"
-# h["two"] # returns 2
-# h[:four] = 4 # adds :four => 4
-# h[3] = 'Three' # adds 3 => 'Three'
-
-# # C. return value of is[2+2 == 4], is["Erik" == "Jonathan"],
-#
-# is = {true => "It's true!", false => "It's false"}
-# 1. It's true
-# 2. It's false
-# 3. It's false
-# 4. nil
-# 5. nil
-
-# D. Access Users twitter accounts
 
 users = {
   "Jonathan" => {
@@ -59,19 +37,11 @@ users = {
 6. users["Anil"][:favorite_numbers].select do |num|
   num.even?
 end
-7.
-8. struggled with these the last two questions and was wondering if you can help or give me a hint
 
-# users.each_key {  returns all keys in the hash: returns both twitter and favorite_numbers
-#   :favorite_numbers
-# }
+7. users.each do |key, value|
+      puts value[:favorite_numbers]
+    end
 
-# users.each_key do |key, val|
-#   puts "#{:favorite_numbers}"
-# end
-
-# users.each_value do |val|
-#   puts "#{:favorite_numbers}"
-# end
-#
-# users.select {|:favorite_numbers|}
+8. users.each do |key, value|
+      puts value[:favorite_numbers].sort
+  end
