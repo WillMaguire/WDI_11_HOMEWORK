@@ -32,7 +32,7 @@ def new_client
 
   return Client.new(name, children, age, pets)
 end
-
+#TEST ELEMENTS ADDED TO FILL THE EMPTY ARRAYS WITH DATA TO TEST
 shelter.add_client(Client.new('Gerard',0,28,[]))
 shelter.add_client(Client.new('Tony',3,45,[]))
 shelter.add_client(Client.new('Michael',2,35,[]))
@@ -50,7 +50,6 @@ loop do
   puts "5. Facilitate client adopts an animal"
   puts "6. Facilitate client puts an animal up for adoption"
   puts "7. Exit"
-
 
   user_action = gets.chomp.to_i
 
