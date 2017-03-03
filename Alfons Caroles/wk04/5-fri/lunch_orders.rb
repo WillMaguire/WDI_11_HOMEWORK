@@ -30,3 +30,24 @@ while usr_response == 'y'
   usr_response = gets.chomp
 end
 puts "All Order: #{all_order}"
+
+
+
+# @all_order = []
+# input = 'y'
+# while input == 'y'
+# puts "Is it a new customer?(y/n)"
+# usr_input = gets.chomp
+#   if usr_input == 'y'
+#       @all_order.push(single_client())
+#     else
+#       puts "Please enter client's name"
+#       existing_customer_name = gets.chomp
+#       existing_customer = all_order.find{ |x| x[:Name] = existing_customer_name }
+#       existing_customer[:Order].push(collect_orders())
+#   end
+# end
+# puts "All Order: #{all_order}"
+#   #
+#   # puts "Do you have another customer who like to order? (y/n)"
+#   # usr_response = gets.chomp
