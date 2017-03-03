@@ -6,6 +6,14 @@ lunchArr = []
 class LunchPair
   attr_accessor :name, :orderList
 
+  # def name
+  #   return @name
+  # end
+  #
+  # def name=(value)
+  #   @name = value
+  # end
+
   def initialize (name, orderList)
     @name = name
     @orderList = orderList
@@ -14,6 +22,7 @@ class LunchPair
 end
 
 test1 = LunchPair.new('Kasun', ['latte','sandwich'])
+test1.name = 'DT'
 collectiveArr << test1
 
 puts " **welcome to lunch order app BETA**"
@@ -26,7 +35,7 @@ print ">> #{orderName} wants to order:"
 lunchOrder = gets.chomp
 lunchArr << lunchOrder
 
-puts "Add another item to the order? (y/n)"
+puts "\n *** Add another item to the order? (y/n) ***"
 repeatMarker =  gets.chomp
 
 
