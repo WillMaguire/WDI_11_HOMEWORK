@@ -73,6 +73,8 @@ is = {true => "It's true!", false => "It's false"}
     },
   }
 
+  puts users
+
   # D1. How would you access Jonathan's Twitter handle (i.e. the string `"tronathan"`)?
   users["Jonathan"][:twitter]
 
@@ -109,4 +111,4 @@ is = {true => "It's true!", false => "It's false"}
 
 
 
-# binding.pry
+#binding.pry
