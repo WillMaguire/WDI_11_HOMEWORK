@@ -27,7 +27,7 @@ if choice == 'add'
     a_toys = gets.chomp
 
     animal_array.push(Animal.new(a_name, a_age, a_gender, a_species))
-    
+
 
 
   elsif to_add == 'client'

@@ -10,8 +10,8 @@ class Client
     @pets = []
   end
 
-  def info
-    "Client:#{@name} is #{@age} years old with #{@children_number} children. He/she has already #{@pets.join (',')}"
+  def client_info
+    "Client name:#{@name}, age: #{@age}, number of children: #{@children_number}, other pets: #{@pets.join (',')}"
   end
 
   def add_a_pet (pet)
