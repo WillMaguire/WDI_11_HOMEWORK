@@ -1,27 +1,29 @@
 require 'pry'
 
-client_order = []
+client_order = Hash.new
+client_order[:order] = []
 
 puts 'Name for order:'
-name_order = gets.chomp
+client_name = gets.chomp
+client_order[:name] = client_name
 
-puts "#{name_order} wants to order:"
+puts "#{client_name} wants to order:"
 item = gets.chomp
-client_order.push(item)
+client_order[:order] << item
 
 puts "Add another item to the order? (y/n)"
-another_order = gets.chomp
+add_item = gets.chomp
 
-while another_order == "y" do
-  puts "#{name_order} wants to order:"
+while add_item == "y" do
+  puts "#{client_name} wants to order:"
   item = gets.chomp
-  client_order.push(item)
+  client_order[:order] << item
   puts "Add another item to the order? (y/n)"
-  another_order = gets.chomp
+  add_item = gets.chomp
 end
 
-while another_order == "n" do
-    puts "All orders for #{name_order}: #{client_order.join(", ")} "
+while add_item== "n" do
+    puts "All orders for #{client_name}: #{client_order[:order].join(", ")} "
     break
 end
 
