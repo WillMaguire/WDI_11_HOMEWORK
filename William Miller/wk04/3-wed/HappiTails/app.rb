@@ -76,7 +76,7 @@ def add_new_animal
 	species = gets.chomp
 
 	new_animal = Animal.new name, age, gender, species
-	new_animal.push.shelter[:animals]
+	new_animal << shelter[:animals]
 end
 
 #METHOD FOR ADDING NEW CLIENT

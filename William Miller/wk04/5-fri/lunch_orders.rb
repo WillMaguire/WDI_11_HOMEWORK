@@ -14,6 +14,9 @@
 
 require 'pry'
 
+
+
+
 class Customer
   attr_accessor :user_name, :user_order
 
@@ -25,10 +28,17 @@ class Customer
 
 end
 
-class allOrders
-  attr_accessor :allOrders
 
-  def initialize()
+class allOrders
+  attr_accessor :customers
+
+  def initialize(customers)
+    @customers = []
+
+  end
+
+end
+
 
 
 def take_name
@@ -56,6 +66,5 @@ def add_another
       puts "All orders: #{allOrders.}"
     end
 end
-
 
 binding.pry
