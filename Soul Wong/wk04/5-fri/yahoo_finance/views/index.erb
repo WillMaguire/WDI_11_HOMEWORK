@@ -18,6 +18,7 @@
     </div>
 
     <div class="stock_details">
+      <% if @stockSymbol %>
       <h3> <%= @stockSymbol %> </h3>
       <h3> <%= @time %> </h3>
       <h4> <%= @changePercent %> </h4>
@@ -28,6 +29,7 @@
     <div class="stock_cost bottom">
       <h2>Ask </h2> <h2> $ <%= @askprice %> USD </h2>
     </div>
+    <% end %>
   </div>
 
 </div>
