@@ -1,0 +1,60 @@
+body{
+  background-color: mistyrose;
+  max-width:500px;
+}
+
+
+
+.container{
+  text-align:center;
+
+  border-radius: 25px;
+}
+
+h2, h3, h4{
+  display:inline-block;
+}
+
+.submit{
+  margin-left: -50px;
+}
+
+.search{
+  width: 22%;
+}
+
+.stock_name, .header_wrapper{
+  background-color:#000;
+  color:white;
+}
+
+a{
+  background-color:#f2f4f6;
+  margin:0;
+}
+
+.stock_details, .stock_cost{
+  background-color:#464a4d;
+  color:white;
+}
+
+h1{
+  margin:0;
+  
+}
+
+.bottom{
+  border-radius: 0 0 20px 20px;
+}
+
+.search_area{
+  background-color:#f2f4f6;
+}
+
+.header_wrapper{
+  border-radius: 20px 20px 0 0;
+}
+
+form{
+  padding:15px;
+}
