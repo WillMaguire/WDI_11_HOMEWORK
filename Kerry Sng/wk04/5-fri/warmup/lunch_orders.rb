@@ -14,29 +14,28 @@
 # #      * **"All orders: {order data}"**
 require 'pry'
 
+puts "Can I have your name please?"
+puts "What would you like to order?"
+puts "Would you like fries with your order?"
+
 class Lunch
   attr_accessor :name, :item
+
+  #accessor is a short cut to allow us to access the attributes above.
+  # so that we dont need to define name and item
 
 def initialize(name, item)
   @name = gets.chomp
   @food_order = []
 
+
   end
-puts "What would you like to order?"
 
-input = gets.chomp
-
-
-
-puts "Would you like to add fries to your order?"
-
-input = gets.chomp
+food_order = gets.chomp
 
 def new_order(name, food_order)
 
-end
-
-if input == y
+if input == 'y'
   new_order.new(name, food_order + 'fries')
 
 else
@@ -45,13 +44,6 @@ else
 end
 
 
-def get_name
-  @name
-  end
-
-def set_name(name)
-  @name = name
-end
 
 
 
