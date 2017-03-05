@@ -82,12 +82,12 @@ while text != 'q'
       puts "Who does she/he want to adopt?"
         aName = gets.chomp.downcase
 binding.pry
-      (0..(shelterClient.length + shelterAnimal.length)).each do |i|
-        if cName == shelterClient[i].instance_variable_get(:@name) && aName == shelterAnimal[i].instance_variable_get(:@name) && shelterAnimal[i].instance_variable_get(:@relationship) == "no"
+      (0..(shelterClient.length + shelterAnimal.length)).each do |i,n|
+        if cName == shelterClient[i].instance_variable_get(:@name) && aName == shelterAnimal[n].instance_variable_get(:@name) && shelterAnimal[n].instance_variable_get(:@relationship) == "no"
           shelterClient[i].instance_variable_get(:@pets).push(aName)
-          shelterAnimal[i].instance_variable_set(:@relationship, "yes")
+          shelterAnimal[n].instance_variable_set(:@relationship, "yes")
           text += " #{aName} has been adopted by #{cName}"
-        elsif cName == shelterClient[i].instance_variable_get(:@name) && shelterAnimal[i].instance_variable_get(:@relationship) == "yes"
+        elsif cName == shelterClient[i].instance_variable_get(:@name) && shelterAnimal[n].instance_variable_get(:@relationship) == "yes"
           puts "#{aName} is already owned"
         end
       end
@@ -98,12 +98,12 @@ binding.pry
       puts "What the name of his pet he wants to put up for adoption?"
         aName = gets.chomp.downcase
 
-      (0..shelterClient.length + shelterAnimal.length).each do |i|
-        if cName == shelterClient[i].instance_variable_get(:@name) && aName == shelterAnimal[i].instance_variable_get(:@name) && shelterAnimal[i].instance_variable_get(:@relationship) == "yes"
+      (0..shelterClient.length + shelterAnimal.length).each do |i,n|
+        if cName == shelterClient[i].instance_variable_get(:@name) && aName == shelterAnimal[n].instance_variable_get(:@name) && shelterAnimal[n].instance_variable_get(:@relationship) == "yes"
           shelterClient[i].instance_variable_get(:@pets).delete(aName)
-          shelterAnimal[i].instance_variable_set(:@relationship, "no")
+          shelterAnimal[n].instance_variable_set(:@relationship, "no")
           text += " #{aName} has been put up for adoption from #{cName}"
-        elsif shelterAnimal[i].instance_variable_get(:@relationship) == "yes"
+        elsif shelterAnimal[n].instance_variable_get(:@relationship) == "yes"
           puts "#{aName} is already owned"
         else
           puts "ERROR404"
