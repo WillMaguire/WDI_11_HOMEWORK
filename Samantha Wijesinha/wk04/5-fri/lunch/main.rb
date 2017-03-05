@@ -1,5 +1,5 @@
 require 'pry'
-
+require_relative 'order.rb'
 
 
 # It's approaching lunch hour… let's collect orders. Create a new file called `lunch_orders.rb` to complete this exercise.
@@ -15,26 +15,32 @@ require 'pry'
 # 3. After the user completes adding orders, print out:
 #      * **"All orders: {order data}"**
 
-  lunch_order = {}
+
+# monkey1 = Monkey.new("Godzilla", "Gorilla")
+# monkey1.eat("Banana")
+# monkey1.eat("apple")
+# monkey1.introduce_monkey()
+lunch_order = {}
 
   puts "Name for order:"
   name = gets.chomp
 
   puts "#{name} wants to order:"
   order = gets.chomp
+  lunch_order.add(:name => name).add(:order => [order])
 
-  lunch_order[:name]  = name
-  lunch_order[:order] = [order]
+
+
 
   puts "add another item to the order (y/n)?"
   add_another_item = gets.chomp
 
-    while add_another_item != "n" do
+    while add_another_item.downcase != "n" do
 
       puts "enter additional item"
       add_order = gets.chomp
 
-      lunch_order[:order].push(add_order)
+      lunch_order.last[:order].push(add_order)
 
       puts "add another item to the order (y/n)?"
       add_another_item = gets.chomp
@@ -42,6 +48,6 @@ require 'pry'
     end
 
 
-      puts "#{name} can order a #{order}, and then add #{add_order} to his order later."
+
 
 binding.pry
