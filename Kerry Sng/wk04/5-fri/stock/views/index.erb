@@ -1,0 +1,21 @@
+
+<form action='/index' method='get'>
+  <label>Enter the stock symbol:</label>
+  <input type='text' name='stock_symbol'>
+  <button>Get a quote!</button>
+</form>
+
+
+
+
+<% if @stock_symbol %>
+
+  <header>
+    <h1>Latest stock price for <%= @stock.name %> (<%= @stock_symbol %>) (<%= Time.now.strftime('%A') %>)</h1>
+      $<%= @stock.lastTrade %>,
+    <p>Day high: $<%= @stock.dayHigh%></p>
+    <p>Day low: $<%= @stock.dayLow%></p>
+
+  </header>
+
+<% end %>
