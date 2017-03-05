@@ -11,32 +11,31 @@
 # 3. After the user completes adding orders, print out:
 #      * **"All orders: {order data}"**
 require 'pry'
+indi_orders = []
 
 class Lunch
-  attr_accessor :name, :order
+  attr_reader :name, :order
   def initialize (name, order)
     @name = name
     @order = order
   end
-
-  def additional (food)
-    @order.push(food)
-  end
 end
 
 class Invoice
-  attr_accessor :final_order
+  attr_reader :final_order
   def initialize()
     @final_order = []
   end
+
   def add_order order
-    @final_order.push(order)
-  end
-  def to_s
+    @final_order << order
   end
 end
 
-indi_orders = []
+invoice = Invoice.new
+invoice.add_order(Lunch.new("gerard",["coke", "burger"]))
+invoice.add_order(Lunch.new("michael",["banana", "salad"]))
+invoice.add_order(Lunch.new("wendy",["fries", "tomato sauce"]))
 
 loop do
   print "hello can i help you? (y/n)"
@@ -55,8 +54,8 @@ loop do
         order = gets.chomp
         indi_orders.push(order)
       else
-        print "#{name} your orders are #{indi_orders.join(", ")}\n"
-        Invoice.new.add_order(Lunch.new(name,indi_orders))
+        puts "#{name} your orders are #{indi_orders.join(", ")}"
+        invoice.add_order(Lunch.new(name,indi_orders))
         break
       end
     end
@@ -65,5 +64,6 @@ loop do
   end
 end
 
+invoice.final_order.each { |chr| puts "#{chr.name} ordered #{chr.order.join(', ')}"  }
 
-binding.pry
+# binding.pry
