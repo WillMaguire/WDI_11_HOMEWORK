@@ -12,7 +12,6 @@
     #  * **"All orders: {order data}"**
 
 require 'pry'
-
 class Order
   attr_accessor :order_name, :order_item
 
@@ -21,33 +20,35 @@ class Order
     @order_name = order_name
     @order_item = order_item
 
-    def create_new_order
-       puts "* ** Name for order:**"
-        order_name = gets.chomp
-
-
-      puts order_name + " wants to order"
-       order_items = gets.chomp
-    end
-end
-
-    puts "Would you like to continue to order?"
-      y_n = gets.chomp
-      if y_n == 'y'
-        create_new_order
-      elsif y_n == 'n'
-        puts final order .to_s
-        #while loop to index through index[0] to find name or customer placing order with if and elsif statements to determine if a true value of order
-
   end
 
   def create_new_order
-      created_order = Order.new(order_name, order_item)
-      fianl_order.push(created_order)
-  end
+    puts "* ** Name for order:**"
+    order_name = gets.chomp
 
-    @order = []
-    final_orders=[]
+
+    puts order_name + " wants to order"
+    order_items = gets.chomp
+  end
+end
+
+puts "Would you like to place an order?"
+y_n = gets.chomp
+if y_n == 'y'
+  finalise_new_order   #--- to be called
+elsif y_n == 'n'
+  puts  "GET OUT OF MY SHOP!"  #final orders
+    #while loop to index through index[0] to find name of customer placing order with if and elsif statements to determine if a true value of order
+end
+
+def finalise_new_order
+    created_order = Order.new(order_name, order_item)
+    @order << created_order
+    final_orders << created_order
+end
+
+@order = []
+final_orders=[]
 
 
 
