@@ -21,3 +21,10 @@ SELECT AVG(age) FROM players WHERE games > 40;
 
 8. The team and total points scored from all players on that team (team points), ordered from most team points to least
 SELECT team, SUM(points) AS "Team points" FROM players GROUP BY team ORDER BY "Team points" DESC;
+
+Bonus
+1. Age and the average points per game for that age, ordered from youngest to oldest
+SELECT age, AVG(points/games) AS "Avg points per game" FROM players GROUP BY age ORDER BY age;
+
+2. Team and the the number of players who score above 12 points per game on that team, ordered from most to least
+SELECT team, COUNT(players) AS "No. of players above 12 ppg" FROM players WHERE (points/games) > 12 GROUP BY team ORDER BY "No. of players above 12 ppg" DESC;
