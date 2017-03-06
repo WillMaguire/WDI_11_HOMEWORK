@@ -1,0 +1,26 @@
+<div class="content">
+<form action="/">
+  <label for="">Search for movie </label>
+  <input name="movie_name" type="text" placeholder="Name of Movie">
+</form>
+</div>
+<% if @result %>
+<div class="content heading">
+  <h1><%= "#{@result["Title"]} (#{@result["Year"]})" %></h1>
+  <h5><%= "Imdb Rating:#{@result["imdbRating"]}/10 | imdb Votes:#{@result["imdbVotes"]} "%></h5>
+</div>
+<div class="poster">
+  <img src="<%=@result["Poster"]%>" alt="">
+</div>
+<div class="content heading">
+  <h4><%= "Release: #{@result["Released"]} | Runtime: #{@result["Runtime"]}"%></h4>
+  <h4><%= "Genre: #{@result["Genre"]} | Rated: #{@result["Rated"]}" %> </h4>
+</div>
+<div class="content heading">
+  <p>
+    <%= "#{@result["Plot"]}" %>
+  </p>
+  <h4><%= "Directed by #{@result["Director"]}"%></h4>
+</div>
+
+<% end %>
