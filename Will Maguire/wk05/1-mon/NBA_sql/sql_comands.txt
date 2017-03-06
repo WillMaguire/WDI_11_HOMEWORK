@@ -1,0 +1,21 @@
+1. select * from players where team = 'NYK';
+2. select * from players where team = 'IND' and age < 26;
+3. select * from players order by points asc;
+4. select max(points) from players where name and points/games; ??? for players where points max ??? - made me annoyed 
+5. select avg(age) from players
+6. select avg(age) from players where team = 'OKC';
+7. select avg(age) from players where games_played > 40;
+8. ??? - made me angry
+
+
+
+
+
+All columns for all players from the New York Knicks (NYK)
+All columns for all players from the Indiana Packers (IND) who are under 26 years old
+All columns for all players, ordered from least points scored to most points scored
+Name and Points per game (points/games), for the players with the top 20 points per game
+The average age for all players
+The average age for all players on the Oklahoma City Thunder (OKC)
+The average age for all players who played more than 40 games
+The team and total points scored from all players on that team (team points), ordered from most team points to least
