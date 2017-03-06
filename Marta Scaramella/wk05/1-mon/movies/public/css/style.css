@@ -1,0 +1,58 @@
+body{
+  background-color:  #d6f5f5;
+  /*background-image: url(/img/backgroundHomepage.jpg)*/
+}
+
+.container{
+  position: relative;
+  width: 900px;
+  height: 800px;
+}
+
+p{
+  font-size: 15px;
+}
+
+.infoMovie{
+  position: absolute;
+  right:0;
+  width: 400px;
+  top: 50px;
+  /*border: 5px solid black;*/
+  margin: 15px;
+  padding: 10px;
+  /*background-color: #6699cc;*/
+  color: white;
+  font-family: 'Lemonada', cursive;
+}
+
+img{
+  position: absolute;
+  width: 400px;
+  top: 50px;
+  left: 25px;
+  border: 5px solid black;
+}
+
+form{
+  width:400px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-top: 200px;
+}
+
+button{
+  border-radius: 5px;
+  background-color:  #6699cc;
+  font-family: 'Lemonada', cursive;
+}
+
+input{
+  height: 20px;
+  border-radius: 5px;
+  font-family: 'Lemonada', cursive;
+}
+
+body.img{
+  width: 800px;
+}

@@ -1,0 +1,22 @@
+<style>
+  body{
+    background-image: url('/css/img/backgroundHomepage.jpg');
+  }
+</style>
+
+<div class="container">
+
+  <img src= <%= @poster.to_s %> alt="">
+
+  <div class="infoMovie">
+    <p> <b>Title:</b>  <%= @title %> </p>
+    <p> <b>Year:</b> <%= @year %> </p>
+    <p> <b>Genre:</b> <%= @genre %> </p>
+    <p> <b>Director:</b> <%= @director %> </p>
+    <p> <b>Awards:</b> <%= @awards %> </p>
+    <p> <b>Country:</b> <%= @country %> </p>
+    <p> <b>Actors:</b> <%= @actors %> </p>
+    <p> <b>Plot:</b> <%= @plot %></p>
+  </div>
+
+</div>
