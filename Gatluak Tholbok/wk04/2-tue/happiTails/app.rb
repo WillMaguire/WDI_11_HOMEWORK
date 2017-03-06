@@ -1,38 +1,40 @@
-require 'pry'
+# require 'pry'
+# require_relative 'client.rb'
+# require_relative 'animal.rb'
 
-# require_relative 'happiTails.rb'
-require_relative 'clients.rb'
-require_relative 'animals.rb'
-
-puts 'clients or animals"'
-
-userInput = gets
-
-if userInput == 'clients'
-  shelter[:clients]
-elsif userInput == 'animals'
-  shelter[:animals].push(Animals.new())
-else
-
-end
-
-family_one = Clients.new('James', 42, 3, 1)
-cody_dog = Animals.new('cody', 5, 'female', 'dog')
+animal_shelter = Hash.new
+client_shelter = Hash.new
 
 
-shelter = {
-  animals: [cody_dog],
-  clients: [family_one]
-}
+puts "What is your name?"
+client_shelter["client"] = gets.chomp.capitalize
 
-# to display animals and clients
+puts "How old are you?"
+client_shelter["age"] = gets.chomp.to_i
 
-shelter[:animals]
-shelter[:clients]
+puts "How many children do you have?"
+client_shelter["children"] = gets.chomp.to_i
 
-# to add new clients and animals
+puts "How many pets do you have?"
+client_shelter["pets"] = gets.chomp.split
 
-rogue_cat = shelter[:animals].push(Animals.new('rogue', 1, 'male', 'cat'))
-david_johns = shelter[:clients].push(Clients.new('David', 23, 0, 0))
+# Does the client have any pets
 
-# client can adopt an animal and put an animal for adoption
+puts "What is your animal's name?"
+animal_shelter["name"] = gets.chomp.capitalize
+
+puts "How old is your animal?"
+animal_shelter["age"] = gets.chomp.to_i
+
+puts "What is it's gender??"
+animal_shelter["gender"] = gets.chomp.capitalize
+
+puts "What species is it?"
+animal_shelter["species"] = gets.chomp.capitalize
+
+puts "List the amount of toys your animal have?"
+animal_shelter["toys"] = gets.chomp.split
+
+puts animal_shelter
+puts
+puts client_shelter

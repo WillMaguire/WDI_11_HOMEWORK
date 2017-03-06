@@ -13,26 +13,29 @@
 #      * Repeat steps 1 & 2 if the answer is "y"
 # 3. After the user completes adding orders, print out:
 #      * **"All orders: {order data}"**
-#
+
 
 require 'pry'
 
-puts 'enter name'
-userInpet = gets
-
-if userInput == 'Mark'
-  orders['Mark']
-elsif user == 'Gatluak'
-  orders['Gatluak']
-else
+def lunch_orders
+  puts "#{@customer_name} wants to order."
+  customer_name = gets.chomp.to_s
+  return customer_name
 end
 
-orders = {
-  'Mark' => {
-    :lunch => ['burger', 'fries', 'frozen coke', 'ice cream'],
-  },
-  'Gatluak' => {
-    :lunch => []
-  }
-}
-binding.pry
+all_orders = {}
+puts "What do you want?"
+
+@customer_name = gets.chomp.to_s
+all_orders[:Name] = @customer_name
+orders = []
+customer_input = 'y'
+
+while customer_input == 'y' do
+  orders.push(lunch_orders())
+  puts 'would you like another order? (y/n)'
+  customer_input == gets.chomp
+end
+
+all_orders[:Orders] = orders
+puts "All orders: #{all_orders}"
