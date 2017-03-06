@@ -38,7 +38,8 @@ SELECT * FROM players ORDER BY points DESC LIMIT 20;
 
 # The average age for all players
 
-SELECT AVG(points) FROM players;
+SELECT AVG(age) FROM players;
+SELECT AVG(age) as average_age FROM players;
 
 # The average age for all players on the Oklahoma City Thunder (OKC)
 
@@ -49,6 +50,12 @@ SELECT AVG(points) FROM players WHERE team = "OKC";
 SELECT AVG(age) FROM players WHERE games > 40;
 
 # The team and total points scored from all players on that team (team points), ordered from most team points to least
+
+SELECT team, SUM(points) AS team_points
+  FROM players
+    GROUP BY team
+    ORDER BY team_points DESC;
+
 
 # Bonus
 #
