@@ -17,6 +17,32 @@ client2 = Client.new('Anita Diaz', 0, 25, [Animal.new('Crocks',3,'Male','Saltwat
 @clients.push(client1)
 @clients.push(client2)
 
+def animals_list(animals)
+  index = 0
+  puts "------------------Pets-------------------"
+  while index != animals.length do
+    puts "Name: #{animals[index].name}"
+    puts "Age: #{animals[index].age}"
+    puts "Gender: #{animals[index].gender}"
+    puts "Species: #{animals[index].species}"
+    puts "Toys: #{animals[index].toys}"
+    puts "------------------------------------------"
+    index = index + 1
+  end
+end
+
+def clients_list
+  index = 0
+  puts "------------------Clients-------------------"
+  while index != @clients.length do
+    puts "Name: #{@clients[index].name}"
+    puts "Children: #{@clients[index].children}"
+    puts "Age: #{@clients[index].age}"
+    animals_list(@clients[index].pets)
+    puts "------------------------------------------"
+    index = index + 1
+  end
+end
 
 def add_animal
   puts "Please enter animal's name"
@@ -97,16 +123,16 @@ n = gets.chomp.to_i
 
   case n
     when 1
-        puts @animals.inspect
+      animals_list(@animals)
     when 2
-        puts @clients.inspect
+      clients_list
     when 3
-        @animals.push(add_animal())
+      @animals.push(add_animal)
     when 4
-        @clients.push(add_client())
+      @clients.push(add_client)
     when 5
-      adopt_animal()
+      adopt_animal
     when 6
-      advertised_animal()
+      advertised_animal
   end
 end
