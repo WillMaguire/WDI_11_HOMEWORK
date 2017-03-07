@@ -2,7 +2,7 @@
 <form action="/about" method="post">
 
 <% @search_result["Search"].each do |result| %>
-    <p><a href="/about?movie=<%= result['Title'] %>"> <%= result['Title'] %> </a></p>
+    <p><a href="/about?search=<%= result['Title'] %>"> <%= result['Title'] %> </a></p>
 
  <% end %>
 </form>

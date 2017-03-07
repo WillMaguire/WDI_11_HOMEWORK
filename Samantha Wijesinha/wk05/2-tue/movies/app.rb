@@ -18,7 +18,7 @@ get '/about' do
   erb :about
 end
 
-post '/search_result' do
+get '/search_result' do
   movie = params[:search]
   @search_result = HTTParty.get('http://omdbapi.com/?s='+movie)
 
