@@ -21,5 +21,5 @@ get '/stock' do
   @stock_name = @stock[@stocksymbol].name
   @current_price = @stock[@stocksymbol].lastTrade
   # binding.pry
-  erb(:stock)
+  erb(:index)
 end
