@@ -16,7 +16,7 @@ get '/search' do
 end
 
 get '/about' do
-  @result = HTTParty.get("http://omdbapi.com/?t=#{params[:link]}")
+  result = HTTParty.get("http://omdbapi.com/?t=#{params[:name]}")
   binding.pry
   @poster = result["Poster"]
   @title = result["Title"]
