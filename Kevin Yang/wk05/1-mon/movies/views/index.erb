@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kuka Movie Search</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Kuka Movie Search</h1>
+
+    <form action="/t" >
+      <div class="inputStyle">
+      <input type="text" name="film" class="form-control">
+      </div>
+
+      <div class="centerize">
+      <button class="btn btn-primary btn-lg outline">Search</button>
+      </div>
+
+    </form>
+
+    <img src="<%= @poster %>">
+
+    <div >
+      <div class="panel-heading"><%= @title %></div>
+      <div class="panel-body">
+        <p class="list-group-item"><%= @plot %></p>
+      </div>
+
+        <ul class="list-group">
+          <li class="list-group-item">Year: <%= @year %></li>
+          <li class="list-group-item">Rated: <%= @rated %></li>
+          <li class="list-group-item">Released: <%= @released %></li>
+          <li class="list-group-item">Runtime: <%= @runtime %></li>
+          <li class="list-group-item">Genre: <%= @genre %></li>
+          <li class="list-group-item">Director: <%= @director %></li>
+          <li class="list-group-item">Writer: <%= @writer %></li>
+          <li class="list-group-item">Actors: <%= @actors %></li>
+          <li class="list-group-item">Language: <%= @language %></li>
+          <li class="list-group-item">Country: <%= @country %></li>
+          <li class="list-group-item">Awards: <%= @awards %></li>
+          <li class="list-group-item">Metascore: <%= @metascore %></li>
+          <li class="list-group-item">IMDB Rating: <%= @imdbRating %></li>
+        </ul>
+
+    </div>
+    <footer>&copy; kukaheadla 2017</footer>
+  </body>
+</html>
