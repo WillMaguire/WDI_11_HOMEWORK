@@ -14,7 +14,7 @@ get '/about' do
   @image = result["Poster"]
   @items = result
   File.open('history.txt', 'a+') do |file|
-    file.write movie
+    file.puts movie
   end
   erb :about
 end
