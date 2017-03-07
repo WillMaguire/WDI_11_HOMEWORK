@@ -1,0 +1,44 @@
+-- BASIC QUERIES
+
+-- Get all information about all authors
+  A: select * from authors;
+
+-- Get just the name and birth year of all authors
+  A: select name, birth_year from authors;
+
+-- Get all authors born in the 20th centruy or later
+  A: select * from authors where birth_year > 1900;
+
+-- Get all authors born in the USA
+  A: select * from authors where nationality = 'United States of America';
+
+-- Get all books published on 1985
+  A: select * from books where publication_date = 1985;
+
+-- Get all books published before 1989
+  A: select * from books where publication_date < 1989;
+
+-- Get just the title of all books.
+  A: select title from books;
+
+-- Get just the year that 'A Dance with Dragons' was published
+  -- Cry when you realize how long it's been
+  A: select publication_date from books where id = 67;
+
+-- Get all books which have `the` somewhere in their title (hint, look up LIKE/ILIKE)
+  A: select * from books where title like '%the%';
+
+-- Add yourself as an author
+  A: insert into authors (Name, nationality, birth_year)
+    values ('William Miller', 'Australian', 1990);
+-- Add two books that you'd like to write (you can hard-code your id as the author id)
+
+-- Update one of your books to have a new title
+  A: insert into books (title, publication_date, author_id)
+    values ('the devil in the flesh', 1923, 10), ('where the wild things are', 1982, 10);
+
+-- Delete your books
+  A: delete from books where author_id = 10;
+
+-- Delete your author entry
+  A: delete from authors where id = 10;

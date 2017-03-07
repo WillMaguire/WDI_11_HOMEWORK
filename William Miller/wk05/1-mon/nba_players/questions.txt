@@ -1,4 +1,4 @@
-1. All columns for all players from the New York Knicks (NYK)
+sel1. All columns for all players from the New York Knicks (NYK)
 
   select * from players where team = 'NYK';
 
