@@ -3,27 +3,32 @@ require 'pry'
 require_relative 'animals'
 require_relative 'clients'
 
-animal_array = []
+@animals = []
+@clients = []
 toys = []
 
 puts "Do you want add an animal/client or display animals/clients? (type add or display)"
 
 choice = gets.chomp
 
+
+# loop do
+# puts 'Enter in the number you want access'
+
 if choice == 'add'
   puts 'do you want add an animal or a client?'
   to_add = gets.chomp
 
   if to_add == 'animal'
-    puts "What is the name?"
+    puts "Name:"
     a_name = gets.chomp
-    puts "What the age?"
+    puts "Age:"
     a_age = gets.chomp.to_i
-    puts "What is the gender?"
+    puts "Gender:"
     a_gender = gets.chomp
-    puts "What is the species?"
+    puts "Species:"
     a_species = gets.chomp
-    puts "What are his/her toys?"
+    puts "Toys:"
     a_toys = gets.chomp
 
     animal_array.push(Animal.new(a_name, a_age, a_gender, a_species))
@@ -31,13 +36,13 @@ if choice == 'add'
 
 
   elsif to_add == 'client'
-    puts "What is the name?"
+    puts "Name:"
     c_name = gets.chomp
-    puts "How many children does he/she has?"
+    puts "Number of children:"
     c_children = gets.chomp.to_i
-    puts "How old the new client is?"
+    puts "Age:"
     c_age = gets.chomp.to_i
-    puts "Does he/she has other animals? If yes what:"
+    puts "Pets:"
     c_pets = gets.chomp
   end
 
