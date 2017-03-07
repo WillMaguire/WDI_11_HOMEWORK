@@ -8,7 +8,7 @@ class Animal
     @gender = gender
     @species = species
     @toys = toys
-    @relationship = relationship
+    @relationship = false
   end
 
   # def adopted
