@@ -1,0 +1,7 @@
+<% @movielist['Search'].each do |movie| %>
+  <div class="movielist-item">
+    <img src="<%= movie['Poster'] %>" alt="">
+    <h2><%= movie['Title'] %></h2>
+    <a href="/about?movie=<%= movie['Title'] %>"> <%= movie['Title'] %> </a>
+  </div>
+<% end %>
