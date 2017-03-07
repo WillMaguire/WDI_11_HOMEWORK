@@ -1,3 +1,12 @@
 <div class="infoMovie">
-  <p> <%= @all_movies_titles %> </p>
+  <!-- <form action="/movie" method="post"> -->
+
+    <p>Choose the title!</p>
+    <% @movies.each do |movie| %>
+    <% @title = movie['Title'] %>
+      <a href= " <%= @title %> " > <%= @title %> </a>
+    <br>
+    <% end %>
+
+  <!-- </form> -->
 </div>
