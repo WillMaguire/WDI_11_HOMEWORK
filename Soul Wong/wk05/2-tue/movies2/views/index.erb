@@ -1,0 +1,27 @@
+<div class="content">
+<form action="/">
+  <label for="">Search for movie </label>
+  <input name="movie_name" type="text" placeholder="Name of Movie">
+</form>
+</div>
+<% if @result %>
+
+<div class="search_result">
+<h3>Search Results For <%= "' #{params["movie_name"]} ' - ( #{@result["totalResults"]} " %> Matches Found. )</h3>
+<div class="line"><h4>Movies</h4></div>
+
+<% @result["Search"].each do |movie| %>
+<div class="result_container">
+  <img src="<%= movie["Poster"] %>" alt="">
+  <div class="result_description">
+  <h4><a href="<%= "/?movie_name=#{movie["Title"]}" %>"><%= "#{movie["Title"]} (#{movie["Year"]}) "%></a></h4>
+  <h5><%= "Type: #{movie["Type"]}" %></h5>
+  <h5><%= "imdbID: #{movie["imdbID"]}" %></h5>
+  </div>
+</div>
+  <br>
+<% end %>
+</div>
+
+
+<% end %>
