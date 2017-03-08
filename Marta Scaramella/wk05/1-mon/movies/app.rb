@@ -9,15 +9,15 @@ get '/' do
 end
 
 get '/movie_list' do
-  result = HTTParty.get('http://omdbapi.com/?s=' + params['s'])
+  result = HTTParty.get('http://omdbapi.com/?s=' + params['film'])
   @movies = result['Search']
   erb :movie_list
 end
 
-get '/movie' do
-  # t = params['s']
-  address = 'http://omdbapi.com/?t=' + params['t']
-  list_result = HTTParty.get(address)
+get '/movie/:name' do
+  result = HTTParty.get("http://omdbapi.com/?t="+"#{params[:name]}")
+  # result = HTTParty.get('http://omdbapi.com/?t=' + params['film'])
+
   @title = result['Title']
   @year = result['Year']
   @genre = result ['Genre']
@@ -27,7 +27,7 @@ get '/movie' do
   @awards = result['Awards']
   @director = result['Director']
   @poster = result['Poster']
-  erb :result
+  erb :movie
 end
 
 # binding.pry
