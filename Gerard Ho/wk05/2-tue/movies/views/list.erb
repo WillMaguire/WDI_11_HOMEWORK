@@ -1,0 +1,22 @@
+<div class="list_item">
+  <form class="" action="/list">
+    <label>Put in the movie you want to search</label>
+    <input type="text" name="movie">
+    <button>Submit</button>
+  </form>
+</div>
+
+<div class="list_item">
+  <h1><%= @search_word %></h1>
+  <ul class="list">
+    <% @movie_list.each do |content| %>
+    <li class="li_item">
+
+      <img class="list_img" src= <%= content["Poster"] %>>
+      <a href = "/about?movie=<%= content['Title'] %>"><%= content["Title"] %></a>
+
+    </li>
+    <% end %>
+  </ul>
+
+</div>
