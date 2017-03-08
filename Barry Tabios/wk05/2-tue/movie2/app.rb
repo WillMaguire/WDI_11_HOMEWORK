@@ -11,24 +11,22 @@ end
 
 get '/search' do
   @result = HTTParty.get("http://omdbapi.com/?s=#{params[:input_search]}")
-  binding.pry
   erb :search
 end
 
 get '/about' do
-  result = HTTParty.get("http://omdbapi.com/?t=#{params[:name]}")
-  binding.pry
-  @poster = result["Poster"]
-  @title = result["Title"]
-  @year = result["Year"]
-  @rate = result["Rated"]
-  @runtime = result["Runtime"]
-  @genre = result["Genre"]
-  @director = result["Director"]
-  @writer = result["Writer"]
-  @actors = result["Actors"]
-  @plot = result["Plot"]
-  @language = result["Language"]
-  @country = result["Country"]
+  film = HTTParty.get("http://omdbapi.com/?t=#{params[:name]}")
+  @poster = film["Poster"]
+  @title = film["Title"]
+  @year = film["Year"]
+  @rate = film["Rated"]
+  @runtime = film["Runtime"]
+  @genre = film["Genre"]
+  @director = film["Director"]
+  @writer = film["Writer"]
+  @actors = film["Actors"]
+  @plot = film["Plot"]
+  @language = film["Language"]
+  @country = film["Country"]
   erb :about
 end
