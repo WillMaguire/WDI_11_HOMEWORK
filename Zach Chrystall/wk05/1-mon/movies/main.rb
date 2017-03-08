@@ -10,6 +10,8 @@ get '/' do
 end
 
 get '/search' do
+  result = HTTParty.get('http://omdbapi.com/?t=once')
+  binding.pry
   @t = params[:t]
   erb :search
 end
