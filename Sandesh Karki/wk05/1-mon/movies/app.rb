@@ -1,7 +1,7 @@
 require 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
-require 'HTTParty'
+require 'httparty'
 
 
 get '/' do
@@ -12,3 +12,6 @@ end
 
 
 # result = HTTParty.get('http://omdbapi.com/?t=once')
+
+
+# binding.pry
