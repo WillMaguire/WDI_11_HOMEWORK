@@ -7,7 +7,7 @@ require 'httparty'
 
 get '/' do
 
-  @result = {}
+
   erb :index
 
 end
