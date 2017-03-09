@@ -34,23 +34,25 @@ get '/about' do
 
   conn = PG.connect(dbname: 'movie_db')
   sql = "SELECT title FROM movies WHERE title = '#{params[:name]}';"
-  result = conn.exec(sql) # gets the result of the executed file from sql
+  result = conn.exec(sql) # gets the result of the executed file from sql / result will contain a hash within a hash containing key value pairs,
   # conn.close
 
-  if result.cmd_tuples == 0 # cmd_tuples returns number of rows affected if none it will return a zero
+  if result.cmd_tuples == 0 # cmd_tuples returns number of rows detected if none it will return a zero
     film = HTTParty.get("http://omdbapi.com/?t=#{params[:name]}")
-    @poster = film["Poster"]
-    @title = film["Title"]
+
+    @poster = film["Poster"].gsub(/'/, "''")
+    @title = film["Title"].gsub(/'/, "''")
     @year = film["Year"]
-    @rate = film["Rated"]
-    @runtime = film["Runtime"]
-    @genre = film["Genre"]
-    @director = film["Director"]
-    @writer = film["Writer"]
-    @actors = film["Actors"]
-    @plot = film["Plot"]
-    @language = film["Language"]
-    @country = film["Country"]
+    @rate = film["Rated"].gsub(/'/, "''")
+    @runtime = film["Runtime"].gsub(/'/, "''")
+    @genre = film["Genre"].gsub(/'/, "''")
+    @director = film["Director"].gsub(/'/, "''")
+    @writer = film["Writer"].tr("'","''")
+    @actors = film["Actors"].tr("'","''")
+    @plot = film["Plot"].gsub(/'/, "''") # substitute ' with '' for sql command. sql throws syntax error due to single quotes for values.
+    @language = film["Language"].gsub(/'/, "''")
+    @country = film["Country"].gsub(/'/, "''")
+
 
     sql = "INSERT INTO movies(title, year, rate, runtime, genre, director, writer, actors, plot, language, country, poster)
     VALUES ('#{@title}',#{@year},'#{@rate}','#{@runtime}','#{@genre}', '#{@director}', '#{@writer}', '#{@actors}', '#{@plot}', '#{@language}', '#{@country}', '#{@poster}');"
@@ -58,20 +60,20 @@ get '/about' do
 
   else
     sql = "SELECT * FROM movies WHERE title ='#{params[:name]}';"
-    film = conn.exec(sql)
+    film = conn.exec(sql)[0] # [0] is to obtain the just the key value pairs of that row. If i do film = conn.exec(sql) this will return an object name and key values pairs.
 
-    @poster = film[0]["poster"]
-    @title = film[0]["title"]
-    @year = film[0]["year"]
-    @rate = film[0]["rated"]
-    @runtime = film[0]["runtime"]
-    @genre = film[0]["genre"]
-    @director = film[0]["director"]
-    @writer = film[0]["writer"]
-    @actors = film[0]["actors"]
-    @plot = film[0]["plot"]
-    @language = film[0]["language"]
-    @country = film[0]["country"]
+    @poster = film["poster"]
+    @title = film["title"]
+    @year = film["year"]
+    @rate = film["rated"]
+    @runtime = film["runtime"]
+    @genre = film["genre"]
+    @director = film["director"]
+    @writer = film["writer"]
+    @actors = film["actors"]
+    @plot = film["plot"]
+    @language = film["language"]
+    @country = film["country"]
 
   end
 

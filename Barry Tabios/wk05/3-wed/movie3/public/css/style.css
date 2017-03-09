@@ -24,7 +24,7 @@ a {
 }
 
 .search-output {
-  display: inline block;
+  display: block;
 }
 
 hr {
