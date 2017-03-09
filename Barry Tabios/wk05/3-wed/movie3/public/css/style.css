@@ -1,0 +1,38 @@
+body {
+  background-color: mistyrose;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+div p img{
+  display: block;
+}
+
+img {
+  margin-top: 20px;
+}
+
+a {
+  display: block;
+}
+
+.image-search {
+  height: 200px;
+  width: 140px;
+}
+
+.search-output {
+  display: inline block;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
