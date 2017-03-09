@@ -21,11 +21,11 @@ img {
 }
 
 
-.Type, .Metascore, .imdbID, .Type, .Response {
+.type, .metascore, .imdbid, .id, .response {
   display: none;
 }
 
-.Title, .Year, .Rated {
+.title, .year, .rated {
   display: inline;
 }
 

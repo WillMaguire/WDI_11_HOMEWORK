@@ -1,10 +1,10 @@
 <div>
-  <% index = @result.find{ |y| y[0] == "Poster" } %>
+  <% index = @result.find{ |y| y[0].downcase == "poster" } %>
   <%= "<img class='single' src='#{index[1]}' alt='#{index[0]}' />" %>
   <ul>
-    <% @result.each do |element| %>
-    <% if element[0] != 'Poster'%>
-        <%= "<li class='#{element[0]}'>#{element[0]}: #{element[1]}</li>" %>
+    <% @result.each do |movie| %>
+    <% if movie[0].downcase != 'poster'%>
+        <%= "<li class='#{movie[0].downcase}'>#{movie[0].capitalize}: #{movie[1]}</li>" %>
       <% end %>
     <% end %>
   </ul>
