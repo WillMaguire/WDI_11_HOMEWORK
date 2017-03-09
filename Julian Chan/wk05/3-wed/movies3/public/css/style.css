@@ -1,0 +1,112 @@
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+html {
+  background: #222;
+}
+
+body {
+  margin: 0;
+  width: 80%;
+  margin: 0 auto;
+  color: lightgray;
+}
+
+header {
+  padding: 1em 2em;
+  margin-bottom: 1em;
+}
+
+.main {
+  background: #333;
+}
+
+.main > div {
+  display: inline-block;
+  width: 65%;
+  padding: 1em;
+  vertical-align: top;
+}
+
+.plot {
+  font-weight: bold;
+  font-style: italic;
+  line-height: 1.5em;
+  margin-top: .2em;
+  margin-bottom: 2em;
+}
+
+img {
+  width: 30%;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.5em;
+}
+
+.site-name {
+  text-align: center;
+  margin: 1.8em;
+  font-family: 'Oswald', sans-serif;
+  font-size: 4em;
+  color: #ded;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: .5em 0 0 0;
+}
+
+.main li {
+  font-variant: small-caps;
+  padding: .5em 0;
+}
+
+.header-info {
+  font-size: .9em;
+}
+
+.header-info li {
+  display: inline-block;
+  padding: 0 1em;
+  border-right: 1px solid lightgray;
+}
+
+.header-info li:first-child {
+  padding-left: 0;
+}
+
+.header-info li:last-child {
+  border-style: none;
+}
+
+h1 a {
+  display: inline;
+  font-size: .075em;
+}
+
+form {
+  text-align: center;
+}
+
+input, button {
+  padding: .5em;
+  font-size: 2em;
+}
+
+button {
+  background: mistyrose;
+}
+
+.disambiguation {
+  margin: 2em 0;
+}
+
+a {
+  display: block;
+  color: lightgreen;
+  text-decoration: none;
+}
