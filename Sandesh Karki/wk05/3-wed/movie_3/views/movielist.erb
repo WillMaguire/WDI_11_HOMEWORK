@@ -3,5 +3,6 @@
 <% @s_results["Search"].each do |index| %>
 
     <a href='/single_movie?title= + <%= index["Title"] %>' > <%= index["Title"] %> </a> </p>
+    <a href='/single_movie?title= + <%= index["Title"] %>'> <img src="<%= index["Poster"] %>">
 
 <% end %>
