@@ -2,5 +2,12 @@
     <h2>Search Matches</h2>
   </div>
   <div class="matches">
-
+    <%= @list %>
   </div>
+
+
+    <!-- <div class="search_list"> -->
+    <% @titles.each do |title| %>
+    <li><a href="/movie?title=<%= title %>" name='title'><%= title %></a></li>
+    <% end %>
+    <!-- </div> -->

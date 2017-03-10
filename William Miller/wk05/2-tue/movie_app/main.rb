@@ -2,25 +2,28 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+# require 'pry'
 
 get '/' do
   erb :index
 end
 
 get '/movie' do
-  movie_title = params[:title]
-  @result = HTTParty.get('http://www.omdbapi.com/?t=' + movie_title)
-  #@movie
+  @title = params[:title]
+  @result = HTTParty.get("http://www.omdbapi.com/?t=#{ @title }")
   erb :movie
 end
 
 get '/list' do
-  movie_title = params[:title]
-  @result = HTTParty.get('http://omdbapi.com/?t=' + movie_title)
-  @list = result["search"]
-  if @list.length == 1 #if there is only one movie that meatches
-    redirect to "/movie?title=#{@movie_title}"
-  
+  @titles = []
+  @searched = params[:searched]
+  @result_list = HTTParty.get("http://omdbapi.com/?s=#{ @searched }")
+  @result_list["Search"].each do |movie|
+    @titles << movie["Title"]
+  end
+  if @titles.length == 1
+    redirect "/movie?title=#{@searched}"
+  else
     erb :list
   end
 end
