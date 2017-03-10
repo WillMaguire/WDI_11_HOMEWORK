@@ -16,6 +16,6 @@ CREATE TABLE movie_list (
   country VARCHAR(200),
   awards VARCHAR(200),
   imdbRating FLOAT(1),
-  imdbVotes NUMERIC,
+  imdbVotes VARCHAR(100),
   poster TEXT
 );

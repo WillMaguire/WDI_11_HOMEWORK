@@ -9,8 +9,8 @@
   <% @search_results.each do |result| %>
   <div class='lists'>
     <%= "<img class='list' src='#{result["Poster"]}' alt='#{result["Title"]}' />" %>
-    <form class="link" action="/movie" method="post">
-      <%= "<button class='single-movie' name='title' value='#{result["Title"]}'>#{result["Title"]}</button>" %>
+    <form class="link" action="/movie" method="get">
+      <%= "<a class='single-movie' name='title' href='/movie?title=#{result["Title"]}'>#{result["Title"]}</a>" %>
     </form>
   </div>
     <% end %>

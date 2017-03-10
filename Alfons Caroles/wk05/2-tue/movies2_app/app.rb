@@ -32,8 +32,8 @@ post '/' do
     file << "#{Time.now}: #{params[:title]}\n"
   end
   search_result = HTTParty.get("http://omdbapi.com/?s=#{ params[:title] }")
-  @returned_results = search_result['Search']
-  if @returned_results.length > 1
+  returned_results = search_result['Search']
+  if returned_results.length > 1
     @search_results = returned_results
     erb :index
   else
