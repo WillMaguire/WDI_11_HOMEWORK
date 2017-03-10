@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS movies;
 
 CREATE TABLE movies (
   id SERIAL4 PRIMARY KEY,
-  title VARCHAR(400),
+  title TEXT,
   year INTEGER,
   rate VARCHAR(10),
   runtime VARCHAR(50),
@@ -11,7 +11,7 @@ CREATE TABLE movies (
   writer TEXT,
   actors TEXT,
   plot TEXT,
-  language VARCHAR(100),
+  language TEXT,
   country VARCHAR(100),
   poster TEXT
 );

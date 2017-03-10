@@ -1,8 +1,8 @@
 <% for i in 0..(@result.length-1) do %>
   <div class='search_output'>
-  <img class="image-search" src=<%= @result["Search"][i]["Poster"] %>
-  <p><a href='/about?name=<%= @result["Search"][i]["Title"] %>'><%= @result["Search"][i]["Title"] %></a></p>
-  <p>Year: <%= @result["Search"][i]["Year"] %></p>
-  <hr>
+    <img class="image-search" src=<%= @result["Search"][i]["Poster"] %>
+    <p><a href='/about?name=<%= @result["Search"][i]["Title"] %>'><%= @result["Search"][i]["Title"] %></a></p>
+    <p>Year: <%= @result["Search"][i]["Year"] %></p>
+    <hr>
   </div>
 <% end %>
