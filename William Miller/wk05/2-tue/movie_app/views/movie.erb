@@ -1,7 +1,10 @@
-<h2><%= @result["Title"]%></h2>
 
-<h3>Year: <%= @result["Year"]%></h3>
+<div class="movie">
+  <h2><%= @result["Title"] %></h2>
+  <h3><%= @result["Year"] %></h3>
+  <p>Genre: <%= @result["Genre"] %></p>
+  <p>Starring: <%= @result["Actors"] %></p>
+  <p><%= @result["Plot"] %></p>
+  <img src="<%= @result["Poster"] %>" alt="">
 
-<h3>Director: <%= @result["Director"] %></h3>
-
-<h4>Rated: <%= @result["Rated"]  %></h4>
+</div>
