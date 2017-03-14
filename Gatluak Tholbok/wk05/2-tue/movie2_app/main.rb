@@ -17,7 +17,7 @@ get '/searched' do
   @titles = []
   @searched = params[:searched]
   @result_list = HTTParty.get("http://omdbapi.com/?s=#{ @searched }")
-  # binding.pry
+
   @result_list["Search"].each do |movie|
     @titles << movie["Title"]
   end

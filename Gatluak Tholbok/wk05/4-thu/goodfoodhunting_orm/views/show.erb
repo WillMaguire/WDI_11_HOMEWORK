@@ -1,8 +1,21 @@
-<h1><%= @dish['name'] %></h1>
+<h1><%= @dish.name %></h1>
 
-<form action="/dishes/<%= @dish['id'] %>" method="post">
+<form action="/dishes/<%= @dish.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button>delete</button>
 </form>
 
+<% if logged_in? %>
 <a href="/dishes/<%= @dish.id %>/edit">edit</a>
+<% end %>
+
+<% @dish.comments.each do |comment| %>
+  <p><%=  comment.body %></p>
+  <hr>
+<% end %>
+<form action="/comments" method="post">
+  <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+  <textarea name="body"></textarea>
+
+  <button>post</button>
+</form>

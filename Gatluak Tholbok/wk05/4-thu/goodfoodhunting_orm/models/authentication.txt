@@ -1,0 +1,12 @@
+relationships:
+
+------->Create Session<-------
+
+User: -------
+Password: ------
+
+Store password and username in a table.
+
+store password in an algorithm:
+
+password: 'pudding' -----> store in this |____hash____| -------> it comes 2#gh!k;jgjs,.kks digested

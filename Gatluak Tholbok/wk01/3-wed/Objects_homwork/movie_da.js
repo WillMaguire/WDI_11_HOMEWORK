@@ -1,6 +1,3 @@
-
-console.log('my movie database');
-
 var badBoys = {
   title: 'Bad Boys II',
   stars: ['Will Smith', ' Martin Lawrence'],

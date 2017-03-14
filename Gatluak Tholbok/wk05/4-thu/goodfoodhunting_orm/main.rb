@@ -1,10 +1,26 @@
-require 'pry'
+ require 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
 require_relative 'database_config'
+require_relative 'models/dish_type'
+require_relative 'models/user'
+require_relative 'models/comment'
 require_relative 'models/dish'
-# router
+
+enable :sessions
+
+helpers do
+
+  def current_user
+    User.find_by(id: session[:user_id])
+  end
+
+  def logged_in? # should return a boolean
+    !!current_user
+  end
+
+end
 
 after do
   ActiveRecord::Base.connection.close
@@ -27,8 +43,7 @@ post '/dishes' do
   dish.name = params[:name]
   dish.image_url = params[:image_url]
 
-  if
-    dish.save
+  if dish.save
     redirect '/'
   else
     erb :new
@@ -38,14 +53,8 @@ end
 # localhost:4567/dishes?id=7
 get '/dishes/:id' do
   @dish = Dish.find(params[:id])
+  @comments = @dish.comments
   erb :show
-end
-
-get '/dishes/:id/dish_type' do
-  dish.id = DishType.create(params[:id])
-  dish.id = params[:name]
-  dish.save
-  erb :dish_type
 end
 
 delete '/dishes/:id' do
@@ -56,15 +65,50 @@ delete '/dishes/:id' do
 end
 
 get '/dishes/:id/edit' do
+  redirect '/session/new' if !logged_in?
+
   @dish = Dish.find(params[:id])
   erb :edit
 end
 
-
 put '/dishes/:id' do
+  redirect '/session/new' if !logged_in?
+
   dish = Dish.find(params[:id])
   dish.name = params[:name]
   dish.image_url = params[:image_url]
   dish.save
   redirect "/dishes/#{params[:id]}"
+end
+
+post '/comments' do
+  comment = Comment.new
+  comment.body = params[:body]
+  comment.dish_id = params[:dish_id]
+
+  if comment.save
+    redirect "/dishes/#{comment.dish_id}"
+  else
+    erb :show
+  end
+end
+
+get '/session/new' do
+  erb :login
+end
+
+post '/session' do
+  user = User.find_by(email: params[:email])
+  if user && user.authenticate(params[:password])
+    session[:user_id] = user.id
+    redirect '/'
+  else
+    erb :login
+  end
+end
+
+# logout
+delete '/session' do
+  session[:user_id] = nil
+  redirect '/session/new'
 end

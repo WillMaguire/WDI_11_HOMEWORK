@@ -1,6 +1,3 @@
-
-console.log('transmogrifier is work');
-
 var transmogrifier = function(numOne, numTwo, numThree) {
   var num4 = numOne * numTwo;
   var result = Math.pow(num4, numThree);
