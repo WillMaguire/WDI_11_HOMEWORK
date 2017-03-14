@@ -1,0 +1,12 @@
+<% @result2["Search"].each do |index|  %>
+      <a href="/movie2?title= +<%= index["Title"] %>">
+        <img src="<%= index['Poster'] %>" alt="">
+        <%= index["Title"] %>
+
+
+
+      </a>
+
+  </p>
+
+<% end %>
