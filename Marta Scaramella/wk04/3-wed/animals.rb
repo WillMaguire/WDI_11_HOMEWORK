@@ -3,7 +3,7 @@ require "pry"
 class Animal
   attr_accessor :name, :age, :gender
 
-  def initialize (name, age, gender, species)
+  def initialize (name, age, gender, species, toys)
     @name = name
     @age = age
     @gender = gender
