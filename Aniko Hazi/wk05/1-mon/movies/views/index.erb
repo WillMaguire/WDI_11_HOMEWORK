@@ -1,27 +1,29 @@
-<form action="/list" method="get" >
-  <label for="">film title</label>
-  <input name="movie" type="text">
-  <button>submit</button>
-</form>
 
+<% if @film_details %>
 
+  <div class="details">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Year</th>
-    <th>Director</th>
-  </tr>
+    <ul>
+      <!-- <li>Title</li>
+      <li>Year</li>
+      <li>Runtime</li>
+      <li>Genre</li>
+      <li>Director</li>
+      <li>Actors</li>
+      <li>Plot</li> -->
 
-  <tr>
-    <td><%= @film_details['Title'] %></td>
-    <td><%= @film_details['Year'] %></td>
-    <td><%= @film_details['Director'] %></td>
-  </tr>
-  <tr>
-    <th rowspan = 3>
-      <img src="<%= @film_details['Poster'] %>" alt="">
-    </th>
-  </tr>
+      <li><%= @film_details[:title] %></li>
+      <li><%= @film_details[:year] %></li>
+      <li><%= @film_details[:runtime] %></li>
+      <li><%= @film_details[:genre] %></li>
+      <li><%= @film_details[:director] %></li>
+      <li><%= @film_details[:actors] %></li>
+      <li><%= @film_details[:plot] %></li>
+    </ul>
+  </div>
 
-</table>
+  <div class="poster">
+    <img src="<%= @film_details[:poster] %>" alt="">
+  </div>
+
+<% end %>
