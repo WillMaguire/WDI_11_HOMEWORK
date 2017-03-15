@@ -1,4 +1,4 @@
- require 'pry'
+equire 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
