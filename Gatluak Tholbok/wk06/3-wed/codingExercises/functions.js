@@ -6,13 +6,21 @@
 // # The `totalAmountToBeAddedUp` function should take one input: `arrayOfMultiples`. It will then add up all the numbers in the array and return a total. Display this total in the console.
 
 
-function totalAmountToBeAddedUp(arrayOfMultiples) {
+function multiplesOfFourAndSix(arrayOfMultiples) {
+  // fixed the issue
   array = [];
   for (var i = 4; i < arrayOfMultiples; i++) {
-    if (i%2 === 0 && i%4 === 0) {
+    if (i % 4 === 0 || i % 6 === 0) {
       array.push(i)
-      console.log(array);
     }
   }
+  return array
 }
-totalAmountToBeAddedUp(25)
+multiplesOfFourAndSix(25)
+
+// the reduce () method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value
+
+var sum = [4,6,8,12,16,18,20,24];
+sum.reduce(function(acc, val) {
+  return acc + val;
+});
