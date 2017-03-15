@@ -23,65 +23,35 @@ get '/about' do
   end
   # return db_found.actors
   if (db_found != nil)
-    @title = db_found.title
-    @image = db_found.poster
-    @year = db_found.year
-    @rated = db_found.rated
-    @release = db_found.released
-    @runtime = db_found.runtime
-    @genre = db_found.genre
-    @director = db_found.director
-    @writer = db_found.writer
-    @actors = db_found.actors
-    @plot = db_found.plot
-    @language = db_found.language
-    @country = db_found.country
-    @awards = db_found.awards
-    @metascore = db_found.metascore
-    @imdbrating = db_found.imdbrating
-    @imdbvotes = db_found.imdbvotes
+    @found = db_found.attributes
+    @image = db_found[:poster]
   else
     result = HTTParty.get("http://omdbapi.com/?t=#{movie_title}")
-    @items = result
-    @title = result["Title"]
-    @image = result["Poster"]
-    @year = result["Year"]
-    @rated = result["Rated"]
-    @release = result["Released"]
-    @runtime = result["Runtime"]
-    @genre = result["Genre"]
-    @director = result["Director"]
-    @writer = result["Writer"]
-    @actors = result["Actors"]
-    @plot = result["Plot"]
-    @language = result["Language"]
-    @country = result["Country"]
-    @awards = result["Awards"]
-    @metascore = result["Metascore"]
-    @imdbrating = result["imdbRating"]
-    @imdbvotes = result["imdbVotes"]
+    # binding.pry
+    @found = result
+    @image = result['Poster']
 
     input = Movie.new
-    input.title = @items['Title']
-    input.year = @items['Year']
-    input.rated = @items['Rated']
-    input.released = @items['Released']
-    input.runtime = @items['Runtime']
-    input.genre = @items['Genre']
-    input.director = @items['Director']
-    input.writer = @items['Writer']
-    input.actors = @items['Actors']
-    input.plot = @items['Plot']
-    input.language = @items['Language']
-    input.country = @items['Country']
-    input.awards = @items['Awards']
-    input.poster = @items['Poster']
-    input.metascore = @items['Metascore']
-    input.imdbrating = @items['imdbRating']
-    input.imdbvotes = @items['imdbVotes']
-    input.imdbid = @items['imdbID']
-    input.something = @items['Type']
-    input.response = @items['Response']
+    input.title = @found['Title']
+    input.year = @found['Year']
+    input.rated = @found['Rated']
+    input.released = @found['Released']
+    input.runtime = @found['Runtime']
+    input.genre = @found['Genre']
+    input.director = @found['Director']
+    input.writer = @found['Writer']
+    input.actors = @found['Actors']
+    input.plot = @found['Plot']
+    input.language = @found['Language']
+    input.country = @found['Country']
+    input.awards = @found['Awards']
+    input.poster = @found['Poster']
+    input.metascore = @found['Metascore']
+    input.imdbrating = @found['imdbRating']
+    input.imdbvotes = @found['imdbVotes']
+    input.imdbid = @found['imdbID']
+    input.something = @found['Type']
+    input.response = @found['Response']
     input.save
   end
   # return input
