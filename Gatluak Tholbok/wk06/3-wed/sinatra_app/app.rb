@@ -35,8 +35,8 @@ post '/posts' do
   erb :show
 end
 
-get '/products/' do
-  product = Product.find(params[:name])
+get '/products' do
+  product.id = params[:id]
   product.destroy
 
   product.save
@@ -56,8 +56,8 @@ put '/edit' do
 end
 
 
-post '/products' do
-  @product = Product.find(params[:id])
+get '/products' do
+  @product.name = params[:name]
   product.destroy
 
   product.save

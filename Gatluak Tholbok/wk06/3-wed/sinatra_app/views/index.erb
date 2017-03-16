@@ -1,9 +1,9 @@
 <h2>Thrifty Brand</h2>
-<a href="/product/new"></a>
+<a href="/product"></a>
 
 <% @product.each do |product| %>
 <h2>
-  <a href="/products/<%= product.name %>">
+  <a href="/products<%= product.name %>">
     <%= product.name %>
   </a>
 </h2>

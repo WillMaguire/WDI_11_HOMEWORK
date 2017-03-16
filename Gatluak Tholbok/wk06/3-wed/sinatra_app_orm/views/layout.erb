@@ -1,18 +1,18 @@
-<h2>Delete this product</h2>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> [rifty-brand] </title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
 
-@@show
-<h3><%= @product.name %></h3>
+  <%= yield %>
 
-<form action="/products<%= @product.name %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button>delete</button>
-</form>
+</body>
 
-<!-- <a href="/posts<%= @product.id %>/edit/">edit</a> -->
 
-<!-- steps:
-
-1. create product:
+<!-- 1. create product:
 
 product: has a name, price a d is stocked - true if available and false if not available
 

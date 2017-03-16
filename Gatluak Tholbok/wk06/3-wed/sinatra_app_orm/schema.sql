@@ -2,7 +2,7 @@ CREATE TABLE products (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(400) NOT NULL,
   image_url TEXT,
-  price INTEGER
+  price INTEGER,
   availablity TEXT
 );
 
