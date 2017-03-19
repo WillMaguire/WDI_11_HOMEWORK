@@ -4,7 +4,7 @@ console.log('dom quiz');
 
 var changeToHelloFriend = document.getElementsByTagName('ul')[0];
 
-// Question 2: schange the contents of what you selected above to be 'Friend'?
+// Question 2: change the contents of what you selected above to be 'Friend'?
 
 changeToHelloFriend.textContent = 'Hello Friend';
 

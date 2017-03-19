@@ -7,13 +7,13 @@ get '/' do
   erb :index
 end
 
-get '/about' do
+get '/searched' do
   @title = params[:title]
   @result = HTTParty.get("http://omdbapi.com/?t=#{ @title }")
-  erb :about
+  erb :film
 end
 
-get '/searched' do
+get '/about' do
   @titles = []
   @searched = params[:searched]
   @result_list = HTTParty.get("http://omdbapi.com/?s=#{ @searched }")
@@ -24,6 +24,6 @@ get '/searched' do
   if @titles.length == 1
     redirect "/about?title=#{@searched}"
   else
-    erb :film
+    erb :about
   end
 end

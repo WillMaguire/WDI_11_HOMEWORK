@@ -1,6 +1,3 @@
-
-console.log('This is a reading list. Is it working?');
-
 var books = [
     {
         title: 'Tools of Titans',
