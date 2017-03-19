@@ -21,12 +21,10 @@ require_relative 'animal.rb'
 require_relative 'client.rb'
 require_relative 'shelter.rb'
 
-animals = []
 leo = Animal.new('Leo', 8, 'male', 'dog')
 tom = Animal.new('Tom', 5, 'male', 'cat')
 button = Animal.new('Button', 3, 'female', 'dog')
 
-clients = []
 john_smith = Client.new('John Smith', 1, 30)
 ann_lee = Client.new('Ann Lee', 2, 35)
 jon_jones = Client.new('Jon Jones', 0, 25)
