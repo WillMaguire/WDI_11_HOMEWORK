@@ -1,0 +1,7 @@
+
+<h2>Pick your weapon</h2>
+<% ['rock', 'paper', 'scissors'].each do |weapon| %>
+  <div class="weapon">
+    <a href="/games/rock_paper_scissors/<%= weapon %>"><%= weapon %></a>
+  </div>
+<% end %>
