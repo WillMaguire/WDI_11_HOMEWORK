@@ -41,13 +41,13 @@ while text != 'q'
   case choice
     when "1"
       (0..shelterClient.length).each do |i|
-        nameList = shelterClient[i].instance_variable_get(:@name)
+        nameList = shelterClient[i].name
         puts nameList
       end
 
     when "2"
       (0..shelterAnimal.length).each do |i|
-        nameList = shelterAnimal[i].instance_variable_get(:@name)
+        nameList = shelterAnimal[i].name
         puts nameList
       end
 
@@ -60,7 +60,7 @@ while text != 'q'
         clientChildren = gets.chomp
 
       puts "Client #{clientName}"" has been added"
-      clientName = Client.new(clientName, clientAge, clientChildren)
+      shelterClient << Client.new(clientName, clientAge, clientChildren)
 
     when "4"
         puts "What is the name of the animal"
@@ -83,8 +83,8 @@ while text != 'q'
         aName = gets.chomp.downcase
 binding.pry
       (0..(shelterClient.length + shelterAnimal.length)).each do |i,n|
-        if cName == shelterClient[i].instance_variable_get(:@name) && aName == shelterAnimal[n].instance_variable_get(:@name) && shelterAnimal[n].instance_variable_get(:@relationship) == "no"
-          shelterClient[i].instance_variable_get(:@pets).push(aName)
+        if cName == shelterClient[i].name && aName == shelterAnimal[n].name && shelterAnimal[n].instance_variable_get(:@relationship) == "no"
+          shelterClient[i].pets.push(aName)
           shelterAnimal[n].instance_variable_set(:@relationship, "yes")
           text += " #{aName} has been adopted by #{cName}"
         elsif cName == shelterClient[i].instance_variable_get(:@name) && shelterAnimal[n].instance_variable_get(:@relationship) == "yes"

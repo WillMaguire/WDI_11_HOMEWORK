@@ -1,0 +1,17 @@
+
+
+
+<% if @result != nil %>
+  <% @result["Search"].each do |i| %>
+
+    <div class="special">
+    <a href="/t?movie=<%= i["Title"].split(" ").join("+") %>"><%= i["Title"] %></a>
+    </div>
+
+    <div class="panel-body">
+    <img src="<%= i["Poster"] %>">
+    </div>
+
+    <br>
+  <% end %>
+<% end %>
