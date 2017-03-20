@@ -19,4 +19,40 @@ class GamesController < ApplicationController
     end
     render :secretnumberanswer
   end
+
+  def rock_paper_scissors_play
+    input = params[:throw]
+    array = ["rock", "paper", "scissors"]
+    c_input = array.sample
+
+    if input == c_input
+      @string = 'tie game'
+    end
+
+    if input == 'paper' && c_input == 'scissors'
+      @string = 'you lose'
+    end
+
+    if input == 'paper' && c_input == 'rock'
+      @string = 'you win'
+    end
+
+    if input == 'scissors' && c_input == 'paper'
+      @string = 'you win'
+    end
+
+    if input == 'scissors' && c_input == 'rock'
+      @string = 'you lose'
+    end
+
+    if input == 'rock' && c_input == 'paper'
+      @string = 'you lose'
+    end
+
+    if input == 'rock' && c_input == 'scissors'
+      @string = 'you win'
+    end
+
+    render :rock_paper_scissors_play
+  end
 end
