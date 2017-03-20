@@ -1,0 +1,9 @@
+<form action="/magic8ball" method="post">
+  <label for="">ASK ME A QUESTION AND I SHALL BLESS THEE WITH KNOWLEDGE</label>
+  <br>
+  <input type="text" name="question">
+  <br>
+  <button>ASK I SAY!</button>
+  <span><%=@final_answer%></span>
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+</form>

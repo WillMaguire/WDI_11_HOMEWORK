@@ -1,7 +1,7 @@
 /* MUST SLEEP... more to come */
 
 body {
-  width: 96.66666667%;
+  width: 86.66666667%;
   margin: 0 auto;
   background-color: #FFFFFF;
 }
@@ -47,8 +47,6 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 18pt;
   width: 10px;
-
-
 }
 .nav_box:hover {
   background-color: #f94444;
@@ -75,7 +73,7 @@ body {
   float: left;
   font-size: 52pt;
   color: #a9a3a3;
-  padding: 2px 4px 4px 2px;
+  padding: 2px 4px 6px 2px;
   }
 #img-1 {
   width: 100%;
