@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get '/eightball', to: 'eightball#index'
   post '/eightball/answer', to: 'eightball#answer'
 
+  get '/numbers', to: 'numbers#index'
+  post '/numbers/check', to: 'numbers#check'
+
 end
