@@ -1,7 +1,8 @@
 <% @movielist['Search'].each do |movie| %>
   <div class="movielist-item">
-    <img src="<%= movie['Poster'] %>" alt="">
-    <h2><%= movie['Title'] %></h2>
-    <a href="/about?movie=<%= movie['Title'] %>"> <%= movie['Title'] %> </a>
+    <a href="/about?movie=<%= movie['Title'].split(" ").join("+") %>">
+      <img src="<%= movie['Poster'] %>" alt=""> <!-- Consider .split("").join("+") for spaces in titles -->
+      <h2><%= movie['Title'] %></h2>
+    </a>
   </div>
 <% end %>

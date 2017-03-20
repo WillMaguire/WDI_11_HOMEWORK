@@ -1,0 +1,13 @@
+<% @random_number = rand(1..10) %>
+
+<h1>Your guess was</h1>
+<%= @number %>
+
+<h2>Secret number was</h2>
+<%= @random_number %>
+
+<% if @number == @random_number %>
+  <h3> You Win    </h3>
+<% else %>
+  <h3> You Lose    </h3>
+<% end %>
