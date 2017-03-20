@@ -6,6 +6,12 @@ CREATE TABLE products (
   availablity TEXT
 );
 
+CREATE TABLE  users (
+  id SERIAL4 PRIMARY KEY,
+  email VARCHAR(400) NOT NULL,
+  password_digest VARCHAR(400) NOT NULL
+);
+
 
 -- steps:
 -- 1. create product:
