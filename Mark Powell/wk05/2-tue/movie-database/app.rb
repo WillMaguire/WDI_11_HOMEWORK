@@ -18,8 +18,6 @@ get '/list' do
   erb :list
 end
 
-end
-
 get '/about' do
   title = params[:movie]
   @result = HTTParty.get('http://omdbapi.com/?t='+title)
