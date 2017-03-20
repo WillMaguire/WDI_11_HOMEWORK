@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/', to: 'main#index'
+  get '/', to: 'intro#index' # route directing straight to index file
 
-  get '/games/eightballpage', to: 'games#eightballpage'
+  get '/games/eightballpage', to: 'games#eightballpage' #route directing straight to eightballpage file
 
-  get '/games/secretnumberpage', to: 'games#secretnumberpage'
+  get '/games/secretnumberpage', to: 'games#secretnumberpage' #route directing straight to secretnumberpage file
 
-  get '/games/rockpaperscissorspage', to: 'games#rockpaperscissorspage'
+  get '/games/rockpaperscissorspage', to: 'games#rockpaperscissorspage' #route directing straight to rockpaperscissorspage file
 
+  post '/games', to: 'games#eightballanswer'  #route directing to a method in games controller
+
+  post '/games', to: 'games#secretnumber'  
 end
