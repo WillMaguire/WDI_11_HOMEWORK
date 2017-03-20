@@ -1,0 +1,10 @@
+<h1>Eight Ball</h1>
+
+<form action="/eightball/answer" method ="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+
+  <label>Enter a Question</label>
+  <textarea class="u-full-width" name="question" rows="8" cols="80"></textarea>
+  <button>Ask Question</button>
+</form>

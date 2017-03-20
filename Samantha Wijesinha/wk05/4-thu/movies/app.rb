@@ -34,6 +34,7 @@ get '/search_result' do
     Movie1.Year = "<%= result['Year'] %>"
     Movie1.RunTime = "<%= result['RunTime'] %>"
     Movie1.save
+
   end
   erb :search_result
 end
