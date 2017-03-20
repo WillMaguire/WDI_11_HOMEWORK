@@ -27,6 +27,9 @@ end
 get '/search' do
   @result = HTTParty.get("http://omdbapi.com/?s=#{params[:input_search]}")
   erb :search
+
+  # @result['Search'].length
+  # binding.pry
 end
 
 get '/about' do
@@ -40,6 +43,7 @@ get '/about' do
   if result.cmd_tuples == 0 # cmd_tuples returns number of rows detected if none it will return a zero
     film = HTTParty.get("http://omdbapi.com/?t=#{params[:name]}")
 
+    binding.pry
     @poster = film["Poster"].gsub(/'/, "''")
     @title = film["Title"].gsub(/'/, "''")
     @year = film["Year"]
@@ -52,10 +56,10 @@ get '/about' do
     @plot = film["Plot"].gsub(/'/, "''") # substitute ' with '' for sql command. sql throws syntax error due to single quotes for values.
     @language = film["Language"].gsub(/'/, "''")
     @country = film["Country"].gsub(/'/, "''")
-
+    #hello
 
     sql = "INSERT INTO movies(title, year, rate, runtime, genre, director, writer, actors, plot, language, country, poster)
-    VALUES ('#{@title}',#{@year},'#{@rate}','#{@runtime}','#{@genre}', '#{@director}', '#{@writer}', '#{@actors}', '#{@plot}', '#{@language}', '#{@country}', '#{@poster}');"
+    VALUES ('#{@title}',#{@year},'#{@rate}','#{@runtime}','#{@genre}', '#{@director}', '#{@writer}', '#{@actors}', '#{@plot}'', '#{@language}', '#{@country}', '#{@poster}');"
     conn.exec(sql)
 
   else
