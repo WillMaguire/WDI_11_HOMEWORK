@@ -1,0 +1,14 @@
+<a href="/games">return to main menu</a>
+<a href="/games/magic8ball">new game</a>
+
+<form action="/games/magic8ball" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Please enter your question</label>
+  <input type="text" name="question">
+
+  <button>Get Answer</button>
+</form>
+
+<% if @question != nil %>
+<p><%= @answer %></p>
+<% end %>
