@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <title> [rifty-brand] </title>
+  <title> [rifty+HAIR] </title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
 </head>
+
 <body>
 
+<form class="login" action="/session" method="post">
+  <label for="">Email:</label>
+  <input type="text" name="email" value="">
+
+  <label for="">Password</label>
+  <input type="password" name="password">
+
+  <button>login</button >
+</form>
+
+<% if logged_in? %>
+logged in as <%= current_user.email %>
+<form class="logout" action="/session" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>logout</button>
+
+</form>
+<% end %>
+
   <%= yield %>
+
 
 </body>
 

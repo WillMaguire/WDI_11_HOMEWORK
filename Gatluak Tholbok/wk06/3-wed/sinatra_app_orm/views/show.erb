@@ -2,7 +2,7 @@
 
 <div class="product_details">
 
-  <h2><%= @product.name %></h2>
+  <h3>Style: <%= @product.name %></h3>
 
   <h3>Price: $<%= @product.price %></h3>
 
@@ -15,13 +15,13 @@
 <div>
 <!-- deleting form.. should redirect to index page -->
 
-  <form action="/products/delete<%= @product['id'] %>" method="post">
+<% if logged_in? %>
+  <form action="/product/<%= @product['id']%>" method="post">
 
     <input type="hidden" name="_method" value="delete">
     <button>Delete</button>
 
-  </form>
-
   <!-- editing link, redirects to the editing page -->
-  <a href="/product/<%= @product.id %>/edit">Edit</a>
+    <a href="/product/<%= @product.id %>/edit">Edit</a>
+  <% end %>
 </div>
