@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   post '/games/secretnumberanswer', to: 'games#secretnumberanswer'
 
   post 'games/rock_paper_scissors_play', to: 'games#rock_paper_scissors_play'
+
+  
 end

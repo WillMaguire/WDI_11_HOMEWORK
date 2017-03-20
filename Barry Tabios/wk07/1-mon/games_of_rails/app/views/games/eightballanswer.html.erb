@@ -1,3 +1,14 @@
 <h1>THE MAGIC 8 BALL HAS SPOKEN ....</h1>
 
 <p><%= @answer %></p>
+
+<form action="/games/eightballpage" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <button>back</button>
+</form>
+
+
+<form action="/" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <button>Main Page</button>
+</form>
