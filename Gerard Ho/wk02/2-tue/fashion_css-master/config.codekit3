@@ -7,7 +7,7 @@
 		"uuidString": "B6DC4F37-6AE3-44DC-A955-B8CADC05AF86"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25704",
 "files": {
 	"\/css\/style-min.css": {
 		"aP": 1,
@@ -32,10 +32,12 @@
 	"\/fashion_css.png": {
 		"ft": 32768,
 		"iS": 743776,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/fashion_css.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/fashion_photo.jpeg": {
 		"ft": 16384,
@@ -43,7 +45,8 @@
 		"oA": 0,
 		"oAP": "\/images\/fashion_photo.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/fashion_photo2.jpeg": {
 		"ft": 16384,
@@ -51,7 +54,8 @@
 		"oA": 0,
 		"oAP": "\/images\/fashion_photo2.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -758,6 +762,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -1237,6 +1245,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -1837,7 +1849,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -1930,7 +1943,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,

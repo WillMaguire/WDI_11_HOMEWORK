@@ -7,7 +7,7 @@
 		"uuidString": "6638D5B5-0167-4728-A06F-3964D0CF4D5C"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25704",
 "files": {
 	"\/css\/style-min.css": {
 		"aP": 1,
@@ -40,18 +40,22 @@
 	"\/images\/ad-postcard-tee.png": {
 		"ft": 32768,
 		"iS": 17190,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/ad-postcard-tee.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/ad-submit-your-own.png": {
 		"ft": 32768,
 		"iS": 9404,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/ad-submit-your-own.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/background.jpg": {
 		"ft": 16384,
@@ -59,7 +63,8 @@
 		"oA": 0,
 		"oAP": "\/images\/background.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/ecard-courage.jpg": {
 		"ft": 16384,
@@ -67,7 +72,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ecard-courage.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/ecard-nycstartups.jpg": {
 		"ft": 16384,
@@ -75,39 +81,48 @@
 		"oA": 0,
 		"oAP": "\/images\/ecard-nycstartups.jpg",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/logo.png": {
 		"ft": 32768,
 		"iS": 31643,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/logo.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/social-icon-facebook.png": {
 		"ft": 32768,
 		"iS": 2670,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/social-icon-facebook.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/social-icon-pinterest.png": {
 		"ft": 32768,
 		"iS": 2987,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/social-icon-pinterest.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/images\/social-icon-twitter.png": {
 		"ft": 32768,
 		"iS": 2742,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/images\/social-icon-twitter.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -136,10 +151,12 @@
 	"\/screenshot-final.png": {
 		"ft": 32768,
 		"iS": 880777,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/screenshot-final.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 0,
+		"q": 100
 		}
 	},
 "hooks": [
@@ -822,6 +839,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -1301,6 +1322,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -1901,7 +1926,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -1994,7 +2020,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,

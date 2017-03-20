@@ -1,0 +1,9 @@
+<h1>Rock Paper Scissor</h1>
+
+<form>
+  <input type="hidden" name="authenticity_token" value= <%=form_authenticity_token%>>
+  <% @array_game.each do |choice| %>
+    <button formaction="/rockpaperscissors/<%=choice%>"><%=choice%></button>
+  <% end %>
+</form>
+<p><%= @response %></p>
