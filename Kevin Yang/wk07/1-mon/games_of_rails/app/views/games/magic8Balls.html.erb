@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Magic 8 Ball</title>
+</head>
+<body>
+<h1>Magic 8 Ball</h1>
+<p>Ask a question, and the ball will respond</p>
+<br>
+<form action="/games/magic8Balls" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="type" placeholder="ask wisely!">
+  <button>ASK</button>
+</form>
+
+<h3 name="answer"><%= @output %></h3>
+
+</body>
+</html>
