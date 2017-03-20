@@ -1,0 +1,13 @@
+<h1>Rock Paper & Scissors</h1>
+
+<form action="/games/rock_paper_scissors" method="post">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Chose:
+    <br> 1: rock
+    <br> 2: paper
+    <br> 3: scissor
+    <br>
+  </label>
+  <input type="text" name="throw">
+  <button>Play</button>
+</form>
