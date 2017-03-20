@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/games/rockpaperscissorspage', to: 'games#rockpaperscissorspage' #route directing straight to rockpaperscissorspage file
 
-  post '/games', to: 'games#eightballanswer'  #route directing to a method in games controller
+  post '/games/eightballanswer', to: 'games#eightballanswer'  #route directing to a method in games controller
 
-  post '/games', to: 'games#secretnumber'  
+  post '/games/secretnumberanswer', to: 'games#secretnumberanswer'
 end
