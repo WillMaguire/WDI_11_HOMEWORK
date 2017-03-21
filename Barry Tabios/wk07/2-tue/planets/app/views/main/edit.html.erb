@@ -1,0 +1,10 @@
+<h1>Edit Planet</h1>
+
+<%= form_tag '/', method: 'put' do %>
+  <input type="hidden" name="planet_id" value="<%= @planet_id%>">
+  <input name="name" type="text">
+  <label>name</label>
+  <input name="image_url" type="text">
+  <label>Image URL</label>
+  <button>Update</button>
+<% end %>
