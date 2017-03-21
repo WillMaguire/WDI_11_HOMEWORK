@@ -1,0 +1,31 @@
+<% @planetss.each do |planet|%>
+
+
+
+<div class="wrapper">
+
+
+  <div class="header">
+    <img id="profile" src=""/>
+
+  </div>
+
+  <span class="image_holder" >
+    <img class="planet_image" src="<%= planet.img_url%>"/>
+  </span>
+    <form action="/planets" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <input type="hidden" name="planet_id" value="<%= planet.id %>">
+      <button id="delete">delete</button>
+      <h2>
+        <a href="/planets/<%= planet.id %>"> <%= planet.name %> </a>
+      </h2>
+  </form>
+
+</div>
+
+
+
+
+<%end%>
