@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
-  get 'planet/index', to: 'planet#index'
+  get '/planet/index', to: 'planet#index'
 
-  get 'planet/new', to: 'planet#new'
+  get '/planet/new', to: 'planet#new'
+  post '/planet/new', to: 'planet#create'
 
-  get 'planet/delete', to: 'planet#delete'
+  delete '/planet/delete', to: 'planet#delete'
 
-  get 'planet/edit', to: 'planet#edit'
+  get '/planet/edit/:id', to: 'planet#edit'
+  put '/planet/edit', to: 'planet#modify'
 
-  get 'planet/:id', to: 'planet#view'
+  get '/planet/:id', to: 'planet#view'
 
   get '/login', to: 'session#new'
   post 'session/create', to: 'session#create'
