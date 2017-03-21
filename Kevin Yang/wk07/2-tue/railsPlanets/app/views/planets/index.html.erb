@@ -1,0 +1,27 @@
+<!-- <#%=# @user.username %> -->
+
+<form action="/planets/new">
+  <button>create a new planet</button>
+</form>
+<hr>
+<% @planets.each do |single| %>
+  <b><%= single.planet %></b>
+  <form action="/planets/<%=single.id%>/edit" >
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <button>Edit info</button>
+  </form>
+  <br>
+  <img src="<%= single.image_url %>" alt="" style="max-width: 150px;">
+  <form action="/comment" method="post">
+    <input type="text" placeholder="comment">
+    <button>submit</button>
+  </form>
+  <br>
+  <form action="/planets" method="post">
+    <input type="hidden" name="_method"  value="delete">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <input type="hidden" value="<%= single.id %>" name="planet_id">
+    <button>delete</button>
+  </form>
+<hr>
+<% end %>

@@ -1,0 +1,15 @@
+<h2>Edit planet</h2>
+
+
+<form action="/planets/<%= @planet.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="_method" value="put">
+
+  <label for="">name</label>
+  <input name="name" type="text" value="<%= @planet.planet %>" placeholder="<%= @planet.planet %>">
+  <br>
+  <label for="">image url</label>
+  <input name="image_url" type="url" value="<%= @planet.image_url %>" placeholder="<%= @planet.image_url  %>">
+
+  <button>update</button>
+</form>
