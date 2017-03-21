@@ -1,0 +1,42 @@
+<% if session[:user_id] %>
+  <p>You are currently signed in as <%= User.find(session[:user_id]).email %></p>
+  <%= form_tag '/logout', method: 'delete' do %>
+    <button>Log Out</button>
+  <% end %>
+  <%= form_tag '/new', method: 'put' do %>
+    <label for="">Name</label>
+    <input type="text" name="name" value="">
+    <label for="">Size</label>
+    <input type="text" name="size" value="">
+    <label for="">Atmosphere</label>
+    <input type="text" name="atmosphere" value="">
+    <label for="">Image URL</label>
+    <input type="text" name="image" value="">
+    <button>Submit</button>
+  <% end %>
+  <% @user.planets.each do |planet| %>
+    <img src= "<%= planet.image_url %>" alt="">
+    <% if planet.comments != nil %>
+      <% planet.comments.each do |comment| %>
+        <p><%= comment.body %></p>
+      <% end %>
+    <% end %>
+    <%= form_tag "/comment/#{planet.id}", method: 'post' do %>
+    <label for="">Comment</label>
+    <input type="text" name="body" value="">
+    <button>Submit</button>
+    <% end %>
+  <% end %>
+<%else%>
+  <%= form_tag '/login', method: 'post' do %>
+    <label for="">Email</label>
+    <input type="email" name="email" value="">
+    <label for="">Password</label>
+    <input type="password" name="password" value="">
+    <button>Login</button>
+  <% end %>
+  <% @planets.each do |planet| %>
+  <img src= "<%= planet.image_url %>" alt="">
+  <p>Planet owned by: <%=planet.user.email%></p>
+  <% end %>
+<% end %>
