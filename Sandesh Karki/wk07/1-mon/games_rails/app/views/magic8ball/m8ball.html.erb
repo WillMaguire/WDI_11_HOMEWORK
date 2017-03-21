@@ -1,0 +1,11 @@
+<h1> Welcome to Magic 8 Ball </h1>
+
+<form action="/play8ball">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+
+  <input type="text" name="question">
+  <button>Ask</button>
+</form>
+
+
+<h2> <%= @message %> </h2>

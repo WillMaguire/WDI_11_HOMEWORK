@@ -4,7 +4,6 @@ require 'pg'
 require 'httparty'
 
 
-
 def run_sql(sql)
   conn = PG.connect(dbname: 'omdb_movies')
   @sql_result = conn.exec(sql)
