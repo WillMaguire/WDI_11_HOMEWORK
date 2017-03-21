@@ -1,0 +1,24 @@
+
+<h1> Add New Planet </h1>
+
+<%= form_tag '/planet/create', method: "post" do %>
+  <label for="">Name</label>
+  <input type="text" name="name">
+
+  <label for="">Position</label>
+  <input type="text" name="position">
+
+  <label for="">Life</label>
+  <input type="text" name="life">
+
+  <label for="">Radius</label>
+  <input type="text" name="radius">
+
+  <label for="">Distance From Sun</label>
+  <input type="text" name="distance">
+
+  <label for="">Image</label>
+  <input type="text" name="image">
+
+  <button>Add</button>
+<% end %>
