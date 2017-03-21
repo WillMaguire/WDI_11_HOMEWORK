@@ -1,4 +1,8 @@
 class GamesController < ApplicationController
+  def index
+    
+  end
+
   def magic_question
     render :magic_question
   end

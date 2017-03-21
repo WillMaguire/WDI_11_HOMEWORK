@@ -1,0 +1,11 @@
+Add a new planet
+<%= form_tag '/planet/new', method: 'post' do %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="">name</label>
+  <input type="text" name="name">
+  <label for="">description</label>
+  <input type="text" name="description">
+  <label for="">Image URL</label>
+  <input type="text" name="image_url">
+  <button>Add to planet collection</button>
+<% end %>
