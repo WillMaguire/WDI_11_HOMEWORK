@@ -4,6 +4,8 @@ get '/index', to: 'pages#index'
 
 get '/games/magic_eight', to: 'games#magic_eight'
 
+
+
 post '/games/magic_eight/answer', to: 'games#magic_eight_answer'
 
 get '/games/secret_number', to: 'games#secret_number'
