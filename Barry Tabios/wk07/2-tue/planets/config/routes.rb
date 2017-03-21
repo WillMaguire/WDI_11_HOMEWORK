@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/edit', to: 'main#edit'
 
   put '/', to: 'main#update'
+
+  patch '/', to: 'main#comment'
 end

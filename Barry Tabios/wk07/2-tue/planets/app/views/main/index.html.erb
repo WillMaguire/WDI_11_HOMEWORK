@@ -19,4 +19,13 @@
     <button>Edit Planet</button>
   <% end %>
 
+  <%= form_tag '/', method: 'patch' do %>
+    <button>Comment</button>
+    <input type="text" name="input">
+  <% end %>
+
+  <% @comments.each do |comment| %>
+    <p><%= comment.body %></p>
+  <% end %>
+
 <% end %>

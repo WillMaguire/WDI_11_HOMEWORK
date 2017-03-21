@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   def index
     @planets = Planet.all
+    @comments = Comment.all
     #render :index
   end
 
@@ -39,6 +40,14 @@ class MainController < ApplicationController
     else
       redirect_to '/'
     end
+  end
+
+  def comment
+    com = Comment.new
+    com.body = params[:input]
+    com.save
+    @comments = Comment.all
+    redirect_to '/'
   end
 
 end
