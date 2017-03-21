@@ -1,0 +1,38 @@
+<h1>Edit <%= @planet.name %></h1>
+
+<%= form_tag '/planets', method: 'put' do %>
+  <input type="hidden" name="planet_id" value="<%= @planet.id %>">
+  <div>
+    <label for="">Name</label>
+    <input type="text" name="name" value="<%= @planet.name %>" required>
+  </div>
+  <div>
+    <label for="">Image URL</label>
+    <input type="text" name="image_url" value="<%= @planet.image_url %>">
+  </div>
+  <div>
+    <label for="">Orbital distance (AU)</label>
+    <input type="text" name="orbital_distance_in_au" value="<%= @planet.orbital_distance_in_au %>">
+  </div>
+  <div>
+    <label for="">Mass (earths)</label>
+    <input type="text" name="mass_relative_to_earth" value="<%= @planet.mass_relative_to_earth %>">
+  </div>
+  <div>
+    <label for="">Diameter (earths)</label>
+    <input type="text" name="diameter_relative_to_earth" value="<%= @planet.diameter_relative_to_earth %>">
+  </div>
+  <div>
+    <label for="">Rotational period (days)</label>
+    <input type="text" name="rotational_period_in_days" value="<%= @planet.rotational_period_in_days %>">
+  </div>
+  <div>
+    <label for="">Orbital period (years)</label>
+    <input type="text" name="orbital_period_in_years" value="<%= @planet.orbital_period_in_years %>">
+  </div>
+  <div>
+    <label for="">Number of moons</label>
+    <input type="text" name="number_of_moons" value="<%= @planet.number_of_moons %>">
+  </div>
+  <button>Edit planet</button>
+<% end %>
