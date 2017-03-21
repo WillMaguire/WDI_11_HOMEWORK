@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+figure {
+  width: 250px;
+  height: 250px;
+  white-space: nowrap;
+}
+
+img {
+  width: 100%;
+}
+
+form > div {
+  padding-bottom: .7em;
+}
+
+.card {
+  background: rgba(0, 0, 0, .85);
+  border-radius: 20px;
+  color: white;
+  margin: .2em;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.comments {
+  margin-left: 2em;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.fill-height {
+  height: 100%;
+}
+
+.vertical-top {
+  vertical-align: top;
+}
+
+.vertical-middle {
+  vertical-align: middle;
+}
