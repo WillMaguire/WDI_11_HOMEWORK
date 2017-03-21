@@ -1,0 +1,9 @@
+<%= @dish.name %>
+
+  <%= @dish.comments.body %>
+
+  <%= form_tag '/comments', method: 'post' do %>
+  <input type="text" name="planet_id" value="<%= @planet.id %>">
+  <button>submit</button>
+
+<% end %>
