@@ -3,13 +3,12 @@ class GamesController < ApplicationController
   end
 
   def eightball
-
   end
 
   def answer
     @question= params[:question]
-    answers = [
 
+    answers = [
     "It is certain",
     "It is decidedly so",
     "Without a doubt",
@@ -42,34 +41,28 @@ class GamesController < ApplicationController
     @computer_pick = computer[Random.rand(computer.size)]
 
     if @user_pick == "rock" && @computer_pick == "scissors"
-    @result = "Player chose rock. \nComputer chose scissors."
-    @winner =  "Rock beats scissors, player wins the round."
-
+      @result = "Player chose rock. \nComputer chose scissors."
+      @winner =  "Rock beats scissors, player wins the round."
 
     elsif @user_pick == "scissors" && @computer_pick == "paper"
       @result =  "Player chose scissors. \nComputer chose paper."
       @winner =   "Scissors beat paper, player wins the round."
 
-
     elsif @user_pick == "paper" && @computer_pick == "rock"
       @result =  "Player chose paper. \nComputer chose rock"
       @winner =  "Paper beats rock, player wins the round."
-
 
     elsif @computer_pick == "rock" && @user_pick == "scissors"
       @result =  "Player chose scissors. \nComputer chose rock."
       @winner =  "Rock beats scissos, Computer wins the round"
 
-
     elsif @computer_pick == "scissors" && @user_pick == "paper"
       @result =  "Player chose paper. \nComputer chose scissors."
       @winner =  "Scissors beats paper, Computer wins the round"
 
-
     elsif @computer_pick == "paper" && @user_pick == "rock"
       @result =  "Player chose rock. \nComputer chose paper."
       @winner =  "Paper beats rock, Computer wins the round"
-
 
     elsif @user_pick == @computer_pick
       @result =  "Tie, go again!"
