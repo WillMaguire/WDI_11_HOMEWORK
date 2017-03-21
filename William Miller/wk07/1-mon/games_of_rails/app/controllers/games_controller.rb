@@ -23,8 +23,9 @@ class GamesController < ApplicationController
 
     elsif num == 6
       @answer = "Don't ask me Im just a stupid eight ball"
+
     end
-    
+
   end
 
 

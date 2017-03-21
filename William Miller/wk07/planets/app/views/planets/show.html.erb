@@ -1,0 +1,16 @@
+<%= @planet.name %>
+
+<img class="planet_img" src="<%= planet.image_url %>" alt="">
+
+<form action="/planets/<%= @planet.id %>" method="post">
+        <input type="hidden" name="_method" value="put">
+
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <label>Name</label>
+        <input type="text" name="name" value="<%= @planet.name %>">
+
+        <label>image_url</label>
+        <input type="text" name="image" value="<%= @planet.image_url %>">
+
+        <button>save</button>
+</form>
