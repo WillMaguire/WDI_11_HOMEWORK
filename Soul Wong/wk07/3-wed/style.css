@@ -39,6 +39,21 @@ body{
   width: 60px;
   height: 90px;
 }
+.results_wrapper img{
+  width: 60px;
+  height: 90px;
+}
+.results_wrapper h3{
+  background-color:#2d50a7;
+  color:white;
+  width:600px;
+}
+.results_wrapper h5{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+
 
 .search_result h3{
  background-color:#2d50a7;
