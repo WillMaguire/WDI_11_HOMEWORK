@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/comments', to: 'comments#new'
   post '/comments', to: 'comments#create'
-  get '/comment/:id', to: 'comments#destroy'
+  delete '/comment/:id', to: 'comments#destroy'
 
   get '/login', to: 'session#new'
   post '/session', to: 'session#create'
@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   get '/planets', to: 'planets#index'
   post '/planets', to: 'planets#create'
-  delete 'planets/:id', to: 'planets#destroy'
+  delete '/planets/:id', to: 'planets#destroy'
 
 end
