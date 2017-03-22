@@ -1,0 +1,12 @@
+@import 'https://fonts.googleapis.com/css?family=Electrolize|Orbitron';
+body {
+  background: skyblue;
+  font-family: 'Orbitron', sans-serif;
+}
+img {
+  float: left;
+}
+#info {
+  height: 300px;
+  width: 300px;
+}
