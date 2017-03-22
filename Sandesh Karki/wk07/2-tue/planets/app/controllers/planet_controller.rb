@@ -16,7 +16,7 @@ class PlanetController < ApplicationController
     planet.image_url = params[:image]
 
     if planet.save
-      render :list
+      redirect_to '/planet/list'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class PlanetController < ApplicationController
   def destroy
     planet = Planet.find(params[:planet_id])
     if planet.destroy
-      redirect_to 'planet/list'
+      redirect_to '/planet/list'
     else
      redirect_to "/planet/show/#{params[:id]}"
    end
