@@ -1,8 +1,14 @@
 class CommentController < ApplicationController
-  def new
-  end
+
 
   def create
+    planet = Planet.find(params[:planet_id])
+    planet.body = params[:body]
+    planet.planet_id = params[:planet_id]
+    if planet.save
+      redirect_to "comment/show/#{params[:planet_id]}"
+    else
+      redirect_to '/' #testing purpose
   end
 
   def list
