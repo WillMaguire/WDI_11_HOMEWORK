@@ -26,8 +26,9 @@ function dataCall() {
   var movie = $('input').val();
 
   $.ajax({
-    url: "http://www.omdbapi.com/?s=" + movie,
-    method: 'get'
+    url: "http://www.omdbapi.com/",
+    data: {s: movie}
+    // method: 'get'
   }).done(coolFuncToCallback);
 }
 
