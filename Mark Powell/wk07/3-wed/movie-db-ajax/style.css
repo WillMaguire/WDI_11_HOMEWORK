@@ -1,0 +1,30 @@
+body{
+  font-family: 'Helvetica', sans-serif;
+}
+
+header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+header input, button {
+  padding: 5px 10px;
+  font-size: 1.5em;
+  margin: 0.25em;
+}
+
+.results {
+  padding: 5px 10px;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.35);
+  transition: 0.1s;
+}
+
+a:hover{
+  color: rgba(0, 0, 0, 1);
+
+}
