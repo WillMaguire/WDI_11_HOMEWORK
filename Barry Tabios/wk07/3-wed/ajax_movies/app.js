@@ -27,4 +27,41 @@
 //
 //
 
-console.log('hello');
+console.log('AJAX Movie DB');
+
+
+// $.ajax({
+//    url: 'http://omdbapi.com/?',
+//    data: {s: 'jaws'},
+//    method: 'get'
+// }).done(function(data){
+//    console.log(data)
+// });
+
+$searchBtn = $('.searchBtn');
+$searchBtn.on('click', function(){
+input = document.querySelector('.input').value
+
+  $.ajax({
+     url: 'http://omdbapi.com',
+     data: {s: input},
+     method: 'get'
+  }).done(function(data){
+    result = data["Search"]; // Assigns the array of objects from Object Search
+    for(i=0; i<result.length; i++){
+      title = result[i]['Title'];
+      newH2 = document.createElement('H2');
+      newH2.setAttribute("id", i );
+      document.querySelector('body').appendChild(newH2);
+      // document.querySelector(.i).innerHTML = title;
+      document.getElementById(i).innerHTML = title;
+      console.log(title);
+    };
+  });
+
+});
+
+
+// document.querySelector('.searchBtn').addEventListener('click', function(){
+//   console.log('hello there');
+// });
