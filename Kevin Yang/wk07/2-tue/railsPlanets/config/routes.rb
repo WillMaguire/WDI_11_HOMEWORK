@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete '/planets', to: 'planets#destroy'
   get '/planets/:id/edit', to: 'planets#edit'
   put '/planets/:id', to: 'planets#editing'
+  post'/planets/comment', to: 'comments#create'
   root 'planets#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
