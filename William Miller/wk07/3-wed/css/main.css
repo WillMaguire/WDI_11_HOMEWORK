@@ -1,0 +1,25 @@
+
+body {
+  font-family: 'Baloo Bhaina', cursive;
+  margin: 0;
+  padding: 0;
+  padding-left: 20%;
+}
+
+form {
+  position: fixed;
+  left: 10%;
+  top: 10%;
+  width: 30%;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+img {
+  display: block;
+  vertical-align: middle;
+  height: 200px;
+  width: 200px;
+}
