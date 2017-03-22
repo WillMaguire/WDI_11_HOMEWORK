@@ -1,8 +1,5 @@
 
-var $button = $('button');
-var result = null;
-
-$button.on('click', function(){
+$('button').on('click', function(){
   var titleSearch = $('.title').val();
   $.ajax({
     url: 'http://www.omdbapi.com/',
@@ -10,16 +7,12 @@ $button.on('click', function(){
     method: 'get'
   }).done(function(data){
     result = data.Search;
-    generateList(result);
+    $('h2').detach();
+    $body = $('body');
+    result.forEach(function(movie){
+      burl = 'http://www.imdb.com/title/' + movie.imdbID;
+      title = movie.Title;
+      $body.append('<h2><a href="'+ burl +'" target="blank">' + title + '</a></h2>');
+    })
   });
 })
-
-var generateList = function() {
-  $('h2').detach();
-  var $body = $('body');
-  for (index = 0; index < result.length; index++) {
-    var burl = 'http://www.imdb.com/title/' + result[index].imdbID;
-    var title = result[index].Title;
-    $body.append('<h2><a href="'+ burl +'">' + title + '</a></h2>');
-  }
-}
