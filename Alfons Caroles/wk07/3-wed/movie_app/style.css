@@ -1,0 +1,27 @@
+* {
+  margin:0;
+}
+
+h2{
+  margin: 10px;
+}
+
+body{
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  margin:10px;
+}
+
+a:hover {
+  color: blue;
+}
+
+.search {
+  margin: 20px auto;
+  text-align: center;
+}
