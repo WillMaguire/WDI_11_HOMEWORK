@@ -25,7 +25,7 @@ class PlanetController < ApplicationController
       redirect_to '/planet/index'
     else
       redirect_to "/planet/edit/#{params[:id]}"
-    end 
+    end
   end
 
   def edit
@@ -47,5 +47,6 @@ class PlanetController < ApplicationController
 
   def view
     @Planet = Planet.find_by(id:params[:id])
+    @Comments = @Planet.comments
   end
 end

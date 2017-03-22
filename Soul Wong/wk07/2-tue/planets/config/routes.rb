@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/planet/:id', to: 'planet#view'
 
+  post '/comments/new', to: 'comment#create'
+
   get '/login', to: 'session#new'
   post 'session/create', to: 'session#create'
   delete 'session/destroy', to: 'session#destroy'
