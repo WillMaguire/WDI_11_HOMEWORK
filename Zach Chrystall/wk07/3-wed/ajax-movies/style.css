@@ -1,0 +1,54 @@
+header {
+  padding: .35em;
+  text-align: center;
+  background-color: powderblue;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  background-color: mintcream;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+.ui-card {
+  float: left;
+  width: 23%;
+  margin: 1%;
+  padding: .75em;
+  background-color: lightcyan;
+  border: 2px solid lightskyblue;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2em;
+  padding: .25em;
+}
+
+.search {
+  text-align: center;
+  display: inline-block;
+  width: 300px;
+}
+
+button,
+input {
+  font-size: 1.25em;
+  padding: .25em;
+  border-radius: .75em;
+  margin: .35em
+}
+
+input {
+  width: 300px;
+  /*display: block;*/
+  text-align: center;
+}
+
+button {
+  width: 50%;
+}
