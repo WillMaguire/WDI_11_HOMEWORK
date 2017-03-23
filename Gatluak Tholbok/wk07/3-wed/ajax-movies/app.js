@@ -1,17 +1,29 @@
-$.ajax({
-	url: "http://www.omdbapi.com/?s=Batman&page=2",
-	method: "GET"
-	}).done(function(data) {
-		var results = data.Search
-		$.each(results, function(i, movieObject) {
-			var movie = movieObject;
-			console.log(movie.Title)
+$(document).ready(function() {
 
-		var h2 = $(".movie_title").val();
-		})
-		// console.log();
+  $(".search_btn").click(function() {
+
+    var movieTitle = $("input").val();
+    var url = "http://www.omdbapi.com/?s="+movieTitle;
+
+    $.ajax({
+      url: url,
+      method: "GET",
+      dataType: "JSON"
+    }).done(function(display) {
+      console.log(display);
+
+      var searchArr = display["Search"];
+      console.log(searchArr);
+
+      searchArr.forEach(function(movie) {
+        console.log(movie);
+
+
+        var $title = $('<h2>').text(movie.Title);
+        $(".list").append($title);
+
+      })
+
+    })
+  });
 });
-
-// $('button').on('click', function() {
-//   var str = $(".search_bar").val();
-// })
