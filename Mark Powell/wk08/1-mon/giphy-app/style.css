@@ -1,0 +1,19 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.gif-container {
+  flex-basis: 33%;
+  display: inline-block;
+  box-sizing: border-box;
+}
