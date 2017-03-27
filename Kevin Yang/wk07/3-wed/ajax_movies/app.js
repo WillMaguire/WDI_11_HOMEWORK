@@ -4,7 +4,7 @@ $('.search-btn').click(function(){
   var title = $("input[name='search-txt']").val();
 
   $.ajax({
-      url: 'http://omdbapi.com/?',
+      url: '$?',
       data: { s: title },
       method: 'get'
     }).done(function(data){

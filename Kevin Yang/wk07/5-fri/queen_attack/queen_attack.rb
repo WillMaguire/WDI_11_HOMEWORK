@@ -30,5 +30,5 @@ class Queens
   def slope?
     (white[0]-black[0]).abs == (white[1]-black[1]).abs
   end
-  
+
 end
