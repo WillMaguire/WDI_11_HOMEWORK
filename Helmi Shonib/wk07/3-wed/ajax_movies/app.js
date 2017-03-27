@@ -1,16 +1,18 @@
-$(document).ready(function() {
-  $(".search").click(function(){
-    var movie_title = $("input[name='movie_title']").to_s();
-    var url = "https://www.omdpapi.com/?t="+movie_title
-    $.ajax({
-      url: url,
-      method: "GET"
-      data: "JSON"
-
-    }).done(function () {
-      
-    }
-  )}
-
-)}
-)
+console.log('connected...');
+$('.search-btn').click(function(event) {
+// event.preventDefault();
+var input = $('.search-movie').val();
+  $.ajax({
+    url: 'https://www.omdpapi.com/',
+    data: {
+      s: input,
+    },
+    method: 'get',
+    dataType: 'JSON'
+  }).done(function(data) {  // add data in brackets with JSON
+    // $('<p>').text(data.name).appendTo('.output');
+    Object.keys(data).forEach(function(key) {  //take owner out
+      $('<p>').text(key + ": " + data[key]).appendTo('.output'); //take owner out of data
+    })
+  });
+});  //http://www.omdbapi.com/?s=jaws
