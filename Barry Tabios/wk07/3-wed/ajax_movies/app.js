@@ -37,10 +37,11 @@ console.log('AJAX Movie DB');
 // }).done(function(data){
 //    console.log(data)
 // });
+var input;
 
 $searchBtn = $('.searchBtn');
 $searchBtn.on('click', function(){
-input = document.querySelector('.input').value
+  input = document.querySelector('.input').value;
 
   $.ajax({
      url: 'http://omdbapi.com',
