@@ -1,0 +1,37 @@
+
+body {
+  background: mistyrose;
+}
+
+header {
+  text-align: center;
+}
+
+.gifs {
+  width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+}
+
+img {
+  width: 95%;
+  margin: 5px auto;
+}
+
+input {
+  width: 300px;
+  padding: .25em;
+  font-size: 1.5em;
+  text-align: center;
+  border-radius: .3em;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  width: 140px;
+  margin: 10px;
+  /*font-size: 1.25em;*/
+  padding: .25em;
+}
