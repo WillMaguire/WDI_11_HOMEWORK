@@ -1,20 +1,22 @@
-$movie = $('input').val();
 
+$('button').on('click',function(){
+  $movie = $('input').val();
 
-$.ajax({
-      url: 'http://www.omdbapi.com/?',
-      data: { s: $movie },
-      method: 'GET'
-    }).done(function(data){
-      console.log(data);
-      // console.log(data["Search"])
-      // arr = data["Search"];
+  $.ajax({
+        url: 'http://www.omdbapi.com/?',
+        data: { s: $movie },
+        method: 'GET'// optional as it is get by defult
+      }).done(function(movies){
+        console.log(movies)
 
-      data.Search.forEach(function(movie){
-      // console.log(movie.Title);
-      $('.result').append('<h3> Title: ' + movie.Title+ '</h3>');
+        movies.Search.forEach(function(movie){
 
+          var $title = $('<a>').attr('href', 'http://www.imdb.com/title/' + movie.imdbID).text(movie.Title).attr('target', '_blank');
+
+          var $h2 = $('<h2>');
+
+          $($h2).append($title);
+          $(".result").append($h2);
+        });
       });
-    });
-
-    
+});

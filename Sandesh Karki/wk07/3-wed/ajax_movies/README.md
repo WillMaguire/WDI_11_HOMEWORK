@@ -25,4 +25,3 @@ write a frontend app to allow users to enter a search for movies, and to show th
 ### Extension
 
 turn each h2 titles into a link that goes to the corresponding IMDB movie page that opens in a new window
-0
