@@ -9,7 +9,6 @@ var $results = $('.results');
 
 var hasStartedSearch = false;
 var scrollThrottle = false;
-var scrollThrottling = false;
 
 var limit = 100;
 var offset = 0;
@@ -61,13 +60,9 @@ $('button').click(function() {
 });
 
 $window.scroll(function() {
-  if (scrollThrottle) {
-    if (!scrollThrottling) {
-      scrollThrottling = true;
-      setTimeout(function() { scrollThrottle = false; scrollThrottling = false; }, 500);
-    }
-  } else if (hasStartedSearch && $window.scrollTop() + $window.height() > $document.height() * 0.8) {
+  if (!scrollThrottle && hasStartedSearch && $window.scrollTop() + $window.height() > $document.height() * 0.8) {
     loadGifs();
     scrollThrottle = true;
+    setTimeout(function() { scrollThrottle = false; }, 750);
   }
 });
