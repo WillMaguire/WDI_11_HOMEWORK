@@ -24,7 +24,6 @@
     </div>
     <br>
   </div>
-
 <script>
 $('.myButton').on('click', function(){
   var searchTerm = $( ".search_term" ).val();
@@ -42,7 +41,7 @@ function searchMovie(movieName){
             'class' : 'result_container',
             'html' : '<img src="'+element["Poster"]+
             '"alt=""><div class="result_description">'+
-            '<h4><a href=" ">'+element["Title"]+'</a></h4><h5>'+element["Type"] +'</h5>'+
+            '<h4><a href="">'+element["Title"]+'</a></h4><h5>'+element["Type"] +'</h5>'+
             '<h5>'+element["imdbID"]+'</h5> '
           }).appendTo('.results_wrapper');
           });
