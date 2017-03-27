@@ -61,8 +61,8 @@ $('button').click(function() {
 
 $window.scroll(function() {
   if (!scrollThrottle && hasStartedSearch && $window.scrollTop() + $window.height() > $document.height() * 0.8) {
-    loadGifs();
     scrollThrottle = true;
+    loadGifs();
     setTimeout(function() { scrollThrottle = false; }, 750);
   }
 });
