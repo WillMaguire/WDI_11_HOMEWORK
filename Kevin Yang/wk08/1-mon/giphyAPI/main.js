@@ -22,7 +22,7 @@ $('.search-btn').click(function(){
           "href": datum['source']
          });
         $('.result').append($image);
-        $('.result').append('<br>')
+
       })
     })
 })
@@ -45,7 +45,6 @@ $(window).scroll(function(){
              "href": datum['source']
             });
            $('.result').append($image);
-           $('.result').append('<br>')
 
          })
        })
