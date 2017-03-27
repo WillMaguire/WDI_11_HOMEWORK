@@ -1,12 +1,17 @@
 
-var $search_btn = $('button');
-    $search_btn.on('click', function(){
-      var title = $('input').value
-      $.ajax({
-        url: 'http://omdbapi.com/?',
-        data:{ s: title},
-        method: 'get'
-      }).done(function(data){
-        $('p').text(data['Search'])
+// $(document).ready(function(){
+  $("button").click(function(){
+
+    var movie_title = $(".movie-title").val();
+
+    $.ajax({
+      url: "http://omdbapi.com/?s="+movie_title,
+      method: 'get'
+    }).done(function(movie_list){
+      var title = movie_list.Search;
+      title.forEach(function(title){
+        var title_movie = $("<h2>").text(title.Title);
+        $(".list").append(title_movie);
       })
     })
+  })
