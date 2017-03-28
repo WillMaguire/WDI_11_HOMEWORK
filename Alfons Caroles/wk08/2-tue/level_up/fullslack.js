@@ -34,18 +34,17 @@ function filter(list, callback) {
   return new_array;
 }
 
-var each = function(arr, func) {
+function each(arr, func) {
   for(var index = 0; index < arr.length; index++){
-    func( arr[index] );
+    console.log(func( arr[index] ));
   }
 }
-
 
 var Fullslack = {
   each: each
 }
 
-Fullslack.author = 'wdi11'
+Fullslack.each = each;
 //version
 Fullslack.VERSION = '1.0'
 //shuffle
@@ -55,6 +54,7 @@ Fullslack.map = map;
 //filter
 Fullslack.filter = filter;
 
+console.log( Fullslack.each(lists, double));
 console.log( Fullslack.VERSION);
 console.log( Fullslack.shuffle(lists));
 console.log( Fullslack.map(lists, double) )
