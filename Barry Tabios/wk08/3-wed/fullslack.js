@@ -20,7 +20,7 @@ var shuffle = function(list){
 
 var each = function(list, callback1){
   for (var index=0; index<list.length; index++){
-    callback(list[index]);
+    callback1(list[index]);
   };
 };
 
