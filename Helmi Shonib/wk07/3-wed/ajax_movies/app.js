@@ -11,8 +11,8 @@ var input = $('.search-movie').val();
     dataType: 'JSON'
   }).done(function(data) {  // add data in brackets with JSON
     // $('<p>').text(data.name).appendTo('.output');
-    Object.keys(data).forEach(function(key) {  //take owner out
-      $('<p>').text(key + ": " + data[key]).appendTo('.output'); //take owner out of data
+    data.Search.forEach(function(key) {  //take owner out
+      key.Title; //take owner out of data
     })
   });
 });  //http://www.omdbapi.com/?s=jaws
