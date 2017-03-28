@@ -18,24 +18,51 @@ var shuffle = function(list){
 };
 
 
-var each = function(list, callback){
+var each = function(list, callback1){
   for (var index=0; index<list.length; index++){
     callback(list[index]);
   };
 };
 
 
+var callback1 = function(x){
+  if(x > 4){
+    console.log(list);
+  };
+};
 
+var map = function(list,callback2){
+  var newArray=[];
+  for (var index=0; index<list.length; index++){
+    newArray.push(callback2(list[index]));
+  };
+  console.log(newArray);
+}
+var callback2 = function(x){
+  return x*3;
+};
 
-var callback = function(x){
-  if()
+var filter = function(list, callback3){
+  var newArray = [];
+  for (var index=0; index<list.length; index++){
+    if (callback3(list[index]) === true) {
+      newArray.push(list[index]);
+    };
+  };
+  console.log(newArray);
+};
+
+var callback3 = function(x){
+  return x >= 3
 };
 
 
 var Fullslack = {
   VERSION: '1.0',
   shuffle: shuffle,
-  each: each
+  each: each,
+  map: map,
+  filter: filter
 };
 
 
