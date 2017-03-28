@@ -11,8 +11,9 @@ $('.searchGif').click(function(event) {
     },
     method: "get"
   }).done(function(lists) {
-    debugger
+    
     lists.data.forEach(function(item){
+      console.log(item);
       var $image = $("<img>").attr("src", item.images.original.url);
       $('body').append($image);
     })
