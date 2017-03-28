@@ -13,11 +13,10 @@ var each = function(arr, func) {
 
 // library methods
 var shuffle = function(arr) {
-  var res = arr.slice(), endIdx = res.length, idx, temp;
+  var res = arr.slice(), idx, temp;
 
-  while (endIdx > 0) {
-    idx = randInt(0, endIdx);
-    endIdx--;
+  for (var endIdx = res.length - 1; endIdx > 0; endIdx--) {
+    idx = randInt(0, endIdx + 1);
     temp = res[endIdx];
     res[endIdx] = res[idx];
     res[idx] = temp;
