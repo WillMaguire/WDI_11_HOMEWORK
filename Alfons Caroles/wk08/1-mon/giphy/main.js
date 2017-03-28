@@ -18,7 +18,7 @@ $('button').on('click', function(){
   request();
 });
 
-$(window).on('scroll', function() {
+$(window).scroll(function(){
   if(($(this).scrollTop() + $('.search').height() + $(this).height()) >= $(document).height()) {
     request();
   }
