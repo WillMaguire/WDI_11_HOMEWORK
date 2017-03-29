@@ -1,0 +1,43 @@
+<div class="wrapper">
+
+</div>
+
+<form class="new-card-form">
+  <labelfor="">name</label>
+  <input class="new-card-name" name="name" type="text">
+  <label for="">Image URL</label>
+  <input class="new-card-image" name="image" type="text">
+  <button class="new-card-btn">create card</button>
+</form>
+
+
+<div class="edit-card-form" id="edit-modal">
+  <span class="close">&times;</span>
+  <div class="input">
+    <labelfor="">name</label>
+    <input class="edit-card-name" name="name" type="text" >
+  </div>
+  <div class="input">
+  <label for="">Image URL</label>
+  <input class="edit-card-image" name="image" type="text" >
+  </div>
+  <button class="edit-card-btn">Edit card</button>
+</div>
+
+
+<script id="card-template" type="text/x-handlebars-template">
+    <div class="card" data-id="{{ id }}">
+      <header class="content">
+        <div>{{ name }}</div>
+      </header>
+      <div class="image">
+        <img src="{{ image_url }}" alt="">
+      </div>
+      <footer>
+
+        <div class="button-div"><span class="delete-btn">delete</span></div>
+        <div class="button-div"><span class="edit-btn">edit</span></div>
+
+      </footer>
+    </div>
+</script>
