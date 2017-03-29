@@ -68,38 +68,22 @@ $(document).ready(function(){
   $('.wrapper').on('click', '.edit-action', function(event){
     console.log('editing');
     var id = $(event.target).closest('.card').data('id');
+    console.log('id'+id)
     $.ajax({
       url: '/api/cards/' + id,
-      method: 'get'
+      method: 'get',
+      // data: { name: $('.new-card-name').val(),
+      //         image_url: $('.new-card-image_url').val()
+      //       }
     }).done(function(card){
+      console.log(card);
       console.log('now editing...');
+
       $('.wrapper').remove();
       var source = $('#edit-template').html();
       var template = Handlebars.compile(source);
       var html = template(card)
       $('body').append(html);
-
-      // $('<form>').appendTo($('body'));
-      // $('<input>').addClass('edit-card-name').appendTo($('body form'));
-      // $('<label>').text('name').appendTo($('body form'));
-      // $('<input>').addClass('edit-card-image_url').appendTo($('body form'));
-      // $('<label>').text('image_url').appendTo($('body form'));
-      // $('<button>').text('submit').appendTo($('body form'));
-      // $('<div>').addClass('card').attr('data-id', '{{id}}').appendTo($('body'));
-      // $('<header>').addClass('content').appendTo($('body .card'));
-      // $('<div>').text('{{name}}').appendTo($('body .card header'));
-      // $('<div>').addClass('image').appendTo($('body'));
-      // $('<img>').attr("src", "{{image_url}}").appendTo('body .image');
-      //
-      //
-      // var source = $('#edit-template').html(); // gran the template string
-      // var template = Handlebars.compile(source); // turn template string into a function
-      // var html = template(card); // html with template merged together
-      // $('body').append(html);
-
-
-      // $('<div>').addClass('card').setAttribute('data-fruit','{{id}}').appendTo($('body'));
-
 
     });
   });
