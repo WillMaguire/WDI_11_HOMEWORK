@@ -1,0 +1,61 @@
+.wrapper {
+  display: flex;
+  background-color: linen;
+}
+
+.card. delete-action {
+  cursor: pointer;
+}
+.card {
+  border-radius: 20px;
+  padding: 10px 0;
+  background-color: mistyrose;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card header {
+  text-align: center;
+}
+
+.card div {
+  background-color: linen;
+  margin: 0 auto;
+
+}
+
+.card footer {
+  background-color: blue;
+}
+
+.content {
+  padding: 5px;
+}
+
+.barby {
+  background-color: brown;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.barby > div {
+  height: 250px;
+
+}
+
+.chicken {
+  background-color: pink;
+  order: 2;
+}
+
+.pineapple {
+  background-color: yellow;
+}
+
+.tomato {
+  background-color: tomato;
+}
