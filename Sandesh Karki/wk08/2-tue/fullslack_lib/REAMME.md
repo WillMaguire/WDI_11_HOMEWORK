@@ -37,4 +37,3 @@ Fullslack.filter(list, callback);
 ```
 
 Looks through each value in the list, returning an array of all the values that pass a truth test
-0
