@@ -12,19 +12,27 @@
 //   })
 //   });
 
-$title = $(".title_search"); //added .val(),.innerHTML, .text, changed to hardcoced <span>... tired and perplexed
-$search_button = $(".search_button");
-$search_button.click(function(event) {
+title = $(".title_search"); //added .val(),.innerHTML, .text, changed to hardcoced <span>... tired and perplexed WHAT INSAN;Y SIMPLE THING AM I NOT SEEING!?!?1
+search_button = $(".search_button");
+search_button.click(function(event) {
   $.ajax(
 
     {
-    url: ("http://omdbapi.com/?t=" + $title)//???  why did this suddenly not work??? added every sting method I could find
+    url: ("http://omdbapi.com/?s=" + title.val())//???  why did this suddenly not work??? added every sting method I could find
   }
 
 ).done(function(data) {
-    console.log(data) ///add loop or toEach method with <a> tags around movie link and title returned by /?s= search::: return 'movie' title list
     data.Search.forEach(function(movie) {
-    $a = $("<a>" + {href: "http://www.imdb.com/title/" + movie.imdbID} + "</a>")//---> into reslutls div
-    $title_list = $( movie.Title ) ///something like that only with the actual reslutls returned... CAN"T WORK OUT THE UNDEFINED!!!  MUST KNOW
+    // var link = $("<a>" + {href: "http://www.imdb.com/title/" + movie.imdbID} + "</a>")//---> into reslutls div
+    // var title_list = $( "<h2>" ).text( movie.Title )
+    // $( '.results' ).append(title_list); ///something like that only with the actual reslutls returned... CAN"T WORK OUT THE UNDEFINED!!!  MUST KNOW
+  var a = $('<a>').attr('href:', "http://www.imdb.com/title/" + movie.imdbID).text( movie.Title );
+    $( '.results' ).append(a);
   })
 })
+});
+  //   // add loop or toEach method with <a> tags around movie link and title returned by /?s= search::: return 'movie' title list
+  //  data.Search.forEach(function(movie) {
+  //  $link = $("<a>" + {href: "http://www.imdb.com/title/" + movie.imdbID} + "</a>")//---> into reslutls div
+  // $title_list = $( movie.Title ) ///something like that only with the actual reslutls returned... CAN"T WORK OUT THE UNDEFINED!!!  MUST KNOW
+  //  })

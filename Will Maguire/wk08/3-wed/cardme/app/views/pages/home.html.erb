@@ -1,0 +1,54 @@
+<div class="wrapper">
+
+
+<script id="card-template" type="text/x-handlebars-template">
+  <div class="card" data-id= {{id}} >
+    <header class="content">
+      {{name}}
+    </header>
+    <div class="image">
+      <img src={{image_url}} />
+    </div>
+    <footer class="content">
+      <div><span class="delete-action">Delete</span></div>
+      <div><span class="edit-action">Edit</span></div>
+    </footer>
+  </div>
+</script>
+
+
+<script id="card-edit-template" type="text/x-handlebars-template">
+  <div class="card" data-id= {{id}} >
+    <header class="content">
+      {{name}}
+    </header>
+    <footer class="content">
+      <form class='edit-card-form'>
+        <label>name</label>
+        <input type="text" class="edit-card-name" value="{{name}}">
+        <label>image url</label>
+        <input type="text" class="edit-card-image" value="{{image_url}}">
+        <button class="edit-card-button">Edit Card</button>
+      </form>
+    </footer>
+  </div>
+</script>
+
+
+<form class='new-card-form'>
+  <label>name</label>
+  <input type="text" class="new-card-name">
+  <label>image url</label>
+  <input type="text" class="new-card-image">
+  <button class="new-card-action">Create Card</button>
+</form>
+
+
+  </div>
+
+  <!-- <div class="barbie">
+    <div class="chicken">chicken</div>
+    <div class="pineapple">pineapple</div>
+    <div class="tomato">tomato</div>
+  </div>
+</div> -->

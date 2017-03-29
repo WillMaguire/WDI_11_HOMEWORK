@@ -1,0 +1,59 @@
+.wrapper {
+  display: flex;
+}
+.card {
+  border-radius: 15px;
+  padding: 15px 0;
+  background-color: skyblue;
+  flex-grow: 1;
+}
+.card img {
+  width: 100%;
+  display: block;
+}
+.card .image {
+  background-color: linen;
+  margin: 0 auto;
+}
+.card header {
+  background-color: skyblue;
+  text-align: center;
+}
+
+.card footer {
+  background-color: skyblue;
+  text-align: center;
+}
+.content {
+  padding: 5px;
+}
+.card .delete-action {
+  cursor: pointer;
+}
+.new-card-form {
+  display: inline;
+}
+.card .edit-action {
+  cursor: pointer;
+}
+/*.barbie {
+  background-color: brown;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.barbie > div {
+  height: 100px;
+}
+.chicken {
+  background-color: pink;
+  flex-grow: 2;
+}
+.pineapple {
+  background-color: yellow;
+  flex-grow: 1;
+}
+.tomato {
+  background-color: tomato;
+}*/
