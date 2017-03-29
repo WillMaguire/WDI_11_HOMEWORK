@@ -8,11 +8,11 @@ $('button').on('click', function(){
   }).done(function(data){
     result = data.Search;
     $('h2').detach();
-    $body = $('body');
     result.forEach(function(movie){
-      burl = 'http://www.imdb.com/title/' + movie.imdbID;
-      title = movie.Title;
-      $body.append('<h2><a href="'+ burl +'" target="blank">' + title + '</a></h2>');
+      var source = $('#movie-template').html(); //grab the template string
+      var template = Handlebars.compile( source ); //turn template string into a function
+      var html = template( movie ); //html with template & data merged together
+      $('.contents').append(html);
     })
   });
 })
