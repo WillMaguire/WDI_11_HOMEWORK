@@ -32,4 +32,17 @@ class Api::CardsController < ApplicationController
     render json: card
   end
 
+
+  def update
+    card = Card.find(params[:id])
+    card.name = params[:name]
+    card.image_url = params[:image_url]
+    if card.save
+      render json: card
+    else
+      render json: card.errors
+    end
+      
+  end
+
 end
