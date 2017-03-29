@@ -16,10 +16,38 @@ var shuffle = function(list){
 return list;
 };
 
+var callback1 = function(num) {
+  if (num === 5) {
+      console.log('True')
+    } else {
+      console.log('False')
+    }
+
+}
+var some = function(list, callback) {
+  for (var i = 0; i < list.length; i++) {
+    callback(list[i]);
+  }
+}
+
+var map = function(arr) {
+  var max = arr.length - 1;
+  var index = Math.round(Math.random()) * (0 - max) + max;
+  return arr[index];
+}
+
+var callback2 = function(num) {
+  var result = list.map * 2
+  console.log(result);
+}
+
+
 
 
 var Fullslack = {
   VERSION: "1.0",
-  shuffle: shuffle
+  shuffle: shuffle,
+  some: some,
+  map: map
 };
 debugger

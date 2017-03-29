@@ -1,18 +1,23 @@
-console.log('connected...');
-$('.search-btn').click(function(event) {
-// event.preventDefault();
-var input = $('.search-movie').val();
+console.log('AJAX Movie DB');
+var input;
+$searchBtn = $('.searchBtn');
+$searchBtn.on('click', function(){
+  input = document.querySelector('.input').value;
+  console.log(input);
   $.ajax({
-    url: 'https://www.omdpapi.com/',
-    data: {
-      s: input,
-    },
-    method: 'get',
-    dataType: 'JSON'
-  }).done(function(data) {  // add data in brackets with JSON
-    // $('<p>').text(data.name).appendTo('.output');
-    data.Search.forEach(function(key) {  //take owner out
-      key.Title; //take owner out of data
-    })
+     url: 'http://omdbapi.com',
+     data: {s: input},
+     method: 'get'
+  }).done(function(data){
+    result = data["Search"]; // Assigns the array of objects from Object Search
+    for(i=0; i<result.length; i++){
+      title = result[i]['Title'];
+      newH2 = document.createElement('H2');
+      newH2.setAttribute("id", i );
+      document.querySelector('body').appendChild(newH2);
+      // document.querySelector(.i).innerHTML = title;
+      document.getElementById(i).innerHTML = title;
+      console.log(title);
+    };
   });
-});  //http://www.omdbapi.com/?s=jaws
+});
