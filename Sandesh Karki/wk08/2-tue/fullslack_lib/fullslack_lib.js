@@ -3,7 +3,6 @@ console.log('fullslack_lib')
 var list = [1,2,3,4,5];
 Fullslack = {};
 
-
 // Fullslack.VERSION;
 var version = function(){
   return '1.0'
