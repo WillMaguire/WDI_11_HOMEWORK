@@ -10,7 +10,6 @@ render: function(){
 $.ajax({
     url: '/api/cards'
   }).done(function(res){
-    console.log(res);
     var shuffleCards = _.shuffle(res);
     shuffleCards.forEach(function(card) {
       var view = new QuoteItemView({ model: card });
@@ -53,7 +52,7 @@ $(document).ready(function(){
       });
     });
   });
-  
+
   //edit
   $('.wrapper').on('click', '.edit-action', function(event){
     var id = $(event.target).closest('.card').data('id');
@@ -81,13 +80,10 @@ $(document).ready(function(){
         url: '/api/cards'
       }).done(function(res){
         var shuffleCards = _.shuffle(res);
-
         shuffleCards.forEach(function(card) {
-
-          var source = $('#card-template').html(); //grab the template string
-          var template = Handlebars.compile( source ); //turn template string into a function
-          var html = template( card ); //html with template & data merged together
-          $('.contents').append(html);
+          var view = new QuoteItemView({ model: card });
+          view.render();
+          $('.contents.wrapper').append(view.el);
         })
     })
   });
