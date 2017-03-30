@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    function doSomething(){
+      console.log(this);
+    }
+    doSomething();
+    // console.log(this);
+
+    var person = {
+      name: 'cake',
+      sayHello: function(){
+        // console.log(person.name + 'hello')
+        //or you can write but not write all the time
+        console.log(this.name + 'hello')
+        }
+        // but this is not case all the time for eg.
+        var greetings = preson.sayHello;
+    }
+
+
+  </script>
+</body>
+</html>
