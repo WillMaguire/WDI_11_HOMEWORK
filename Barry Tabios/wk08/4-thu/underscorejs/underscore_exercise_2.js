@@ -22,8 +22,11 @@ console.log(sort_uid);
 // Group the random words by the lower case version of their first letter
 
 var low_case = _.map(words, function(word){ return word.toLowerCase(); });
-var in_order = _.sortBy(low_case, function(l_word){ return l_word; });
+var in_order = _.groupBy(low_case, function(l_word){ return l_word.substr(0,1); });
+console.log('group by lower case');
 console.log(in_order);
+
+
 
 // Check to see if all the words have more than 3 characters
 var num_characters = _.every(words, function(word) {
