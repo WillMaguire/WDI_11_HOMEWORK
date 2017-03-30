@@ -1,15 +1,18 @@
-<div class="wrapper">
-
+<div id="app">
 </div>
 
-<form class="new-card-form">
-  <labelfor="">name</label>
-  <input class="new-card-name" name="name" type="text">
-  <label for="">Image URL</label>
-  <input class="new-card-image" name="image" type="text">
-  <button class="new-card-btn">create card</button>
-</form>
+<script id="index-template" type="text/x-handlebars-template">
+  <div class="wrapper">
+  </div>
 
+  <form class="new-card-form">
+    <labelfor="">name</label>
+    <input class="new-card-name" name="name" type="text">
+    <label for="">Image URL</label>
+    <input class="new-card-image" name="image" type="text">
+    <button class="new-card-btn">create card</button>
+  </form>
+</script>
 
 <div class="edit-card-form" id="edit-modal">
   <span class="close">&times;</span>
@@ -30,14 +33,14 @@
       <header class="content">
         <div>{{ name }}</div>
       </header>
+
       <div class="image">
         <img src="{{ image_url }}" alt="">
       </div>
-      <footer>
 
+      <footer>
         <div class="button-div"><span class="delete-btn">delete</span></div>
         <div class="button-div"><span class="edit-btn">edit</span></div>
-
       </footer>
     </div>
 </script>
