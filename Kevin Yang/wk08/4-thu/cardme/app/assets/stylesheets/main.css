@@ -1,0 +1,73 @@
+body {
+}
+
+.card {
+  border-radius: 10px;
+  background-color: mistyrose;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+.content {
+  padding: 5px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .image{
+  background-color: linen;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.card div{
+}
+
+.card header{
+  background-color: transparent;
+  text-align: center;
+}
+
+.card footer{
+  background-color: mistyrose;
+  text-align: center;
+}
+
+.card .delete-action, .edit-action {
+  cursor: pointer;
+  padding-left: 10px;
+  margin: 13px;
+}
+
+.barby{
+  background-color: brown;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+
+.barby > div {
+  height: 100px;
+}
+
+.chicken{
+  background-color: pink;
+  order: 2;
+}
+
+.pineapple{
+  background-color: yellow;
+}
+
+.tomato{
+  background-color: tomato;
+}
