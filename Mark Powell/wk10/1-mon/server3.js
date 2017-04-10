@@ -21,6 +21,7 @@ var app = function(req, res){
   if(method == 'GET' && url == '/'){
     request('http://www.omdbapi.com/?t=jaws', function(error, response, body){
       res.write(body);
+      res.end();
     });
   }
 };
