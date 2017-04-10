@@ -14,7 +14,8 @@ var http = require('http');
 var request = require('request');
 
 var app = function(req, res) {
-  if (req.method === 'GET') request('http://www.omdbapi.com/?t=jaws').pipe(res);
+  if (req.method === 'GET' && req.url === '/') request('http://www.omdbapi.com/?t=jaws').pipe(res);
+  else res.end('404 Not Found');
 };
 
 var server = http.createServer(app);
