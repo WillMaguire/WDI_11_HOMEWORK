@@ -1,0 +1,13 @@
+body{
+  font-family: Arial;
+}
+.wrapper{
+  text-align: center;
+  margin: 20% 0;
+}
+a{
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid white;
+  color: white;
+}
