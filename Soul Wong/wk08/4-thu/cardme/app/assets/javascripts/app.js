@@ -96,6 +96,26 @@ console.log('error');
 
 var QuoteItemView = Backbone.View.extend({
   template: Handlebars.compile( $('#card-template').html() ),
+
+
+  events: {
+    'click .edit-action': 'edit_button',
+    'click .delete-action': 'delete_button'
+  },
+
+  edit_button: function(){
+    var id = this.$el.find('div').data('id');
+    $.ajax({
+      url:'/api/cards/' + id,
+      method: 'get'
+    }).done(function(data){
+      console.log(data);
+      });
+  },
+
+  delete_button: function(){
+    console.log("delete button pressed");
+  },
   render: function(){
     var html = this.template(this.model);
     this.$el.html(html);
