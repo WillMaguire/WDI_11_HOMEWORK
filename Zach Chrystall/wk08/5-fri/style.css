@@ -1,0 +1,67 @@
+body {
+  background-color: mistyrose;
+}
+
+input,
+button {
+  border: none;
+  background-color: inherit;
+  font-size: 1em;
+}
+
+.list {
+  width: 400px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  margin: 100px auto;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  flex-grow: 1;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+
+textarea, input {
+  outline: none;
+  width: 100%;
+}
+
+.status span {
+  padding: .25em;
+  border: 1px solid lightgrey;
+  border-radius: .25em;
+}
+
+.content {
+  padding: .5em;
+  border: 1px solid lightgrey;
+}
+
+.task input,
+.task button {
+  display: none;
+}
+
+.completed-indicator {
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.completed .completed-indicator {
+  background-color: chartreuse;
+}
+
+.completed .description {
+  text-decoration: line-through;
+  color: lightgrey;
+}
