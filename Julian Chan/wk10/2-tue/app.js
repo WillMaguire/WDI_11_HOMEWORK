@@ -24,7 +24,7 @@ app.get('/:name?', function(req, res) {
   res.render('index', {
     compliment: _.sample(compliments),
     bgColor: _.sample(colors),
-    name: req.params.name
+    name: req.params.name || ""
   });
 });
 
