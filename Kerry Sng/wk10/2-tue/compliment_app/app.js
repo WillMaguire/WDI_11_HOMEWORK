@@ -13,7 +13,8 @@ app.use(express.static( path.join(__dirname, 'public')))
 app.engine('ejs', engine);
 app.set('view engine', 'ejs')
 
-app.get('/', function(req, res) {
+app.get('/:name', function(req, res) {
+
   var compliments = [
   "Your instructors love you",
   "High five = ^5",
@@ -28,11 +29,9 @@ app.get('/', function(req, res) {
     compliments: _.sample(compliments),
     color: _.sample(colors)
   });
+  res.send(req.params.name);
 
 });
-
-
-
 
 
 
