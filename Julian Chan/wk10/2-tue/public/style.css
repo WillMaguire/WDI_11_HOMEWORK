@@ -1,0 +1,36 @@
+html, body, main {
+  min-height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+header {
+  padding: .25em 2em;
+  font-size: .75em;
+}
+
+main {
+  display: block;
+  text-align: center;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  border: 3px solid white;
+  margin-top: 1em;
+  padding: 1em 2em;
+}
+
+.content {
+  font-size: 4em;
+  margin: 20% 5% 0 5%;
+}
