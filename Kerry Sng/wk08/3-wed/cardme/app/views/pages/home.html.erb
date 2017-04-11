@@ -1,16 +1,19 @@
-<div class="wrapper">
+<div id="app"></div>
 
 
-</div>
+<script id="index-template" type="text/x-handlebars-template">
+  <div class="wrapper">
+  </div>
+  <form class="new-card-form" action="">
+    <label class="new-">name</label>
+    <input type="text" class="new-card-name">
+    <label for="">image_url</label>
+    <input type="text" class='new-card-image_url' >
+    <button class='new-card-action'>create card</button>
 
-<!-- <form class="new-card-form" action="">
-  <label class="new-">name</label>
-  <input type="text" class="new-card-name">
-  <label for="">image_url</label>
-  <input type="text" class='new-card-image_url' >
-  <button class='new-card-action'>create card</button>
+  </form>
 
-</form> -->
+</script>
 
  <script id="card-template" type="text/x-handlebars-template">
   <div class="card" data-id="{{ id }}">
