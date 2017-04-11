@@ -1,10 +1,8 @@
 $(document).ready(function(){
-  // cardsIndex();
+
   var QuoteItemView = Backbone.View.extend({
     template: Handlebars.compile($('#card-template').html()),
     render: function(){
-      // var source = $('#quote-item-template').html()
-      // var template = Handlebars.compile(source);
       var html = this.template(this.model);
       this.$el.html(html);
     }
@@ -15,26 +13,26 @@ $(document).ready(function(){
       url: '/api/cards'
     }).done(function(cards){
 
-      cards.forEach(function(card){
-        var view = new QuoteItemView({model: card});
-        view.render()
-        $('.app').append(view.el)
+    cards.forEach(function(card){
+      var view = new QuoteItemView({model: card});
+      view.render()
+      $('.app').append(view.el)
+    });
+
+    $('.app').on('click','.delete-action',deleteCard);
+    function deleteCard(event){
+      var $id = $(this).closest('.card').data('id')
+
+      $.ajax({
+        url: '/api/cards/'+$id,
+        method: "delete"
+      }).done(function(){
+        console.log(this)
+        $(event.target).closest('.card').remove();
+        // $(this)
+
       });
-
-      $('.app').on('click','.delete-action',deleteCard);
-      function deleteCard(event){
-        var $id = $(this).closest('.card').data('id')
-
-        $.ajax({
-          url: '/api/cards/'+$id,
-          method: "delete"
-        }).done(function(){
-          console.log(this)
-          $(event.target).closest('.card').remove();
-          // $(this)
-
-        });
-      }
+    }
 
 
       // var movies = res.Search;
