@@ -30,8 +30,23 @@ app.get('/', function(req, res) {
   })
 })
 
+app.get('/:name', function(req, res, err) {
+  var name = req.params.name;
+  var colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"];
 
+  var compliments = [
+    "Your instructors love you",
+    "High five = ^5",
+    "Is it Ruby Tuesday yet?",
+    "It's almost beer o'clock",
+    "The Force is strong with you"
+  ];
 
+  res.render('/:name', {
+    compliment_person: _.sample(compliments),
+    color: _.sample(colors)
+  });
 
+});
 
 module.exports = app;
