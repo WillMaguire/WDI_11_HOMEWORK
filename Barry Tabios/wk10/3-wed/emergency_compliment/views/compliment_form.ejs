@@ -8,5 +8,8 @@
   <button type='submit'>Add Compliment</button>
 </form>
 
-
 <h3><%= compliment %></h3>
+
+<% array.forEach(function(com) { %>
+  <li><%= com %></li>
+<% }); %>

@@ -68,11 +68,13 @@ function name (req, res){
 function compliment_form_func (req, res){
   var randomColor = _.sample(colors);
   var compliment = _.sample(compliments2);
-
+  var compliment_Array = compliments2;
 
   res.render('compliment_form', {
     color: randomColor,
-    compliment: compliment
+    compliment: compliment,
+    array: compliment_Array
+
   })
 }
 
@@ -86,12 +88,13 @@ function create_compliment (req, res, body){
 
   var compliment = _.sample(compliments2);
 
+  var compliment_Array = compliments2;
 
   var randomColor = _.sample(colors);
   res.render('compliment_form', {
     color: randomColor,
     compliment: compliment,
-
+    array: compliment_Array
   });
 }
 
