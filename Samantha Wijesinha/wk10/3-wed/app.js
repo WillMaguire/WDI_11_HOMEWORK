@@ -1,7 +1,7 @@
 var express = require('express');
 var request = require('request');
 var engine = require('ejs-mate');
-
+var bodyParser = require("body-parser");
 var _ = require('underscore');
 var path = require('path'); //help me build directory paths
 var app = express();
@@ -11,7 +11,9 @@ app.set('views', path.join(__dirname, 'views'))
 // what kind of templates?
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
-
+//body-parser code
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -26,20 +28,20 @@ var compliments = [
 var colors = ["#FFBF00", "#0080FF","#01DF3A","#FF0080"];
 
 app.get('/', function(req, res){
-
-  var compliment = _.sample(compliments)
-  var color = _.sample(colors)
-  res.render('home', { compliment, color })
-
+  res.render('home')
 });
 
-app.get('/:name', function(req, res){
-  var name = req.params.name
+app.post('/', function(req, res){
+    var info = req.body
+    console.log(info)
+    var comp = ({
+         name: info.firstname,
+         comp: info.comp
+      });
+      compliments.push(info.comp)
+    res.render('home', { comp, compliments })
+});
 
-  var compliment = _.sample(compliments)
-  var color = _.sample(colors)
-  res.render('home', { compliment, name, color })
-
-})
+console.log(compliments)
 
 module.exports = app;
