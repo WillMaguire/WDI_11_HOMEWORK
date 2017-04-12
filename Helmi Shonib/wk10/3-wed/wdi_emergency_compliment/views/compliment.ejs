@@ -4,12 +4,12 @@
 
 
 <div class="images">
-
-   <img src ="<%= images %>"  alt="">
+  <img src ="<%= images %>"  alt="">
 </div>
 
 <p class="subtitle is-2"><%= compliments %></p>
 
-
-
+<form method="post" action="/add/compliment">
+  <input type="text" name="compliment">
+  <button type="submit">Submit</button>
 </form>

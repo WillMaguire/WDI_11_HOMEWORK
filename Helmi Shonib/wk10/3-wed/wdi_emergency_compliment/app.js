@@ -4,6 +4,7 @@ var path = require('path');
 var engine = require('ejs-mate');
 var _ = require('underscore');
 var app = express();
+var bodyParser = require('body-parser');
 
 var compliments = [
   "Your instructors love you",
@@ -23,7 +24,10 @@ app.set('views', path.join(__dirname,'views'));
 app.engine('ejs', engine); // alternate to handlebars
 app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
 app.get('/', function(req, res) {
@@ -47,5 +51,27 @@ app.get('/:name', function name(req, res) {
     colors: randomColors
   });
 });
+
+app.get('/add/compliment', function name(req, res) {
+  res.render('compliment', {
+   name: name,
+   compliments: compliment,
+   colors: randomColors
+  });
+});
+
+app.post('/add/compliment', urlencodedParser, function name(req, res) {
+  var output = req.body.compliment;
+  res.end(JSON.stringify(req.body));
+  compliments.push(output);
+  console.log(output);
+  res.render('compliment', {
+   name: name,
+   compliment: req.body,
+   colors: randomColors
+  });
+});
+
+// app.post('/add/compliment', function(req, res)
 
 module.exports = app;
