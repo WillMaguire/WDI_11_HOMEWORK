@@ -3,7 +3,15 @@
 
 <h2>Compliments</h2>
 
-
-<p><%=compliments%></p>
+<p><%=name%>, <%=compliments%></p>
 
 <body style="background-color: <%= color %>"></body>
+
+
+    <form action="/:name" method="post">
+      <div class="formgroup">
+      <label class="form-control-label" name="compliments" for="">Compliment</label>
+      <input class="form-control" type="text" name="compliments" value="">
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </form>
