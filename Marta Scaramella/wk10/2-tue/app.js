@@ -67,6 +67,7 @@ function homeName(req,res){
     name: name
   });
 };
+
 app.get('/', home);
 app.get('/:name', homeName);
 module.exports = app;
