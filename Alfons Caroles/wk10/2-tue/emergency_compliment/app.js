@@ -46,7 +46,7 @@ app.get('/:name', function(req, res){
       var compliObject = _.sample(compliments);
       var colorNew = _.sample(colors);
 
-      res.render('home', {
+      res.render('personalize', {
                           colors: colorNew,
                           compliment: compliObject,
                           greetName: properName
