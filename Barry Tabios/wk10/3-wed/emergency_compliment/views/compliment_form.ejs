@@ -1,0 +1,12 @@
+<% layout('layout') %>
+
+
+<h1>Add Compliment</h1>
+
+<form action="/add/compliments" method='post'>
+  <input name="input" type="text">
+  <button type='submit'>Add Compliment</button>
+</form>
+
+
+<h3><%= compliment %></h3>
