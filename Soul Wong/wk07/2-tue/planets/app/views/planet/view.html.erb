@@ -1,0 +1,33 @@
+<%= @Planet.name %>
+<%= @Planet.image_url %>
+<%= @Planet.description %>
+<a href="/planet/edit/<%=@Planet.id%>">Edit Here</a>
+<a href="/planet/index">Return to Home Page</a>
+
+<h3>Comments</h3>
+<% if @Comments.count != 0 %>
+  <% @Comments.each do | comment | %>
+  <%= comment.body%> - Posted by
+  <%= comment.user["email"]%>
+  <% end %>
+<% else %>
+<% No Comments Found %>
+<% end %>
+<%= form_tag '/comments/new', method: 'post' do %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="id" value="<%= @Planet.id %>">
+  <label for="">Comments</label>
+  <textarea name="comment_body" rows="8" cols="80"></textarea>
+  <button>Post this comment</button>
+<% end %>
+<%= form_tag '/planet/edit', method: 'put' do %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="id" value="<%= @Planet.id %>">
+  <label for="">name</label>
+  <input type="text" name="name" value="<%=@Planet.name%>">
+  <label for="">description</label>
+  <input type="text" name="description" value="<%=@Planet.description%>">
+  <label for="">Image URL</label>
+  <input type="text" name="image_url" value="<%=@Planet.image_url%>">
+  <button>Modify this planet!</button>
+<% end %>

@@ -1,0 +1,17 @@
+<form action="/" method="post">
+  <label for="">Movie Title</label>
+  <input name="title" type="text">
+  <button>Submit</button>
+</form>
+
+<% if @search_results != '' %>
+<hr>
+  <% @search_results.each do |result| %>
+  <div class='lists'>
+    <%= "<img class='list' src='#{result["Poster"]}' alt='#{result["Title"]}' />" %>
+    <form class="link" action="/movie" method="get">
+      <%= "<a class='single-movie' name='title' href='/movie?title=#{result["Title"]}'>#{result["Title"]}</a>" %>
+    </form>
+  </div>
+    <% end %>
+<% end %>

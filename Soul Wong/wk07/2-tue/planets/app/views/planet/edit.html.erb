@@ -1,0 +1,17 @@
+Edit This Planet
+<%= form_tag '/planet/edit', method: 'put' do %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="id" value="<%= @Planet.id %>">
+  <label for="">name</label>
+  <input type="text" name="name" value="<%=@Planet.name%>">
+  <label for="">description</label>
+  <input type="text" name="description" value="<%=@Planet.description%>">
+  <label for="">Image URL</label>
+  <input type="text" name="image_url" value="<%=@Planet.image_url%>">
+  <button>Modify this planet!</button>
+<% end %>
+<%= form_tag '/planet/delete', method: 'delete' do %>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="id" value="<%= @Planet.id %>">
+  <button>Destroy this planet!</button>
+<% end %>

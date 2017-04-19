@@ -1,0 +1,24 @@
+
+
+<main>
+  <div>
+
+    <h1> Stock App </h1>
+    <h2> Please Input Stock Symbol via url query string. <br> <i> eg: "/?stock = AAPL" and press enter
+    OR enter below </i></h2>
+
+    <!-- <form action="/result">
+      <input name="stock">
+    <button>Submit</button> -->
+
+    <p > Compay Name: <b> <%= @stock_data[@stock_name].name %> </b> </p>
+
+    <p > Compay Symbol: <b><%= @stock_name = params[:stock] %> </b></p>
+
+    <p class="rate"> Last Trade Rate : <b> US$ <%= @stock_data[@stock_name].lastTrade %> </b> </p>
+
+    <footer>Powered by: <i> Yahoo Finance </i></footer>
+
+  </div>
+
+<main>

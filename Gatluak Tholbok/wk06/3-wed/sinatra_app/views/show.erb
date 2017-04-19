@@ -1,0 +1,26 @@
+<h2>Delete this product</h2>
+
+@@show
+<h3><%= @product.name %></h3>
+
+<form action="/products<%= @product.name %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+<!-- <a href="/posts<%= @product.id %>/edit/">edit</a> -->
+
+<!-- steps:
+
+1. create product:
+
+product: has a name, price a d is stocked - true if available and false if not available
+
+2. views folder has:
+index - show only products that are in stock (where stock is true)
+show - shows page for each products
+edit - edit page to modify product
+
+3. can create, edit and delete products
+4. create postgresql to store products
+5. use ActiveRecord to talk to the database -->

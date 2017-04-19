@@ -1,0 +1,15 @@
+<div class="list_item">
+  <h1><%= @search_word %></h1>
+  <ul class="list">
+    <% @movie_list.each do |content| %>
+    <li class="li_item">
+
+      <a href = "/about?movie=<%= content['Title'] %>">
+        <img class="list_img" src= <%= content["Poster"] %>>
+        <%= content["Title"] %>
+      </a>
+      
+    </li>
+    <% end %>
+  </ul>
+</div>

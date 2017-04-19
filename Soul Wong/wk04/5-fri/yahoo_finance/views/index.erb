@@ -1,0 +1,35 @@
+
+<div class="container">
+  <div class="wrapper">
+    <header>
+      <div class="header_wrapper">
+          <h1>Greed is good</h1>
+      </div>
+    </header>
+    <div class="search_area">
+      <form action="/">
+        <label for="">Stock Code</label>
+        <input class="search" name="stockname" type="text" placeholder="e.g. - msft">
+        <input class="submit" type="submit" value="Check">
+      </form>
+    </div>
+    <div class="stock_name">
+      <h1> <%= @stockName %></h1>
+    </div>
+
+    <div class="stock_details">
+      <% if @stockSymbol %>
+      <h3> <%= @stockSymbol %> </h3>
+      <h3> <%= @time %> </h3>
+      <h4> <%= @changePercent %> </h4>
+    </div>
+    <div class="stock_cost">
+      <h2>Bid </h2> <h2> $ <%= @bid %> USD </h2>
+    </div>
+    <div class="stock_cost bottom">
+      <h2>Ask </h2> <h2> $ <%= @askprice %> USD </h2>
+    </div>
+    <% end %>
+  </div>
+
+</div>

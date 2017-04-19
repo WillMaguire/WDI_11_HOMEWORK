@@ -1,0 +1,13 @@
+<h1>ROCK PAPER SCISSORS</h1>
+
+<p><%= @string %></p>
+
+<form action="/games/rock_paper_scissors" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <button>back</button>
+</form>
+
+<form action="/" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <button>Main Page</button>
+</form>

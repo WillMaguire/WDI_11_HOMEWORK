@@ -1,0 +1,15 @@
+
+
+<form action="/searched">
+  <label for="">Stock Symbol</label>
+  <input name="stock_symbol">
+  <button>Search</button>
+</form>
+
+<div class="results">
+  <h1><%= params[:name] %></h1>
+  <h2><%= params[:stock_symbol] %></h2>
+  <h2>$<%= params[:stock_price] %></h2>
+
+
+</div>

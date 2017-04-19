@@ -1,0 +1,44 @@
+<a href="/planet/new">Create Planet</a>
+
+<% @planets.each do |planet| %>
+<div class="showcase">
+  <div class="header">
+    <img class="user image" src="<%= asset_path('icon.png') %>">
+    <p class="user"><%= current_user.username %></p>
+    <p class="date">
+      <%= l planet.updated_at %>
+    </p>
+  </div>
+  <div class="planet-image">
+    <img src="<%= planet.image_url %>" alt="">
+  </div>
+  <div class="description">
+    <h1 class="dish name"><a href="/planet/<%= planet.id %>"><%= planet.name %></a></h1>
+    <p class="dish body">
+      lorem ipsum karl superman insult greyhound black widow afraid hulk contestant bring money hello
+      jkorep popstar horee kbsh hungry always hug terre
+    </p>
+  </div>
+    <% @comments = Comment.where(planet_id: planet.id) %>
+    <% @comments.each do |comment| %>
+    <div class="comment">
+      <span>Username: <%= comment.user.username %></span>
+      <span>Comment: <%= comment.body %></span>
+      <span>Date: <%= l comment.created_at %></span>
+    </div>
+    <% end %>
+    <form action="/<%= planet.id %>/comment/new" method="get">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <button>Add Comment</button>
+    </form>
+    <form action="/planet" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="hidden" name="planet_id" value="<%= planet.id %>">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <button>Delete</button>
+    </form>
+</div>
+
+<% end %>

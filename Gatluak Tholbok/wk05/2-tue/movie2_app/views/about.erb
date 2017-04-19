@@ -1,0 +1,14 @@
+
+<img src="<%= @result["Poster"] %>" alt="">
+<div class="about">
+  <h2><%= @result["Title"] %></h2>
+  <p><%= @result["Plot"] %></p>
+  <p>Actors: <%= @result["Actors"] %></p>
+  <p>Genre: <%= @result["Genre"] %></p>
+  <div class="ratings">
+    <div><%= @result["imdbRating"] %></div>
+    <div><%= @result["Metascore"] %></div>
+    <div><%= @result["Awards"] %></div>
+  </div>
+
+</div>

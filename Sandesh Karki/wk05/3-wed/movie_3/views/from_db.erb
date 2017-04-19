@@ -1,0 +1,12 @@
+
+<h3> Source: omdb_movies Databse </h3>
+
+
+<h3> Title: <%= @sql_result[0]['title']  %> </h3>
+<h3> Rated: <%= @sql_result[0]['rated']  %> </h3>
+<h3> Released: <%= @sql_result[0]['released']  %> </h3>
+<h3> Runtime: <%= @sql_result[0]['runtime']  %> </h3>
+<h3> Director: <%= @sql_result[0]['director']  %> </h3>
+<div>
+  Poster: <img src="<%= @sql_result[0]['poster']  %>">
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AJAX MOVIES!</title>
+  <link rel="stylesheet" href="style.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <label for="">Search Movie Name</label>
+  <input type="text" class="search_term">
+  <span class="myButton">Search It!</span>
+  <div class="search_result">
+    <h3>Search Results For </h3>
+    <div class="line"><h4>Movies</h4></div>
+    </div>
+    <div class="results_wrapper">
+
+    </div>
+    <br>
+  </div>
+<script>
+$('.myButton').on('click', function(){
+  var searchTerm = $( ".search_term" ).val();
+  searchMovie(searchTerm);
+})
+
+function searchMovie(movieName){
+  $('.results_wrapper').empty()
+  $.ajax({
+        url: 'http://omdbapi.com/?s='+movieName,
+      }).done( function(data) {
+        if( data["Response"] === "True" ) {
+          data["Search"].forEach(function(element) {
+          $('<div>',{
+            'class' : 'result_container',
+            'html' : '<img src="'+element["Poster"]+
+            '"alt=""><div class="result_description">'+
+            '<h4><a href="">'+element["Title"]+'</a></h4><h5>'+element["Type"] +'</h5>'+
+            '<h5>'+element["imdbID"]+'</h5> '
+          }).appendTo('.results_wrapper');
+          });
+
+        }else{
+          $('<div>',{
+            'class' : 'result_container',
+            'html' : 'No Results Found!'}).appendTo('.search_result');
+        }
+      });
+}
+
+</script>
+</body>
+</html>

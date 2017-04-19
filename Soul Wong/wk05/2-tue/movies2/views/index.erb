@@ -1,0 +1,27 @@
+<% if @result %>
+
+<div class="search_result">
+<h3>Search Results For <%= "' #{params["movie_name"]} ' - ( #{@result["totalResults"]} " %> Matches Found. )</h3>
+<div class="line"><h4>Movies</h4></div>
+  <% if @result["Response"] == "True" %>
+  <% @result["Search"].each do |movie| %>
+  <div class="result_container">
+    <img src="<%= movie["Poster"] %>" alt="">
+    <div class="result_description">
+      <h4><a href="<%= "/?movie_id=#{movie["imdbID"]}" %>"><%= "#{movie["Title"]} (#{movie["Year"]}) "%></a></h4>
+      <h5><%= "Type: #{movie["Type"]}" %></h5>
+      <h5><%= "imdbID: #{movie["imdbID"]}" %></h5>
+    </div>
+  </div>
+  <br>
+  <% end %>
+  <% end %>
+  <% if @result["Response"] == "False" %>
+  <div class="result_container">
+    No Results Found!
+  </div>
+  <% end %>
+
+
+</div>
+<% end %>

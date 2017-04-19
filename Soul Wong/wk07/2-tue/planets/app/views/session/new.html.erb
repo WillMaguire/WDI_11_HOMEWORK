@@ -1,0 +1,8 @@
+<h1> Login </h1>
+<%= form_tag '/session/create', method: 'post' do %>
+  <label for="">email</label>
+  <input type="text" name="email">
+  <label for="">password</label>
+  <input type="password" name="password">
+  <button>Login</button>
+<% end %>

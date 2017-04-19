@@ -1,0 +1,17 @@
+<h1>Collection of all Planets</h1>
+
+<% @planets.each do |planet| %>
+
+  <div class="ui-card">
+    <img src="<%= planet.image_url %>">
+
+    <h3>Name: <%= planet.name %> </h3>
+    <h3>Position from Sun: <%= planet.position %> </h3>
+    <h3>Life: <%= planet.life %> </h3>
+    <h3>Radius: <%= planet.radius %> </h3>
+    <h3>Distance from Sun(million km): <%= planet.distance_from_sun_in_million_km %> </h3>
+
+    <a href="/planet/show/<%= planet.id %>"> More Options </a>
+  </div>
+
+<% end %>

@@ -1,0 +1,84 @@
+body {
+  /*background-color: #236467;*/
+  background: #236467; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #67989A , #236467); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #67989A , #236467); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #003133;
+  font-family: 'Cinzel', serif;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 3em;
+  vertical-align: top;
+  margin-top: 0;
+
+}
+
+img {
+  margin: .6em;
+  border-radius: .6em;
+  width: 150px;
+  height: 150px;
+  border: 3px solid #67989A;
+}
+
+.main {
+  /*padding: 3em 0;*/
+  border-top: .5em solid white;
+  border-bottom: .5em solid white;
+  display: block;
+  margin: 2em auto;
+  text-align: center;
+  padding-bottom: 5em;
+}
+
+.interface {
+  display: inline-block;
+  width: 24em;
+  height: 15em;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.btn-holder {
+  display: block;
+  margin-top: 1em;
+}
+
+button {
+  width: 10em;
+  height: 4em;
+  background-color: #236467;
+  color: white;
+  margin: 4px;
+  border: 2px solid #67989A;
+  border-radius: .5em;
+}
+
+input {
+  width: 7em;
+  height: 2em;
+  text-align: center;
+  font-size: 1em;
+  padding: .5em;
+  border: 2px solid #0D4A4D;
+  border-radius: .5em;
+  color: #003133;
+}
+
+@media (min-width: 100em) {
+  img,
+  h1 {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .interface {
+    display: block;
+    max-width: 100%;
+  }
+
+
+}

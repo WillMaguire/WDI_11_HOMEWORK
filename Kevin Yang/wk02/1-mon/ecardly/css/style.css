@@ -1,0 +1,88 @@
+*{ font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-image: url('images/background.jpg');
+  background-position: right top;
+  background-repeat: repeat;
+  background-color: #d6d6d6;
+}
+
+a{
+  color:#ff7700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+p{
+  font-size: 13px;
+}
+
+.ecard {
+  border: 1px solid black;
+  border-top-style: dotted;
+  border-bottom-style: solid;
+  border-right-style: none;
+  border-left-style: none;
+  font-size: 10px;
+  padding: 10px 0 10px 0
+}
+
+article, nav {
+  display: inline-block;
+}
+
+article {
+  border: 1px solid white;
+  background-color: white;
+  width: 60%;
+  padding: 20px;
+
+}
+
+.blog {
+  width: 100%;
+}
+
+nav {
+background-color: white;
+width: 20%;
+font-weight: bold;
+text-align:left;
+font-size: 16px;
+padding: 30px;
+vertical-align: top;
+margin-left: 10px;
+
+}
+
+nav > img {
+  padding: 10px 0 5px 0 ;
+  width: 100%
+}
+
+footer {
+  text-align: center;
+  clear: left;
+  padding: 10px;
+
+}
+
+.container{
+  margin: 0 auto;
+  width: 70%;
+}
+
+header {
+  text-align: center;
+  background-image: url('/Users/KevinYang/wdi11/WDI_11_HOMEWORK/Kevin Yang/wk02/1-mon/ecardly/images/background.jpg');
+  margin: 0 0 5px 0;
+  background-repeat: repeat-x;
+
+
+}
+
+#logo {
+  padding: 80px 0 10px 0;
+  width: 15%;
+}

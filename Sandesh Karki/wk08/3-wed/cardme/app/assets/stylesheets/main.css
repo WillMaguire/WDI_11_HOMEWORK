@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  background-color: gray;
+}
+.card {
+  border-radius: 10px;
+  background-color: mistyrose;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+.card .delete-action,
+.card .edit-action {
+  cursor: pointer;
+}
+
+.content {
+  padding: 5px;
+}
+
+.card img {
+  height: 400px;
+
+}
+
+.card .image {
+  background-color: linen;
+  margin: 0 auto;
+
+}
+
+.card header {
+  background-color: mistyrose;
+  text-align: center;
+}
+
+.card footer {
+  text-align: center;
+}

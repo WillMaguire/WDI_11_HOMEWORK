@@ -1,0 +1,33 @@
+body {
+  background-color: GhostWhite;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  width: 236px;
+  height: 319px;
+  display: inline-block;
+}
+
+.add_product {
+
+}
+
+.login {
+  float:left;
+  display: inline-block;
+  border: 2 solid tomato;
+}
+
+.logout {
+  float: right;
+}
+
+a {
+
+}
+
+.product_details {
+
+}

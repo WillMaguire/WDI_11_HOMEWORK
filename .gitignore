@@ -1,5 +1,4 @@
 .DS_Store
 *.log
 *.sqlite
-node_modules/
-
+node_modules

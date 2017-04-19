@@ -1,0 +1,18 @@
+body {
+  background: mistyrose;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+h2 {
+  font-size: 50px;
+  color: white;
+  font-weight: normal;
+}
+
+h4  {
+  font-size: 25px;
+  color: white;
+  font-weight: lighter;
+}

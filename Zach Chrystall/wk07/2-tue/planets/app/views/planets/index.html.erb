@@ -1,0 +1,10 @@
+
+<% @planets.each do |planet| %>
+  <a href="/planets/<%= planet.id %>"><%= planet.name %></a>
+  <ul>
+    <li>radius: <%= planet.radius %></li>
+    <li>type: <%= planet.type %></li>
+    <li>population: <%= planet.population %></li>
+    <li>color: <%= planet.color %></li>
+  </ul>
+<% end %>

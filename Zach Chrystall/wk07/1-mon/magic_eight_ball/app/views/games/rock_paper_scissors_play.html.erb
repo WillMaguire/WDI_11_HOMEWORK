@@ -1,0 +1,9 @@
+<% if @result == 'tie' %>
+  <h2>It's a tie mother flippers</h2>
+<% elsif @result == 'user' %>
+  <h2>You win! <%= @user_throw %> beats <%= @comp_throw %></h2>
+<% else %>
+  <h2>Absolute looser! Total disaster.</h2>
+  <h2><%= @comp_throw %> beats <%= @user_throw %></h2>
+<% end %>
+<a href="/games/rock_paper_scissors">PLAY AGAIN?</a>

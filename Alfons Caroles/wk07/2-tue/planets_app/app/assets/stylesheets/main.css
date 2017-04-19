@@ -1,0 +1,68 @@
+body {
+  text-align: center;
+}
+
+.showcase {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2em;
+  max-width: 20%;
+  margin: 10px;
+}
+
+p {
+  display:inline-block;
+}
+
+.image {
+  max-width: 10%;
+  vertical-align: middle;
+}
+
+.header {
+  margin: 20px;
+  width: 85%;
+  height: 20px;
+}
+
+.user {
+  float: left;
+  margin: 0 2px 0 2px;
+}
+
+.date {
+  float: right;
+}
+
+.description {
+  margin: 10px;
+}
+
+.name {
+  font-size: 2em;
+}
+
+.body {
+  width: 70%;
+}
+
+.comment {
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.comment form {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+button {
+  margin: 10px;
+}
+
+span {
+  display: block;
+}
