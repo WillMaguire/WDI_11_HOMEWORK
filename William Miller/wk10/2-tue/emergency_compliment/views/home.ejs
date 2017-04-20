@@ -1,0 +1,13 @@
+<% layout('layout') %>
+<div class="wrapper">
+  <h1><%= compliment %></h1>
+
+  <form method="get" action="/">
+    <button>Give me more</button>
+  </form>
+
+  <form method="post" action="/newcompliment">
+    <input class="input-field" type"text" name="compliment" placeholder="add your own..." autofocus>
+    <input class="input-button" type="submit" name="" value="create" placeholder="add">
+  </form>
+</div>
