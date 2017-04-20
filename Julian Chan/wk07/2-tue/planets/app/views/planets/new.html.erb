@@ -1,0 +1,37 @@
+<h1>Add planet</h1>
+
+<%= form_tag '/planets', method: 'post' do %>
+  <div>
+    <label for="">Name</label>
+    <input type="text" name="name" value="" required>
+  </div>
+  <div>
+    <label for="">Image URL</label>
+    <input type="text" name="image_url" value="">
+  </div>
+  <div>
+    <label for="">Orbital distance (AU)</label>
+    <input type="text" name="orbital_distance_in_au" value="">
+  </div>
+  <div>
+    <label for="">Mass (earths)</label>
+    <input type="text" name="mass_relative_to_earth" value="">
+  </div>
+  <div>
+    <label for="">Diameter (earths)</label>
+    <input type="text" name="diameter_relative_to_earth" value="">
+  </div>
+  <div>
+    <label for="">Rotational period (days)</label>
+    <input type="text" name="rotational_period_in_days" value="">
+  </div>
+  <div>
+    <label for="">Orbital period (years)</label>
+    <input type="text" name="orbital_period_in_years" value="">
+  </div>
+  <div>
+    <label for="">Number of moons</label>
+    <input type="text" name="number_of_moons" value="">
+  </div>
+  <button>Add planet</button>
+<% end %>

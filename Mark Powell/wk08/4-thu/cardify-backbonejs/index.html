@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Backbone Demo</title>
+</head>
+<body>
+  <h1>Cardify Aapp in Backbone Demo</h1>
+  <div id="app"></div>
+
+  <!-- <div class="modal-wrapper">
+    <div class="edit-modal">
+      <span class="modal-close-btn">Close (x)</span>
+      <form id="edit-card" class="edit-card">
+        <label for="">Card Name</label>
+        <input type="text" class="edit-card-name" name="name">
+        <label for="">Image Url</label>
+        <input type="text" class="edit-card-image-url" name="image_url">
+        <input type="submit" class="edit-card-action" value="Edit Card">
+      </form>
+    </div>
+  </div> -->
+
+
+  <script id="index-template" type="text/x-handlebars-template">
+    <form id="create-card" class="create-card">
+      <label for="">Card Name</label>
+      <input type="text" class="new-card-name" name="name">
+      <label for="">Image Url</label>
+      <input type="text" class="new-card-image-url" name="image_url">
+      <input type="submit" class="create-card-action" value="Create New Card">
+    </form>
+
+    <section class="container">
+    </section>
+
+  </script>
+
+
+
+  <script id="card-template" type="text/x-handlebars-template">
+    <div class="card" data-id="{{ id }}">
+      <header class="card-type">{{ name }}</header>
+      <div class="card-image">
+        <img src="{{ image_url }}">
+      </div>
+      <footer>
+        <span class="card-type-upside">{{ name }} </span>
+        <div>
+          <span class="delete-btn">Delete</span>
+          <span class="edit-btn">Edit</span>
+        </div>
+      </footer>
+    </div>
+  </script>
+
+
+
+ <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <!-- Handlebars.js -->
+  <script src="handlebars.js" charset="utf-8"></script>
+
+  <!-- Underscore.js -->
+  <script src="underscore.js" charset="utf-8"></script>
+
+  <!-- Backbone.js   -->
+  <script src="backbone.js" charset="utf-8"></script>
+
+  <!-- Our App -->
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

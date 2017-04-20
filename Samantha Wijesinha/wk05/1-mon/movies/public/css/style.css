@@ -1,0 +1,61 @@
+body {
+
+  background-color: #ECF0F1;
+}
+
+h1 {
+  text-align: center;
+  font-family: arial;
+  font-family: 'Merriweather', serif;
+  color: #E74C3C;
+  font-size: 50px;
+}
+
+ h2 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+    color: #2C3E50;
+    font-size: 25px;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+button {
+  width: 90px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #2980B9;
+  color: #ECF0F1;
+  border: 0;
+
+}
+
+.search {
+  width: 25%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.movie_info {
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+
+}
+
+img {
+    display: block;
+      margin-left: auto;
+      margin-right: auto }
+}

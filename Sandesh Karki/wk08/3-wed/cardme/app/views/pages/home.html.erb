@@ -1,0 +1,54 @@
+<div class="ultimate-wrapper">
+
+  <div class="wrapper"> </div>
+
+  <form class="new-card-form" action="">
+    <label for=""> name </label>
+    <input class="new-card-name" type="text">
+
+    <label for=""> image_url </label>
+    <input class="new-card-image_url" type="text">
+
+    <button class="new-card-action"> create card </button>
+  </form>
+
+</div>
+
+<script id="edit-template" type="text/x-handlebars-template">
+
+    <form class="edit-card-form" data-id="{{id}}">
+      <label for=""> name </label>
+      <input class="edit-card-name" type="text">
+
+      <label for=""> image </label>
+      <input class="edit-card-image_url" type="text">
+
+      <button class="edit-card-action"> edit card </button>
+    </form>
+
+</script>
+
+
+<script id="card-template" type="text/x-handlebars-template">
+
+  <div class="card" data-id="{{id}}">
+
+    <header class="content">
+      <div> {{name}} </div>
+    </header>
+    <div class="image">
+      <img src="{{ image_url }}">
+    </div>
+
+    <footer class="content">
+      <div>
+        <span class='delete-action'>
+          delete
+        </span>
+        <span class='edit-action'>
+          edit
+        </span>
+      </div>
+    </footer>
+  </div>
+</script>

@@ -1,0 +1,15 @@
+<h1 class="site-name">Super Movie Database</h1>
+<form action="/">
+  <input type="text" name="name" placeholder="Enter the movie name">
+  <button type="submit">Get info</button>
+</form>
+<div class="disambiguation">
+  <% if @results["Response"] == "True" %>
+    <p><%= @results["Search"].length %> results found for '<%= @name %>':</p>
+    <% @results["Search"].each do |result| %>
+      <a href="/about?name=<%= result["Title"] %>"><%= result["Title"] %></a>
+    <% end %>
+    <% elsif @results["Response"] == "False" %>
+    <p>'<%= @name %>' could not be found</p>
+  <% end %>
+</div>

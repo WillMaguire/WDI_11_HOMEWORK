@@ -1,0 +1,11 @@
+<div>
+  <ul>
+  <% @result.each do |element| %>
+    <% if element[0] == "Poster" %>
+    <%= "<img src='#{element[1]}' alt='#{element[0]}' />" %>
+    <% else %>
+    <%= "<li class='#{element[0]}'>#{element[0]}: #{element[1]}</li>" %>
+    <% end %>
+  <% end %>
+  </ul>
+</div>

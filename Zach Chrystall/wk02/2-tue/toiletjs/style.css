@@ -1,0 +1,9 @@
+img.reflection {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/*http://vignette3.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/75/Tumblr_mm36zpecpv1rfjowdo1_500.gif/revision/latest?cb=20130520104226*/

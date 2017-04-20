@@ -1,0 +1,11 @@
+<div>
+  <% index = @result.find{ |y| y[0] == "Poster" } %>
+  <%= "<img class='single' src='#{index[1]}' alt='#{index[0]}' />" %>
+  <ul>
+    <% @result.each do |element| %>
+    <% if element[0] != 'Poster'%>
+        <%= "<li class='#{element[0]}'>#{element[0]}: #{element[1]}</li>" %>
+      <% end %>
+    <% end %>
+  </ul>
+</div>

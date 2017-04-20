@@ -1,0 +1,16 @@
+search for movie
+
+get list or miss list
+
+hit about with one title in mind
+
+is it in the database
+
+yes?
+pull from database
+
+no?
+get results from omdb
+store results
+
+go to searched with matching titles

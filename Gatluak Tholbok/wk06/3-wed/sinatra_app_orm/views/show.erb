@@ -1,0 +1,27 @@
+<!-- Pages heading, product's details and links -->
+
+<div class="product_details">
+
+  <h3>Style: <%= @product.name %></h3>
+
+  <h3>Price: $<%= @product.price %></h3>
+
+  <h3>Stocked: <%= @product.availability %></h3>
+
+  <img src="<%= @product.image_url %>">
+
+</div>
+
+<div>
+<!-- deleting form.. should redirect to index page -->
+
+<% if logged_in? %>
+  <form action="/product/<%= @product['id']%>" method="post">
+
+    <input type="hidden" name="_method" value="delete">
+    <button>Delete</button>
+
+  <!-- editing link, redirects to the editing page -->
+    <a href="/product/<%= @product.id %>/edit">Edit</a>
+  <% end %>
+</div>

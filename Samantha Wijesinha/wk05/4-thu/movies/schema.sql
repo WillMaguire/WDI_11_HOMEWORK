@@ -1,0 +1,10 @@
+CREATE DATABASE movies;
+
+CREATE TABLE movies
+(
+ id SERIAL4 PRIMARY KEY,
+ Title VARCHAR(400) NOT NULL,
+ Year INTEGER,
+ Plot TEXT,
+ Runtime VARCHAR(30)
+);

@@ -1,0 +1,13 @@
+.ui-card{
+  width: 30%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.content{
+  padding: 0.8em;
+}
+
+.delete-btn{
+  float: right;
+}

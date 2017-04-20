@@ -1,0 +1,17 @@
+<h1>[rifty+Hair]</h1>
+
+<% if logged_in? %>
+  <a class="logo" href='/product'>Add Hair Photo</a>
+
+<% @products.each do |product| %>
+
+<div class="names">
+  <h2>
+    <a href="/products/<%= product.id %>">
+      <%= product.name %>
+    </a>
+  </h2>
+  <img src="<%= product.image_url %>">
+  <% end %>
+</div>
+<% end %>

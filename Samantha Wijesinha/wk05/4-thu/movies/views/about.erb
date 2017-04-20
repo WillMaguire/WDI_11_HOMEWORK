@@ -1,0 +1,11 @@
+<form action="/" >
+    <button>Search Again</button>
+</form>
+  <h1> <%= @result["Title"].upcase %></h1>
+
+  <div class="movie_info">
+    <h2> <%= @result["Year"] %></h2>
+
+  <img src= <%= @result["Poster"] %> alt=""> </p>
+  <p> <%= @result["Plot"] %></p>
+</div>

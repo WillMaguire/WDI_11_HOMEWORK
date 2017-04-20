@@ -1,0 +1,61 @@
+
+
+body {
+  background-color: lightgrey;
+}
+
+.wrapper {
+  background-color: steelblue;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+input {
+  font-size: 1.5em;
+  display: block;
+  text-align: center;
+  padding: .5em;
+  border: 1px solid goldenrod;
+  border-radius: .5em;
+  margin: 5px auto;
+}
+
+button {
+  padding: .5em;
+  margin: 0 auto;
+  font-size: 1.25em;
+  border: 1px solid black;
+  border-radius: .25em;
+}
+
+.search-form {
+  text-align: center;
+}
+
+
+img {
+  display: inline-block;
+  width: 40%;
+  margin: 10px;
+}
+
+header {
+  height: 50px;
+  text-align: center;
+  background-color: black;
+  color: goldenrod;
+  padding-top: 20px;
+}
+
+main {
+  margin: 0 auto;
+
+}
+
+.about {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}

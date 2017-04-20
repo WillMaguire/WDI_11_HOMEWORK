@@ -1,0 +1,31 @@
+<div class="wrapper">
+</div>
+
+<form class="new-card-form" action="">
+  <label class="new-" for="">Card Name</label>
+  <input type="text" name="name" value="" class="new-card-name">
+  <label for="">Image Url</label>
+  <input type="text" name="image_url" value="" class="new-card-image">
+  <button class="new-card-action">SUBMIT</button>
+</form>
+
+ <!-- this stuff is hidden in the html file, known as templating using Handlebars.js -->
+<script id= 'card-template' type="whateversman">
+  <div class="card" data-id="{{id}}">
+    <header class="content">
+      <div class="card-title">
+        {{ name }}
+      </div>
+    </header>
+    <div class="card-image">
+      <img src="{{image_url}}" alt="">
+    </div>
+    <footer>
+      <div class="button-container">
+        <div class="edit-action">Edit</div>
+        <div class="delete-action">Delete</div>
+      </div>
+      <div class="edit-box"></div
+    </footer>
+  </div>
+</script>

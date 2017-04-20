@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kuka Movie Search</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Kuka Movie Search</h1>
+
+    <form action="/s" >
+      <div class="inputStyle">
+      <input type="text" name="film" class="form-control">
+      </div>
+
+      <div class="centerize">
+      <button class="btn btn-primary btn-lg outline">Search</button>
+      </div>
+
+    </form>
+
+
+    <img src="<%= @result["Poster"] %>">
+
+    <div>
+      <div class="panel-heading"><%= @result["Title"] %></div>
+      <div class="panel-body">
+        <p class="list-group-item"><%= @result["Plot"] %></p>
+      </div>
+        <ul class="list-group">
+          <li class="list-group-item">Year: <%= @result["Year"] %></li>
+          <li class="list-group-item">Rated: <%= @result["Rated"] %></li>
+          <li class="list-group-item">Released: <%= @result["Released"] %></li>
+          <li class="list-group-item">Runtime: <%= @result["Runtime"] %></li>
+          <li class="list-group-item">Genre: <%= @result["Genre"] %></li>
+          <li class="list-group-item">Director: <%= @result["Director"] %></li>
+          <li class="list-group-item">Writer: <%= @result["Writer"] %></li>
+          <li class="list-group-item">Actors: <%= @result["Actors"] %></li>
+          <li class="list-group-item">Language: <%= @result["Language"] %></li>
+          <li class="list-group-item">Country: <%= @result["Country"] %></li>
+          <li class="list-group-item">Awards: <%= @result["Awards"] %></li>
+          <li class="list-group-item">Metascore: <%= @result["Metascore"]%></li>
+          <li class="list-group-item">IMDB Rating: <%= @result["imdbRating"] %></li>
+        </ul>
+
+    </div>
+
+  <footer>&copy; kukaheadla 2017</footer>
+</body>
+</html>

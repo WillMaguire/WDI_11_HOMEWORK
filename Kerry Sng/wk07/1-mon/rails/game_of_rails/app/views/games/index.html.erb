@@ -1,0 +1,19 @@
+   <form action="/play_magic" method="post">
+
+      <label for="q1">Your answer is:</label>
+      <input id="q1" name="q1" type="text" />
+
+       <button>Submit</button>
+
+   </form>
+   <!-- show the question and answer part after user enter input -->
+   <% if params.has_key?(:q1) %>
+     <div class="question-message">Your question: <%= @question %></div>
+     <div class="answer-message"><%= flash.now[:message] %></div>
+   <% end %>
+
+   <form  action="/guess_number" method="get" >
+           <label for="guess">Guess a number from 1 to 10</label>
+           <input id="guess" name="guess" type="text" />
+         <button>Submit</button>
+     </form>

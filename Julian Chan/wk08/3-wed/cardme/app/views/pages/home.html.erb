@@ -1,0 +1,65 @@
+<div class="wrapper">
+  <!-- <div class="card">
+    <header class="content">
+      <div>Ace</div>
+    </header>
+    <div class="image">
+      <img src="https://www.placecage.com/c/200/300">
+    </div>
+    <footer class="content">
+      <div>Ace</div>
+    </footer>
+  </div>
+  <div class="card">
+    <header class="content">
+      <div>Ace</div>
+    </header>
+    <div class="image">
+      <img src="https://www.placecage.com/c/200/300">
+    </div>
+    <footer class="content">
+      <div>Ace</div>
+    </footer>
+  </div> -->
+</div>
+
+<!-- <div class="barby">
+  <div class="chicken">chicken</div>
+  <div class="pineapple">pineapple</div>
+  <div class="tomato">tomato</div>
+</div> -->
+
+<form class="new-card-form">
+  <label for="">name</label>
+  <input type="text" class="new-card-name" name="name">
+  <label for="">image_url</label>
+  <input type="text" class="new-card-image_url" name="image_url">
+  <button class="new-card-action">create card</button>
+</form>
+
+<form class="edit-card-form">
+  <input type="hidden" name="id">
+  <label for="">name</label>
+  <input type="text" name="name">
+  <label for="">image_url</label>
+  <input type="text" name="image_url">
+  <button>edit card</button>
+</form>
+
+<script id="card-template" type="text/x-handlebars-template">
+  <div class="card" data-id="{{ id }}">
+    <header class="content">
+      <div class="name">{{ name }}</div>
+    </header>
+    <div class="image">
+      <img class="image_url" src="{{ image_url }}" alt="">
+    </div>
+    <footer class="content">
+      <!-- <div>{{ name }}</div> -->
+      <div>
+        <span class="delete-action">delete</span>
+        <span class="edit-action">edit</span>
+      </div>
+    </footer>
+  </div>
+</script>

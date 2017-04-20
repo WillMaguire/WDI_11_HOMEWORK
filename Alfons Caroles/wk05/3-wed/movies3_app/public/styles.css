@@ -1,0 +1,68 @@
+body {
+  background: rgba(0, 0, 0, 1);
+  color: white;
+  font-family: 'Rammetto One', cursive;
+  text-align: center;
+}
+
+ul {
+  display: inline-block;
+  max-width: 60%;
+  text-align: left;
+}
+
+li {
+  list-style: none;
+  margin: 5px;
+}
+
+img {
+  display: inline-block;
+}
+
+
+.type, .metascore, .imdbid, .id, .response {
+  display: none;
+}
+
+.title, .year, .rated {
+  display: inline;
+}
+
+.lists {
+  display: inline-block;
+  margin: 1%;
+  width: 45%;
+  text-align: center;
+  min-height: 245px;
+}
+
+.list {
+  max-width: 40%;
+  margin: 10%;
+  height: 300px;
+}
+
+.single {
+  margin: 2%;
+  vertical-align: top;
+  border: 40px double white;
+}
+
+.link {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.single-movie {
+  background: rgba(0,0,0,0);
+  color: white;
+  border: none;
+  font-size: 2em;
+}
+
+.single-movie:hover {
+  cursor: pointer;
+  border: none;
+  font-size: 2em;
+}

@@ -1,0 +1,95 @@
+
+/** {
+    border-sizing: border-box;
+
+}*/
+body {
+  background-image: url(images/background.jpg);
+  background-repeat: repeat-x;
+  background-color: grey;
+
+}
+
+.main-container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+.bg-logo {
+    text-align: center;
+    margin: 0 0 5% 0;
+
+  }
+
+.logo {
+  width: 200px;
+  height: auto;
+
+}
+
+.main {
+  background-color: white;
+  display: inline-block;
+  width: 60%;
+  padding: 0 0 6% 0;
+}
+.main p {
+  margin: 2.5%;
+  width: 95%;
+}
+
+.main h2 {
+  margin: 6% 2.5% 0 2.5%;
+}
+
+.main img {
+  width: 95%;
+  margin: 2.5%;
+}
+
+a {
+  color:red;
+  text-decoration:none
+}
+
+
+.leftSide {
+  vertical-align: top;
+  background-color: white;
+  display: inline-block;
+  width: 30%;
+  margin: 0 10px;
+  padding: 20px;dd
+}
+
+ul {
+  margin: 5px 10px 15px 0 ;
+  list-style-type: none;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+.archiveBlog {
+  margin: 5px 0 10px 10px;
+}
+
+.asideImg {
+  text-align: center;
+
+}
+
+.postedBy {
+  border-top: 1px dotted black;
+  border-bottom: 1px solid black;
+  padding: 2% 0;
+}
+
+footer {
+  text-align: center;
+  margin: 3% 10% 0 0;
+
+}

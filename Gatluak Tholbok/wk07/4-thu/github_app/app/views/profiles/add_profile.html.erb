@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <div class="output"></div>
+
+  <script>
+      $.ajax({
+      url: 'https://api.github.com/users/gat-tholbok',
+      method: 'get',
+      dataType: 'JSON'
+      }).fail(function() {
+      $('<p>').appendTo('.output');
+      console.log(data);
+      }).done(createData);
+
+      function createData(data) {
+      Object.keys(data).forEach(function(key) {
+        $('<p>').text(key + ": "+ data[key]).appendTo('.output');
+        })
+      }
+  </script>
+  </body>
+</html>

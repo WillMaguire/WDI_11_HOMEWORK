@@ -1,0 +1,14 @@
+create arrays of each tram line
+
+get index of start
+get index of end
+
+array from x to y
+
+each has two indexes
+
+find index of richmond on starting lines
+find index of richmond on ending line
+run find stops for starting line to Richmond
+push 'change at'
+run find stops for ending line

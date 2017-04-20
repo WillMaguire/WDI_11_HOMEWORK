@@ -1,0 +1,14 @@
+<h1>Rock Paper Scissors</h1>
+
+<h2>You played <%= @user_choice %></h2>
+<h2>I played <%= @opponent_choice %></h2>
+
+<h3>
+  <% if @user_choice == @opponent_choice %>
+  It's a draw!
+  <% elsif @user_won %>
+  You win!
+  <% else %>
+  You lose!
+  <% end %>
+</h3>

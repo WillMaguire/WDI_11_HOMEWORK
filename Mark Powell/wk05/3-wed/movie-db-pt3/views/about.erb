@@ -1,0 +1,19 @@
+<section class="movie-poster">
+  <img src='<%= @result["Poster"] %>'alt="">
+</section>
+
+<section class="movie-info">
+  <header>
+    <h1>
+      "<%= @movie.title %>"
+      <span class="release-year"><%= @movie.release_ %></span>
+    </h1>
+    <h2><%= @movie["Director"] %></h2>
+    <h3 class="movie-genre"><%= @movie["Genre"] %></h3>
+    <h3 class="movie-cast">Cast: <%= @movie["Actors"] %></h3>
+  </header>
+  <p>
+    <%= @movie["Plot"] %>
+  </p>
+  <h3> IMDB rating: <%= @movie["imdbRating"] %> </h3>
+</section>

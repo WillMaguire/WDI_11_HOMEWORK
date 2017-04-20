@@ -1,0 +1,21 @@
+=> [[32m#<Card:0x000000035b41d8[0m
+  id: [1;34m21[0m,
+  name: [31m[1;31m"[0m[31mQ2[1;31m"[0m[31m[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttp://vignette3.wikia.nocookie.net/disney/images/f/f5/OffWithHerHead-SW.png/revision/latest?cb=20160221131038[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mWed[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2017[0m [1;34m04[0m:[1;34m23[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mWed[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2017[0m [1;34m04[0m:[1;34m23[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Card:0x0000000359f878[0m
+  id: [1;34m23[0m,
+  name: [31m[1;31m"[0m[31mQ4[1;31m"[0m[31m[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttp://vignette3.wikia.nocookie.net/disney/images/f/f5/OffWithHerHead-SW.png/revision/latest?cb=20160221131038[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mWed[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2017[0m [1;34m04[0m:[1;34m23[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mWed[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2017[0m [1;34m04[0m:[1;34m23[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Card:0x0000000359f6c0[0m
+  id: [1;34m24[0m,
+  name: [31m[1;31m"[0m[31mQ5[1;31m"[0m[31m[0m,
+  image_url:
+   [31m[1;31m"[0m[31mhttp://vignette3.wikia.nocookie.net/disney/images/f/f5/OffWithHerHead-SW.png/revision/latest?cb=20160221131038[1;31m"[0m[31m[0m,
+  created_at: [1;34;4mWed[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2017[0m [1;34m04[0m:[1;34m23[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mWed[0m, [1;34m29[0m [1;34;4mMar[0m [1;34m2017[0m [1;34m04[0m:[1;34m23[0m:[1;34m42[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]

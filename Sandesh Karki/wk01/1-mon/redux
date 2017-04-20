@@ -1,0 +1,32 @@
+#<img src= 'https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png' width="30px" height="30px"/>      Redux #
+Redux is a predicatable state container for JavaScript apps.
+(if you're looking for a wordPress framework, check out [Redux Framework](https://www.google.com).)
+
+I helps you write applications that behave consistently, run in different environments
+(client, server, and native), and are easy to test. On top of that, it provides a great
+developer experience, such as [live code editiing combined with a time traveling
+gebugger](https://www.google.com).
+
+You can use REdux together with [React](https://www.google.com), or with any other view library.
+It is tiny (2kB, including dependencies).
+
+> Blockquotes New! Learn Redux from its creator:
+> [Getting STarted with Redux](https://www.google.com) (30 free videos)
+
+**Testiomonials**
+
+> ["Love what your're doing with Redux"](https://www.google.com)
+> Jing Chen, creator of Flux
+
+> [Getting STarted with Redux](https://www.google.com) (30 free videos)
+> Bill Fisher, author of Flux documentation
+
+> ["It's cool that you are inventing a better Flux by not doing Flux at all."](https://www.google.com)
+> Andre Staltz, creator of Cycle
+
+**Developer Experience**
+
+I wrote Redux while working on my React Europe talk called ["Hot Reloading with
+Time Travel"](https://www.google.com). My goal was to create a state management library with minimal API but
+comp;etely predicatble behavior, so it is possible to implement
+logging, hot reloading, time travel, universal apps, record and replay, without any buyin from the developer.

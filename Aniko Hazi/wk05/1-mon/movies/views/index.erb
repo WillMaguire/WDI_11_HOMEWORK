@@ -1,0 +1,29 @@
+
+<% if @film_details %>
+
+  <div class="details">
+
+    <ul>
+      <!-- <li>Title</li>
+      <li>Year</li>
+      <li>Runtime</li>
+      <li>Genre</li>
+      <li>Director</li>
+      <li>Actors</li>
+      <li>Plot</li> -->
+
+      <li><%= @film_details[:title] %></li>
+      <li><%= @film_details[:year] %></li>
+      <li><%= @film_details[:runtime] %></li>
+      <li><%= @film_details[:genre] %></li>
+      <li><%= @film_details[:director] %></li>
+      <li><%= @film_details[:actors] %></li>
+      <li><%= @film_details[:plot] %></li>
+    </ul>
+  </div>
+
+  <div class="poster">
+    <img src="<%= @film_details[:poster] %>" alt="">
+  </div>
+
+<% end %>

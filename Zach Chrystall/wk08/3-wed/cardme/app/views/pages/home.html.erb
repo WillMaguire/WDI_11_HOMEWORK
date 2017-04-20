@@ -1,0 +1,72 @@
+<!-- <div class="wrapper">
+  <div class="card">
+    <header class="content">
+      Ace
+    </header>
+    <div class="image">
+      <img src="http://www.fillmurray.com/460/300" alt="">
+    </div>
+    <footer class="content">
+      Ace
+    </footer>
+  </div>
+
+  <div class="card">
+    <header class="content">
+      Ace
+    </header>
+    <div class="image">
+      <img src="http://www.fillmurray.com/460/300" alt="">
+    </div>
+    <footer class="content">
+      Ace
+    </footer>
+  </div>
+</div> -->
+
+<div class="wrapper"></div>
+
+<form class="new-card-form" action="" method="post">
+  <label for="">name</label>
+  <input class="new-card-name" name="name">
+  <label for="">image url</label>
+  <input class="new-card-img_url" type="text">
+  <button class="new-card-action">create card</button>
+</form>
+
+
+<script id="card-template" type="text/x-handlebars-template">
+  <div class="card" data-id="{{ id }}">
+    <header class="content">
+      <div>{{ name }}</div>
+    </header>
+    <div class="image">
+      <img src="{{ img_url }}" alt="">
+    </div>
+    <footer class="content">
+      <div class="actions">
+        <span class="delete-action">delete</span>
+        <span class="edit-action">edit</span>
+      </div>
+    </footer>
+  </div>
+</script>
+
+<script id="update-card-template" type="text/x-handlebars-template">
+  <div class="card" data-id="{{ id }}">
+    <header class="content">
+      <div>
+        <input type="text" class="edit-name" name="name" value="{{ name }}">
+      </div>
+    </header>
+    <div class="image">
+      <img src="{{ img_url }}" alt="">
+      <input type="text" class="edit-img_url" name="img_url" value="{{ img_url }}">
+    </div>
+    <footer class="content">
+      <div class="actions">
+        <span class="update-action">update</span>
+      </div>
+    </footer>
+  </div>
+</script>

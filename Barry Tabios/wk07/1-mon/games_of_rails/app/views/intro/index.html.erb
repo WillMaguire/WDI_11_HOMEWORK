@@ -1,0 +1,16 @@
+<h1>Welcome to Games of Rails</h1>
+
+<form action="/games/eightballpage" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+  <button>PLAY 8 Ball</button>
+</form>
+
+<form action="/games/secretnumberpage" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+  <button>PLAY Secret Number</button>
+</form>
+
+<form action="/games/rock_paper_scissors" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+  <button>PLAY Rock Paper Scissors</button>
+</form>
