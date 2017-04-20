@@ -1,0 +1,3 @@
+a1 = Animals.new("Dusty",2,"male","dog","some1,some2,some3")
+a2 = Animals.new("Mindy",3,"female","cat","so1me1,so1me2,so1me3")
+a3 = Animals.new("Loks",1,"male","Lizard","so2me1,so2me2,so2me3")

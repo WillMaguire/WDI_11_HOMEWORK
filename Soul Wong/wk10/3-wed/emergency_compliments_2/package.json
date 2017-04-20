@@ -1,0 +1,23 @@
+{
+  "name": "emergency_compliments_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.15.2",
+    "pg-promise": "^5.6.4",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3"
+  }
+}

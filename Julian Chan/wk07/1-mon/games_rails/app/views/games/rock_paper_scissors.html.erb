@@ -1,0 +1,9 @@
+<h1>Rock Paper Scissors</h1>
+
+<h2>Choose your move</h2>
+
+<form>
+  <% %w(Rock Paper Scissors).each do |move| %>
+  <button formaction="/games/rock_paper_scissors/<%= move %>"><%= move %></button>
+  <% end %>
+</form>

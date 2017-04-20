@@ -1,0 +1,20 @@
+<h1>Rock Paper Scissors</h1>
+
+<p>Create a route that goes from /games/rock_paper_scissors/:throw to games#rock_paper_scissors_play
+Use params[:throw] as the user's choice
+Compare the 2!</p>
+
+
+
+  <form action="/rock_paper_scissors" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<input type="radio" name="player1_weapon" value="rock">Rock<br>
+		<input type="radio" name="player1_weapon" value="paper">Paper<br>
+		<input type="radio" name="player1_weapon" value="scissors">Scissors
+		<input type="submit" value="Throw">
+	</form>
+
+<h4><p> USER: <%= @user_pick %></p></h4>
+<h4><p> COMPUTER: <%= @computer_pick %></p></h4>
+<h4><p><%= @result %></p></h4>
+<h4><p><%= @winner %></p></h4>

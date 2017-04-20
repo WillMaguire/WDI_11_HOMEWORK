@@ -1,0 +1,9 @@
+<h1>Create New Planet</h1>
+
+<%= form_tag '/', method: 'post' do %>
+  <input name="name" type="text">
+  <label>name</label>
+  <input name="image_url" type="text">
+  <label>Image URL</label>
+  <button>Create Planet</button>
+<% end %>

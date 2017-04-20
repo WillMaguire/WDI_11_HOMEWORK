@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title> [rifty+HAIR] </title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+
+<body>
+
+<form class="login" action="/session" method="post">
+  <label for="">Email:</label>
+  <input type="text" name="email" value="">
+
+  <label for="">Password</label>
+  <input type="password" name="password">
+
+  <button>login</button >
+</form>
+
+<% if logged_in? %>
+logged in as <%= current_user.email %>
+<form class="logout" action="/session" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>logout</button>
+
+</form>
+<% end %>
+
+  <%= yield %>
+
+
+</body>
+
+
+<!-- 1. create product:
+
+product: has a name, price a d is stocked - true if available and false if not available
+
+2. views folder has:
+index - show only products that are in stock (where stock is true)
+show - shows page for each products
+edit - edit page to modify product
+
+3. can create, edit and delete products
+4. create postgresql to store products
+5. use ActiveRecord to talk to the database -->

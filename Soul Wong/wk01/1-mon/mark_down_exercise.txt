@@ -1,0 +1,30 @@
+
+##<img src="https://s24.postimg.org/5s9hfeqvp/logo_ti1tle_dark.png" height='80px' >##
+
+Redux is a predictable state container for JavaScript apps.
+(If you're looking for a WordPress framework, check out [Redux Framework](www.google.com).)
+
+It helps you write applications that behave consistently, run in different environment (client, server, and native), and
+are easy to test. On top of that, it provides a great developer experience, such as [live code editing combined with a
+time travelling debugger](www.google.com).
+
+You can use Redux together with [React](www.google.com), or with any other view library.
+It is tiny (2kB, including dependencies).
+>**New! Learn Redux from its creator:
+>[Getting Started with Redux](www.google.com) (30 free videos)**
+
+###**Testimonials**###
+
+>["Love what you're doing with Redux"](www.google.com)
+>Jing Chen, creator of Flux
+
+>["I asked for comments on Redux in FB's internal JS discussion group, and it was universally praised. Really awesome work."](www.google.com)
+>Bill Fisher, author of Flux documentation
+
+>["It's cool that you are inventing a better Flux by not doing Flux at all."](www.google.com)
+>Andrew Staltz, creator of Cycle
+
+###Developer Experience###
+I wrote Redux while wokring on my React Europe talk called ["Hot Reloading with Time Travel"](www.google.com). My goal was to create a state management
+library with minimal API but completely predictable behavior, so it is possible to implement logging, hot reloading, time travel,
+universal apps, record and play, without any buy-in from the developer.

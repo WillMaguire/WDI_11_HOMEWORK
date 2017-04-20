@@ -1,0 +1,32 @@
+body {
+  margin: 0 auto;
+  background-color: DarkSalmon;
+  text-align: center;
+}
+
+h1, h3 {
+  color: white;
+  text-align: center;
+}
+
+form, input {
+  padding: auto;
+  text-align: center;
+}
+
+button {
+  background-color: SlateBlue;
+}
+
+img {
+  padding: 0 auto;
+  border: 2px solid black;
+}
+
+p {
+  color: white;
+}
+
+.ratings {
+  list-style: georgian;
+}

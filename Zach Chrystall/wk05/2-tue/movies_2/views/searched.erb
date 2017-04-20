@@ -1,0 +1,8 @@
+
+<form action="/about">
+  <!-- <div class="search_list"> -->
+  <% @titles.each do |title| %>
+  <li><a href="/about?title=<%= title %>" name='title' onclick="form.submit()"><%= title %></a></li>
+  <% end %>
+  <!-- </div> -->
+</form>

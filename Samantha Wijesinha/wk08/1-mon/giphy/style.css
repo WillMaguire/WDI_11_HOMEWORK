@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 95%px;
+  position: relative;
+  margin: 0 auto;
+
+}
+
+.images {
+  width: 300px;
+  height: 300px;
+  height: auto;
+}
+
+.gif-container {
+
+  display: inline-block;
+  box-sizing: border-box;
+}

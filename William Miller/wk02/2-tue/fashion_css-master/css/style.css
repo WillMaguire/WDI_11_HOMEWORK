@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* MAIN ELEMENT STRUCTURE */
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 66.6666%;
+  margin-right: 5%;
+  display: inline-block;
+}
+
+aside {
+  width: 25%;
+  display: inline-block;
+  background-color: mistyrose;
+  vertical-align: top;
+  float: right;
+  position: absolute;
+  margin-left: 48.7em;
+  margin-top: .5em;
+}
+
+/* HEADER */
+
+header h1,
+header h3 {
+  display: inline-block;
+  margin-bottom: .001em;
+  font-weight: 100;    /*defines from thin to thick 100 - 900*/
+}
+
+header h1 {
+  color: #ff0000;
+}
+
+header h3 {
+  margin-left: 5px;
+  color: #C0C0C0;
+}
+
+
+/* NAV */
+
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li {
+  float: left;
+  vertical-align: top;
+  width: 16.66666667%;
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1em 1em;
+  border: solid #ffffff .01em;
+}
+
+nav li:hover {
+  background-color: #C0C0C0;
+}
+
+/* Article Styling */
+
+article {
+  padding-bottom: 2.5em;
+  border-bottom: .1em solid #C0C0C0;
+  margin-bottom: 1em;
+  display: inline-block;
+  width: 100%;
+  background-color: lightgreen;
+  vertical-align: top;
+}
+
+.container h3 {
+  font-size: 1.6em;
+  color: #C0C0C0;
+  margin: 0;
+  font-weight: 100;
+  margin: 1em 0 0 0;
+}
+
+.container h2 {
+  font-size: 1.6em;
+  color: #000;
+  margin: .4em 0 .4em 0;
+  font-weight: 100;
+}
+
+.large-letter {
+  color: #C0C0C0;
+  font-weight: 100;
+  float: left;
+  font-size: 5em ;
+  line-height: 60px;
+  padding: 4px 0 8px 3px;
+
+}
+
+img {
+  width: 100%;
+}
+
+
+
+/*---------- ASIDE -------*/
+
+.about {
+  padding-top: 3em;
+}
+
+.ad {
+  max-width: 100%;
+  margin: 1em ;
+  background: #d3d3d3;
+  color: #7e7e7e;
+  font-size: 4em;
+  text-align: center;
+  font-family: serif;
+  border: 1em solid #d3d3d3
+}
+
+.pop-post {
+  padding-top: 2em;
+  border-top: 2px solid #C0C0C0;
+  margin-top: 3em;
+  text-align: left;
+}
+
+
+/* Link Styling */
+
+a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.link {
+  text-align: right;
+  font-weight: 500;
+  display: block;
+}
+
+/*Footer*/

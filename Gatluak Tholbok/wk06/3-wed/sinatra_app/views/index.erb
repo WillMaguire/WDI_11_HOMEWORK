@@ -1,0 +1,28 @@
+<h2>Thrifty Brand</h2>
+<a href="/product"></a>
+
+<% @product.each do |product| %>
+<h2>
+  <a href="/products<%= product.name %>">
+    <%= product.name %>
+  </a>
+</h2>
+
+<img src="<%= product.image_url %>" alt="">
+<% end %>
+
+
+<!-- steps:
+
+1. create product:
+
+product: has a name, price a and is stocked - true if available and false if not available
+
+2. views folder has:
+index - show only products that are in stock (where stock is true)
+show - shows page for each products
+edit - edit page to modify product
+add - can create, edit and delete products
+
+3. create postgresql to store products
+4. use ActiveRecord to talk to the database -->

@@ -1,0 +1,31 @@
+
+body {
+  text-align: center;
+  background-color: skyblue;
+}
+#main-div {
+  float: left;
+}
+#savings-box {
+  width: 50%;
+  height: 400px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 100px 0 0 150px;
+  background-color: red;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+#check-box {
+  width: 50%;
+  height: 400px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: 100px 0 0 150px;
+  background-color: yellow;
+  border: 3px solid black;
+  border-radius: 10px;
+}

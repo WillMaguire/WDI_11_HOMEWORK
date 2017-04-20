@@ -1,0 +1,85 @@
+h1 {
+  text-align: center;
+}
+
+#logo {
+  display: block;
+  height: 40px;
+  width: 80px;
+  border: 3px solid black;
+  background: red;
+  text-align: left;
+  list-style:none;
+  }
+
+.savings {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  background: tomato;
+  text-align: center;
+}
+
+.savings h1{
+  text-align: center;
+}
+.checking {
+  width: 400px;
+  height: 400px;
+  background: yellow;
+  text-align: center;
+  display: inline-block;
+}
+
+.sav_deposit_button {
+  position: relative;
+  top: 160px;
+  right: 250px;
+}
+
+.sav_withdraw_button {
+  position: relative;
+  top: 130px;
+  left: 50px;
+}
+
+.chq_deposit_button {
+  position: relative;
+  top: 160px;
+  right: 220px;
+}
+
+.chq_withdraw_button {
+  position: relative;
+  top: 127px;
+  left: 60px;
+}
+
+.sav_screen {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  background-color: cyan;
+  left: 30px;
+}
+
+.sav_enter_amount_screen {
+  position: relative;
+  top: 100px;
+  right: 30px;
+}
+
+.chq_screen {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  background-color: cyan;
+  left: 30px;
+
+}
+
+.chq_enter_amount_screen {
+  position: relative;
+  top: 100px;
+  left: 10px;
+}

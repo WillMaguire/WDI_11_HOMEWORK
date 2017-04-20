@@ -1,0 +1,28 @@
+<h3>add a few touches</h3>
+
+<!-- editing button, redirects to the editing page -->
+
+<div class="_editPage">
+<!-- connecting to the route -->
+    <form action="/product/<%= @product.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+<!-- properties to be edited -->
+    <label for="">id</label>
+    <input name="name" type="text" value="<%= @product['id'] %>">
+
+    <label for="">name</label>
+    <input name="name" type="text" value="<%= @product['name'] %>">
+
+    <label name"price">price</label>
+    <input name="price" type="text" value="<%= @product['price'] %>">
+
+    <label for="">Stocked</label>
+    <input name="availability" type="text" value="<%= @product['availability'] %>">
+
+    <label>image_url</label>
+    <input  name="image_url" type="text" value="<%= @product['image_url'] %>">
+
+    <button>Update</button>
+  </form>
+</div>

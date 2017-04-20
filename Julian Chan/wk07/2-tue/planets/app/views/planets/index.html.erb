@@ -1,0 +1,22 @@
+<h1>My Planets</h1>
+
+<a href="/planets/new">Add new planet</a>
+
+<div>
+  <% @planets.each do |planet| %>
+  <a href="/planets/<%= planet.id %>">
+    <div class="card inline-block">
+      <figure>
+        <span class="inline-block fill-height vertical-middle"></span><img class="vertical-middle" src="<%= planet.image_url %>" alt="">
+      </figure>
+      <div><%= planet.name %></div>
+      <div>Orbital distance (AU): <%= planet.orbital_distance_in_au %></div>
+      <div>Mass (earths): <%= planet.mass_relative_to_earth %></div>
+      <div>Diameter (earths): <%= planet.diameter_relative_to_earth %></div>
+      <div>Rotational period (days): <%= planet.rotational_period_in_days %></div>
+      <div>Orbital period (days): <%= planet.orbital_period_in_years %></div>
+      <div>Moons: <%= planet.number_of_moons %></div>
+    </div>
+  </a>
+  <% end %>
+</div>

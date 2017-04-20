@@ -1,0 +1,39 @@
+<h1><%= @planet.name %></h1>
+
+<div class="inline-block">
+  <figure>
+    <img src="<%= @planet.image_url %>" alt="">
+  </figure>
+  <div><%= @planet.name %></div>
+  <div>Orbital distance (AU): <%= @planet.orbital_distance_in_au %></div>
+  <div>Mass (earths): <%= @planet.mass_relative_to_earth %></div>
+  <div>Diameter (earths): <%= @planet.diameter_relative_to_earth %></div>
+  <div>Rotational period (days): <%= @planet.rotational_period_in_days %></div>
+  <div>Orbital period (days): <%= @planet.orbital_period_in_years %></div>
+  <div>Moons: <%= @planet.number_of_moons %></div>
+
+  <a href="/planets/<%= @planet.id %>/edit">Edit</a>
+
+  <%= form_tag '/planets', method: 'delete' do %>
+    <input type="hidden" name="planet_id" value="<%= @planet.id %>">
+    <button>Remove this planet from existence</button>
+  <% end %>
+</div>
+
+<div class="comments inline-block vertical-top">
+  <h4>Comments</h4>
+  <% @planet.comments.each do |comment| %>
+  <h6><%= comment.user.email %> at <%= comment.created_at %></h6>
+  <p><%= comment.body %></p>
+  <% end %>
+
+  <% if logged_in? %>
+  <%= form_tag '/comments', method: 'post' do %>
+  <input type="hidden" name="planet_id" value="<%= @planet.id %>">
+  <textarea name="body" rows="6" cols="60"></textarea>
+  <button>Add comment</button>
+  <% end %>
+  <% else %>
+  <p>Please <a href="/login">log in</a> to comment.</p>
+  <% end %>
+</div>

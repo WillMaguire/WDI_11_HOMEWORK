@@ -1,0 +1,10 @@
+
+
+<% @s_results["Search"].each do |index| %>
+
+  <a href='/single_movie?title= + <%= index["Title"] %>'>
+    <img src="<%= index["Poster"] %>"> </a>
+  <a href='/single_movie?title= + <%= index["Title"] %>' > <%= index["Title"] %> </a>
+  <a href='/single_movie?title= + <%= index["Year"] %>' > <%= index["Year"] %> </a>
+
+<% end %>

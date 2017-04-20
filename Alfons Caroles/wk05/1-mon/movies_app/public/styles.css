@@ -1,0 +1,35 @@
+body {
+  background: rgba(0, 0, 0, 1);
+  color: white;
+  font-family: 'Rammetto One', cursive;
+}
+
+ul {
+  position: relative;
+  margin: 5% 0 0 5%;
+}
+
+li {
+  display: block;
+  position: relative;
+  list-style: none;
+  left: 25%;
+  max-width: 75%;
+  margin: 5px;
+}
+
+img {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px double white;
+}
+
+.Type, .Metascore, .imdbID, .Type, .Response {
+  display: none;
+}
+
+.Title, .Year, .Rated {
+  display: inline;
+}

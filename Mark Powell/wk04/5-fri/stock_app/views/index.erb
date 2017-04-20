@@ -1,0 +1,16 @@
+
+    <div class="container">
+      <form class="" action="/stock" method="get">
+        <input type="text" name="symbol" value="" placeholder="fx. 'AAPL'">
+        <button>Get Quote</button>
+      </form>
+
+      <h1>Company Name: <%= @stock_name %> </h1>
+      <h2>Symbol: <%= @symbol %> </h2>
+      <h2>Current Price: <%= @current_price %> </h2>
+
+      <hr>
+
+      <h2>jQuery Api call</h2>
+      <button type="button" class="get-quote">Bring it</button>
+      <div class="google-finance"></div>

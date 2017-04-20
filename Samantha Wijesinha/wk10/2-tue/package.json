@@ -1,0 +1,22 @@
+{
+  "name": "2-tue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs-mate": "^2.3.0",
+    "express": "^4.15.2",
+    "jQuery": "^1.7.4",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

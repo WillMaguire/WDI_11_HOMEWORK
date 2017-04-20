@@ -1,0 +1,51 @@
+* {
+  font-family: 'Molengo', sans-serif;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: white
+}
+
+a:hover {
+  color: #bdc3c7;
+}
+
+body {
+  color: white;
+  text-align: center;
+  background: #c2e59c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #c2e59c , #64b3f4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #c2e59c , #64b3f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px;
+  transition: 0.3s;
+  font-size: 25px;
+  margin: 20px;
+  width: 100px;
+
+}
+
+button:hover {
+  background-color: red;
+}
+
+button:active {
+  background-color: red;
+}
+
+input {
+  min-width: 500px;
+  min-height: 30px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 15px;
+  font-size: 20px;
+}

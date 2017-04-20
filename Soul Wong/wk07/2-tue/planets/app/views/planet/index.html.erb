@@ -1,0 +1,4 @@
+<% @Planets.each do | planet |%>
+<a href="/planet/<%=planet.id%>"><%= planet.name %></a>
+<img src="<%= planet.image_url %>" alt="">
+<% end %>

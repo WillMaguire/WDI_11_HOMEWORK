@@ -1,0 +1,33 @@
+<div id="app">
+
+</div>
+
+<script id="index-template" type="text/x-handlebars-template">
+  <div class="wrapper">
+
+  </div>
+    <form class="new-card-form" action="">
+      <label for="">name</label>
+      <input type="text" class="new-card-name">
+      <label for="">image_url</label>
+      <input type="text" class="new-card-image_url">
+      <button class="new-card-action">create card</button>
+    </form>
+</script>
+
+<script id="card-template" type="text/x-handlebars-template">
+    <div class="card" data-id="{{ id }}">
+    <header class="content">
+     <div>{{ name }}</div>
+    </header>
+    <div class="image">
+      <img src="{{ image_url }}" alt="">
+    </div>
+    <footer class="content">
+      <div>
+        <span class="delete-action">delete</span>
+        <span class="edit-action">edit</span>
+      </div>
+    </footer>
+
+</script>

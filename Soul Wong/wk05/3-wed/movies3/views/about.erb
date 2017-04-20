@@ -1,0 +1,19 @@
+<% if @movieSingle %>
+<div class="content heading">
+  <h1><%= "#{@movieSingle["title"]} (#{@movieSingle["year"]})" %></h1>
+  <h5><%= "Imdb Rating:#{@movieSingle["imdbrating"]}/10 | imdb Votes:#{@movieSingle["imdbvotes"]} "%></h5>
+</div>
+<div class="poster">
+  <img src="<%=@movieSingle["poster"]%>" alt="">
+</div>
+<div class="content heading">
+  <h4><%= "Release: #{@movieSingle["Released"]} | Runtime: #{@movieSingle["runtime"]}"%></h4>
+  <h4><%= "Genre: #{@movieSingle["genre"]} | Rated: #{@movieSingle["rated"]}" %> </h4>
+</div>
+<div class="content heading">
+  <p>
+    <%= "#{@movieSingle["plot"]}" %>
+  </p>
+  <h4><%= "Written by #{@movieSingle["writer"]}"%></h4>
+</div>
+<% end %>

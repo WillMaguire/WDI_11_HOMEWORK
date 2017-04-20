@@ -1,0 +1,26 @@
+<header>
+  <h1><%= @result["Title"] %>
+    <form action="/"><button>Search another</button></form>
+  </h1>
+  <ul class="header-info">
+    <li>Year: <%= @result["Year"] %></li>
+    <li>Rating: <%= @result["Rated"] %></li>
+    <li>Released: <%= @result["Released"] %></li>
+    <li>Runtime: <%= @result["Runtime"] %></li>
+    <li>Metascore: <%= @result["Metascore"] %></li>
+    <li>IMDB: <%= @result["imdbRating"] %></li>
+  </ul>
+</header>
+<div class="main">
+  <img src=<%= @result["Poster"] %> alt="">
+  <div>
+    <div class="plot"><%= @result["Plot"] %></div>
+    <ul>
+      <li>Director: <%= @result["Director"] %></li>
+      <li>Writer: <%= @result["Writer"] %></li>
+      <li>Actors: <%= @result["Actors"] %></li>
+      <li>Language: <%= @result["Language"] %></li>
+      <li>Awards: <%= @result["Awards"] %></li>
+    </ul>
+  </div>
+</div>

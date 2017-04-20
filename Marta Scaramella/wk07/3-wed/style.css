@@ -1,0 +1,17 @@
+body{
+  /*background-image: url("http://cdn.hercampus.com/s3fs-public/2014/09/16/iconpicture.jpg");*/
+  width: 100%;
+  background-color: mistyrose;
+  position: relative;
+  margin: 10px;
+}
+
+.search{
+  padding: 15px;
+  margin: auto;
+  width: 45%;
+}
+
+.searchBtn{
+
+}

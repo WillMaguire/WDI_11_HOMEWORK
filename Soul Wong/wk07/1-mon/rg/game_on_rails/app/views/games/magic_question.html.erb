@@ -1,0 +1,12 @@
+<% if @answer.nil? %>
+<form action="/magic" method="post">
+  <input type="text" name="question">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <button>Submit your question</button>
+</form>
+<% else %>
+<p>
+  <h1>The answer to your question is ..<%= @answer %> </h1>
+  <h2><a href="/magic">Try Again? </a></h2>
+</p>
+<% end %>

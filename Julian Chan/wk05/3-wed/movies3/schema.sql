@@ -1,0 +1,22 @@
+CREATE TABLE movies (
+  id SERIAL4 PRIMARY KEY,
+  title VARCHAR(255),
+  year VARCHAR(10),
+  rated VARCHAR(10),
+  released VARCHAR(15),
+  runtime VARCHAR(10),
+  genre VARCHAR(255),
+  director VARCHAR(255),
+  writer VARCHAR(255),
+  actors VARCHAR(400),
+  plot TEXT,
+  language VARCHAR(255),
+  country VARCHAR(255),
+  awards VARCHAR(255),
+  poster VARCHAR(255),
+  metascore VARCHAR(10),
+  imdbrating VARCHAR(10),
+  imdbvotes VARCHAR(10),
+  imdbid VARCHAR(20),
+  type VARCHAR(20)
+);

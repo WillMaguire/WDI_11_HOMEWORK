@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Stocks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Stock App</h1>
+  <h2>Enter the stock ticker as a query string (e.g. /?stock=MSFT) or use the form below.</h2>
+  <form action="/">
+    <input type="text" name="stock" placeholder="Stock ticker">
+    <button>Get data</button>
+  </form>
+  <div class="stock-data">
+    <div class="name"><%= @stock_name %></div>
+    <div><span class="price"><%= @stock_data[:lastTrade] %></span> USD <span class="change"><%= @stock_data[:changePoints] %> (<%= @stock_data[:changePercent] %>%)</span></div>
+  </div>
+</body>
+</html>

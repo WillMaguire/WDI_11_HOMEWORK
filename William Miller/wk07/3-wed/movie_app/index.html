@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AJAX MOVIE SEARCH</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+  </head>
+  <body>
+
+  <h1>Movie Search</h1>
+
+
+    <form class="search">
+      <input type="search" name="movie_title" class="movie-search"/>
+      <button>Search</button>
+    </form>
+
+    <main>
+      <div class="result">
+
+      </div>
+    </main>
+
+    <script id="movie-template" type="text/x-handlebars-template">
+      <div class="movie-card">
+        <a href="http://www.imdb.com/title/{{ 'imdbID' }}/?ref_=nv_sr_1">
+          <h2>{{ 'Title' }}</h2>
+          <img src="{{ 'Poster' }}">
+        </a>
+      </div>
+    </script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/movies_app.js"></script>
+  </body>
+</html>

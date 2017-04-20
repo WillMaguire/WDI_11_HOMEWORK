@@ -1,0 +1,12 @@
+<% layout('layout') %>
+<body style="background-color:<%= color %> ">
+  <h2>WDI11 Full Slack Home Page</h2>
+  <p> Hello <% if( namae_wa ) { %>~~~
+     <%=  namae_wa %> </p>
+  <% } %>
+  <p> <%= compliment %> </p>
+  <form action="/newCompliment" method="POST">
+    <label for="">New Compliment</label>
+    <input type="text" name="compliment">
+  </form>
+</body>

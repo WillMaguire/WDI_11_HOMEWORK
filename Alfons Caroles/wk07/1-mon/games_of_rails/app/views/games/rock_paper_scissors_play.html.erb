@@ -1,0 +1,11 @@
+<a href="/games">return to main menu</a>
+
+<% if @user_choice == 'rock' && @random_gesture == 'paper' || @user_choice == 'paper' && @random_gesture == 'scissor' || @user_choice == 'scissor' && @random_gesture == 'rock' %>
+  <h1>You Lose!!!!</h1>
+<% elsif @user_choice == 'paper' && @random_gesture == 'rock' || @user_choice == 'scissor' && @random_gesture == 'paper' || @user_choice == 'rock' && @random_gesture == 'scissor' %>
+  <h1>You Win!!!!</h1>
+<% else %>
+  <h1>It's a draw!!!</h1>
+<% end %>
+<p>User: <%= @user_choice %></p>
+<p>Computer: <%= @random_gesture %></p>

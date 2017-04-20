@@ -1,0 +1,10 @@
+body {
+  background-color: mistyrose;
+  text-align: center;
+  font-size: 3em;
+}
+
+li {
+  font-family: 'Dancing Script', cursive;
+  list-style: none;
+}

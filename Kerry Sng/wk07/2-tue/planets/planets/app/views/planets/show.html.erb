@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @planet.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @planet.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @planet.image.thumb.url %>
+</p>
+
+<%= link_to 'Edit', edit_planet_path(@planet) %> |
+<%= link_to 'Back', planets_path %>

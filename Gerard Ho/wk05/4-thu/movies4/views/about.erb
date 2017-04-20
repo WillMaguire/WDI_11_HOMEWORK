@@ -1,0 +1,17 @@
+<div>
+  <h1><%= @title %></h1>
+</div>
+<div class="wrapper">
+  <div class="left">
+    <img src= "<%=@image%>" alt="">
+  </div>
+  <div class="right">
+    <ul>
+      <% @found.each do |key,value| %>
+        <% if key != "id" && key != "poster" && key != "something" && key != "imdbid" && key != "response" && key != "Type"%>
+          <li><span><%= "#{key}".capitalize %></span> : <%= "#{value}" %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kuka Finance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Kuka STOCK monitor</h1>
+    <h2>Finance data LIVE <br> bringing you you the information you need</h2>
+
+    <form  action="/result">
+      <div class="inputStyle">
+      <input type="text" name="stock" class="form-control" >
+      </div>
+
+      <div class="centerize">
+      <button class="btn btn-primary btn-lg outline">Get Info</button>
+      </div>
+    </form>
+
+    <div class="list-group">
+      <li class="list-group-item">Date: <%= @date %></li>
+      <li class="list-group-item">Current: <%= @current %></li>
+      <li class="list-group-item">Orgnisation: <%= @org %></li>
+      <li class="list-group-item">% change: <%= @change %></li>
+      <li class="list-group-item">Day Highest: <%= @dayHigh %></li>
+      <li class="list-group-item">Day Lowest: <%= @dayLow %></li>
+      <li class="list-group-item">Average Daily Volume: <%= @averageDailyVolume %></li>
+      <!-- <%= @result %> -->
+    </div>
+    <footer>&copy; kukaheadla 2017</footer>
+  </body>
+</html>

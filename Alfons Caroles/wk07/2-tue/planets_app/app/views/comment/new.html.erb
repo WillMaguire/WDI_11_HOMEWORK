@@ -1,0 +1,8 @@
+<form action="/comment" method="post">
+  <input type="hidden" name="planet_id" value="<%= params[:id] %>">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <label class="block">Comment</label>
+  <textarea class="block" name="content" cols="30" rows="10"></textarea>
+  <button class="block">Post</button>
+</form>

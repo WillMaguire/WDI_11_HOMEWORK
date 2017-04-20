@@ -1,0 +1,13 @@
+body{
+  background-color: mistyrose;
+  font-family: sans-serif;
+  text-align: center;
+}
+p{
+  font-size: 30px;
+}
+input{
+  width: 100px;
+  height: 30px;
+  font-size: 25px;
+}

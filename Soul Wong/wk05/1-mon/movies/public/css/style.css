@@ -1,0 +1,27 @@
+body{
+  color: #2d50a7;
+}
+.content{
+  width: 400px;
+  padding: 5px;
+  text-align:center;
+}
+.content h5,h1{
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.poster{
+  width: 400px;
+  padding: 5px;
+  text-align:center;
+}
+
+.poster img{
+  width: 200px;
+  height:auto;
+}
+
+.heading {
+  border-top-style: groove;
+}

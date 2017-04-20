@@ -1,0 +1,25 @@
+<h1>Rock Paper Scissors</h1>
+
+<p>Choose ROCK, PAPER Or Scissors .. try beating the machine</p>
+<form action="/games/rock_paper_scissors_play" method='post'>
+  <input type="hidden" name="throw" value="rock">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <button>Rock</button>
+</form>
+<form action="/games/rock_paper_scissors_play" method='post'>
+  <input type="hidden" name="throw" value="paper">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <button>Paper</button>
+</form>
+<form action="/games/rock_paper_scissors_play" method='post'>
+  <input type="hidden" name="throw" value="scissors">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <button>Scissors</button>
+</form>
+
+
+
+<form action="/" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <button>Main Page</button>
+</form>

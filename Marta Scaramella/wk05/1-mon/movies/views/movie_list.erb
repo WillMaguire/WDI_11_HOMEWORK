@@ -1,0 +1,11 @@
+<div class="infoMovie">
+    <p>Choose the title!</p>
+
+    <% @movies.each do |movie| %>
+    <% @result = HTTParty.get("http://omdbapi.com/?t="+"movie['Title']") %>
+      <a href="/movie/<%= movie['Title']%>"> <%= movie['Title'] %></a>
+      <br>
+      <img src=" <%= movie['Poster']%>">
+      <br>
+    <% end %>
+</div>

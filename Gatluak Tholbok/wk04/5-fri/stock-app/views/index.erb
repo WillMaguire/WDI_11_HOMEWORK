@@ -1,0 +1,25 @@
+
+<h1>YahooFinance</h1>
+
+<form action="/">
+
+  <label for="">Search For Stock</label>
+  <input name="stockname" type="text" placeholder="enter amount">
+
+  <input class="submit" type="submit" value="results">
+</form>
+
+
+<h1> <%= @stockName %></h1>
+
+
+<% if @stockSymbol %>
+  <h4><%= @stockSymbol %></h3>
+
+  <h3>Biding: $ <%=@bid%> AUD</h3>
+
+  <hr>
+
+  <h3>Asking Price: $ <%= @askprice %> AUD</h3>
+
+<% end %>
