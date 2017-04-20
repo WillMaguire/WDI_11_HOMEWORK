@@ -1,0 +1,9 @@
+<% layout('layout') %>
+
+<h2>WDI Emergency Compliment</h2>
+<p><%= compliments %> by <%= name %></p>
+
+<form method="post" action="/add/compliment">
+  <input type="text" name="compliment">
+  <button type="submit">Submit</button>
+</form>
