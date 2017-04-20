@@ -1,0 +1,21 @@
+{
+  "name": "emergency_compliment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Alf",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.15.2",
+    "pg-promise": "^5.6.4",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "description": ""
+}
