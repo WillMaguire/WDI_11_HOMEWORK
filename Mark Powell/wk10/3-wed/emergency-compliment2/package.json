@@ -1,0 +1,22 @@
+{
+  "name": "emergency-compliment",
+  "version": "1.0.0",
+  "description": "haha ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Powell",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "ejs-mate": "^2.3.0",
+    "express": "^4.15.2",
+    "request": "^2.81.0",
+    "underscore": "^1.8.3"
+  }
+}
