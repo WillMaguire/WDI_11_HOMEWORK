@@ -1,0 +1,16 @@
+<% layout('layout')%>
+
+<h1>Compliments</h1>
+
+<form action="/" method="post">
+  <input type="text" name="firstname" class="name" placeholder="enter name">
+  <input type="text" name="comp" class"compliment" placeholder="enter compliment">
+  <button>Submit</button>
+
+</form>
+
+
+  <div class="compliment" >
+    <h1><%= comp.name %>,</h1>
+    <h3><%= comp.comp %> </h3>
+  </div>
